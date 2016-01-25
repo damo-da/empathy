@@ -2,6 +2,9 @@
 	//Your desktop is awesome, and here's the package of Empathy made just for your desktop. Everything that's not cross platform is here!
 */
 
+#ifndef LEMPATHY
+#define LEMPATHY
+
 #include "../Empathy/empathy.hpp"
 
 #define SC_SIZE_X 800
@@ -37,3 +40,6 @@ public:
 	
 	static LEmpathy * instance;
 };
+
+
+#endif

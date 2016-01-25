@@ -1,3 +1,7 @@
+
+#ifndef EMPATHY_GLOBAL
+#define EMPATHY_GLOBAL
+
 #include <iostream>
 using namespace std;
 
@@ -8,4 +12,6 @@ using namespace std;
 // GLFW
 #include <GLFW/glfw3.h>
 
-#include <math.h>
+#include <cmath>
+
+#endif

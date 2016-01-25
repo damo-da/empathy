@@ -1,76 +1,120 @@
 #include "wave.hpp"
 #include <iostream>
-void LifeEvent_Wave::init(){
-	cout<<"INIT"<<endl;
-	float radius=0.2f;
-	float cerv=2 * M_PI*radius;
-	float diff=0.01f;
+void LifeEvent_Wave::init() {
+	speed = 1.0f;
+	waveLength = 1.f;
+	amplitude = 1.0f;
 
-	
-	for(float i=0;i < cerv; i+=diff){
-		float angle=2 * M_PI * i/cerv;
+	lastWaveCompletionTime = 0.0f;
 
-		float x=radius * cos(angle) + centerX;
-		float y=radius * sin(angle) + centerY;
-		
-		vertices.push_back(x);
-		vertices.push_back(y);
+	color={1.0f,1.0f,1.0f,1.0f};
+
+	cout << "Created wave" << endl;
+}
+
+void LifeEvent_Wave::setColor(GLfloat r,GLfloat g,GLfloat b,GLfloat a){
+	color={r,g,b,a};
+}
+
+void LifeEvent_Wave::destroy() {
+	for (int i = 0; i < waveData.size(); i++) {
+		waveData[i].destroy();
 	}
-	
-
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-
-	glBindVertexArray(VAO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-	glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(GLfloat), &vertices[0], GL_STREAM_DRAW);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
-	glEnableVertexAttribArray(0);
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed,
-
-	glBindVertexArray(0); // Unbind VAO 
 }
 
-void LifeEvent_Wave::destroy(){
-	glDeleteVertexArrays(1, &VAO);
-	glDeleteBuffers(1, &VBO);
-}
 
-void LifeEvent_Wave::draw(GLuint shaderProgram){
-	// cout<<"Drawing inherited"<<endl;
-
-	GLfloat timeValue = glfwGetTime();
-	GLfloat greenValue = (sin(timeValue) / 2) + 0.5;
-	// cout<<timeValue<<" is curTIme"<<endl;
+void LifeEvent_Wave::draw(GLuint shaderProgram) {
 	glUseProgram(shaderProgram);
+
+	// cout<<"Drawing"<<endl;
+	glLineWidth(2.5);
 
 	//set Vertex Color
 	GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
-	glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+	glUniform4f(vertexColorLocation, color[0],color[1],color[2],color[3]);
 
-	// Draw the triangle
-	glBindVertexArray(VAO);
-	glDrawArrays(GL_LINE_LOOP, 0, vertices.size()/2);
-	glBindVertexArray(0);
+	for (int i = 0; i < waveData.size(); i++) {
+		waveData[i].draw(shaderProgram);
+	}
 
 	glUseProgram(0);
 
-	glLineWidth(2.5);
 }
 
 
-LifeEvent_Wave::LifeEvent_Wave(int i,std::string c):LifeEvent(i,c){
-	radius=0.8f;
+LifeEvent_Wave::LifeEvent_Wave(int i, std::string c): LifeEvent(i, c) {
+	radius = 0.1f;
 	init();
 }
 
-LifeEvent_Wave::LifeEvent_Wave(int i,std::string c,GLfloat cX,GLfloat cY):LifeEvent(i,c){
-	radius=0.8f;
+LifeEvent_Wave::LifeEvent_Wave(int i, std::string c, GLfloat cX, GLfloat cY)
+	: LifeEvent(i, c)
+{
+	radius = 0.1f;
 
-	centerX=cX;
-	centerY=cY;
-	
+	centerX = cX;
+	centerY = cY;
+
 	init();
+}
+
+GLfloat LifeEvent_Wave::getFrequency() {
+	return speed / waveLength;
+}
+GLfloat LifeEvent_Wave::getLastWaveCompletionTime() {
+	return lastWaveCompletionTime;
+}
+GLfloat LifeEvent_Wave::getTimePeriod() {
+	return waveLength / speed;
+}
+
+void LifeEvent_Wave::passTime(GLfloat delTime) {
+	// cout<<"passing time"<<endl;
+	LifeEvent::passTime(delTime);
+	// cout<<"Time is "<<getTime()<<endl;
+	// cout<<"waveLength"<<waveLength<<endl;
+
+	GLfloat timeDiff = getTime() - getLastWaveCompletionTime();
+
+	if (getId() == 2) {
+		cout << "wave 2 time is " << getTime() << endl;
+		cout << "Wave 2 timeDiff is " << timeDiff << endl;
+		cout << "Last completion time is " << getLastWaveCompletionTime() << endl;
+	}
+
+	if (timeDiff > getTimePeriod() || (getLastWaveCompletionTime() == 0 && waveData.size() == 0)) {
+		cout << "wave complete at " << getTime() << endl;
+		//time to add a new wave
+
+
+
+		if (waveData.size() != 0) {
+			lastWaveCompletionTime += getTimePeriod();
+		}
+
+		GLfloat frequency = getFrequency();
+		GLfloat aMomentum = 2 * M_PI * frequency;
+		GLfloat amplitude = sin(aMomentum * getTime());
+
+		// vertices.push_back(data);
+		WaveData data(1.0f, 0.0f, centerX, centerY, true);
+		// cout<<"Added"<<endl;
+		waveData.push_back(data);
+
+	}
+
+	for (int i = 0; i < waveData.size(); i++) {
+
+		waveData[i].radius += 0.001;
+		waveData[i].calculateGlVertices();
+
+		if (waveData[i].radius > 3.f) {
+			waveData[i].destroy();
+
+			waveData.erase(waveData.begin() + i);
+			i--;
+		}
+	}
+
+
 }

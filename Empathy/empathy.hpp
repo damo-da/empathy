@@ -1,3 +1,6 @@
+#ifndef EMPATHY
+#define EMPATHY
+
 #include "global.hpp"
 
 #include "You/you.hpp"
@@ -41,3 +44,5 @@ private:
 GLuint emCreateShaderProgram(GLuint ,GLuint);
 GLuint emCreateFragmentShader();
 GLuint emCreateVertexShader();
+
+#endif

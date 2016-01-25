@@ -23,7 +23,13 @@ public:
 
 	virtual void init()=0;
 
+	GLfloat totalTime;
+	virtual void passTime(GLfloat);
+	GLfloat getTime();
+	
 	LifeEvent();
+
+	int getId(){return id;}
 private:
 	
 };
