@@ -12,8 +12,7 @@ void You::onReceiveEvent(Event event) {
 }
 
 
-int You::calcFPS(){
-    float curTime=glfwGetTime();
+int You::calcFPS(GLfloat curTime){
 
     deltaTime=curTime-lastTime;
 
@@ -38,8 +37,9 @@ void You::passTime(GLfloat timeLength){
 
     // cout<<"DONE"<<endl;
 }
-void You::passTime(){
-    calcFPS();
+
+void You::setTime(GLfloat time){
+    calcFPS(time);
     passTime(deltaTime);
 }
 void You::init(){

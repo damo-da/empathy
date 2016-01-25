@@ -1,19 +1,17 @@
 #include "empathy.hpp"
 
-Empathy::Empathy(GLFWwindow * w){
-	cout<<"emp constructor"<<endl;
 
-	cout<<"got "<<window<<endl;
-	window=w;
-	
+Empathy::Empathy(EmpathyBinder *binder) {
+    this->binder=binder;
 }
+
+
 void Empathy::flush(){
 	cout<<"Flush done"<<endl;
-	// Terminate GLFW, clearing any resources allocated by GLFW.
-	glfwTerminate();
+
+    binder->terminate();
+
 }
-
-
 
 void Empathy::init() {
 	cout<<"initing emp"<<endl;
@@ -162,18 +160,17 @@ void Empathy::begin() {
 
 
 
-    while (! glfwWindowShouldClose(window)) {
-        glfwPollEvents();
+    while (! binder->shouldTerminate()) {
+        binder->pollEvents();
 
         glClearColor(0.2f, 0.3f, 0.3f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
 
-        you->passTime();
+        you->setTime(binder -> getTime());
 
         you->blit();
 
-        // Swap the screen buffers
-        glfwSwapBuffers(window);
+        binder->swapBuffers();
     }
 
     you->clearEvents();

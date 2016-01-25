@@ -6,11 +6,13 @@
 #define LEMPATHY
 
 #include "../Empathy/empathy.hpp"
+#include "../Empathy/Implements/EmpathyBinder.h"
+#include <GLFW/glfw3.h>
 
 #define SC_SIZE_X 800
 #define SC_SIZE_Y 600
 
-class LEmpathy{
+class LEmpathy:public EmpathyBinder{
 	/*
 	The foundation module for LEmpathy. It manages everything required for the desktop and only the desktop.
 	*/
@@ -37,8 +39,20 @@ public:
 	void begin();
 
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
-	
-	static LEmpathy * instance;
+
+
+private:
+    virtual bool shouldTerminate() override;
+
+    virtual void terminate() override;
+
+    virtual GLfloat getTime() override;
+
+    virtual void pollEvents() override;
+
+    virtual void swapBuffers() override;
+
+    static LEmpathy * instance;
 };
 
 

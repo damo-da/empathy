@@ -6,16 +6,17 @@
 #include "You/you.hpp"
 
 #include "LifeEvent/life_event.hpp"
+#include "Implements/EmpathyBinder.h"
 
 class Empathy{
 public:
-	GLFWwindow* window;
+    EmpathyBinder * binder;
 
 	//init the cross-platform system ready.
 	void init();
 
 	//The constructor
-	Empathy(GLFWwindow *);
+	Empathy(EmpathyBinder * binder);
 
 	//The window is created. Begin serving empathy
 	void begin();

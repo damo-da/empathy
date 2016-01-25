@@ -45,7 +45,7 @@ void LEmpathy::init(){
 void LEmpathy::initEmpathyInstance() {
 	cout<<"Create empathy instance"<<endl;
 	cout<<"passed "<<window<<endl;
-	empathy = new Empathy(window);
+	empathy = new Empathy(this);
 	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 }
 
@@ -79,3 +79,24 @@ void LEmpathy::initGlfw() {
 }
 
 LEmpathy * LEmpathy::instance=nullptr;
+
+bool LEmpathy::shouldTerminate() {
+    return glfwWindowShouldClose(window);
+}
+
+void LEmpathy::terminate() {
+    // Terminate GLFW, clearing any resources allocated by GLFW.
+    glfwTerminate();
+}
+
+GLfloat LEmpathy::getTime() {
+    return glfwGetTime();
+}
+
+void LEmpathy::pollEvents() {
+    glfwPollEvents();
+}
+
+void LEmpathy::swapBuffers() {
+    glfwSwapBuffers(window);
+}

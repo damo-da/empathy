@@ -30,9 +30,9 @@ public:
 
 	long curTime;
 	float lastTime,deltaTime;
-	int calcFPS();
+	int calcFPS(GLfloat curTime);
 	void passTime(GLfloat);
-	void passTime();
+	void setTime(GLfloat);
 
 
     virtual void onReceiveEvent(Event event) override;
