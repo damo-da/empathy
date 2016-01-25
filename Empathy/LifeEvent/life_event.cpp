@@ -33,3 +33,17 @@ GLfloat LifeEvent::getTime(){
 	// cout<<"getting time"<<endl;
 	return totalTime;
 }
+
+void LifeEvent::destroy(){
+	// Properly de-allocate all resources once they've outlived their purpose
+
+}
+
+void LifeEvent::init(){
+
+}
+
+void LifeEvent::draw(GLuint shaderProgram){
+
+	cout<<"Drawing base"<<endl;
+}

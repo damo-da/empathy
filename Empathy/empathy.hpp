@@ -5,8 +5,6 @@
 
 #include "You/you.hpp"
 
-#include "Reality/reality.hpp"
-
 #include "LifeEvent/life_event.hpp"
 
 class Empathy{

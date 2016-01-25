@@ -7,7 +7,6 @@ project(empathy)
 #set source code
 file(GLOB LEMPATHY_SRC "LEmpathy/*.hpp" "LEmpathy/*.cpp")
 file(GLOB EMPATHY_SRC "Empathy/*.hpp" "Empathy/*.cpp")
-file(GLOB EMPATHY_REALITY_SRC "Empathy/Reality/*.hpp" "Empathy/Reality/*.cpp")
 file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp" "Empathy/LifeEvent/Wave/*.cpp")
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
@@ -17,7 +16,6 @@ set (SOURCES
 
 	${EMPATHY_SRC}
 
-	${EMPATHY_REALITY_SRC}
 	${EMPATHY_LIFE_EVENT_SRC}
 	${EMPATHY_YOU_SRC}
 		Empathy/Implements/NonNativeEmpathy.cpp Empathy/Implements/NonNativeEmpathy.h Empathy/RadioStation/BroadcastStation.cpp Empathy/RadioStation/BroadcastStation.h Empathy/RadioStation/Event.cpp Empathy/RadioStation/Event.h Empathy/RadioStation/Subscriber.cpp Empathy/RadioStation/Subscriber.h)
