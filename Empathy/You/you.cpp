@@ -9,6 +9,9 @@ You::You(GLuint &shader){
 void You::onReceiveEvent(Event event) {
     Subscriber::onReceiveEvent(event);
 
+    if(event.action==Event::INPUT_KEY_PRESS){
+        cout<<"key press listened!"<<endl;
+    }
 }
 
 
@@ -19,7 +22,7 @@ int You::calcFPS(GLfloat curTime){
     lastTime=curTime;
 
     int FPS=1/deltaTime;
-    cout<<"FPS "<<FPS<<endl;
+//    cout<<"FPS "<<FPS<<endl;
     return FPS;
 }
 
@@ -59,7 +62,8 @@ void You::init(){
     //initializing time
     curTime=0;
 
-    listen(Event::LIFE_EVENT_WAVE_COMPLETE);
+    listen(Event::INPUT_KEY_PRESS);
+    listen(Event::INPUT_KEY_RELEASE);
 }
 
 void You::addEvent(LifeEvent * e) {

@@ -7,6 +7,7 @@
 
 #include "LifeEvent/life_event.hpp"
 #include "Implements/EmpathyBinder.h"
+#include "RadioStation/BroadcastStation.h"
 
 class Empathy{
 public:
@@ -30,6 +31,8 @@ public:
 	void flush();
 
 	You * you;
+
+    static BroadcastStation broadcastStation;
 private:
 	//Screen Size
 	uint sc_size_x,sc_size_y;

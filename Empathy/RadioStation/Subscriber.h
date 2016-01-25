@@ -15,7 +15,7 @@ public:
 
     void emit(Event);
 
-    void listen(int id);
+    void listen(std::string id);
 };
 
 

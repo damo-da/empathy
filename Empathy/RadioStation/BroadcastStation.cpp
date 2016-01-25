@@ -4,9 +4,7 @@
 
 #include "BroadcastStation.h"
 
-BroadcastStation * BroadcastStation::instance=new BroadcastStation();
-
-void BroadcastStation::subscribe(Subscriber *subscriber, int id) {
+void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
     if(!instance->existsChannel(id)){
         instance->addChannel(id);
     }
@@ -24,14 +22,15 @@ void BroadcastStation::emit(Event e) {
     }
 }
 
-bool BroadcastStation::existsChannel(int i) {
+bool BroadcastStation::existsChannel(std::string i) {
     return !(channels.find(i) == channels.end());
 }
 
-void BroadcastStation::addChannel(int id) {
+void BroadcastStation::addChannel(std::string id) {
     channels[id]=std::vector<Subscriber *>();
 }
 
 BroadcastStation::BroadcastStation() {
     instance=this;
 }
+BroadcastStation * BroadcastStation::instance= nullptr;

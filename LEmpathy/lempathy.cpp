@@ -1,4 +1,5 @@
 #include "lempathy.hpp"
+#include "../Empathy/RadioStation/Outcome.h"
 
 void LEmpathy::run(){
 	
@@ -22,16 +23,27 @@ void LEmpathy::begin(){
 void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
 	cout<<"key call back received"<<endl;
 
-	//LEmpathy is in the variable `instance`
-
 	// When a user presses the escape key, we set the WindowShouldClose property to true,
 	// closing the application
 
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(instance->window, GL_TRUE);
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
+        glfwSetWindowShouldClose(instance->window, GL_TRUE);
+        return;
+    }
+    std::string myAction="";
+    if(action==GLFW_PRESS){
+        myAction=Event::INPUT_KEY_PRESS;
+    }else if(action==GLFW_RELEASE){
+        myAction=Event::INPUT_KEY_RELEASE;
+    }
+    if(myAction != ""){
+        Event event=Event(myAction);
+        event.put(Outcome::INPUT_KEY,&key);
+
+        BroadcastStation::emit(event);
+    }
 
 }
-
 
 void LEmpathy::init(){
 	cout<<"init lempathy"<<endl;
@@ -95,6 +107,7 @@ GLfloat LEmpathy::getTime() {
 
 void LEmpathy::pollEvents() {
     glfwPollEvents();
+
 }
 
 void LEmpathy::swapBuffers() {

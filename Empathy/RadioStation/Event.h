@@ -10,11 +10,13 @@
 
 class Event {
 public:
-    const static int LIFE_EVENT_WAVE_COMPLETE=1;
+    static std::string LIFE_EVENT_WAVE_COMPLETE;
+    static std::string INPUT_KEY_PRESS;
+    static std::string INPUT_KEY_RELEASE;
+
 public:
     void put(std::string key, const void *value) {
-        int a=1;
-        data[key]=&a;
+        data[key]=&value;
 
     }
 
@@ -23,16 +25,16 @@ public:
     }
 
     bool existsKey(std::string key) {
-        return data.find("world") != data.end();
+        return data.find(key) != data.end();
     }
 
-    Event(std::string ,int);
+    Event(std::string);
 
-    int action;
+    std::string action;
+    std::string name;
 
 private:
     std::map<std::string,void *> data;
-    std::string name;
 };
 
 

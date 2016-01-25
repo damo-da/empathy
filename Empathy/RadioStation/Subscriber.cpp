@@ -9,7 +9,7 @@ void Subscriber::emit(Event event) {
     BroadcastStation::emit(event);
 }
 
-void Subscriber::listen(int id) {
+void Subscriber::listen(std::string id) {
     BroadcastStation::subscribe(this,id);
 }
 

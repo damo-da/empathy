@@ -88,7 +88,7 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 
 		waveData.push_back(data);
 
-		Event e=Event("New Wave Added!",Event::LIFE_EVENT_WAVE_COMPLETE);
+		Event e=Event(Event::LIFE_EVENT_WAVE_COMPLETE);
         emit(e);
 	}
 
@@ -106,7 +106,6 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 		}
 	}
 
-	cout<<"number "<<waveData.size()<<endl;
 
 
 }

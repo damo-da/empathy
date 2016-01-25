@@ -14,7 +14,7 @@
 class BroadcastStation {
 public:
     //subscribes  a subscriber.
-    static void subscribe(Subscriber *base, int id);
+    static void subscribe(Subscriber *base, std::string id);
 
     BroadcastStation();
 
@@ -25,10 +25,10 @@ protected:
     static BroadcastStation * instance;
 
 private:
-    std::map<int,std::vector<Subscriber *>> channels;
+    std::map<std::string,std::vector<Subscriber *>> channels;
 
-    bool existsChannel(int);
-    void addChannel(int);
+    bool existsChannel(std::string);
+    void addChannel(std::string);
 };
 
 #endif //EMPATHY_BROADCAST_H

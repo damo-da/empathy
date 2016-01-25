@@ -177,3 +177,5 @@ void Empathy::begin() {
 
     flush();
 }
+
+BroadcastStation Empathy::broadcastStation= BroadcastStation();
