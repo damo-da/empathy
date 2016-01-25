@@ -2,18 +2,18 @@
 #include <iostream>
 void LifeEvent_Wave::init() {
 	speed = 1.0f;
-	waveLength = 1.f;
+	waveLength = 2.f;
 	amplitude = 1.0f;
 
 	lastWaveCompletionTime = 0.0f;
 
-	color={1.0f,1.0f,1.0f,1.0f};
+	color = {1.0f, 1.0f, 1.0f, 1.0f};
 
 	cout << "Created wave" << endl;
 }
 
-void LifeEvent_Wave::setColor(GLfloat r,GLfloat g,GLfloat b,GLfloat a){
-	color={r,g,b,a};
+void LifeEvent_Wave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
+	color = {r, g, b, a};
 }
 
 void LifeEvent_Wave::destroy() {
@@ -31,7 +31,7 @@ void LifeEvent_Wave::draw(GLuint shaderProgram) {
 
 	//set Vertex Color
 	GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
-	glUniform4f(vertexColorLocation, color[0],color[1],color[2],color[3]);
+	glUniform4f(vertexColorLocation, color[0], color[1], color[2], color[3]);
 
 	for (int i = 0; i < waveData.size(); i++) {
 		waveData[i].draw(shaderProgram);
@@ -43,15 +43,12 @@ void LifeEvent_Wave::draw(GLuint shaderProgram) {
 
 
 LifeEvent_Wave::LifeEvent_Wave(int i, std::string c): LifeEvent(i, c) {
-	radius = 0.1f;
 	init();
 }
 
 LifeEvent_Wave::LifeEvent_Wave(int i, std::string c, GLfloat cX, GLfloat cY)
 	: LifeEvent(i, c)
 {
-	radius = 0.1f;
-
 	centerX = cX;
 	centerY = cY;
 
@@ -69,24 +66,15 @@ GLfloat LifeEvent_Wave::getTimePeriod() {
 }
 
 void LifeEvent_Wave::passTime(GLfloat delTime) {
-	// cout<<"passing time"<<endl;
 	LifeEvent::passTime(delTime);
-	// cout<<"Time is "<<getTime()<<endl;
-	// cout<<"waveLength"<<waveLength<<endl;
 
 	GLfloat timeDiff = getTime() - getLastWaveCompletionTime();
 
-	if (getId() == 2) {
-		cout << "wave 2 time is " << getTime() << endl;
-		cout << "Wave 2 timeDiff is " << timeDiff << endl;
-		cout << "Last completion time is " << getLastWaveCompletionTime() << endl;
-	}
+	GLfloat distanceDiff=speed*timeDiff;
 
-	if (timeDiff > getTimePeriod() || (getLastWaveCompletionTime() == 0 && waveData.size() == 0)) {
-		cout << "wave complete at " << getTime() << endl;
+	if (distanceDiff>waveLength || (getLastWaveCompletionTime() == 0 && waveData.size() == 0)) {
+		// cout << "wave complete at " << getTime() << endl;
 		//time to add a new wave
-
-
 
 		if (waveData.size() != 0) {
 			lastWaveCompletionTime += getTimePeriod();
@@ -96,11 +84,12 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 		GLfloat aMomentum = 2 * M_PI * frequency;
 		GLfloat amplitude = sin(aMomentum * getTime());
 
-		// vertices.push_back(data);
 		WaveData data(1.0f, 0.0f, centerX, centerY, true);
-		// cout<<"Added"<<endl;
+
 		waveData.push_back(data);
 
+		Event e=Event("New Wave Added!",Event::LIFE_EVENT_WAVE_COMPLETE);
+        emit(e);
 	}
 
 	for (int i = 0; i < waveData.size(); i++) {
@@ -108,13 +97,16 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 		waveData[i].radius += 0.001;
 		waveData[i].calculateGlVertices();
 
-		if (waveData[i].radius > 3.f) {
+		if (waveData[i].radius > 2.0f) {
+
 			waveData[i].destroy();
 
 			waveData.erase(waveData.begin() + i);
 			i--;
 		}
 	}
+
+	cout<<"number "<<waveData.size()<<endl;
 
 
 }

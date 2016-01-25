@@ -12,3 +12,7 @@ void Subscriber::emit(Event event) {
 void Subscriber::listen(int id) {
     BroadcastStation::subscribe(this,id);
 }
+
+void Subscriber::onReceiveEvent(Event event) {
+
+}

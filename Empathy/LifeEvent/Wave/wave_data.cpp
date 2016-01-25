@@ -18,7 +18,7 @@ WaveData::WaveData(GLfloat amplitude, GLfloat radius, GLfloat centerX, GLfloat c
 }
 
 void WaveData::initVertexObjects() {
-	cout<<"initing vertex objects"<<endl;
+	// cout<<"initing vertex objects"<<endl;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 }
@@ -64,7 +64,7 @@ void WaveData::draw(GLuint shaderProgram) {
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 2);
 	glBindVertexArray(0);
-
+	
 
 
 	// cout<<"drawn "<<endl;

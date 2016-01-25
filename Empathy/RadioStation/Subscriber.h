@@ -11,11 +11,11 @@
 //The class to be overridden to emit/receive broadcasts
 class Subscriber {
 public:
-    virtual void onEventReceive(Event event)=0;
+    virtual void onReceiveEvent(Event event);
 
-    virtual void emit(Event);
+    void emit(Event);
 
-    virtual void listen(int id);
+    void listen(int id);
 };
 
 

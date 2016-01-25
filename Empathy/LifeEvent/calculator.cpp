@@ -8,5 +8,5 @@ void LifeEvent::destroy(){
 }
 
 void LifeEvent::init(){
-	
+
 }

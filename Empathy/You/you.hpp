@@ -12,7 +12,7 @@
 
 #include <vector>
 
-class You{
+class You: public Subscriber{
 public:
 	vector<LifeEvent*> * lifeEvents;
 
@@ -24,7 +24,6 @@ public:
 
 	void blit();
 
-	
 	void addEvent(LifeEvent *);
 	void removeEvent(LifeEvent *);
 	void clearEvents();
@@ -36,6 +35,7 @@ public:
 	void passTime();
 
 
+    virtual void onReceiveEvent(Event event) override;
 };
 
 #endif

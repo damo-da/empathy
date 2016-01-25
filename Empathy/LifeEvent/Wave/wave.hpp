@@ -6,43 +6,46 @@
 
 #include <vector>
 
-class LifeEvent_Wave: public LifeEvent{
+class LifeEvent_Wave: public LifeEvent {
 public:
-	float radius;
-	float width;
-	const float diff=0.03f;
+    std::vector<GLfloat> color;//in rgba
+    GLfloat speed, waveLength;
+    GLfloat amplitude;
+    GLfloat lastWaveCompletionTime;
 
 	GLfloat centerX;
 	GLfloat centerY;
 
+    std::vector<WaveData> waveData;
 
+    //called once. By the constructor. Overridden method of parent
 	void init();
 
-	std::vector<WaveData> waveData;
-
+    //called every frame to draw the data
 	void draw(GLuint);
 
+    //called by the destructor
 	void destroy();
 
-	void setCenter(GLfloat x,GLfloat y){centerX=x;y=centerY;}
+    //set the center
+	void setCenter(GLfloat x, GLfloat y) {centerX = x; y = centerY;}
 
-	LifeEvent_Wave(int,std::string);
-	LifeEvent_Wave(int,std::string,GLfloat,GLfloat);
+    //constructors
+	LifeEvent_Wave(int, std::string);
+	LifeEvent_Wave(int, std::string, GLfloat, GLfloat);
 
-	
-	std::vector<GLfloat> color;//in rgba
-	void setColor(GLfloat,GLfloat,GLfloat,GLfloat);
 
-	GLfloat speed,waveLength;
-	GLfloat amplitude;
+	void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
+
 	GLfloat getFrequency();
-	GLfloat lastWaveCompletionTime;
-	GLfloat getTimePeriod();
+    GLfloat getTimePeriod();
 	GLfloat getLastWaveCompletionTime();
 
 	void passTime(GLfloat);
+
+
 private:
-	
+
 };
 
 #endif

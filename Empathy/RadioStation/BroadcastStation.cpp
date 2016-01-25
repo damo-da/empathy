@@ -20,7 +20,7 @@ void BroadcastStation::emit(Event e) {
     std::vector<Subscriber*> subscribers= instance->channels[e.action];
 
     for(int i=0;i<subscribers.size();i++){
-        subscribers[i]->onEventReceive(e);
+        subscribers[i]->onReceiveEvent(e);
     }
 }
 

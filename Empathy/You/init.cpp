@@ -20,4 +20,6 @@ void You::init(){
 
 	//initializing time
 	curTime=0;
+
+	listen(Event::LIFE_EVENT_WAVE_COMPLETE);
 }

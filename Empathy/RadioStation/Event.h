@@ -9,8 +9,8 @@
 #include <map>
 
 class Event {
-    std::map<std::string,void *> data;
-    std::string name;
+public:
+    const static int LIFE_EVENT_WAVE_COMPLETE=1;
 public:
     void put(std::string key, const void *value) {
         int a=1;
@@ -29,6 +29,10 @@ public:
     Event(std::string ,int);
 
     int action;
+
+private:
+    std::map<std::string,void *> data;
+    std::string name;
 };
 
 

@@ -6,10 +6,11 @@
 #define EMPATHY_LIFE_EVENT
 
 #include "../global.hpp"
+#include "../RadioStation/Subscriber.h"
 
 #include <vector>
 
-class LifeEvent{
+class LifeEvent : public Subscriber{
 public:
 	std::string name;
 	
