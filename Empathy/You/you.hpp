@@ -34,6 +34,8 @@ public:
 	int calcFPS();
 	void passTime(GLfloat);
 	void passTime();
+
+
 };
 
 #endif

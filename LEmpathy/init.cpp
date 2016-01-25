@@ -18,7 +18,9 @@ void LEmpathy::initEmpathyInstance() {
 
 void LEmpathy::initGlfw() {
 	cout<<"glfwInit"<<endl;
-	glfwInit();
+	cout<<"Version is "<<glfwInit()<<endl;
+
+
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -31,6 +33,7 @@ void LEmpathy::initGlfw() {
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
+        exit(EXIT_FAILURE);
 
 	}
 

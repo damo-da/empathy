@@ -20,7 +20,7 @@ set (SOURCES
 	${EMPATHY_REALITY_SRC}
 	${EMPATHY_LIFE_EVENT_SRC}
 	${EMPATHY_YOU_SRC}
-	)
+		Empathy/Implements/NonNativeEmpathy.cpp Empathy/Implements/NonNativeEmpathy.h Empathy/RadioStation/BroadcastStation.cpp Empathy/RadioStation/BroadcastStation.h Empathy/RadioStation/Event.cpp Empathy/RadioStation/Event.h Empathy/RadioStation/Subscriber.cpp Empathy/RadioStation/Subscriber.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

@@ -17,10 +17,10 @@ void You::removeEvent(LifeEvent * e) {
 }
 
 void You::clearEvents() {
-	
+
 	while(lifeEvents->size()>0){
 		LifeEvent * event = (*lifeEvents)[0];
-	
+
 		removeEvent(event);
 	}
 }
