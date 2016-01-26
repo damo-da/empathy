@@ -33,7 +33,8 @@ public:
 
 	void createTimeOut(GLfloat interval,int);
 
-    void createRepeatingTimeout(GLfloat interval,int);
+    void createRepeatingTimeout(GLfloat,GLfloat,int);
+	void createRepeatingTimeout(GLfloat,int);
 private:
 
 };

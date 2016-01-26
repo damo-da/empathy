@@ -1,6 +1,9 @@
+#include <iostream>
 #include "you.hpp"
 #include "../LifeEvent/Wave/wave.hpp"
 #include "../global.hpp"
+#include "../RadioStation/TimeBroadcaster.h"
+
 using namespace std;
 
 You::You(GLuint &shader){
@@ -8,10 +11,10 @@ You::You(GLuint &shader){
 }
 
 
-void You::onReceiveEvent(Event event) {
+void You::onReceiveEvent(Event * event) {
     Subscriber::onReceiveEvent(event);
 
-    if(event.action==EMPATHY_EVENT_INPUT_KEY_PRESS){
+    if(event->action==EMPATHY_EVENT_INPUT_KEY_PRESS){
         cout<<"key press listened!"<<endl;
     }
 }
@@ -39,6 +42,7 @@ void You::passTime(GLfloat timeLength){
         event->passTime(timeLength);
         // cout <<"Passed time"<<endl;
     }
+    TimeBroadcaster::poll(timeLength);
 
     // cout<<"DONE"<<endl;
 }
@@ -56,10 +60,10 @@ void You::init(){
     wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
     addEvent(wave);
 
-//	//add a secondary wave
-//	LifeEvent_Wave * sWave=new LifeEvent_Wave(2,"SecondaryWave",0.2f,0.2f);
+	//add a secondary wave
+//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
 //	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-    // addEvent(sWave);
+//     addEvent(sWave);
 
     //initializing time
     curTime=0;

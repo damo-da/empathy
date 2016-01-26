@@ -22,7 +22,7 @@ void LEmpathy::begin(){
 }
 
 void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
-    std::cout<<"key call back received"<<action<<std::endl;
+//    std::cout<<"key call back received"<<action<<std::endl;
 
 	// When a user presses the escape key, we set the WindowShouldClose property to true,
 	// closing the application
@@ -43,7 +43,7 @@ void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
         Event event=Event(myAction);
         event.put(EMPATHY_EVENT_INPUT_KEY,&key);
 
-        BroadcastStation::emit(event);
+        BroadcastStation::emit(&event);
     }
 
 }

@@ -13,7 +13,8 @@ void LifeEvent_Wave::init() {
 
 	color = {1.0f, 1.0f, 1.0f, 1.0f};
 
-	createTimeOut(1.0f,12);
+//	createTimeOut(1.0f,1);
+	createRepeatingTimeout(0.0f,1.0f,1);
 	cout << "Created wave" << endl;
 }
 
@@ -90,7 +91,7 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 		waveData.push_back(data);
 
 		Event e=Event(EMPATHY_EVENT_WAVE_COMPLETE);
-        emit(e);
+        emit(&e);
 	}
 
 	for (int i = 0; i < waveData.size(); i++) {
@@ -108,5 +109,16 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 	}
 
 
+
+}
+
+void LifeEvent_Wave::onReceiveEvent(Event *event) {
+    Subscriber::onReceiveEvent(event);
+
+    cout<<"Event received"<<endl;
+    
+    string act=event->action;
+
+    cout<<act<<"is act "<<act.size()<<endl;
 
 }

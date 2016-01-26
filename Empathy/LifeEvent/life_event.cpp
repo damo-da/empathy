@@ -1,3 +1,4 @@
+#include <iostream>
 #include "life_event.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
 #include "../global.hpp"
@@ -10,7 +11,7 @@ LifeEvent::LifeEvent(){
 }
 void LifeEvent::passTime(GLfloat delTime){
 	if(totalTime==0)
-		cout<<"delTime is "<<delTime<<endl;
+        cout<<"delTime is "<<delTime<<endl;
 
 	// cout<<"passing base time"<<endl;
 	totalTime += delTime;
@@ -35,15 +36,21 @@ void LifeEvent::draw(GLuint shaderProgram){
     std::cout<<"Drawing base"<<std::endl;
 }
 
-void LifeEvent::createTimeOut(GLfloat interval, int id) {
-    timeouts[id]=interval;
-
+void LifeEvent::createTimeOut(GLfloat start, int id) {
     Event event(EMPATHY_EVENT_WAVE_COMPLETE);
     event.broadcaster=this;
 
-    TimeBroadcaster::createTimeout(*this,event,interval);
+    TimeBroadcaster::createTimeout(this,&event,start);
+}
+
+void LifeEvent::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
+    Event event(EMPATHY_EVENT_WAVE_COMPLETE);
+    event.broadcaster=this;
+
+    cout<<"while creating"<<event.action<<endl;
+    TimeBroadcaster::createRepeatingTimeout(this,&event,start,interval);
 }
 
 void LifeEvent::createRepeatingTimeout(GLfloat interval, int id) {
-    intervals[id]=interval;
+    createRepeatingTimeout(0.0f,interval,id);
 }

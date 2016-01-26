@@ -11,11 +11,11 @@
 //The class to be overridden to emit/receive broadcasts
 class Subscriber {
 public:
-    virtual void onReceiveEvent(Event event);
+    virtual void onReceiveEvent(Event *);
 
-    void emit(Event);
+    void emit(Event*);
 
-    void listen(std::string id);
+    void listen(std::string);
 };
 
 

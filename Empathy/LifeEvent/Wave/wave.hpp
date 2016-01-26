@@ -45,6 +45,8 @@ public:
 
 private:
 
+public:
+	virtual void onReceiveEvent(Event *event) override;
 };
 
 #endif

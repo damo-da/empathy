@@ -29,7 +29,7 @@ set (SOURCES
 		Empathy/RadioStation/Subscriber.cpp
 		Empathy/RadioStation/Subscriber.h
         Empathy/RadioStation/TimeBroadcaster.cpp
-        Empathy/RadioStation/TimeBroadcaster.h)
+        Empathy/RadioStation/TimeBroadcaster.h Empathy/RadioStation/TimeBroadcasterObject.cpp Empathy/RadioStation/TimeBroadcasterObject.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

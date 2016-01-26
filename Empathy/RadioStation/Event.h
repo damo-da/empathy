@@ -5,7 +5,7 @@
 #ifndef EMPATHY_EVENT_H
 #define EMPATHY_EVENT_H
 
-#include <iostream>
+
 #include <map>
 
 class Event {

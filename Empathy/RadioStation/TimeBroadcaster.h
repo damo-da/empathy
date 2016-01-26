@@ -9,13 +9,21 @@
 #include <GL/glew.h>
 #include "Subscriber.h"
 
-#include <thread>
+#include <vector>
+#include "TimeBroadcasterObject.h"
 class TimeBroadcaster {
-public:
-    static void createRepeatingTimeout(Subscriber &,Event&,GLfloat);
+private:
+    static std::vector<TimeBroadcasterObject> items;
 
-    static void createTimeout(Subscriber &, Event&, GLfloat);
+public:
+    static void createRepeatingTimeout(Subscriber *,Event*,GLfloat,GLfloat);
+
+    static void createTimeout(Subscriber *, Event*, GLfloat);
+
+    static void poll(GLfloat);
 };
+
+
 
 
 #endif //EMPATHY_TIMEBROADCASTER_H

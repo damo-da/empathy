@@ -35,7 +35,7 @@ public:
 	void setTime(GLfloat);
 
 
-    virtual void onReceiveEvent(Event event) override;
+    virtual void onReceiveEvent(Event *) override;
 };
 
 #endif
