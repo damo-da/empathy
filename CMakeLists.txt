@@ -28,7 +28,8 @@ set (SOURCES
 		Empathy/RadioStation/Event.h
 		Empathy/RadioStation/Subscriber.cpp
 		Empathy/RadioStation/Subscriber.h
-        Empathy/RadioStation/Outcome.cpp Empathy/RadioStation/Outcome.h)
+        Empathy/RadioStation/TimeBroadcaster.cpp
+        Empathy/RadioStation/TimeBroadcaster.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

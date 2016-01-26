@@ -1,5 +1,5 @@
 #include "empathy.hpp"
-
+using namespace std;
 
 Empathy::Empathy(EmpathyBinder *binder) {
     this->binder=binder;

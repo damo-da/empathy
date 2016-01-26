@@ -8,15 +8,16 @@
 #include "../global.hpp"
 #include "../RadioStation/Subscriber.h"
 
-#include <vector>
+#include <map>
+#include <GL/glew.h>
 
 class LifeEvent : public Subscriber{
 public:
-	std::string name;
-	
 	int id;
+    int getId(){return id;}
 
-	LifeEvent(int,std::string &);
+    std::map<GLfloat ,int> timeouts;
+    std::map<GLfloat ,int> intervals;
 
 	virtual void draw(GLuint)=0;
 
@@ -30,9 +31,11 @@ public:
 	
 	LifeEvent();
 
-	int getId(){return id;}
+	void createTimeOut(GLfloat interval,int);
+
+    void createRepeatingTimeout(GLfloat interval,int);
 private:
-	
+
 };
 
 #endif

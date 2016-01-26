@@ -6,6 +6,8 @@
 #include "BroadcastStation.h"
 
 void Subscriber::emit(Event event) {
+    event.broadcaster=this;
+
     BroadcastStation::emit(event);
 }
 

@@ -5,6 +5,7 @@
 
 
 #include <vector>
+#include <GL/glew.h>
 
 class WaveData{
 public:

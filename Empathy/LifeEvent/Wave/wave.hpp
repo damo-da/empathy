@@ -31,8 +31,7 @@ public:
 	void setCenter(GLfloat x, GLfloat y) {centerX = x; y = centerY;}
 
     //constructors
-	LifeEvent_Wave(int, std::string);
-	LifeEvent_Wave(int, std::string, GLfloat, GLfloat);
+	LifeEvent_Wave(GLfloat, GLfloat);
 
 
 	void setColor(GLfloat, GLfloat, GLfloat, GLfloat);

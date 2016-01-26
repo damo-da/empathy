@@ -1,5 +1,7 @@
 #include "you.hpp"
 #include "../LifeEvent/Wave/wave.hpp"
+#include "../global.hpp"
+using namespace std;
 
 You::You(GLuint &shader){
 	shaderProgram=shader;
@@ -9,7 +11,7 @@ You::You(GLuint &shader){
 void You::onReceiveEvent(Event event) {
     Subscriber::onReceiveEvent(event);
 
-    if(event.action==Event::INPUT_KEY_PRESS){
+    if(event.action==EMPATHY_EVENT_INPUT_KEY_PRESS){
         cout<<"key press listened!"<<endl;
     }
 }
@@ -50,7 +52,7 @@ void You::init(){
     lifeEvents=new std::vector<LifeEvent*>();
 
     //add a base wave
-    LifeEvent_Wave * wave=new LifeEvent_Wave(1,"BaseWave",0.0f,0.0f);
+    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
     wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
     addEvent(wave);
 
@@ -62,8 +64,9 @@ void You::init(){
     //initializing time
     curTime=0;
 
-    listen(Event::INPUT_KEY_PRESS);
-    listen(Event::INPUT_KEY_RELEASE);
+    listen(EMPATHY_EVENT_INPUT_KEY_PRESS);
+    listen(EMPATHY_EVENT_INPUT_KEY_RELEASE);
+    listen(EMPATHY_EVENT_INPUT_KEY_REPEAT);
 }
 
 void You::addEvent(LifeEvent * e) {

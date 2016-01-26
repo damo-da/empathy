@@ -1,5 +1,9 @@
 #include "wave.hpp"
 #include <iostream>
+#include <math.h>
+#include "../../global.hpp"
+using namespace std;
+
 void LifeEvent_Wave::init() {
 	speed = 1.0f;
 	waveLength = 2.f;
@@ -9,6 +13,7 @@ void LifeEvent_Wave::init() {
 
 	color = {1.0f, 1.0f, 1.0f, 1.0f};
 
+	createTimeOut(1.0f,12);
 	cout << "Created wave" << endl;
 }
 
@@ -42,12 +47,8 @@ void LifeEvent_Wave::draw(GLuint shaderProgram) {
 }
 
 
-LifeEvent_Wave::LifeEvent_Wave(int i, std::string c): LifeEvent(i, c) {
-	init();
-}
-
-LifeEvent_Wave::LifeEvent_Wave(int i, std::string c, GLfloat cX, GLfloat cY)
-	: LifeEvent(i, c)
+LifeEvent_Wave::LifeEvent_Wave(GLfloat cX, GLfloat cY)
+	: LifeEvent()
 {
 	centerX = cX;
 	centerY = cY;
@@ -88,7 +89,7 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 
 		waveData.push_back(data);
 
-		Event e=Event(Event::LIFE_EVENT_WAVE_COMPLETE);
+		Event e=Event(EMPATHY_EVENT_WAVE_COMPLETE);
         emit(e);
 	}
 
