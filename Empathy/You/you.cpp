@@ -38,13 +38,9 @@ void You::passTime(GLfloat timeLength){
     for(int i=0;i<lifeEvents->size();i++){
         LifeEvent * event=(*lifeEvents)[i];
 
-        // cout <<"Passing time"<<endl;
         event->passTime(timeLength);
-        // cout <<"Passed time"<<endl;
     }
     TimeBroadcaster::poll(timeLength);
-
-    // cout<<"DONE"<<endl;
 }
 
 void You::setTime(GLfloat time){

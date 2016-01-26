@@ -2,9 +2,11 @@
 // Created by damo on 1/26/16.
 //
 
+#include <iostream>
 #include "TimeBroadcasterObject.h"
+using namespace std;
 
-TimeBroadcasterObject::TimeBroadcasterObject(Event *event, GLfloat nextOccurance, Subscriber *subscriber):
+TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance, Subscriber *subscriber):
         event(event),
         nextOccurance(nextOccurance),
         subscriber(subscriber),
@@ -16,7 +18,7 @@ TimeBroadcasterObject::TimeBroadcasterObject(Event *event, GLfloat nextOccurance
 
 
 
-TimeBroadcasterObject::TimeBroadcasterObject(Event *event, GLfloat nextOccurance, Subscriber *subscriber, GLfloat period) :
+TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance, Subscriber *subscriber, GLfloat period) :
         event(event),
         nextOccurance(nextOccurance),
         subscriber(subscriber),

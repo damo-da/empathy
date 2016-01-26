@@ -6,8 +6,13 @@
 
 #include <vector>
 
+#define EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE 1
+#define EMPATHY_LIFE_EVENT_WAVE_ID "WAVE_ID"
+
 class LifeEvent_Wave: public LifeEvent {
 public:
+
+
     std::vector<GLfloat> color;//in rgba
     GLfloat speed, waveLength;
     GLfloat amplitude;

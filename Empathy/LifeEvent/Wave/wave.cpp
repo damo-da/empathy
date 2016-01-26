@@ -2,20 +2,19 @@
 #include <iostream>
 #include <math.h>
 #include "../../global.hpp"
+#include "../../RadioStation/TimeBroadcaster.h"
+
 using namespace std;
 
 void LifeEvent_Wave::init() {
-	speed = 1.0f;
+    LifeEvent::init();
+
+//	frequency=1.0f;
 	waveLength = 2.f;
 	amplitude = 1.0f;
 
-	lastWaveCompletionTime = 0.0f;
-
 	color = {1.0f, 1.0f, 1.0f, 1.0f};
-
-//	createTimeOut(1.0f,1);
-	createRepeatingTimeout(0.0f,1.0f,1);
-	cout << "Created wave" << endl;
+    createRepeatingTimeout(getTimePeriod(),EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE);
 }
 
 void LifeEvent_Wave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
@@ -53,6 +52,7 @@ LifeEvent_Wave::LifeEvent_Wave(GLfloat cX, GLfloat cY)
 {
 	centerX = cX;
 	centerY = cY;
+
 
 	init();
 }
@@ -116,7 +116,7 @@ void LifeEvent_Wave::onReceiveEvent(Event *event) {
     Subscriber::onReceiveEvent(event);
 
     cout<<"Event received"<<endl;
-    
+
     string act=event->action;
 
     cout<<act<<"is act "<<act.size()<<endl;

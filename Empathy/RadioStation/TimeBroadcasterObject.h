@@ -14,7 +14,7 @@ private:
 
 public:
     Subscriber * subscriber;
-    Event * event;
+    Event event;
 
     GLfloat period;
 
@@ -22,8 +22,8 @@ public:
 
     GLfloat nextOccurance;
 
-    TimeBroadcasterObject(Event*,GLfloat,Subscriber * );
-    TimeBroadcasterObject(Event*,GLfloat,Subscriber*,GLfloat);
+    TimeBroadcasterObject(Event,GLfloat,Subscriber * );
+    TimeBroadcasterObject(Event,GLfloat,Subscriber*,GLfloat);
 };
 
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "life_event.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
-#include "../global.hpp"
+#include "../Uniqueness.h"
 
 using namespace std;
 LifeEvent::LifeEvent(){
@@ -29,7 +29,7 @@ void LifeEvent::destroy(){
 }
 
 void LifeEvent::init(){
-
+    id=Uniqueness::newId();
 }
 
 void LifeEvent::draw(GLuint shaderProgram){
@@ -37,18 +37,20 @@ void LifeEvent::draw(GLuint shaderProgram){
 }
 
 void LifeEvent::createTimeOut(GLfloat start, int id) {
-    Event event(EMPATHY_EVENT_WAVE_COMPLETE);
+    Event event(EMPATHY_EVENT_TIMEOUT);
     event.broadcaster=this;
 
-    TimeBroadcaster::createTimeout(this,&event,start);
+    event.put(EMPATHY_LIFE_EVENT_ID,&id);
+
+    TimeBroadcaster::createTimeout(this,event,start);
 }
 
 void LifeEvent::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
-    Event event(EMPATHY_EVENT_WAVE_COMPLETE);
+    Event event(EMPATHY_EVENT_REPEAT_TIMEOUT);
     event.broadcaster=this;
+    event.put(EMPATHY_LIFE_EVENT_ID,&id);
 
-    cout<<"while creating"<<event.action<<endl;
-    TimeBroadcaster::createRepeatingTimeout(this,&event,start,interval);
+    TimeBroadcaster::createRepeatingTimeout(this,event,start,interval);
 }
 
 void LifeEvent::createRepeatingTimeout(GLfloat interval, int id) {

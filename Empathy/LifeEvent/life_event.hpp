@@ -11,6 +11,8 @@
 #include <map>
 #include <GL/glew.h>
 
+#define EMPATHY_LIFE_EVENT_ID "ID"
+
 class LifeEvent : public Subscriber{
 public:
 	int id;
@@ -19,11 +21,11 @@ public:
     std::map<GLfloat ,int> timeouts;
     std::map<GLfloat ,int> intervals;
 
-	virtual void draw(GLuint)=0;
+	virtual void draw(GLuint);
 
-	virtual void destroy()=0;
+	virtual void destroy();
 
-	virtual void init()=0;
+	virtual void init();
 
 	GLfloat totalTime;
 	virtual void passTime(GLfloat);

@@ -11,16 +11,21 @@
 
 #include <vector>
 #include "TimeBroadcasterObject.h"
+
+#define EMPATHY_EVENT_TIMEOUT "EMPATHY_EVENT_TIMEOUT"
+#define EMPATHY_EVENT_REPEAT_TIMEOUT "EMPATHY_EVENT_REPEAT_TIMEOUT"
+
+
 class TimeBroadcaster {
-private:
-    static std::vector<TimeBroadcasterObject> items;
 
 public:
-    static void createRepeatingTimeout(Subscriber *,Event*,GLfloat,GLfloat);
+    static void createRepeatingTimeout(Subscriber *,Event&,GLfloat,GLfloat);
 
-    static void createTimeout(Subscriber *, Event*, GLfloat);
+    static void createTimeout(Subscriber *, Event&, GLfloat);
 
     static void poll(GLfloat);
+
+    static std::vector<TimeBroadcasterObject> items;
 };
 
 
