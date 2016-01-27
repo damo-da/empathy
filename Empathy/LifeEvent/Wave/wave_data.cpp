@@ -2,15 +2,13 @@
 #include "wave_data.hpp"
 
 
-WaveData::WaveData(GLfloat amplitude, GLfloat radius, GLfloat centerX, GLfloat centerY) {
-	this->amplitude = amplitude;
+WaveData::WaveData(GLfloat radius, GLfloat centerX, GLfloat centerY) {
 	this->radius = radius;
 	this->centerX = centerX;
 	this->centerY = centerY;
 }
 
-WaveData::WaveData(GLfloat amplitude, GLfloat radius, GLfloat centerX, GLfloat centerY, bool initGL) {
-	this->amplitude = amplitude;
+WaveData::WaveData( GLfloat radius, GLfloat centerX, GLfloat centerY, bool initGL) {
 	this->radius = radius;
 	this->centerX = centerX;
 	this->centerY = centerY;

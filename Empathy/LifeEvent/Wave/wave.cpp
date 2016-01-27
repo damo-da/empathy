@@ -60,21 +60,11 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
     LifeEvent::passTime(delTime);
 
     if(shouldCreateNewWave){
-
-        GLfloat frequency = getFrequency();
-        GLfloat aMomentum = 2 * M_PI * frequency;
-        GLfloat amplitude = sin(aMomentum * getTime());
-
         //create the new wave
-        WaveData data(1.0f, 0.0f, centerX, centerY, true);
+        WaveData data( 0.0f, centerX, centerY, true);
 
         //create a callback for next wave
         createTimeOut(getTimePeriod(),EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE);
-
-        //broadcast that the wave is complete
-        Event e(EMPATHY_EVENT_WAVE_COMPLETE);emit(e);
-
-
 
         waveData.push_back(data);
 
@@ -106,6 +96,10 @@ void LifeEvent_Wave::onReceiveEvent(Event &event) {
 
         if(id==getId()){
             shouldCreateNewWave=true;
+
+            //broadcast that the wave is complete
+            Event e(EMPATHY_EVENT_WAVE_COMPLETE);
+            emit(e);
         }
     }else{
         cout<<"else event received"<<event.action<<endl;

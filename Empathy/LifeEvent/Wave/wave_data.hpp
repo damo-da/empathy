@@ -9,7 +9,7 @@
 
 class WaveData{
 public:
-	GLfloat amplitude;
+
 	GLfloat radius;
 	GLfloat centerX;
 	GLfloat centerY;
@@ -17,8 +17,8 @@ public:
 	GLuint VBO;
 	std::vector<GLfloat> vertices;
 
-	WaveData(GLfloat,GLfloat,GLfloat,GLfloat);
-	WaveData(GLfloat,GLfloat,GLfloat,GLfloat,bool);
+	WaveData(GLfloat radius,GLfloat,GLfloat);
+	WaveData(GLfloat radius,GLfloat,GLfloat,bool);
 	void initVertexObjects();
 	void calculateGlVertices();
 	GLuint getVAO();

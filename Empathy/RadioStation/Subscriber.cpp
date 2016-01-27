@@ -8,7 +8,8 @@
 #include "TimeBroadcaster.h"
 
 void Subscriber::emit(Event & event) {
-    event. broadcaster=this;
+    event.broadcaster=this;
+    event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
 
     BroadcastStation::emit(event);
 }

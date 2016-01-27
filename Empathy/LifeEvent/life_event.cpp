@@ -12,7 +12,6 @@ void LifeEvent::passTime(GLfloat delTime){
 }
 
 GLfloat LifeEvent::getTime(){
-	// cout<<"getting time"<<endl;
 	return totalTime;
 }
 
@@ -26,6 +25,6 @@ void LifeEvent::init(){
 }
 
 void LifeEvent::draw(GLuint shaderProgram){
-    std::cout<<"Drawing base"<<std::endl;
+//    std::cout<<"Drawing base"<<std::endl;
 }
 
