@@ -11,13 +11,8 @@
 #include <map>
 #include <GL/glew.h>
 
-#define EMPATHY_LIFE_EVENT_ID "EMPATHY_LIFE_EVENT_ID"
-
 class LifeEvent : public Subscriber{
 public:
-	int id;
-    int getId(){return id;}
-
     std::map<GLfloat ,int> timeouts;
     std::map<GLfloat ,int> intervals;
 
@@ -32,11 +27,6 @@ public:
 	GLfloat getTime();
 	
 	LifeEvent();
-
-	void createTimeOut(GLfloat interval,int);
-
-    void createRepeatingTimeout(GLfloat,GLfloat,int);
-	void createRepeatingTimeout(GLfloat,int);
 private:
 
 };

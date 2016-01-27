@@ -5,18 +5,17 @@
 #include "wave_data.hpp"
 
 #include <vector>
+#include <math.h>
 
 #define EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE 1
 #define EMPATHY_LIFE_EVENT_WAVE_ID "WAVE_ID"
 
 class LifeEvent_Wave: public LifeEvent {
-public:
 
+public:
+    virtual void onReceiveEvent(Event &event) override;
 
     std::vector<GLfloat> color;//in rgba
-    GLfloat frequency, waveLength;
-    GLfloat amplitude;
-    GLfloat lastWaveCompletionTime;
 
 	GLfloat centerX;
 	GLfloat centerY;
@@ -43,17 +42,23 @@ public:
 
 	void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
-	GLfloat getFrequency();
-    GLfloat getTimePeriod();
-	GLfloat getLastWaveCompletionTime();
+	GLfloat getFrequency(){return frequency;}
+    GLfloat getWavelength(){return waveLength;}
+    void setFrequency(GLfloat f){this->frequency=f;}
+    GLfloat getLastWaveCompletionTime(){return lastWaveCompletionTime;}
+
+    GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
+    GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
+    GLfloat getTimePeriod(){return 1.0f/getFrequency();}
+
+
 
 	void passTime(GLfloat);
 
-
 private:
+    GLfloat frequency, waveLength;
+    GLfloat lastWaveCompletionTime;
 
-public:
-	virtual void onReceiveEvent(Event &event) override;
 };
 
 #endif

@@ -6,6 +6,7 @@
 #define EMPATHY_STATIONBASE_H
 
 
+#define EMPATHY_SUBSCRIBER_ID "EMPATHY_SUBSCRIBER_ID"
 #include "Event.h"
 
 //The class to be overridden to emit/receive broadcasts
@@ -16,6 +17,17 @@ public:
     void emit(Event&);
 
     void listen(std::string);
+
+    Subscriber();
+
+    void createTimeOut(GLfloat interval,int);
+
+    void createRepeatingTimeout(GLfloat,GLfloat,int);
+    void createRepeatingTimeout(GLfloat,int);
+
+    int getId(){return id;}
+private:
+    int id;
 };
 
 
