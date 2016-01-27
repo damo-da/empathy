@@ -81,7 +81,7 @@ void You::init(){
     addEvent(sineWave);
 
     LifeEvent_SineWave * sineWave1=new LifeEvent_SineWave();
-    sineWave1->setColor(1.0f,0.0f,1.0f,0.1f);//pink
+    sineWave1->setColor(0.0f,1.0f,1.0f,0.1f);//pink
     sineWave1->setAmplitude(0.2f);
     sineWave1->setSpeed(-0.3f);
     sineWave1->setBaseValue(-0.4f);

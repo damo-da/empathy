@@ -44,7 +44,6 @@ public:
         return period;
     }
     void setLength(GLfloat length) {
-        std::cout<<"length set"<<std::endl;
         this->length = length;
     }
     void setSpeed(GLfloat speed) {

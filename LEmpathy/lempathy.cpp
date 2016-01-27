@@ -49,7 +49,7 @@ void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
 }
 
 void LEmpathy::init(){
-	cout<<"init lempathy"<<endl;
+//	cout<<"init lempathy"<<endl;
 	instance=this;
 
 	initGlfw();
@@ -58,17 +58,17 @@ void LEmpathy::init(){
 	empathy->init();
 }
 void LEmpathy::initEmpathyInstance() {
-	cout<<"Create empathy instance"<<endl;
-	cout<<"passed "<<window<<endl;
+//	cout<<"Create empathy instance"<<endl;
+//	cout<<"passed "<<window<<endl;
 	empathy = new Empathy(this);
 	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 }
 
 void LEmpathy::initGlfw() {
-	cout<<"glfwInit"<<endl;
-	cout<<"Version is "<<glfwInit()<<endl;
+//	cout<<"glfwInit"<<endl;
 
 
+	glfwInit();
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

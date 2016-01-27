@@ -14,7 +14,7 @@ void Empathy::flush(){
 }
 
 void Empathy::init() {
-	cout<<"initing emp"<<endl;
+//	cout<<"initing emp"<<endl;
 
 	initGlew();
 
@@ -25,7 +25,7 @@ void Empathy::init() {
 	initYou();
 }
 void Empathy::initGlew(){
-	cout<<"initing glew"<<endl;
+//	cout<<"initing glew"<<endl;
 
 	//initialize GLEW
 	glewExperimental = GL_TRUE;
@@ -37,7 +37,7 @@ void Empathy::initGlew(){
 }
 
 void Empathy::initShaders(){
-	cout<<"initing shaders"<<endl;
+//	cout<<"initing shaders"<<endl;
 
 	GLuint fragmentShader=emCreateFragmentShader();
 	GLuint vertexShader=emCreateVertexShader();
@@ -46,7 +46,7 @@ void Empathy::initShaders(){
 }
 
 void Empathy::initGL(){
-	cout<<"initing glViewport"<<sc_size_x<<","<<sc_size_y<<endl;
+//	cout<<"initing glViewport"<<sc_size_x<<","<<sc_size_y<<endl;
 	glViewport(0, 0, sc_size_x, sc_size_y);
 }
 
@@ -57,7 +57,7 @@ void Empathy::initYou(){
 
 
 GLuint emCreateFragmentShader() {
-    cout<<"created emCreateFragmentShader"<<endl;
+//    cout<<"created emCreateFragmentShader"<<endl;
 
     //read the shaders
     // 1. Retrieve the vertex/fragment source code from filePath
@@ -97,7 +97,7 @@ GLuint emCreateFragmentShader() {
 }
 
 GLuint emCreateVertexShader() {
-    cout<<"created emCreateVertexShader"<<endl;
+//    cout<<"created emCreateVertexShader"<<endl;
     std::string vertexCode = "#version 330 core\n"
             "layout (location = 0) in vec2 position;\n"
             "void main()\n"
@@ -131,7 +131,7 @@ GLuint emCreateVertexShader() {
 }
 
 GLuint emCreateShaderProgram(GLuint fragmentShader , GLuint vertexShader) {
-    cout<<"created emCreateShaderProgram"<<endl;
+//    cout<<"created emCreateShaderProgram"<<endl;
 
     //create shader program
     GLuint shaderProgram = glCreateProgram();
@@ -150,13 +150,13 @@ GLuint emCreateShaderProgram(GLuint fragmentShader , GLuint vertexShader) {
 }
 
 void Empathy::setScreenSize(int x,int y){
-    cout<<"Set setScreenSize"<<endl;
+//    cout<<"Set setScreenSize"<<endl;
     sc_size_x=x;
     sc_size_y=y;
 }
 
 void Empathy::begin() {
-    cout << "empathy begin" << endl;
+//    cout << "empathy begin" << endl;
 
 
 
