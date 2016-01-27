@@ -5,20 +5,22 @@
 #include <math.h>
 #include "LifeEvent_SineWave.h"
 
+using namespace std;
+
 void LifeEvent_SineWave::draw(GLuint shaderProgram) {
     LifeEvent::draw(shaderProgram);
 
     glUseProgram(shaderProgram);
 
     // cout<<"Drawing"<<endl;
-    glLineWidth(2.5);
+    glLineWidth(2.5f);
 
     //set Vertex Color
     GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
     glUniform4f(vertexColorLocation, color[0], color[1], color[2], color[3]);
 
     glBindVertexArray(VAO);
-    glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 2);
+    glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 2);
     glBindVertexArray(0);
 
     glUseProgram(0);
@@ -43,31 +45,24 @@ void LifeEvent_SineWave::init() {
     color = {1.0f, 1.0f, 1.0f, 1.0f};
 
     head=0.0f;
+    period=8.0f;
 }
+
 void LifeEvent_SineWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
 }
 
 void LifeEvent_SineWave::passTime(GLfloat lfloat) {
-//    std::cout<<"passTime done"<<std::endl;
     LifeEvent::passTime(lfloat);
-
-    float radius=0.3f;
 
     if (!(VAO && VBO))return;
 
-    // cout << "Calculating vertices" << endl;
     vertices.clear();
 
-    float diff = 0.01f;
-    float cerv = 2 * M_PI * radius;
-
-
-    for (float i = 0; i < cerv; i += diff) {
-        float angle = 2 * M_PI * i / cerv;
-
-        float x = radius * cos(angle) ;
-        float y = radius * sin(angle) ;
+    for(float i=0;i<getLength();i+=diff){
+        GLfloat x=i + head;
+        x += speed*getTime();
+        GLfloat y=sin(x*period*2*M_PI)*amplitude;
 
         vertices.push_back(x);
         vertices.push_back(y);
@@ -97,14 +92,20 @@ LifeEvent_SineWave::LifeEvent_SineWave(GLfloat length,GLfloat baseValue,GLfloat 
     init();
 };
 
-LifeEvent_SineWave::LifeEvent_SineWave(GLfloat length, GLfloat baseValue, GLfloat amplitude,GLfloat speed):
+LifeEvent_SineWave::LifeEvent_SineWave(GLfloat l, GLfloat b, GLfloat a,GLfloat s):
         LifeEvent(),
-        length(length),
-        speed(speed),
-        baseValue(baseValue),
-        amplitude(amplitude),
+        length(l),
+        baseValue(b),
+        amplitude(a),
+        speed(s),
         horizontal(true) {
+
+
     init();
 }
 
-GLfloat LifeEvent_SineWave::diff=0.01f;
+GLfloat LifeEvent_SineWave::diff=0.003f;
+
+LifeEvent_SineWave::LifeEvent_SineWave() {
+    init();
+}

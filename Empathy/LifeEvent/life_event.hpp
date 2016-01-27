@@ -13,9 +13,6 @@
 
 class LifeEvent : public Subscriber{
 public:
-    std::map<GLfloat ,int> timeouts;
-    std::map<GLfloat ,int> intervals;
-
 	virtual void draw(GLuint);
 
 	virtual void destroy();

@@ -21,25 +21,70 @@ public:
 
     LifeEvent_SineWave(GLfloat length,GLfloat baseValue,GLfloat amplitude,GLfloat speed,bool horizontal);
     LifeEvent_SineWave(GLfloat length,GLfloat baseValue,GLfloat amplitude,GLfloat speed);
-
-    int getLength(){return length;}
-    bool isHorizontal(){return horizontal;}
+    LifeEvent_SineWave();
 
     void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
     static GLfloat diff;
+
+    GLfloat getLength(){return length;}
+    bool isHorizontal(){return horizontal;}
+    GLfloat getBaseValue() const {
+        return baseValue;
+    }
+    GLfloat getSpeed() const {
+        return speed;
+    }
+    GLfloat getAmplitude() const {
+        return amplitude;
+    }
+    GLfloat getPeriod() const {
+        return period;
+    }
+    void setLength(GLfloat length) {
+        std::cout<<"length set"<<std::endl;
+        this->length = length;
+    }
+    void setSpeed(GLfloat speed) {
+        LifeEvent_SineWave::speed = speed;
+    }
+    void setBaseValue(GLfloat baseValue) {
+        LifeEvent_SineWave::baseValue = baseValue;
+    }
+    void setHorizontal(bool horizontal) {
+        LifeEvent_SineWave::horizontal = horizontal;
+    }
+    void setAmplitude(GLfloat amplitude) {
+        LifeEvent_SineWave::amplitude = amplitude;
+    }
+    void setPeriod(GLfloat period) {
+        LifeEvent_SineWave::period = period;
+    }
+
 private:
     GLfloat head;
 
-    const GLfloat length;
+    GLfloat length;
 
-    const GLfloat speed;
+    GLfloat speed;
 
-    const GLfloat baseValue;
+    GLfloat baseValue;
 
-    const GLfloat amplitude;
+    GLfloat amplitude;
 
-    const bool horizontal;
+public:
+    GLfloat getHead() const {
+        return head;
+    }
+
+    void setHead(GLfloat head) {
+        LifeEvent_SineWave::head = head;
+    }
+
+private:
+    bool horizontal;
+
+    GLfloat period;
 
     GLuint VAO,VBO;
     std::vector<GLfloat> vertices;

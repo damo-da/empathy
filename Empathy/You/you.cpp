@@ -62,8 +62,15 @@ void You::init(){
 //	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
 //     addEvent(sWave);
 
-    LifeEvent_SineWave * sineWave=new LifeEvent_SineWave(0.4f,0.0f,0.1f,1.0f);
+    LifeEvent_SineWave * sineWave=new LifeEvent_SineWave();
     sineWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+    sineWave->setAmplitude(0.2f);
+    sineWave->setSpeed(0.2f);
+    sineWave->setBaseValue(0.4f);
+    sineWave->setHorizontal(false);
+    sineWave->setPeriod(8.3f);
+    sineWave->setLength(1.0f);
+    sineWave->setHead(-1.0f-sineWave->getLength());
     addEvent(sineWave);
 
     //initializing time
