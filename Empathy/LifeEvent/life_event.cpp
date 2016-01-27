@@ -21,10 +21,17 @@ void LifeEvent::destroy(){
 }
 
 void LifeEvent::init(){
-
+	finished=false;
 }
 
 void LifeEvent::draw(GLuint shaderProgram){
 //    std::cout<<"Drawing base"<<std::endl;
 }
 
+bool LifeEvent::shouldDestroy() {
+	return finished;
+
+}
+
+
+void LifeEvent::setShouldDestroy(bool state){finished=true;}

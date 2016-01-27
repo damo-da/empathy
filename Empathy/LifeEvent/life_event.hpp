@@ -24,7 +24,12 @@ public:
 	GLfloat getTime();
 	
 	LifeEvent();
+
+    bool shouldDestroy();
+    void setShouldDestroy(bool);
 private:
+	bool finished;
+
 
 };
 

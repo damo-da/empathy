@@ -39,6 +39,13 @@ void You::passTime(GLfloat timeLength){
     for(int i=0;i<lifeEvents->size();i++){
         LifeEvent * event=(*lifeEvents)[i];
 
+        if(event->shouldDestroy()){
+            removeEvent(event);
+            i--;
+            continue;
+        }
+
+
         event->passTime(timeLength);
     }
     TimeBroadcaster::poll(timeLength);
@@ -53,17 +60,17 @@ void You::init(){
     lifeEvents=new std::vector<LifeEvent*>();
 
     //add a base wave
-//    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
+    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
 //    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
 //    addEvent(wave);
 //
 //	//add a secondary wave
-//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
 //	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
 //     addEvent(sWave);
 
     LifeEvent_SineWave * sineWave=new LifeEvent_SineWave();
-    sineWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+    sineWave->setColor(1.0f,1.0f,1.0f,0.1f);//pink
     sineWave->setAmplitude(0.2f);
     sineWave->setSpeed(0.2f);
     sineWave->setBaseValue(0.4f);

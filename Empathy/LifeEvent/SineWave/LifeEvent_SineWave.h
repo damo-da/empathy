@@ -9,6 +9,8 @@
 #include <vector>
 #include "../life_event.hpp"
 
+#define EMPATHY_LIFE_EVENT_SINE_WAVE_STARTED_DESTROYING "EMPATHY_LIFE_EVENT_SINE_WAVE_STARTED_DESTROYING"
+#define EMPATHY_LIFE_EVENT_SINE_WAVE_DESTROYED "EMPATHY_LIFE_EVENT_SINE_WAVE_DESTROYED"
 class LifeEvent_SineWave : public LifeEvent{
 public:
     virtual void draw(GLuint shaderProgram) override;
@@ -71,6 +73,8 @@ private:
     GLfloat baseValue;
 
     GLfloat amplitude;
+
+    bool startedDestroying;
 
 public:
     GLfloat getHead() const {

@@ -46,6 +46,8 @@ void LifeEvent_SineWave::init() {
 
     head=0.0f;
     period=8.0f;
+
+    startedDestroying=false;
 }
 
 void LifeEvent_SineWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
@@ -68,6 +70,25 @@ void LifeEvent_SineWave::passTime(GLfloat lfloat) {
         vertices.push_back(y);
     }
 
+    //events handler
+    if(head + getLength()+speed*getTime()>1.0f){
+
+        if(!startedDestroying){
+            Event e=Event(EMPATHY_LIFE_EVENT_SINE_WAVE_STARTED_DESTROYING);
+            emit(e);
+
+            startedDestroying=true;
+        }else{
+            if(head+speed*getTime()>1.0f){
+                Event e=Event(EMPATHY_LIFE_EVENT_SINE_WAVE_DESTROYED);
+                emit(e);
+
+                setShouldDestroy(true);
+            }
+        }
+
+    }
+
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
@@ -82,13 +103,13 @@ void LifeEvent_SineWave::passTime(GLfloat lfloat) {
 }
 
 
-LifeEvent_SineWave::LifeEvent_SineWave(GLfloat length,GLfloat baseValue,GLfloat amplitude,GLfloat speed,bool horizontal):
+LifeEvent_SineWave::LifeEvent_SineWave(GLfloat l,GLfloat b,GLfloat a,GLfloat s,bool h):
         LifeEvent(),
-        length(length),
-        baseValue(baseValue),
-        amplitude(amplitude),
-        speed(speed),
-        horizontal(horizontal) {
+        length(l),
+        baseValue(b),
+        amplitude(a),
+        speed(s),
+        horizontal(h) {
     init();
 };
 
