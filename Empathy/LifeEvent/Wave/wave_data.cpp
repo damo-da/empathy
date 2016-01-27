@@ -56,16 +56,10 @@ void WaveData::calculateGlVertices() {
 
 }
 void WaveData::draw(GLuint shaderProgram) {
-	
-
-
 	// Draw the circle
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 2);
 	glBindVertexArray(0);
-	
-
-
 	// cout<<"drawn "<<endl;
 }
 GLuint WaveData::getVAO() {

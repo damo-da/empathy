@@ -3,11 +3,12 @@
 #include "../LifeEvent/Wave/wave.hpp"
 #include "../global.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
+#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
 
 using namespace std;
 
 You::You(GLuint &shader){
-	shaderProgram=shader;
+    shaderProgram=shader;
 }
 
 
@@ -52,14 +53,18 @@ void You::init(){
     lifeEvents=new std::vector<LifeEvent*>();
 
     //add a base wave
-    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
-    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
-    addEvent(wave);
-
-	//add a secondary wave
+//    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
+//    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
+//    addEvent(wave);
+//
+//	//add a secondary wave
 //	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
 //	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
 //     addEvent(sWave);
+
+    LifeEvent_SineWave * sineWave=new LifeEvent_SineWave(0.4f,0.0f,0.1f,1.0f);
+    sineWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+    addEvent(sineWave);
 
     //initializing time
     curTime=0;
