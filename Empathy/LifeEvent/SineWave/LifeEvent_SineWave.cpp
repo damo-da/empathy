@@ -66,8 +66,15 @@ void LifeEvent_SineWave::passTime(GLfloat lfloat) {
         x += speed*getTime();
         GLfloat y=sin(x*period*2*M_PI)*amplitude;
 
-        vertices.push_back(x);
-        vertices.push_back(y);
+        y+=baseValue;
+        if(isHorizontal()){
+            vertices.push_back(x);
+            vertices.push_back(y);
+        }else{
+            vertices.push_back(y);
+            vertices.push_back(x);
+        }
+
     }
 
     //events handler

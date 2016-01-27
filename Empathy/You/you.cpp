@@ -61,24 +61,35 @@ void You::init(){
 
     //add a base wave
     LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
-//    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
-//    addEvent(wave);
+    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
+    addEvent(wave);
 //
 //	//add a secondary wave
 	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-//     addEvent(sWave);
+	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+     addEvent(sWave);
 
     LifeEvent_SineWave * sineWave=new LifeEvent_SineWave();
     sineWave->setColor(1.0f,1.0f,1.0f,0.1f);//pink
     sineWave->setAmplitude(0.2f);
-    sineWave->setSpeed(0.2f);
+    sineWave->setSpeed(0.3f);
     sineWave->setBaseValue(0.4f);
-    sineWave->setHorizontal(false);
+    sineWave->setHorizontal(true);
     sineWave->setPeriod(8.3f);
-    sineWave->setLength(1.0f);
-    sineWave->setHead(-1.0f-sineWave->getLength());
+    sineWave->setLength(0.5f);
+    sineWave->setHead(-0.7f);
     addEvent(sineWave);
+
+    LifeEvent_SineWave * sineWave1=new LifeEvent_SineWave();
+    sineWave1->setColor(1.0f,0.0f,1.0f,0.1f);//pink
+    sineWave1->setAmplitude(0.2f);
+    sineWave1->setSpeed(-0.3f);
+    sineWave1->setBaseValue(-0.4f);
+    sineWave1->setHorizontal(true);
+    sineWave1->setPeriod(8.3f);
+    sineWave1->setLength(0.5f);
+    sineWave1->setHead(0.7f);
+    addEvent(sineWave1);
 
     //initializing time
     curTime=0;
