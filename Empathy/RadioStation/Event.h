@@ -6,21 +6,28 @@
 #define EMPATHY_EVENT_H
 
 
+
+#include <GL/glew.h>
+#include <iostream>
 #include <map>
 
 class Event {
 public:
-    void put(std::string key, const void *value) {
-        data[key]=&value;
+    void putString(std::string key, std::string value) {
+        strData[key]=value;
 
     }
+    void putInt(std::string key,int value){
 
-    const void *get(const std::string key) {
-        return data[key];
+        intData[key]=value;
     }
 
-    bool existsKey(std::string key) {
-        return data.find(key) != data.end();
+    const int getInt(const std::string key){
+        return intData[key];
+    }
+
+    const std::string getString(const std::string key){
+        return strData[key];
     }
 
     Event(std::string);
@@ -30,7 +37,8 @@ public:
 
     void * broadcaster;
 private:
-    std::map<std::string,void *> data;
+    std::map<std::string,int> intData;
+    std::map<std::string,std::string> strData;
 };
 
 

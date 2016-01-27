@@ -9,12 +9,17 @@ using namespace std;
 void LifeEvent_Wave::init() {
     LifeEvent::init();
 
-//	frequency=1.0f;
+	frequency=1.0f;
 	waveLength = 2.f;
 	amplitude = 1.0f;
 
+    lastWaveCompletionTime=0.0f;
+
+    shouldCreateNewWave=true;
+
 	color = {1.0f, 1.0f, 1.0f, 1.0f};
-    createRepeatingTimeout(getTimePeriod(),EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE);
+
+    createRepeatingTimeout(3.0f,EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE);
 }
 
 void LifeEvent_Wave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
@@ -26,7 +31,6 @@ void LifeEvent_Wave::destroy() {
 		waveData[i].destroy();
 	}
 }
-
 
 void LifeEvent_Wave::draw(GLuint shaderProgram) {
 	glUseProgram(shaderProgram);
@@ -58,13 +62,13 @@ LifeEvent_Wave::LifeEvent_Wave(GLfloat cX, GLfloat cY)
 }
 
 GLfloat LifeEvent_Wave::getFrequency() {
-	return speed / waveLength;
+	return frequency;
 }
 GLfloat LifeEvent_Wave::getLastWaveCompletionTime() {
 	return lastWaveCompletionTime;
 }
 GLfloat LifeEvent_Wave::getTimePeriod() {
-	return waveLength / speed;
+	return 1.0f/frequency;
 }
 
 void LifeEvent_Wave::passTime(GLfloat delTime) {
@@ -72,7 +76,7 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 
 	GLfloat timeDiff = getTime() - getLastWaveCompletionTime();
 
-	GLfloat distanceDiff=speed*timeDiff;
+	GLfloat distanceDiff=waveLength/(timeDiff/frequency);
 
 	if (distanceDiff>waveLength || (getLastWaveCompletionTime() == 0 && waveData.size() == 0)) {
 		// cout << "wave complete at " << getTime() << endl;
@@ -91,7 +95,7 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 		waveData.push_back(data);
 
 		Event e=Event(EMPATHY_EVENT_WAVE_COMPLETE);
-        emit(&e);
+        emit(e);
 	}
 
 	for (int i = 0; i < waveData.size(); i++) {
@@ -112,13 +116,15 @@ void LifeEvent_Wave::passTime(GLfloat delTime) {
 
 }
 
-void LifeEvent_Wave::onReceiveEvent(Event *event) {
+void LifeEvent_Wave::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
-    cout<<"Event received"<<endl;
+    if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT){
 
-    string act=event->action;
+        int id=event.getInt(EMPATHY_LIFE_EVENT_ID);
 
-    cout<<act<<"is act "<<act.size()<<endl;
-
+        cout<<"received correct event with id "<<id<<endl;
+    }else{
+		cout<<"else event received"<<event.action<<endl;
+	}
 }

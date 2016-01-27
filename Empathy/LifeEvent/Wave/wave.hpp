@@ -14,12 +14,14 @@ public:
 
 
     std::vector<GLfloat> color;//in rgba
-    GLfloat speed, waveLength;
+    GLfloat frequency, waveLength;
     GLfloat amplitude;
     GLfloat lastWaveCompletionTime;
 
 	GLfloat centerX;
 	GLfloat centerY;
+
+    bool shouldCreateNewWave;
 
     std::vector<WaveData> waveData;
 
@@ -51,7 +53,7 @@ public:
 private:
 
 public:
-	virtual void onReceiveEvent(Event *event) override;
+	virtual void onReceiveEvent(Event &event) override;
 };
 
 #endif

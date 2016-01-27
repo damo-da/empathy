@@ -11,7 +11,7 @@
 #include <map>
 #include <GL/glew.h>
 
-#define EMPATHY_LIFE_EVENT_ID "ID"
+#define EMPATHY_LIFE_EVENT_ID "EMPATHY_LIFE_EVENT_ID"
 
 class LifeEvent : public Subscriber{
 public:

@@ -19,7 +19,7 @@ public:
     BroadcastStation();
 
     //emit an event to the whole world
-    static void emit(Event*);
+    static void emit(Event&);
 
 protected:
     static BroadcastStation * instance;

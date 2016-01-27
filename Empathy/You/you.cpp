@@ -11,10 +11,10 @@ You::You(GLuint &shader){
 }
 
 
-void You::onReceiveEvent(Event * event) {
+void You::onReceiveEvent(Event & event) {
     Subscriber::onReceiveEvent(event);
 
-    if(event->action==EMPATHY_EVENT_INPUT_KEY_PRESS){
+    if(event.action==EMPATHY_EVENT_INPUT_KEY_PRESS){
         cout<<"key press listened!"<<endl;
     }
 }

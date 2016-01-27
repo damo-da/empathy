@@ -41,9 +41,9 @@ void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
 	}
     if(myAction != ""){
         Event event=Event(myAction);
-        event.put(EMPATHY_EVENT_INPUT_KEY,&key);
+        event.putInt(EMPATHY_EVENT_INPUT_KEY,key);
 
-        BroadcastStation::emit(&event);
+        BroadcastStation::emit(event);
     }
 
 }

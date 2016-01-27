@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "TimeBroadcaster.h"
+#include "../LifeEvent/life_event.hpp"
+
 using namespace std;
 
 void TimeBroadcaster::createRepeatingTimeout(Subscriber *subscriber, Event & event, GLfloat start,GLfloat period) {
@@ -26,7 +28,7 @@ void TimeBroadcaster::poll(GLfloat delTime){
         item.nextOccurance -= delTime;
 
         if(item.nextOccurance<=0){
-            item.subscriber->onReceiveEvent(&item.event);
+            item.subscriber->onReceiveEvent(item.event);
 
             if(!item.repeat){
                 items.erase(items.begin()+i);
@@ -34,6 +36,7 @@ void TimeBroadcaster::poll(GLfloat delTime){
                 i--;
                 continue;
             }
+
             item.nextOccurance += item.period;
         }
 

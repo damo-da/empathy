@@ -10,12 +10,7 @@ LifeEvent::LifeEvent(){
 	totalTime=0.0f;
 }
 void LifeEvent::passTime(GLfloat delTime){
-	if(totalTime==0)
-        cout<<"delTime is "<<delTime<<endl;
-
-	// cout<<"passing base time"<<endl;
 	totalTime += delTime;
-	// cout<<"passed base time"<<endl;
 }
 
 GLfloat LifeEvent::getTime(){
@@ -40,7 +35,7 @@ void LifeEvent::createTimeOut(GLfloat start, int id) {
     Event event(EMPATHY_EVENT_TIMEOUT);
     event.broadcaster=this;
 
-    event.put(EMPATHY_LIFE_EVENT_ID,&id);
+    event.putInt(EMPATHY_LIFE_EVENT_ID,id);
 
     TimeBroadcaster::createTimeout(this,event,start);
 }
@@ -48,11 +43,12 @@ void LifeEvent::createTimeOut(GLfloat start, int id) {
 void LifeEvent::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
     Event event(EMPATHY_EVENT_REPEAT_TIMEOUT);
     event.broadcaster=this;
-    event.put(EMPATHY_LIFE_EVENT_ID,&id);
+
+    event.putInt(EMPATHY_LIFE_EVENT_ID,id);
 
     TimeBroadcaster::createRepeatingTimeout(this,event,start,interval);
 }
 
 void LifeEvent::createRepeatingTimeout(GLfloat interval, int id) {
-    createRepeatingTimeout(0.0f,interval,id);
+    createRepeatingTimeout(interval,interval,id);
 }

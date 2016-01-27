@@ -10,4 +10,6 @@ Event::Event(std::string action):action(action) {
     name="Event ";
 
     broadcaster = nullptr;
+
+//    data=new std::map<std::string,void*>();
 }

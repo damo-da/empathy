@@ -12,10 +12,10 @@ void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
     instance->channels[id].push_back(subscriber);
 }
 
-void BroadcastStation::emit(Event * e) {
-    if(! instance->existsChannel(e->action))return;
+void BroadcastStation::emit(Event & e) {
+    if(! instance->existsChannel(e.action))return;
 
-    std::vector<Subscriber*> subscribers= instance->channels[e->action];
+    std::vector<Subscriber*> subscribers= instance->channels[e.action];
 
     for(int i=0;i<subscribers.size();i++){
         subscribers[i]->onReceiveEvent(e);
