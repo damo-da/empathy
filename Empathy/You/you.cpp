@@ -2,7 +2,7 @@
 #include "you.hpp"
 #include "../LifeEvent/Wave/wave.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
-#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
+//#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
 #include "../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../LifeEvent/MathWave/MathWave_Sinc.h"
 
@@ -67,9 +67,9 @@ void You::init(){
     addEvent(wave);
 //
 //	//add a secondary wave
-//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-//     addEvent(sWave);
+	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+     addEvent(sWave);
 
     MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
     sineWave->setZoomY(0.1f);
