@@ -14,13 +14,13 @@
 
 class LifeEvent_MathWave : public LifeEvent{
 public:
-    virtual void draw(GLuint shaderProgram) override;
+    void draw(GLuint shaderProgram) override;
 
-    virtual void destroy() override;
+    void destroy() override;
 
-    virtual void init();
+    virtual void init() override ;
 
-    virtual void passTime(GLfloat lfloat) override;
+    void passTime(GLfloat lfloat) override;
 
     LifeEvent_MathWave(bool horizontal);
     LifeEvent_MathWave();
@@ -29,7 +29,7 @@ public:
 
     bool isHorizontal(){return horizontal;}
 
-    GLfloat getY(GLfloat x);
+    virtual GLfloat getY(GLfloat x)=0;
 
     void setHorizontal(bool horizontal) {
         LifeEvent_MathWave::horizontal = horizontal;
@@ -98,6 +98,7 @@ public:
         return offsetY;
     }
 
+
     void setOffsetY(GLfloat offsetY) {
         LifeEvent_MathWave::offsetY = offsetY;
     }
@@ -117,7 +118,18 @@ private:
     GLfloat offsetX;
     GLfloat offsetY;
     GLfloat diff;
+    GLfloat pencilSize;
 
+public:
+    GLfloat getPencilSize() const {
+        return pencilSize;
+    }
+
+    void setPencilSize(GLfloat pencilSize) {
+        LifeEvent_MathWave::pencilSize = pencilSize;
+    }
+
+private:
     GLuint VAO,VBO;
     std::vector<GLfloat> vertices;
 

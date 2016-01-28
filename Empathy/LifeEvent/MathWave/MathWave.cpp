@@ -13,7 +13,7 @@ void LifeEvent_MathWave::draw(GLuint shaderProgram) {
     glUseProgram(shaderProgram);
 
     // cout<<"Drawing"<<endl;
-    glLineWidth(2.5f);
+    glLineWidth(getPencilSize());
 
     //set Vertex Color
     GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
@@ -28,7 +28,6 @@ void LifeEvent_MathWave::draw(GLuint shaderProgram) {
 }
 
 void LifeEvent_MathWave::destroy() {
-    std::cout<<"destruction done"<<std::endl;
     LifeEvent::destroy();
 
     glDeleteBuffers(1, &VBO);
@@ -53,6 +52,7 @@ void LifeEvent_MathWave::init() {
     setHead(-0.2f);
     setSpeed(0.1f);
     setHorizontal(true);
+    setPencilSize(2.0f);
 
     startedDestroying=false;
 }
@@ -118,8 +118,4 @@ void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
 
     glBindVertexArray(0); // Unbind VAO
     // cout<<"calculated vertices"<<endl;
-}
-
-GLfloat LifeEvent_MathWave::getY(GLfloat x) {
-    return x;
 }

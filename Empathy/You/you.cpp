@@ -1,10 +1,11 @@
 #include <iostream>
 #include "you.hpp"
 #include "../LifeEvent/Wave/wave.hpp"
-#include "../global.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
 #include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
-#include "../LifeEvent/MathWave/MathWave.h"
+#include "../LifeEvent/MathWave/MathWave_Sine.h"
+#include "../LifeEvent/MathWave/MathWave_Sinc.h"
+
 
 using namespace std;
 
@@ -66,34 +67,25 @@ void You::init(){
     addEvent(wave);
 //
 //	//add a secondary wave
-	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-     addEvent(sWave);
+//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+//     addEvent(sWave);
 
-    LifeEvent_SineWave * sineWave=new LifeEvent_SineWave();
-    sineWave->setColor(1.0f,1.0f,1.0f,0.1f);//pink
-    sineWave->setAmplitude(0.2f);
-    sineWave->setSpeed(0.3f);
-    sineWave->setBaseValue(0.4f);
-    sineWave->setHorizontal(true);
-    sineWave->setPeriod(8.3f);
-    sineWave->setLength(0.5f);
-    sineWave->setHead(-0.7f);
-    addEvent(sineWave);
+    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+    sineWave->setZoomY(0.1f);
+    sineWave->setPencilSize(2.0f);
+//    addEvent(sineWave);
 
-    LifeEvent_SineWave * sineWave1=new LifeEvent_SineWave();
-    sineWave1->setColor(0.0f,1.0f,1.0f,0.1f);//pink
-    sineWave1->setAmplitude(0.2f);
-    sineWave1->setSpeed(-0.3f);
-    sineWave1->setBaseValue(-0.4f);
-    sineWave1->setHorizontal(true);
-    sineWave1->setPeriod(8.3f);
-    sineWave1->setLength(0.5f);
-    sineWave1->setHead(0.7f);
-    addEvent(sineWave1);
+    MathWave_Sinc* sincWave=new MathWave_Sinc();
+    sincWave->setZoomY(0.7f);
+    sincWave->setOffsetY(-0.2f);
+    sincWave->setHorizontal(false);
+    sincWave->setSpeed(0.5f);
+    sincWave->setHead(-1.0f);
+    sincWave->setLength(0.4f);
+    sincWave->setPencilSize(2.0f);
+    addEvent(sincWave);
 
-    LifeEvent_MathWave * mathWave=new LifeEvent_MathWave();
-    addEvent(mathWave);
     //initializing time
     curTime=0;
 

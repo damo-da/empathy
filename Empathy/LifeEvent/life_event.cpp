@@ -5,23 +5,23 @@
 
 using namespace std;
 LifeEvent::LifeEvent(){
-	totalTime=0.0f;
+    totalTime=0.0f;
 }
 void LifeEvent::passTime(GLfloat delTime){
-	totalTime += delTime;
+    totalTime += delTime;
 }
 
 GLfloat LifeEvent::getTime(){
-	return totalTime;
+    return totalTime;
 }
 
 void LifeEvent::destroy(){
-	// Properly de-allocate all resources once they've outlived their purpose
-
+    // Properly de-allocate all resources once they've outlived their purpose
+    cout<<"Destroyed event "<<getId()<<endl;
 }
 
 void LifeEvent::init(){
-	finished=false;
+    finished=false;
 }
 
 void LifeEvent::draw(GLuint shaderProgram){
@@ -29,7 +29,7 @@ void LifeEvent::draw(GLuint shaderProgram){
 }
 
 bool LifeEvent::shouldDestroy() {
-	return finished;
+    return finished;
 
 }
 
