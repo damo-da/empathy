@@ -29,7 +29,7 @@ set (SOURCES
 		Empathy/RadioStation/Subscriber.cpp
 		Empathy/RadioStation/Subscriber.h
         Empathy/RadioStation/TimeBroadcaster.cpp
-        Empathy/RadioStation/TimeBroadcaster.h Empathy/RadioStation/TimeBroadcasterObject.cpp Empathy/RadioStation/TimeBroadcasterObject.h Empathy/Uniqueness.cpp Empathy/Uniqueness.h Empathy/LifeEvent/SineWave/LifeEvent_SineWave.cpp Empathy/LifeEvent/SineWave/LifeEvent_SineWave.h)
+        Empathy/RadioStation/TimeBroadcaster.h Empathy/RadioStation/TimeBroadcasterObject.cpp Empathy/RadioStation/TimeBroadcasterObject.h Empathy/Uniqueness.cpp Empathy/Uniqueness.h Empathy/LifeEvent/SineWave/LifeEvent_SineWave.cpp Empathy/LifeEvent/SineWave/LifeEvent_SineWave.h Empathy/LifeEvent/MathWave/MathWave.cpp Empathy/LifeEvent/MathWave/MathWave.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

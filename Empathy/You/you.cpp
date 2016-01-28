@@ -4,6 +4,7 @@
 #include "../global.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
 #include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
+#include "../LifeEvent/MathWave/MathWave.h"
 
 using namespace std;
 
@@ -91,6 +92,8 @@ void You::init(){
     sineWave1->setHead(0.7f);
     addEvent(sineWave1);
 
+    LifeEvent_MathWave * mathWave=new LifeEvent_MathWave();
+    addEvent(mathWave);
     //initializing time
     curTime=0;
 
