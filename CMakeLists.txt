@@ -38,7 +38,7 @@ set (SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Sinc.h
         Empathy/LifeEvent/MathWave/MathWave_Sinc.cpp
         Empathy/LifeEvent/MathWave/MathWave_Sine.h
-        Empathy/LifeEvent/MathWave/MathWave_Sine.cpp)
+        Empathy/LifeEvent/MathWave/MathWave_Sine.cpp Empathy/Implements/MoonLight.cpp Empathy/Implements/MoonLight.h LEmpathy/LoonLight.cpp LEmpathy/LoonLight.h Empathy/Implements/MoonLightBinder.cpp Empathy/Implements/MoonLightBinder.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

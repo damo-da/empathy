@@ -6,18 +6,21 @@
 #include "You/you.hpp"
 
 #include "LifeEvent/life_event.hpp"
-#include "Implements/EmpathyBinder.h"
 #include "RadioStation/BroadcastStation.h"
+
+#include "Implements/EmpathyBinder.h"
+#include "Implements/MoonLight.h"
 
 class Empathy{
 public:
     EmpathyBinder * binder;
+	MoonLight * moonLight;
 
 	//init the cross-platform system ready.
 	void init();
 
 	//The constructor
-	Empathy(EmpathyBinder * binder);
+	Empathy(EmpathyBinder * binder,MoonLight * moonLightBinder);
 
 	//The window is created. Begin serving empathy
 	void begin();

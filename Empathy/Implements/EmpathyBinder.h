@@ -6,9 +6,10 @@
 #define EMPATHY_NONNATIVEEMPATHY_H
 
 #include <GL/glew.h>
+#include "MoonLight.h"
+
 
 class EmpathyBinder {
-
 public:
     virtual bool shouldTerminate();
 
@@ -19,6 +20,7 @@ public:
     virtual void terminate();
 
     EmpathyBinder(){}
+
 };
 
 

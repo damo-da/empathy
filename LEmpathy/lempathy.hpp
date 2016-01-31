@@ -9,8 +9,8 @@
 #include "../Empathy/Implements/EmpathyBinder.h"
 #include <GLFW/glfw3.h>
 
-#define SC_SIZE_X 800
-#define SC_SIZE_Y 600
+#define SC_SIZE_X 700
+#define SC_SIZE_Y 700
 
 class LEmpathy:public EmpathyBinder{
 	/*

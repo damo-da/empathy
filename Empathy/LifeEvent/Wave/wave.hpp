@@ -7,8 +7,10 @@
 #include <vector>
 #include <math.h>
 
-#define EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE 1
 #define EMPATHY_LIFE_EVENT_WAVE_ID "WAVE_ID"
+#define EMPATHY_LIFE_EVENT_WAVE_CREST_COMPLETE "EMPATHY_LIFE_EVENT_WAVE_CREST_COMPLETE"
+
+#define EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE 1
 
 class LifeEvent_Wave: public LifeEvent {
 
@@ -17,32 +19,32 @@ public:
 
     std::vector<GLfloat> color;//in rgba
 
-	GLfloat centerX;
-	GLfloat centerY;
+    GLfloat centerX;
+    GLfloat centerY;
 
     bool shouldCreateNewWave;
 
     std::vector<WaveData> waveData;
 
     //called once. By the constructor. Overridden method of parent
-	void init();
+    void init();
 
     //called every frame to draw the data
-	void draw(GLuint);
+    void draw(GLuint);
 
     //called by the destructor
-	void destroy();
+    void destroy();
 
     //set the center
-	void setCenter(GLfloat x, GLfloat y) {centerX = x; y = centerY;}
+    void setCenter(GLfloat x, GLfloat y) {centerX = x; y = centerY;}
 
     //constructors
-	LifeEvent_Wave(GLfloat, GLfloat);
+    LifeEvent_Wave(GLfloat, GLfloat);
 
 
-	void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
+    void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
-	GLfloat getFrequency(){return frequency;}
+    GLfloat getFrequency(){return frequency;}
     GLfloat getWavelength(){return waveLength;}
     void setFrequency(GLfloat f){this->frequency=f;}
     GLfloat getLastWaveCompletionTime(){return lastWaveCompletionTime;}
@@ -53,7 +55,7 @@ public:
 
 
 
-	void passTime(GLfloat);
+    void passTime(GLfloat);
 
 private:
     GLfloat frequency, waveLength;

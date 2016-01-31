@@ -98,7 +98,7 @@ void LifeEvent_Wave::onReceiveEvent(Event &event) {
             shouldCreateNewWave=true;
 
             //broadcast that the wave is complete
-            Event e(EMPATHY_EVENT_WAVE_COMPLETE);
+            Event e(EMPATHY_LIFE_EVENT_WAVE_CREST_COMPLETE);
             emit(e);
         }
     }else{

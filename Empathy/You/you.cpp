@@ -65,26 +65,28 @@ void You::init(){
     LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
     wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
     addEvent(wave);
-//
-//	//add a secondary wave
+
+	//add a secondary wave
 	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
 	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
      addEvent(sWave);
 
-    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
-    sineWave->setZoomY(0.1f);
-    sineWave->setPencilSize(2.0f);
+//    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+//    sineWave->setZoomY(0.1f);
+//    sineWave->setPencilSize(2.0f);
 //    addEvent(sineWave);
+//
+//    MathWave_Sinc* sincWave=new MathWave_Sinc();
+//    sincWave->setZoomY(0.7f);
+//    sincWave->setOffsetY(-0.2f);
+//    sincWave->setHorizontal(false);
+//    sincWave->setSpeed(0.3f);
+//    sincWave->setHead(-1.0f);
+//    sincWave->setLength(1.0f);
+//    sincWave->setPencilSize(2.0f);
+//    addEvent(sincWave);
 
-    MathWave_Sinc* sincWave=new MathWave_Sinc();
-    sincWave->setZoomY(0.7f);
-    sincWave->setOffsetY(-0.2f);
-    sincWave->setHorizontal(false);
-    sincWave->setSpeed(0.5f);
-    sincWave->setHead(-1.0f);
-    sincWave->setLength(0.4f);
-    sincWave->setPencilSize(2.0f);
-    addEvent(sincWave);
+
 
     //initializing time
     curTime=0;

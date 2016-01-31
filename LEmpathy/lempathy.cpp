@@ -1,5 +1,6 @@
 #include "lempathy.hpp"
 #include "../Empathy/global.hpp"
+#include "LoonLight.h"
 
 using namespace std;
 void LEmpathy::run(){
@@ -49,7 +50,6 @@ void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
 }
 
 void LEmpathy::init(){
-//	cout<<"init lempathy"<<endl;
 	instance=this;
 
 	initGlfw();
@@ -58,9 +58,7 @@ void LEmpathy::init(){
 	empathy->init();
 }
 void LEmpathy::initEmpathyInstance() {
-//	cout<<"Create empathy instance"<<endl;
-//	cout<<"passed "<<window<<endl;
-	empathy = new Empathy(this);
+	empathy =new Empathy(this,new LoonLight());
 	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 }
 

@@ -1,8 +1,11 @@
 #include "empathy.hpp"
+#include "Implements/MoonLightBinder.h"
+
 using namespace std;
 
-Empathy::Empathy(EmpathyBinder *binder) {
+Empathy::Empathy(EmpathyBinder *binder,MoonLight * moonLightBinder) {
     this->binder=binder;
+    this->moonLight=moonLightBinder;
 }
 
 
@@ -23,6 +26,10 @@ void Empathy::init() {
 	initShaders();
 
 	initYou();
+
+    MoonLightBinder::init(moonLight);
+
+    this->moonLight->init();
 }
 void Empathy::initGlew(){
 //	cout<<"initing glew"<<endl;
