@@ -24,7 +24,7 @@ public:
 	GLuint getVAO();
 	GLuint getVBO();
 	void destroy();
-	void draw(GLuint);
+	void draw();
 };	
 
 

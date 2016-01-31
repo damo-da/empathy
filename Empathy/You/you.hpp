@@ -16,9 +16,7 @@ class You: public Subscriber{
 public:
 	std::vector<LifeEvent*> * lifeEvents;
 
-	GLuint shaderProgram;
-
-	You(GLuint &);
+	You();
 
 	void init();
 

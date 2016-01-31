@@ -7,12 +7,16 @@
 
 
 #include <GL/glew.h>
-
+#include <iostream>
+#include <vector>
 class Shader {
-    static void use();
 public:
     static GLuint shaderProgram;
     static void init();
+
+    static void use();
+
+    static void setVertexColor(std::vector<GLfloat> color);
 };
 
 

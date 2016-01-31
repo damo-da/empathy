@@ -4,20 +4,19 @@
 
 #include <math.h>
 #include "MathWave.h"
+#include "../../Shader.h"
 
 using namespace std;
 
-void LifeEvent_MathWave::draw(GLuint shaderProgram) {
-    LifeEvent::draw(shaderProgram);
-
-    glUseProgram(shaderProgram);
+void LifeEvent_MathWave::draw() {
+    LifeEvent::draw();
+    Shader::use();
 
     // cout<<"Drawing"<<endl;
     glLineWidth(getPencilSize());
 
     //set Vertex Color
-    GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
-    glUniform4f(vertexColorLocation, color[0], color[1], color[2], color[3]);
+    Shader::setVertexColor(color);
 
     glBindVertexArray(VAO);
     glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 2);

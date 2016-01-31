@@ -13,7 +13,7 @@
 
 class LifeEvent : public Subscriber{
 public:
-	virtual void draw(GLuint);
+	virtual void draw();
 
 	virtual void destroy();
 

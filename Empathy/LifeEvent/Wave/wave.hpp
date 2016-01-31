@@ -30,7 +30,7 @@ public:
     void init();
 
     //called every frame to draw the data
-    void draw(GLuint);
+    void draw();
 
     //called by the destructor
     void destroy();

@@ -28,8 +28,6 @@ public:
 
 	void setScreenSize(int,int);
 
-	//The shader program used to render the vertices
-	GLuint shaderProgram;
 
 	void flush();
 
@@ -45,9 +43,5 @@ private:
 	void initGL();
 	void initYou();
 };
-
-GLuint emCreateShaderProgram(GLuint ,GLuint);
-GLuint emCreateFragmentShader();
-GLuint emCreateVertexShader();
 
 #endif

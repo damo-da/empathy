@@ -24,7 +24,7 @@ void LifeEvent::init(){
     finished=false;
 }
 
-void LifeEvent::draw(GLuint shaderProgram){
+void LifeEvent::draw(){
 //    std::cout<<"Drawing base"<<std::endl;
 }
 

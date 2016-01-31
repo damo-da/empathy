@@ -14,7 +14,7 @@
 
 class LifeEvent_MathWave : public LifeEvent{
 public:
-    void draw(GLuint shaderProgram) override;
+    void draw() override;
 
     void destroy() override;
 

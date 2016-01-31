@@ -3,6 +3,7 @@
 #include <math.h>
 #include "../../global.hpp"
 #include "../../RadioStation/TimeBroadcaster.h"
+#include "../../Shader.h"
 
 using namespace std;
 
@@ -27,18 +28,16 @@ void LifeEvent_Wave::destroy() {
     }
 }
 
-void LifeEvent_Wave::draw(GLuint shaderProgram) {
-    glUseProgram(shaderProgram);
+void LifeEvent_Wave::draw() {
+    Shader::use();
 
     // cout<<"Drawing"<<endl;
     glLineWidth(2.5);
 
-    //set Vertex Color
-    GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor");
-    glUniform4f(vertexColorLocation, color[0], color[1], color[2], color[3]);
+    Shader::setVertexColor(color);
 
     for (int i = 0; i < waveData.size(); i++) {
-        waveData[i].draw(shaderProgram);
+        waveData[i].draw();
     }
 
     glUseProgram(0);

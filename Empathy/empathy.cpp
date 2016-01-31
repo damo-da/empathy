@@ -46,8 +46,6 @@ void Empathy::initGlew(){
 
 void Empathy::initShaders(){
     Shader::init();
-
-    shaderProgram=Shader::shaderProgram;
 }
 
 void Empathy::initGL(){
@@ -56,7 +54,7 @@ void Empathy::initGL(){
 }
 
 void Empathy::initYou(){
-	you=new You(shaderProgram);
+	you=new You();
 	you->init();
 }
 

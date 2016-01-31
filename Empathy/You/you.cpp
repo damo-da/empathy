@@ -5,12 +5,13 @@
 //#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
 #include "../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../LifeEvent/MathWave/MathWave_Sinc.h"
+#include "../Shader.h"
 
 
 using namespace std;
 
-You::You(GLuint &shader){
-    shaderProgram=shader;
+You::You(){
+
 }
 
 
@@ -128,6 +129,6 @@ void You::blit(){
     for(int i=0;i<lifeEvents->size();i++){
         LifeEvent * event=(*lifeEvents)[i];
 
-        event->draw(shaderProgram);
+        event->draw();
     }
 }
