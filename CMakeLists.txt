@@ -44,7 +44,9 @@ set (SOURCES
         LEmpathy/LoonLight.cpp
         LEmpathy/LoonLight.h
         Empathy/Implements/MoonLightBinder.cpp
-        Empathy/Implements/MoonLightBinder.h)
+        Empathy/Implements/MoonLightBinder.h
+        Empathy/Shader.cpp
+        Empathy/Shader.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)
