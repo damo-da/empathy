@@ -38,7 +38,13 @@ set (SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Sinc.h
         Empathy/LifeEvent/MathWave/MathWave_Sinc.cpp
         Empathy/LifeEvent/MathWave/MathWave_Sine.h
-        Empathy/LifeEvent/MathWave/MathWave_Sine.cpp Empathy/Implements/MoonLight.cpp Empathy/Implements/MoonLight.h LEmpathy/LoonLight.cpp LEmpathy/LoonLight.h Empathy/Implements/MoonLightBinder.cpp Empathy/Implements/MoonLightBinder.h)
+        Empathy/LifeEvent/MathWave/MathWave_Sine.cpp
+        Empathy/Implements/MoonLight.cpp
+        Empathy/Implements/MoonLight.h
+        LEmpathy/LoonLight.cpp
+        LEmpathy/LoonLight.h
+        Empathy/Implements/MoonLightBinder.cpp
+        Empathy/Implements/MoonLightBinder.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)
@@ -71,4 +77,13 @@ include_directories(${GLEW_INCLUDE_DIRS})
 add_executable(empathy ${SOURCES})
 
 #link the libraries
-target_link_libraries(empathy ${GLFW_STATIC_LIBRARIES} ${GLEW_LIBRARIES} ${x11_LIBRARIES} ${xi_LIBRARIES} ${OPENGL_LIBRARIES} ${xxf86vm_LIBRARIES} ${xrandr_LIBRARIES})
+target_link_libraries(empathy
+        ${GLFW_STATIC_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${x11_LIBRARIES}
+        ${xi_LIBRARIES}
+        ${OPENGL_LIBRARIES}
+        ${xxf86vm_LIBRARIES}
+        ${xrandr_LIBRARIES}
+#        $(PORTAUDIO_LIBRARY)
+        )

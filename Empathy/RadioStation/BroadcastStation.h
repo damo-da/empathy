@@ -21,11 +21,15 @@ public:
     //emit an event to the whole world
     static void emit(Event&);
 
+    static void dispatch();
+
 protected:
     static BroadcastStation * instance;
 
 private:
     std::map<std::string,std::vector<Subscriber *>> channels;
+
+    std::vector<Event> events;
 
     bool existsChannel(std::string);
     void addChannel(std::string);

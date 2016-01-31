@@ -14,12 +14,8 @@ void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
 
 void BroadcastStation::emit(Event & e) {
     if(! instance->existsChannel(e.action))return;
+    instance->events.push_back(e);
 
-    std::vector<Subscriber*> subscribers= instance->channels[e.action];
-
-    for(int i=0;i<subscribers.size();i++){
-        subscribers[i]->onReceiveEvent(e);
-    }
 }
 
 bool BroadcastStation::existsChannel(std::string i) {
@@ -34,3 +30,15 @@ BroadcastStation::BroadcastStation() {
     instance=this;
 }
 BroadcastStation * BroadcastStation::instance= nullptr;
+
+void BroadcastStation::dispatch() {
+    for (int i=0;i<instance->events.size();i++){
+        Event e=instance->events[i];
+
+        std::vector<Subscriber*> subscribers= instance->channels[e.action];
+
+        for(int i=0;i<subscribers.size();i++){
+            subscribers[i]->onReceiveEvent(e);
+        }
+    }
+}
