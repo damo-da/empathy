@@ -26,18 +26,11 @@ public:
     }
 
 public:
-    LifeEvent_MathWave(bool horizontal);
     LifeEvent_MathWave();
 
     void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
-    bool isHorizontal(){return horizontal;}
-
     virtual GLfloat getY(GLfloat x)=0;
-
-    void setHorizontal(bool horizontal) {
-        LifeEvent_MathWave::horizontal = horizontal;
-    }
 
     void render(std::vector<GLfloat> &vertices);
 
@@ -119,6 +112,15 @@ public:
         LifeEvent_MathWave::pencilSize = pencilSize;
     }
 
+
+    GLfloat getRotationAngle() const {
+        return rotationAngle;
+    }
+
+    void setRotationAngle(GLfloat rotationAngle) {
+        LifeEvent_MathWave::rotationAngle = rotationAngle;
+    }
+
 protected:
     virtual void onRun(GLfloat delTime) override;
 
@@ -132,8 +134,6 @@ protected:
 private:
     void calcVertices();
 
-    bool horizontal;
-
     GLfloat head;//the starting point for the initialmost x
     GLfloat tail;//the ending poing for the finalmost x
 
@@ -145,6 +145,7 @@ private:
     GLfloat offsetY;
     GLfloat diff;
     GLfloat pencilSize;
+    GLfloat rotationAngle;
 
     GLuint VAO,VBO;
     std::vector<GLfloat> vertices;

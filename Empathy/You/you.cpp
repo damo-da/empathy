@@ -82,16 +82,16 @@ void You::init(){
     sineWave->setLength(0.5f);
     addEvent(sineWave);
 
-//    MathWave_Sinc* sincWave=new MathWave_Sinc();
-//    sincWave->setZoomY(0.7f);
-//    sincWave->setOffsetY(-0.2f);
-//    sincWave->setHorizontal(false);
-//    sincWave->setSpeed(0.3f);
-//    sincWave->setHead(-1.0f);
-//    sincWave->setLength(1.0f);
-//    sincWave->setPencilSize(2.0f);
-//    addEvent(sincWave);
-//
+    MathWave_Sinc* sincWave=new MathWave_Sinc();
+    sincWave->setZoomY(0.7f);
+    sincWave->setOffsetY(-0.2f);
+    sincWave->setRotationAngle(M_PI_2);
+    sincWave->setSpeed(0.3f);
+    sincWave->setHead(-1.0f);
+    sincWave->setLength(1.0f);
+    sincWave->setPencilSize(2.0f);
+    addEvent(sincWave);
+
 
 
     //initializing time

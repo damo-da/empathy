@@ -50,20 +50,15 @@ void LifeEvent_MathWave::onInit() {
     setDiff(0.003f);
     setHead(-0.2f);
     setSpeed(0.1f);
-    setHorizontal(true);
+    setRotationAngle(0.0f);
     setPencilSize(2.0f);
+    setTail(1.0f);
 
 }
 
 void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
 }
-
-LifeEvent_MathWave::LifeEvent_MathWave(bool h):
-        LifeEvent(),
-        horizontal(h) {
-    onInit();
-};
 
 LifeEvent_MathWave::LifeEvent_MathWave() {
     onInit();
@@ -122,7 +117,7 @@ void LifeEvent_MathWave::calcVertices() {
 
     std::vector<GLfloat> vertices;
 
-    for(float x=getStartX();x<getEndX();x+=getDiff()){
+    for(GLfloat x=getStartX();x<getEndX();x+=getDiff()){
         GLfloat y=getY(x);
 
         x += getOffsetX();
@@ -131,14 +126,12 @@ void LifeEvent_MathWave::calcVertices() {
         x *= getZoomX();
         y *= getZoomY();
 
-        if(isHorizontal()){
-            vertices.push_back(x);
-            vertices.push_back(y);
-        }else{
-            vertices.push_back(y);
-            vertices.push_back(x);
-        }
 
+        GLfloat outX=x*cos(rotationAngle)-y*sin(rotationAngle);
+        GLfloat outY=x*sin(rotationAngle)+y*cos(rotationAngle);
+
+        vertices.push_back(outX);
+        vertices.push_back(outY);
     }
 
     render(vertices);
