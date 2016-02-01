@@ -9,20 +9,21 @@ LifeEvent::LifeEvent(){
 }
 void LifeEvent::passTime(GLfloat delTime){
     totalTime += delTime;
-//    cout<<"passing time"<<endl;
-
     if(isCreating()){
-        cout<<"creating"<<endl;
         createTime += delTime;
+
         onCreate(delTime);
     }else if(isRunning()){
         runTime += delTime;
+
         onRun(delTime);
     }else if(isFinishing()){
         finishTime += delTime;
+
         onFinish(delTime);
     }else if(isFinished() && !isDestroyed()){
         onDestroy();
+        doneDestroying();
     }else{
 
     }
@@ -57,14 +58,14 @@ void LifeEvent::draw(){
 
 void LifeEvent::setShouldDestroy(bool state){finished=true;}
 
-void LifeEvent::onCreate(GLfloat lfloat) {
+void LifeEvent::onCreate(GLfloat delTime) {
     doneCreating();
 }
 
-void LifeEvent::onRun(GLfloat lfloat) {
+void LifeEvent::onRun(GLfloat delTime) {
     doneRunning();
 }
 
-void LifeEvent::onFinish(GLfloat lfloat) {
+void LifeEvent::onFinish(GLfloat delTime) {
     doneFinishing();
 }

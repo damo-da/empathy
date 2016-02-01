@@ -1,6 +1,7 @@
 /*
-* LifeEvents come as happenings. Together, You process LifeEvents to find out the meaning behind Empathy.
-*/
+ * LifeEvents come as happenings. Together, You process LifeEvents to find out the meaning behind Empathy.
+ *
+ */
 
 #ifndef EMPATHY_LIFE_EVENT
 #define EMPATHY_LIFE_EVENT
@@ -35,19 +36,22 @@ protected:
     void doneRunning(){runComplete=true;}
     void doneFinishing(){finishComplete=true;}
 
-    virtual void onCreate(GLfloat);
-    virtual void onRun(GLfloat);
-    virtual void onFinish(GLfloat);
+    virtual void onCreate(GLfloat delTime);
+    virtual void onRun(GLfloat delTime);
+    virtual void onFinish(GLfloat delTime);
 
     GLfloat getTimeSinceRun()const {return runTime+finishTime;}
     GLfloat getTimeSinceCreate()const{return createTime+runTime+finishTime;}
     GLfloat getTimeSinceFinish()const{return finishTime;}
+
+    bool runComplete;
+    bool createComplete;
+    bool finishComplete;
 private:
     bool finished;
 
-    bool createComplete;
-    bool runComplete;
-    bool finishComplete;
+    void doneDestroying(){destroyComplete=true;}
+
     bool destroyComplete;
 
     GLfloat createTime;

@@ -18,11 +18,10 @@ public:
     }
 
     void setPeriod(GLfloat period) {
-        period = period;
+        this->period = period;
     }
 
     GLfloat getPeriodConstant() const{
-//        cout<<"Reading"<<getPeriod()<<endl;
         return 2.0f/getPeriod();
     }
 

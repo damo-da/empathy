@@ -58,6 +58,15 @@ public:
         LifeEvent_MathWave::head = head;
     }
 
+
+    GLfloat getTail() const {
+        return tail;
+    }
+
+    void setTail(GLfloat tail) {
+        LifeEvent_MathWave::tail = tail;
+    }
+
     GLfloat getSpeed() const {
         return speed;
     }
@@ -98,18 +107,35 @@ public:
         return offsetY;
     }
 
-
     void setOffsetY(GLfloat offsetY) {
         LifeEvent_MathWave::offsetY = offsetY;
     }
-protected:
-    virtual void onRun(GLfloat lfloat) override;
 
+    GLfloat getPencilSize() const {
+        return pencilSize;
+    }
+
+    void setPencilSize(GLfloat pencilSize) {
+        LifeEvent_MathWave::pencilSize = pencilSize;
+    }
+
+protected:
+    virtual void onRun(GLfloat delTime) override;
+
+    virtual void onCreate(GLfloat delTime) override;
+
+    virtual void onFinish(GLfloat delTime) override;
+
+    GLfloat getStartX();
+    GLfloat getEndX();
 
 private:
+    void calcVertices();
+
     bool horizontal;
 
     GLfloat head;//the starting point for the initialmost x
+    GLfloat tail;//the ending poing for the finalmost x
 
     GLfloat speed; //the speed of the wave
     GLfloat length; //the length of the wave
@@ -120,16 +146,6 @@ private:
     GLfloat diff;
     GLfloat pencilSize;
 
-public:
-    GLfloat getPencilSize() const {
-        return pencilSize;
-    }
-
-    void setPencilSize(GLfloat pencilSize) {
-        LifeEvent_MathWave::pencilSize = pencilSize;
-    }
-
-private:
     GLuint VAO,VBO;
     std::vector<GLfloat> vertices;
 

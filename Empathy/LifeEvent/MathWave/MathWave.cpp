@@ -47,7 +47,7 @@ void LifeEvent_MathWave::onInit() {
     setZoomX(1.0f);
     setZoomY(1.0f);
     setLength(1.0f);
-    setDiff(0.01f);
+    setDiff(0.003f);
     setHead(-0.2f);
     setSpeed(0.1f);
     setHorizontal(true);
@@ -86,14 +86,43 @@ void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
     // cout<<"calculated vertices"<<endl;
 }
 
-void LifeEvent_MathWave::onRun(GLfloat delTime) {
 
+void LifeEvent_MathWave::onRun(GLfloat delTime) {
+    if(getTail() < getSpeed()*getTimeSinceRun()+getLength() + getHead()){
+        doneRunning();
+    }
+
+    calcVertices();
+}
+
+void LifeEvent_MathWave::onCreate(GLfloat delTime) {
+    if(getLength() <= getTimeSinceCreate()*getSpeed()){
+        cout<<"DONE creating"<<endl;
+        doneCreating();
+    }
+
+    calcVertices();
+}
+
+void LifeEvent_MathWave::onFinish(GLfloat delTime) {
+
+    if(getHead() + getTimeSinceRun()*getSpeed()>getTail()+getLength()){
+        cout<<"done finishing"<<endl;
+        doneFinishing();
+    }
+
+    calcVertices();
+}
+
+void LifeEvent_MathWave::calcVertices() {
+//    cout<<"calculating"<<endl;
     if (!(VAO && VBO))return;
+
+    this->vertices.clear();
 
     std::vector<GLfloat> vertices;
 
-    for(float i=0;i<getLength();i+=getDiff()){
-        GLfloat x=i + getHead() + getSpeed() * getTime();
+    for(float x=getStartX();x<getEndX();x+=getDiff()){
         GLfloat y=getY(x);
 
         x += getOffsetX();
@@ -113,4 +142,24 @@ void LifeEvent_MathWave::onRun(GLfloat delTime) {
     }
 
     render(vertices);
+}
+
+GLfloat LifeEvent_MathWave::getStartX() {
+    if(isCreating())
+        return getHead();
+    else if(isRunning())
+        return getHead()+ getSpeed() * getTimeSinceRun();
+    else if(isFinishing())
+        return getHead()+ getSpeed() * getTimeSinceRun();
+}
+
+GLfloat LifeEvent_MathWave::getEndX() {
+
+    if(isCreating())
+        return getHead() + getSpeed() * getTimeSinceCreate();
+    else if(isRunning())
+        return getHead() + getSpeed() * getTimeSinceCreate();
+    else if(isFinishing())
+        return getTail();
+
 }

@@ -75,18 +75,23 @@ void You::init(){
     MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
     sineWave->setZoomY(0.1f);
     sineWave->setPencilSize(2.0f);
+    sineWave->setHead(-0.7f);
+    sineWave->setTail(0.0f);
+    sineWave->setPeriod(0.1f);
+    sineWave->setSpeed(0.3f);
+    sineWave->setLength(0.5f);
     addEvent(sineWave);
 
-    MathWave_Sinc* sincWave=new MathWave_Sinc();
-    sincWave->setZoomY(0.7f);
-    sincWave->setOffsetY(-0.2f);
-    sincWave->setHorizontal(false);
-    sincWave->setSpeed(0.3f);
-    sincWave->setHead(-1.0f);
-    sincWave->setLength(1.0f);
-    sincWave->setPencilSize(2.0f);
-    addEvent(sincWave);
-
+//    MathWave_Sinc* sincWave=new MathWave_Sinc();
+//    sincWave->setZoomY(0.7f);
+//    sincWave->setOffsetY(-0.2f);
+//    sincWave->setHorizontal(false);
+//    sincWave->setSpeed(0.3f);
+//    sincWave->setHead(-1.0f);
+//    sincWave->setLength(1.0f);
+//    sincWave->setPencilSize(2.0f);
+//    addEvent(sincWave);
+//
 
 
     //initializing time
@@ -101,12 +106,12 @@ void You::addEvent(LifeEvent * e) {
     lifeEvents->push_back(e);
 }
 void You::removeEvent(LifeEvent * e) {
-    e->onDestroy();
+
     for (int i = 0; i < lifeEvents->size(); i++) {
         if ( (*lifeEvents)[i]->getId() == e->getId()) {
 
             lifeEvents->erase(lifeEvents->begin() + i);
-
+//            delete(e);
             i--;
         }
     }
