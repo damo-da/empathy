@@ -14,12 +14,14 @@
 
 class LifeEvent_MathWave : public LifeEvent{
 public:
+    virtual GLfloat getY(GLfloat x)=0;
+
+public:
     void draw() override;
 
     void onDestroy() override;
 
     virtual void onInit() override ;
-
 
     void setZoomY(GLfloat zoomY) {
         LifeEvent_MathWave::zoomY = zoomY;
@@ -30,10 +32,7 @@ public:
 
     void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
-    virtual GLfloat getY(GLfloat x)=0;
-
     void render(std::vector<GLfloat> &vertices);
-
 
     GLfloat getDiff() {
         return diff;

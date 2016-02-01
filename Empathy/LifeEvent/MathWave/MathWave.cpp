@@ -52,7 +52,7 @@ void LifeEvent_MathWave::onInit() {
     setSpeed(0.1f);
     setRotationAngle(0.0f);
     setPencilSize(2.0f);
-    setTail(1.0f);
+    setTail(0.98f);
 
 }
 

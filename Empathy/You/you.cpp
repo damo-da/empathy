@@ -6,6 +6,7 @@
 #include "../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../Shader.h"
+#include "../LifeEvent/MathWave/MathWave_Line.h"
 
 
 using namespace std;
@@ -82,15 +83,18 @@ void You::init(){
     sineWave->setLength(0.5f);
     addEvent(sineWave);
 
-    MathWave_Sinc* sincWave=new MathWave_Sinc();
-    sincWave->setZoomY(0.7f);
-    sincWave->setOffsetY(-0.2f);
-    sincWave->setRotationAngle(M_PI_2);
-    sincWave->setSpeed(0.3f);
-    sincWave->setHead(-1.0f);
-    sincWave->setLength(1.0f);
-    sincWave->setPencilSize(2.0f);
-    addEvent(sincWave);
+    MathWave_Line* line=new MathWave_Line();
+    line->setOffsetY(0.3f);
+    addEvent(line);
+//    MathWave_Sinc* sincWave=new MathWave_Sinc();
+//    sincWave->setZoomY(0.7f);
+//    sincWave->setOffsetY(-0.2f);
+//    sincWave->setRotationAngle(M_PI_2);
+//    sincWave->setSpeed(0.3f);
+//    sincWave->setHead(-1.0f);
+//    sincWave->setLength(1.0f);
+//    sincWave->setPencilSize(2.0f);
+//    addEvent(sincWave);
 
 
 
