@@ -27,20 +27,19 @@ public:
     std::vector<WaveData> waveData;
 
     //called once. By the constructor. Overridden method of parent
-    void init();
+    virtual void onInit() override;
 
     //called every frame to draw the data
-    void draw();
+    virtual void draw() override;
 
     //called by the destructor
-    void destroy();
+    virtual void onDestroy() override;
 
     //set the center
     void setCenter(GLfloat x, GLfloat y) {centerX = x; y = centerY;}
 
     //constructors
     LifeEvent_Wave(GLfloat, GLfloat);
-
 
     void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
@@ -54,8 +53,8 @@ public:
     GLfloat getTimePeriod(){return 1.0f/getFrequency();}
 
 
-
-    void passTime(GLfloat);
+protected:
+    virtual void onRun(GLfloat lfloat) override;
 
 private:
     GLfloat frequency, waveLength;

@@ -26,16 +26,16 @@ void LifeEvent_MathWave::draw() {
 
 }
 
-void LifeEvent_MathWave::destroy() {
-    LifeEvent::destroy();
+void LifeEvent_MathWave::onDestroy() {
+    LifeEvent::onDestroy();
 
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
 }
 
-void LifeEvent_MathWave::init() {
+void LifeEvent_MathWave::onInit() {
     std::cout<<"init done"<<std::endl;
-    LifeEvent::init();
+    LifeEvent::onInit();
 
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -53,16 +53,40 @@ void LifeEvent_MathWave::init() {
     setHorizontal(true);
     setPencilSize(2.0f);
 
-    startedDestroying=false;
 }
 
 void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
 }
 
+LifeEvent_MathWave::LifeEvent_MathWave(bool h):
+        LifeEvent(),
+        horizontal(h) {
+    onInit();
+};
 
-void LifeEvent_MathWave::passTime(GLfloat delTime) {
-    LifeEvent::passTime(delTime);
+LifeEvent_MathWave::LifeEvent_MathWave() {
+    onInit();
+}
+
+void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
+
+    this->vertices=vertices;
+
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+    glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(GLfloat), &vertices[0], GL_STREAM_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed,
+
+    glBindVertexArray(0); // Unbind VAO
+    // cout<<"calculated vertices"<<endl;
+}
+
+void LifeEvent_MathWave::onRun(GLfloat delTime) {
 
     if (!(VAO && VBO))return;
 
@@ -89,32 +113,4 @@ void LifeEvent_MathWave::passTime(GLfloat delTime) {
     }
 
     render(vertices);
-}
-
-
-LifeEvent_MathWave::LifeEvent_MathWave(bool h):
-        LifeEvent(),
-        horizontal(h) {
-    init();
-};
-
-LifeEvent_MathWave::LifeEvent_MathWave() {
-    init();
-}
-
-void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
-
-    this->vertices=vertices;
-
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-    glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(GLfloat), &vertices[0], GL_STREAM_DRAW);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
-    glEnableVertexAttribArray(0);
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed,
-
-    glBindVertexArray(0); // Unbind VAO
-    // cout<<"calculated vertices"<<endl;
 }

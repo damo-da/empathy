@@ -11,8 +11,8 @@ GLfloat MathWave_Sine::getY(GLfloat x) {
     return sin(x*getPeriodConstant());
 }
 
-void MathWave_Sine::init() {
-    LifeEvent_MathWave::init();
+void MathWave_Sine::onInit() {
+    LifeEvent_MathWave::onInit();
     cout<<"init called"<<endl;
     setPeriod(0.2f);
 }

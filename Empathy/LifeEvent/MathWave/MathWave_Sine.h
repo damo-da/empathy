@@ -26,7 +26,7 @@ public:
         return 2.0f/getPeriod();
     }
 
-    virtual void init() override ;
+    virtual void onInit() override ;
 
     MathWave_Sine(GLfloat period);
 

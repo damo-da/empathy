@@ -16,12 +16,16 @@ class LifeEvent_MathWave : public LifeEvent{
 public:
     void draw() override;
 
-    void destroy() override;
+    void onDestroy() override;
 
-    virtual void init() override ;
+    virtual void onInit() override ;
 
-    void passTime(GLfloat lfloat) override;
 
+    void setZoomY(GLfloat zoomY) {
+        LifeEvent_MathWave::zoomY = zoomY;
+    }
+
+public:
     LifeEvent_MathWave(bool horizontal);
     LifeEvent_MathWave();
 
@@ -82,10 +86,6 @@ public:
         return zoomY;
     }
 
-    void setZoomY(GLfloat zoomY) {
-        LifeEvent_MathWave::zoomY = zoomY;
-    }
-
     GLfloat getOffsetX() const {
         return offsetX;
     }
@@ -102,9 +102,9 @@ public:
     void setOffsetY(GLfloat offsetY) {
         LifeEvent_MathWave::offsetY = offsetY;
     }
+protected:
+    virtual void onRun(GLfloat lfloat) override;
 
-private:
-    bool startedDestroying;
 
 private:
     bool horizontal;

@@ -13,8 +13,8 @@ GLfloat MathWave_Sinc::getY(GLfloat x) {
     return MathWave_Sine::getY(x)/(x*getPeriodConstant());
 }
 
-void MathWave_Sinc::init() {
-    MathWave_Sine::init();
+void MathWave_Sinc::onInit() {
+    MathWave_Sine::onInit();
 
     setPeriod(0.8f);
 }

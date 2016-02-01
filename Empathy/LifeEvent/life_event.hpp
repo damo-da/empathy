@@ -1,5 +1,5 @@
 /*
-* LifeEvents come as happenings. Together, You process LifeEvents in Reality to find out the meaning behind Empathy.
+* LifeEvents come as happenings. Together, You process LifeEvents to find out the meaning behind Empathy.
 */
 
 #ifndef EMPATHY_LIFE_EVENT
@@ -13,24 +13,48 @@
 
 class LifeEvent : public Subscriber{
 public:
-	virtual void draw();
+    virtual void passTime(GLfloat);
+    GLfloat getTime();
 
-	virtual void destroy();
+    LifeEvent();
 
-	virtual void init();
 
-	GLfloat totalTime;
-	virtual void passTime(GLfloat);
-	GLfloat getTime();
-	
-	LifeEvent();
-
-    bool shouldDestroy();
     void setShouldDestroy(bool);
+
+    bool isCreating() const{return !createComplete;}
+    bool isRunning()const{ return createComplete && !runComplete;}
+    bool isFinishing()const { return createComplete && runComplete && !finishComplete;}
+    bool isFinished() const{return finishComplete;}
+    bool isDestroyed()const{return destroyComplete;}
+
+    virtual void draw();
+    virtual void onDestroy();
+    virtual void onInit();
+protected:
+    void doneCreating(){createComplete=true;}
+    void doneRunning(){runComplete=true;}
+    void doneFinishing(){finishComplete=true;}
+
+    virtual void onCreate(GLfloat);
+    virtual void onRun(GLfloat);
+    virtual void onFinish(GLfloat);
+
+    GLfloat getTimeSinceRun()const {return runTime+finishTime;}
+    GLfloat getTimeSinceCreate()const{return createTime+runTime+finishTime;}
+    GLfloat getTimeSinceFinish()const{return finishTime;}
 private:
-	bool finished;
+    bool finished;
 
+    bool createComplete;
+    bool runComplete;
+    bool finishComplete;
+    bool destroyComplete;
 
+    GLfloat createTime;
+    GLfloat runTime;
+    GLfloat finishTime;
+
+    GLfloat totalTime;
 };
 
 #endif

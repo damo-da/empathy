@@ -35,14 +35,13 @@ int You::calcFPS(GLfloat curTime){
     return FPS;
 }
 
-
 void You::passTime(GLfloat timeLength){
     curTime += timeLength;
 
     for(int i=0;i<lifeEvents->size();i++){
         LifeEvent * event=(*lifeEvents)[i];
 
-        if(event->shouldDestroy()){
+        if(event->isDestroyed()){
             removeEvent(event);
             i--;
             continue;
@@ -63,29 +62,30 @@ void You::init(){
     lifeEvents=new std::vector<LifeEvent*>();
 
     //add a base wave
-    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
-    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
-    addEvent(wave);
+//    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
+//    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
+//    addEvent(wave);
 
+//    wave->onInit();
 	//add a secondary wave
-	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-     addEvent(sWave);
+//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+//     addEvent(sWave);
 
-//    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
-//    sineWave->setZoomY(0.1f);
-//    sineWave->setPencilSize(2.0f);
-//    addEvent(sineWave);
-//
-//    MathWave_Sinc* sincWave=new MathWave_Sinc();
-//    sincWave->setZoomY(0.7f);
-//    sincWave->setOffsetY(-0.2f);
-//    sincWave->setHorizontal(false);
-//    sincWave->setSpeed(0.3f);
-//    sincWave->setHead(-1.0f);
-//    sincWave->setLength(1.0f);
-//    sincWave->setPencilSize(2.0f);
-//    addEvent(sincWave);
+    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+    sineWave->setZoomY(0.1f);
+    sineWave->setPencilSize(2.0f);
+    addEvent(sineWave);
+
+    MathWave_Sinc* sincWave=new MathWave_Sinc();
+    sincWave->setZoomY(0.7f);
+    sincWave->setOffsetY(-0.2f);
+    sincWave->setHorizontal(false);
+    sincWave->setSpeed(0.3f);
+    sincWave->setHead(-1.0f);
+    sincWave->setLength(1.0f);
+    sincWave->setPencilSize(2.0f);
+    addEvent(sincWave);
 
 
 
@@ -101,10 +101,9 @@ void You::addEvent(LifeEvent * e) {
     lifeEvents->push_back(e);
 }
 void You::removeEvent(LifeEvent * e) {
+    e->onDestroy();
     for (int i = 0; i < lifeEvents->size(); i++) {
         if ( (*lifeEvents)[i]->getId() == e->getId()) {
-
-            (*lifeEvents)[i]->destroy();
 
             lifeEvents->erase(lifeEvents->begin() + i);
 

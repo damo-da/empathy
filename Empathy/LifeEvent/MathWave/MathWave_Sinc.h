@@ -13,7 +13,7 @@ class MathWave_Sinc : public MathWave_Sine{
 public:
     virtual GLfloat getY(GLfloat x) override;
 
-    virtual void init() override;
+    virtual void onInit() override;
 };
 #endif //EMPATHY_MATHWAVE_SINC_H_H
 
