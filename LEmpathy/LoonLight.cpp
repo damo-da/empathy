@@ -9,11 +9,46 @@ using namespace std;
 void LoonLight::play(std::string id, bool repeat) {
     MoonLight::play(id, repeat);
 
-//    cout<<"playing "<<id<<endl;
+    try{
+        std::string local=references[id];
+        std::string file=BASE+local;
+
+        if(local.size()>0)
+            engine->play2D(file.c_str());
+
+    }catch (int i){
+        return;
+    }
+
 }
 
 void LoonLight::init() {
     MoonLight::init();
+    initIrr();
 
+    references=std::map<std::string,std::string>();
+
+    references["EMPATHY_AUDIO_WAVE_COMPLETE"]="game.wav";
 
 }
+
+void LoonLight::terminate() {
+    MoonLight::terminate();
+
+    cout<<"terminating loonlinght"<<endl;
+    engine->drop(); // delete engine
+}
+
+void LoonLight::initIrr() {
+    // start the sound engine with default parameters
+    engine = createIrrKlangDevice();
+
+    if (!engine)
+    {
+        printf("Could not startup engine\n");
+//        return 0; // error starting up the engine
+    }
+}
+
+
+std::string LoonLight::BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/";

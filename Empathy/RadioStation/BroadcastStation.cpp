@@ -32,7 +32,9 @@ BroadcastStation::BroadcastStation() {
 BroadcastStation * BroadcastStation::instance= nullptr;
 
 void BroadcastStation::dispatch() {
+
     for (int i=0;i<instance->events.size();i++){
+
         Event e=instance->events[i];
 
         std::vector<Subscriber*> subscribers= instance->channels[e.action];
@@ -40,5 +42,8 @@ void BroadcastStation::dispatch() {
         for(int i=0;i<subscribers.size();i++){
             subscribers[i]->onReceiveEvent(e);
         }
+
+
     }
+    instance->events.clear();
 }

@@ -18,6 +18,7 @@ public:
     MoonLight();
 
     virtual void init();
+    virtual void terminate();
 
     virtual void onReceiveEvent(Event &event) override;
 

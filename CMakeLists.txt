@@ -46,7 +46,11 @@ set (SOURCES
         Empathy/Implements/MoonLightBinder.cpp
         Empathy/Implements/MoonLightBinder.h
         Empathy/Shader.cpp
-        Empathy/Shader.h Empathy/LifeEvent/MathWave/MathWave_Line.cpp Empathy/LifeEvent/MathWave/MathWave_Line.h Empathy/LifeEvent/FadeInOut/FadeInOut.cpp Empathy/LifeEvent/FadeInOut/FadeInOut.h)
+        Empathy/Shader.h
+        Empathy/LifeEvent/MathWave/MathWave_Line.cpp
+        Empathy/LifeEvent/MathWave/MathWave_Line.h
+        Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
+        Empathy/LifeEvent/FadeInOut/FadeInOut.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)
@@ -75,6 +79,8 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_DIRS})
 
+include_directories(LEmpathy/libs/irrKlang-64bit-1.5.0/include/)
+
 #add source files for compilation
 add_executable(empathy ${SOURCES})
 
@@ -87,5 +93,8 @@ target_link_libraries(empathy
         ${OPENGL_LIBRARIES}
         ${xxf86vm_LIBRARIES}
         ${xrandr_LIBRARIES}
-#        $(PORTAUDIO_LIBRARY)
+
+
+        "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
+#        "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
         )

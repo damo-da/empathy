@@ -100,6 +100,8 @@ bool LEmpathy::shouldTerminate() {
 void LEmpathy::terminate() {
     // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
+
+	
 }
 
 GLfloat LEmpathy::getTime() {

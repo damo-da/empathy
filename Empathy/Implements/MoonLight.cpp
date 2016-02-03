@@ -54,3 +54,7 @@ bool MoonLight::repeats(std::string key) {
         return false;
     }
 }
+
+void MoonLight::terminate() {
+
+}
