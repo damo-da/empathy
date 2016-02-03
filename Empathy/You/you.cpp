@@ -66,15 +66,18 @@ void You::init(){
     LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
     wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
     wave->setCenter(0.0f,0.0f);
-    wave->setDepth(1.0f);
-    cout<<"wave "<<wave->getFrequency()<<" and "<<wave->getWavelength()<<endl;
+    wave->setDepth(0.0f);
+    
+
     addEvent(wave);
 
-//    wave->onInit();
 	//add a secondary wave
-//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-//     addEvent(sWave);
+	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+    sWave->setCenter(0.2f,0.2f);
+    sWave->setDepth(0.1f);
+
+    addEvent(sWave);
 
 //    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
 //    sineWave->setZoomY(0.1f);

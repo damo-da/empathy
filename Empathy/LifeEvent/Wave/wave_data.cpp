@@ -22,7 +22,7 @@ void WaveData::initVertexObjects() {
 	glGenBuffers(1, &VBO);
 }
 
-void WaveData::calculateGlVertices(GLfloat depth) {
+void WaveData::calculateGlVertices() {
 	if (!(VAO && VBO))return;
 
 	// cout << "Calculating vertices" << endl;
@@ -75,3 +75,5 @@ void WaveData::destroy() {
 	glDeleteVertexArrays(1, &VAO);
 
 }
+
+
