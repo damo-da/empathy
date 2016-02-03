@@ -20,8 +20,6 @@ public:
     LifeEvent();
 
 
-    void setShouldDestroy(bool);
-
     bool isCreating() const{return !createComplete;}
     bool isRunning()const{ return createComplete && !runComplete;}
     bool isFinishing()const { return createComplete && runComplete && !finishComplete;}
@@ -48,7 +46,6 @@ protected:
     bool createComplete;
     bool finishComplete;
 private:
-    bool finished;
 
     void doneDestroying(){destroyComplete=true;}
 

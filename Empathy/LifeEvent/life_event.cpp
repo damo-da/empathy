@@ -39,7 +39,6 @@ void LifeEvent::onDestroy(){
 }
 
 void LifeEvent::onInit(){
-    finished=false;
 
     createComplete=false;
     runComplete=false;
@@ -54,9 +53,6 @@ void LifeEvent::onInit(){
 void LifeEvent::draw(){
 //    std::cout<<"Drawing base"<<std::endl;
 }
-
-
-void LifeEvent::setShouldDestroy(bool state){finished=true;}
 
 void LifeEvent::onCreate(GLfloat delTime) {
     doneCreating();
