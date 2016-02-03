@@ -46,7 +46,7 @@ set (SOURCES
         Empathy/Implements/MoonLightBinder.cpp
         Empathy/Implements/MoonLightBinder.h
         Empathy/Shader.cpp
-        Empathy/Shader.h Empathy/LifeEvent/MathWave/MathWave_Line.cpp Empathy/LifeEvent/MathWave/MathWave_Line.h)
+        Empathy/Shader.h Empathy/LifeEvent/MathWave/MathWave_Line.cpp Empathy/LifeEvent/MathWave/MathWave_Line.h Empathy/LifeEvent/FadeInOut/FadeInOut.cpp Empathy/LifeEvent/FadeInOut/FadeInOut.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)
