@@ -9,17 +9,16 @@
 #include "../global.hpp"
 #include "../RadioStation/Subscriber.h"
 
-#include <map>
 #include <GL/glew.h>
+#include <map>
+#include <vector>
 
 class LifeEvent : public Subscriber{
 public:
-    virtual void passTime(GLfloat);
-    GLfloat getTime();
-
     LifeEvent();
 
-
+/*Activity lifecycle*/
+public:
     bool isCreating() const{return !createComplete;}
     bool isRunning()const{ return createComplete && !runComplete;}
     bool isFinishing()const { return createComplete && runComplete && !finishComplete;}
@@ -41,21 +40,42 @@ protected:
     GLfloat getTimeSinceRun()const {return runTime+finishTime;}
     GLfloat getTimeSinceCreate()const{return createTime+runTime+finishTime;}
     GLfloat getTimeSinceFinish()const{return finishTime;}
+private:
+    void doneDestroying(){destroyComplete=true;}
 
     bool runComplete;
     bool createComplete;
     bool finishComplete;
-private:
-
-    void doneDestroying(){destroyComplete=true;}
-
     bool destroyComplete;
 
     GLfloat createTime;
     GLfloat runTime;
     GLfloat finishTime;
 
+/*End of Activity life cycle*/
+
+//Time and loop handlers
+public:
+    GLfloat getTotalTime();
+
+    //game loop
+    virtual void passTime(GLfloat delTime);
+private:
     GLfloat totalTime;
+
+//Depth
+public:
+    GLfloat getDepth() const {
+        return depth;
+    }
+
+
+    void setDepth(GLfloat depth) {
+        LifeEvent::depth = depth;
+    }
+
+private:
+    GLfloat depth;
 };
 
 #endif

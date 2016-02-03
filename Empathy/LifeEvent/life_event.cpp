@@ -6,6 +6,7 @@
 using namespace std;
 LifeEvent::LifeEvent(){
     totalTime=0.0f;
+
 }
 void LifeEvent::passTime(GLfloat delTime){
     totalTime += delTime;
@@ -29,21 +30,17 @@ void LifeEvent::passTime(GLfloat delTime){
     }
 }
 
-GLfloat LifeEvent::getTime(){
-    return totalTime;
-}
-
 void LifeEvent::onDestroy(){
     // Properly de-allocate all resources once they've outlived their purpose
     cout<<"Destroyed event "<<getId()<<endl;
 }
 
 void LifeEvent::onInit(){
-
     createComplete=false;
     runComplete=false;
     finishComplete=false;
     destroyComplete=false;
+    depth=0.0f;
 
     createTime=0.0f;
     runTime=0.0f;
@@ -64,4 +61,8 @@ void LifeEvent::onRun(GLfloat delTime) {
 
 void LifeEvent::onFinish(GLfloat delTime) {
     doneFinishing();
+}
+
+GLfloat LifeEvent::getTotalTime() {
+    return totalTime;
 }

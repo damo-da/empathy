@@ -22,7 +22,7 @@ void WaveData::initVertexObjects() {
 	glGenBuffers(1, &VBO);
 }
 
-void WaveData::calculateGlVertices() {
+void WaveData::calculateGlVertices(GLfloat depth) {
 	if (!(VAO && VBO))return;
 
 	// cout << "Calculating vertices" << endl;
@@ -40,13 +40,14 @@ void WaveData::calculateGlVertices() {
 
 		vertices.push_back(x);
 		vertices.push_back(y);
+		vertices.push_back(depth);
 	}
 
 	glBindVertexArray(VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
 	glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(GLfloat), &vertices[0], GL_STREAM_DRAW);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
 	glEnableVertexAttribArray(0);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed,
@@ -58,7 +59,7 @@ void WaveData::calculateGlVertices() {
 void WaveData::draw() {
 	// Draw the circle
 	glBindVertexArray(VAO);
-	glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 2);
+	glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 3);
 	glBindVertexArray(0);
 	// cout<<"drawn "<<endl;
 }

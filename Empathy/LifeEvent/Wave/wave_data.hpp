@@ -20,7 +20,7 @@ public:
 	WaveData(GLfloat radius,GLfloat,GLfloat);
 	WaveData(GLfloat radius,GLfloat,GLfloat,bool);
 	void initVertexObjects();
-	void calculateGlVertices();
+	void calculateGlVertices(GLfloat depth);
 	GLuint getVAO();
 	GLuint getVBO();
 	void destroy();

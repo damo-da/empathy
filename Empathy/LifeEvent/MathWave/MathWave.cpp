@@ -19,7 +19,7 @@ void LifeEvent_MathWave::draw() {
     Shader::setVertexColor(color);
 
     glBindVertexArray(VAO);
-    glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 2);
+    glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 3);
     glBindVertexArray(0);
 
     glUseProgram(0);
@@ -60,7 +60,7 @@ void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
 }
 
-LifeEvent_MathWave::LifeEvent_MathWave() {
+LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent() {
     onInit();
 }
 
@@ -72,7 +72,7 @@ void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(GLfloat), &vertices[0], GL_STREAM_DRAW);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed,
@@ -132,6 +132,7 @@ void LifeEvent_MathWave::calcVertices() {
 
         vertices.push_back(outX);
         vertices.push_back(outY);
+        vertices.push_back(getDepth());
     }
 
     render(vertices);

@@ -7,6 +7,7 @@
 using namespace std;
 
 void LifeEvent_Wave::onInit() {
+    cout<<"wave init"<<endl;
     LifeEvent::onInit();
 
     frequency=0.95f;
@@ -50,23 +51,25 @@ LifeEvent_Wave::LifeEvent_Wave(GLfloat cX, GLfloat cY)
     centerX = cX;
     centerY = cY;
 
+    onInit();
 }
 
 void LifeEvent_Wave::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
+    cout<<"event working!"<<endl;
+
+
     if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
        event.action==EMPATHY_EVENT_TIMEOUT){
 
-        int id=event.getInt(EMPATHY_SUBSCRIBER_ID);
 
-        if(id==getId()){
-            shouldCreateNewWave=true;
+        shouldCreateNewWave=true;
 
-            //broadcast that the wave is complete
-            Event e(EMPATHY_LIFE_EVENT_WAVE_CREST_COMPLETE);
-//            emit(e);
-        }
+        //broadcast that the wave is complete
+        Event e(EMPATHY_LIFE_EVENT_WAVE_CREST_COMPLETE);
+        emit(e);
+
     }else{
         cout<<"else event received"<<event.action<<endl;
     }
@@ -75,12 +78,13 @@ void LifeEvent_Wave::onReceiveEvent(Event &event) {
 void LifeEvent_Wave::onRun(GLfloat delTime) {
 
     if(shouldCreateNewWave){
+        cout<<"creating new wave running"<<endl;
+
         //create the new wave
         WaveData data( 0.0f, centerX, centerY, true);
 
         //create a callback for next wave
         createTimeOut(getTimePeriod(),EMPATHY_LIFE_EVENT_WAVE_ONE_WAVE_COMPLETE);
-
 
         waveData.push_back(data);
 
@@ -90,7 +94,7 @@ void LifeEvent_Wave::onRun(GLfloat delTime) {
     for (int i = 0; i < waveData.size(); i++) {
 
         waveData[i].radius += getWaveSpeed()*delTime;
-        waveData[i].calculateGlVertices();
+        waveData[i].calculateGlVertices(getDepth());
 
         if (waveData[i].radius > 2.0f) {
 
