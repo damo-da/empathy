@@ -23,6 +23,8 @@ private:
         You::getInstance()->addEvent(event);
     }
 
+    Brain();
+
     static Brain * instance;
 };
 

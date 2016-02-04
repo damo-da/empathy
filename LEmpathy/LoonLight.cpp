@@ -46,8 +46,9 @@ void LoonLight::initIrr() {
     if (!engine)
     {
         printf("Could not startup engine\n");
-//        return 0; // error starting up the engine
     }
+
+    engine->setSoundVolume(0.05f);
 }
 
 

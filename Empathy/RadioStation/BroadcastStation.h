@@ -23,6 +23,8 @@ public:
 
     static void dispatch();
 
+    static void subscribeAll(Subscriber *subscriber);
+
 protected:
     static BroadcastStation * instance;
 
@@ -33,6 +35,8 @@ private:
 
     bool existsChannel(std::string);
     void addChannel(std::string);
+
+    std::vector<Subscriber *> vipSubscribers;
 };
 
 #endif //EMPATHY_BROADCAST_H

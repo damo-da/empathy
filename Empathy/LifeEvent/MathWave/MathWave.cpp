@@ -9,7 +9,6 @@
 using namespace std;
 
 void LifeEvent_MathWave::draw() {
-    LifeEvent::draw();
     Shader::use();
 
     // cout<<"Drawing"<<endl;
@@ -23,18 +22,14 @@ void LifeEvent_MathWave::draw() {
     glBindVertexArray(0);
 
     glUseProgram(0);
-
 }
 
 void LifeEvent_MathWave::onDestroy() {
-    LifeEvent::onDestroy();
-
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
 }
 
 void LifeEvent_MathWave::onInit() {
-    std::cout<<"init done"<<std::endl;
     LifeEvent::onInit();
 
     glGenVertexArrays(1, &VAO);
@@ -61,7 +56,7 @@ void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
 }
 
 LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent() {
-    onInit();
+
 }
 
 void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {

@@ -76,6 +76,7 @@ void You::init(){
 }
 
 void You::addEvent(LifeEvent * e) {
+    e->init();
     lifeEvents->push_back(e);
 }
 void You::removeEvent(LifeEvent * e) {

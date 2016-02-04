@@ -5,11 +5,13 @@
 #include "FadeInOut.h"
 
 void FadeInOut::onDestroy() {
-    
+    LifeEvent::onInit();
 }
 
 void FadeInOut::onInit() {
     LifeEvent::onInit();
+
+
 }
 
 void FadeInOut::onCreate(GLfloat delTime) {

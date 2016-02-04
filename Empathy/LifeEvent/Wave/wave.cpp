@@ -49,13 +49,10 @@ LifeEvent_Wave::LifeEvent_Wave(GLfloat cX, GLfloat cY)
 {
     centerX = cX;
     centerY = cY;
-
-    onInit();
 }
 
 void LifeEvent_Wave::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
-
 
     if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
        event.action==EMPATHY_EVENT_TIMEOUT){

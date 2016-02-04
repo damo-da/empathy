@@ -9,6 +9,7 @@ void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
         instance->addChannel(id);
     }
 
+
     instance->channels[id].push_back(subscriber);
 }
 
@@ -26,7 +27,10 @@ void BroadcastStation::addChannel(std::string id) {
     channels[id]=std::vector<Subscriber *>();
 }
 
-BroadcastStation::BroadcastStation() {
+BroadcastStation::BroadcastStation():
+        vipSubscribers(),
+        channels()
+{
     instance=this;
 }
 BroadcastStation * BroadcastStation::instance= nullptr;
@@ -38,12 +42,21 @@ void BroadcastStation::dispatch() {
         Event e=instance->events[i];
 
         std::vector<Subscriber*> subscribers= instance->channels[e.action];
-
-        for(int i=0;i<subscribers.size();i++){
-            subscribers[i]->onReceiveEvent(e);
+        for(int j=0;j<subscribers.size();j++){
+            subscribers[j]->onReceiveEvent(e);
         }
 
 
+        std::vector <Subscriber*> vipSubscribers=instance->vipSubscribers;
+        for(int j=0;j<vipSubscribers.size();j++){
+            vipSubscribers[i]->onReceiveEvent(e);
+        }
+
     }
     instance->events.clear();
+}
+
+void BroadcastStation::subscribeAll(Subscriber *subscriber) {
+    instance->vipSubscribers.push_back(subscriber);
+
 }

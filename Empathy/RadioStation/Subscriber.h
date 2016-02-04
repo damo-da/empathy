@@ -18,6 +18,7 @@ public:
     void emit(std::string);
 
     void listen(std::string);
+    void listenAll();
 
     Subscriber();
 

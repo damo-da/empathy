@@ -13,6 +13,11 @@
 #include <map>
 #include <vector>
 
+#define EMPATHY_LIFE_EVENT_CREATE_COMPLETE "EMPATHY_LIFE_EVENT_CREATE_COMPLETE"
+#define EMPATHY_LIFE_EVENT_RUN_COMPLETE "EMPATHY_LIFE_EVENT_RUN_COMPLETE"
+#define EMPATHY_LIFE_EVENT_FINISH_COMPLETE "EMPATHY_LIFE_EVENT_FINISH_COMPLETE"
+#define EMPATHY_LIFE_EVENT_DESTROYED "EMPATHY_LIFE_EVENT_DESTROYED"
+
 class LifeEvent : public Subscriber{
 public:
     LifeEvent();
@@ -25,13 +30,14 @@ public:
     bool isFinished() const{return finishComplete;}
     bool isDestroyed()const{return destroyComplete;}
 
-    virtual void draw();
-    virtual void onDestroy();
+    virtual void draw()=0;
+    virtual void onDestroy()=0;
     virtual void onInit();
+    void init();
 protected:
-    void doneCreating(){createComplete=true;}
-    void doneRunning(){runComplete=true;}
-    void doneFinishing(){finishComplete=true;}
+    void doneCreating(){createComplete=true;emit(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);}
+    void doneRunning(){runComplete=true;emit(EMPATHY_LIFE_EVENT_RUN_COMPLETE);}
+    void doneFinishing(){finishComplete=true;emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);}
 
     virtual void onCreate(GLfloat delTime);
     virtual void onRun(GLfloat delTime);
@@ -41,8 +47,9 @@ protected:
     GLfloat getTimeSinceCreate()const{return createTime+runTime+finishTime;}
     GLfloat getTimeSinceFinish()const{return finishTime;}
 private:
-    void doneDestroying(){destroyComplete=true;}
+    void doneDestroying(){destroyComplete=true;emit(EMPATHY_LIFE_EVENT_DESTROYED);}
 
+    bool initComplete;
     bool runComplete;
     bool createComplete;
     bool finishComplete;
@@ -63,7 +70,7 @@ public:
 private:
     GLfloat totalTime;
 
-//Depth
+//Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the surface goes
 public:
     GLfloat getDepth() const {
         return depth;

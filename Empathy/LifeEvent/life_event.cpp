@@ -30,10 +30,6 @@ void LifeEvent::passTime(GLfloat delTime){
     }
 }
 
-void LifeEvent::onDestroy(){
-    // Properly de-allocate all resources once they've outlived their purpose
-    cout<<"Destroyed event "<<getId()<<endl;
-}
 
 void LifeEvent::onInit(){
     createComplete=false;
@@ -45,10 +41,6 @@ void LifeEvent::onInit(){
     createTime=0.0f;
     runTime=0.0f;
     finishTime=0.0f;
-}
-
-void LifeEvent::draw(){
-//    std::cout<<"Drawing base"<<std::endl;
 }
 
 void LifeEvent::onCreate(GLfloat delTime) {
@@ -65,4 +57,11 @@ void LifeEvent::onFinish(GLfloat delTime) {
 
 GLfloat LifeEvent::getTotalTime() {
     return totalTime;
+}
+
+void LifeEvent::init() {
+    if(! initComplete){
+        onInit();
+    }
+    initComplete=true;
 }

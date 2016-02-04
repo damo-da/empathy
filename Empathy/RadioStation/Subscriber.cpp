@@ -53,3 +53,7 @@ void Subscriber::emit(std::string action) {
     Event event=Event(action);
     emit(event);
 }
+
+void Subscriber::listenAll() {
+    BroadcastStation::subscribeAll(this);
+}
