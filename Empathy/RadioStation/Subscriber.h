@@ -5,9 +5,11 @@
 #ifndef EMPATHY_STATIONBASE_H
 #define EMPATHY_STATIONBASE_H
 
+#include "Event.h"
+#include <vector>
 
 #define EMPATHY_SUBSCRIBER_ID "EMPATHY_SUBSCRIBER_ID"
-#include "Event.h"
+
 
 //The class to be overridden to emit/receive broadcasts
 class Subscriber {
@@ -30,6 +32,20 @@ public:
     int getId(){return id;}
 private:
     int id;
+
+
+public:
+    static Subscriber* getById(int id){
+        for(int i=0;i<lifeEvents.size();i++){
+            if(lifeEvents[i]->getId()==id){
+                return lifeEvents[i];
+            }
+        }
+
+        return nullptr;
+    }
+private:
+    static std::vector <Subscriber*> lifeEvents;
 };
 
 

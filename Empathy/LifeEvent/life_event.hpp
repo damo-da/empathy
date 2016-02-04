@@ -70,7 +70,7 @@ public:
 private:
     GLfloat totalTime;
 
-//Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the surface goes
+//Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the object goes
 public:
     GLfloat getDepth() const {
         return depth;
@@ -84,5 +84,6 @@ public:
 private:
     GLfloat depth;
 };
+
 
 #endif
