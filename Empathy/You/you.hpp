@@ -32,8 +32,11 @@ public:
 	void passTime(GLfloat);
 	void setTime(GLfloat);
 
-
     virtual void onReceiveEvent(Event &) override;
+
+    static You * getInstance(){return instance;}
+private:
+    static You * instance;
 };
 
 #endif

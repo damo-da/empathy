@@ -15,6 +15,7 @@ public:
     virtual void onReceiveEvent(Event &);
 
     void emit(Event&);
+    void emit(std::string);
 
     void listen(std::string);
 

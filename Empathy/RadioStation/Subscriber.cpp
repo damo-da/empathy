@@ -14,6 +14,7 @@ void Subscriber::emit(Event & event) {
     BroadcastStation::emit(event);
 }
 
+
 void Subscriber::listen(std::string id) {
     BroadcastStation::subscribe(this,id);
 }
@@ -46,4 +47,9 @@ void Subscriber::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) 
 
 void Subscriber::createRepeatingTimeout(GLfloat interval, int id) {
     createRepeatingTimeout(interval,interval,id);
+}
+
+void Subscriber::emit(std::string action) {
+    Event event=Event(action);
+    emit(event);
 }
