@@ -76,3 +76,21 @@ void LifeEvent_Collection::onFinish(GLfloat delTime) {
 
     if(!atLeastOneIsFinishing)doneFinishing();
 }
+
+void LifeEvent_Collection::removeFromCollection(LifeEvent *event) {
+    for (int i = 0; i < collection.size(); i++) {
+        if ( collection[i]->getId() == event->getId()) {
+
+            collection.erase(collection.begin() + i);
+            i--;
+        }
+    }
+}
+
+void LifeEvent_Collection::addToCollection(LifeEvent *event) {
+    collection.push_back(event);
+}
+
+void LifeEvent_Collection::clearCollection() {
+    collection.clear();
+}
