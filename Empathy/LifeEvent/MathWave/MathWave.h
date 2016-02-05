@@ -31,7 +31,6 @@ public:
 public:
     LifeEvent_MathWave();
 
-    void setColor(GLfloat, GLfloat, GLfloat, GLfloat);
 
     void render(std::vector<GLfloat> &vertices);
 
@@ -149,8 +148,6 @@ private:
 
     GLuint VAO,VBO;
     std::vector<GLfloat> vertices;
-
-    std::vector<GLfloat> color;//in rgba
 };
 
 

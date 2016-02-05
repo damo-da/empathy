@@ -37,8 +37,6 @@ void LifeEvent_MathWave::onInit() {
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
 
-    color = {1.0f, 1.0f, 1.0f, 1.0f};
-
     setOffsetX(0.0f);
     setOffsetY(0.0f);
     setZoomX(1.0f);
@@ -53,9 +51,6 @@ void LifeEvent_MathWave::onInit() {
 
 }
 
-void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
-    color = {r, g, b, a};
-}
 
 LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent(),Color() {
 
