@@ -20,12 +20,6 @@ You::You(){
 void You::onReceiveEvent(Event & event) {
     Subscriber::onReceiveEvent(event);
 
-
-    if(event.action==EMPATHY_EVENT_INPUT_KEY_PRESS){
-        cout<<"key press listened!"<<endl;
-    }else if(event.action==EMPATHY_CREATE_EVENT){
-        cout<<"creting events"<<endl;
-    }
 }
 
 
@@ -72,7 +66,6 @@ void You::init(){
     curTime=0;
 
     listen(EMPATHY_CREATE_EVENT);
-
 }
 
 void You::addEvent(LifeEvent * e) {

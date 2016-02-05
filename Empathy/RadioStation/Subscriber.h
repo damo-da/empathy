@@ -10,6 +10,7 @@
 
 #define EMPATHY_SUBSCRIBER_ID "EMPATHY_SUBSCRIBER_ID"
 
+class Event;
 
 //The class to be overridden to emit/receive broadcasts
 class Subscriber {

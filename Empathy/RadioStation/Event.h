@@ -11,6 +11,8 @@
 #include <iostream>
 #include <map>
 
+class Subscriber;
+
 class Event {
 public:
     void putString(std::string key, std::string value) {
@@ -33,9 +35,8 @@ public:
     Event(std::string);
 
     std::string action;
-    std::string name;
 
-    void * broadcaster;
+    Subscriber * broadcaster;
 private:
     std::map<std::string,int> intData;
     std::map<std::string,std::string> strData;

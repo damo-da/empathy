@@ -3,6 +3,8 @@
 //
 
 #include "BroadcastStation.h"
+using namespace std;
+
 
 void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
     if(!instance->existsChannel(id)){
@@ -14,9 +16,7 @@ void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
 }
 
 void BroadcastStation::emit(Event & e) {
-    if(! instance->existsChannel(e.action))return;
     instance->events.push_back(e);
-
 }
 
 bool BroadcastStation::existsChannel(std::string i) {

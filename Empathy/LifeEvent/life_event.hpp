@@ -35,9 +35,9 @@ public:
     virtual void onInit();
     void init();
 protected:
-    void doneCreating(){createComplete=true;emit(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);}
-    void doneRunning(){runComplete=true;emit(EMPATHY_LIFE_EVENT_RUN_COMPLETE);}
-    void doneFinishing(){finishComplete=true;emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);}
+    void doneCreating();
+    void doneRunning();
+    void doneFinishing();
 
     virtual void onCreate(GLfloat delTime);
     virtual void onRun(GLfloat delTime);

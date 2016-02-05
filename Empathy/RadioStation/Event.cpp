@@ -6,10 +6,10 @@
 
 
 
-Event::Event(std::string action):action(action) {
-    name="Event ";
-
+Event::Event(std::string action):
+        action(action) ,
+        intData(),
+        strData(){
     broadcaster = nullptr;
 
-//    data=new std::map<std::string,void*>();
 }

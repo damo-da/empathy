@@ -12,8 +12,7 @@ using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
-    cout<<"recceived "<<event.action<<endl;
-
+    cout<<"recceived "<<event.action<<event.broadcaster->getId()<<endl;
 }
 
 void Brain::begin() {
@@ -33,44 +32,44 @@ void Brain::mainloop() {
     wave->setCenter(0.0f,0.0f);
     wave->setDepth(0.0f);
     wave->setFrequency(0.4f);
-
-
-
-    //add a secondary wave
-	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
-    addLifeEvent(sWave);
-	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
-    sWave->setCenter(0.2f,0.2f);
-    sWave->setDepth(0.1f);
-
-
-
-    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
-    addLifeEvent(sineWave);
-    sineWave->setZoomY(0.1f);
-    sineWave->setPencilSize(2.0f);
-    sineWave->setHead(-0.7f);
-    sineWave->setTail(0.0f);
-    sineWave->setPeriod(0.1f);
-    sineWave->setSpeed(0.3f);
-    sineWave->setLength(0.5f);
-    sineWave->setDepth(1.0f);
-
-    MathWave_Line* line=new MathWave_Line();
-    addLifeEvent(line);
-    line->setOffsetY(0.3f);
-    line->setDepth(0.1f);
-
-
-    MathWave_Sinc* sincWave=new MathWave_Sinc();
-    addLifeEvent(sincWave);
-    sincWave->setZoomY(0.7f);
-    sincWave->setOffsetY(-0.2f);
-    sincWave->setRotationAngle(M_PI_2);
-    sincWave->setSpeed(0.3f);
-    sincWave->setHead(-1.0f);
-    sincWave->setLength(1.0f);
-    sincWave->setPencilSize(2.0f);
+//
+//
+//
+//    //add a secondary wave
+//	LifeEvent_Wave * sWave=new LifeEvent_Wave(0.2f,0.2f);
+//    addLifeEvent(sWave);
+//	sWave->setColor(1.0f,0.0f,1.0f,0.5f);//pink
+//    sWave->setCenter(0.2f,0.2f);
+//    sWave->setDepth(0.1f);
+//
+//
+//
+//    MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+//    addLifeEvent(sineWave);
+//    sineWave->setZoomY(0.1f);
+//    sineWave->setPencilSize(2.0f);
+//    sineWave->setHead(-0.7f);
+//    sineWave->setTail(0.0f);
+//    sineWave->setPeriod(0.1f);
+//    sineWave->setSpeed(0.3f);
+//    sineWave->setLength(0.5f);
+//    sineWave->setDepth(1.0f);
+//
+//    MathWave_Line* line=new MathWave_Line();
+//    addLifeEvent(line);
+//    line->setOffsetY(0.3f);
+//    line->setDepth(0.1f);
+//
+//
+//    MathWave_Sinc* sincWave=new MathWave_Sinc();
+//    addLifeEvent(sincWave);
+//    sincWave->setZoomY(0.7f);
+//    sincWave->setOffsetY(-0.2f);
+//    sincWave->setRotationAngle(M_PI_2);
+//    sincWave->setSpeed(0.3f);
+//    sincWave->setHead(-1.0f);
+//    sincWave->setLength(1.0f);
+//    sincWave->setPencilSize(2.0f);
 
 }
 

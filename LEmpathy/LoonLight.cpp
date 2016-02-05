@@ -28,7 +28,14 @@ void LoonLight::init() {
 
     references=std::map<std::string,std::string>();
 
-    references["EMPATHY_AUDIO_WAVE_COMPLETE"]="game.wav";
+//    references[EMPATHY_AUDIO_0A]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_0B]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_0B]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_0B]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
+//    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
+
 
 }
 
@@ -48,8 +55,8 @@ void LoonLight::initIrr() {
         printf("Could not startup engine\n");
     }
 
-    engine->setSoundVolume(0.05f);
+//    engine->setSoundVolume(0.05f);
 }
 
 
-std::string LoonLight::BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/";
+std::string LoonLight::BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/audio/";

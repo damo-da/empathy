@@ -65,3 +65,18 @@ void LifeEvent::init() {
     }
     initComplete=true;
 }
+
+void LifeEvent::doneCreating() {
+    createComplete=true;
+    emit(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);
+}
+
+void LifeEvent::doneRunning() {
+    runComplete=true;
+    emit(EMPATHY_LIFE_EVENT_RUN_COMPLETE);
+}
+
+void LifeEvent::doneFinishing() {
+    finishComplete=true;
+    emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);
+}
