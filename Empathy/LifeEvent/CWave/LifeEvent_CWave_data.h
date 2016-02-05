@@ -7,7 +7,7 @@
 
 
 #include <math.h>
-#include "life_event.hpp"
+#include "../life_event.hpp"
 #include <vector>
 class LifeEvent_CWave_data : public LifeEvent {
 

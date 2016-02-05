@@ -7,7 +7,7 @@
 
 
 #include <math.h>
-#include "LifeEvent_Collection.h"
+#include "../LifeEvent_Collection.h"
 
 #define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
 #define EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE "EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE"

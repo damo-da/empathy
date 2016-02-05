@@ -4,7 +4,7 @@
 
 #include "LifeEvent_CWave.h"
 #include "LifeEvent_CWave_data.h"
-#include "../RadioStation/TimeBroadcaster.h"
+#include "../../RadioStation/TimeBroadcaster.h"
 using namespace std;
 
 LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection() {

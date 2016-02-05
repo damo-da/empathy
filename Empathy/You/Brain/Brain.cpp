@@ -3,12 +3,12 @@
 //
 
 #include "Brain.h"
-#include "../../LifeEvent/Wave/wave.hpp"
+
 #include "../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../LifeEvent/MathWave/MathWave_Line.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
-#include "../../LifeEvent/LifeEvent_CWave_data.h"
-#include "../../LifeEvent/LifeEvent_CWave.h"
+#include "../../LifeEvent/CWave/LifeEvent_CWave_data.h"
+#include "../../LifeEvent/CWave/LifeEvent_CWave.h"
 #include <iostream>
 using namespace std;
 void Brain::onReceiveEvent(Event &event) {

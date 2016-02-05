@@ -7,7 +7,7 @@ project(empathy)
 #set source code
 file(GLOB LEMPATHY_SRC "LEmpathy/*.hpp" "LEmpathy/*.cpp")
 file(GLOB EMPATHY_SRC "Empathy/*.hpp" "Empathy/*.cpp")
-file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp" "Empathy/LifeEvent/Wave/*.cpp")
+file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp")
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
 set (SOURCES
@@ -50,7 +50,15 @@ set (SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Line.cpp
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
-        Empathy/LifeEvent/FadeInOut/FadeInOut.h Empathy/You/Brain/Brain.cpp Empathy/You/Brain/Brain.h Empathy/LifeEvent/LifeEvent_Collection.cpp Empathy/LifeEvent/LifeEvent_Collection.h Empathy/LifeEvent/LifeEvent_CWave.cpp Empathy/LifeEvent/LifeEvent_CWave.h Empathy/LifeEvent/LifeEvent_CWave_data.cpp Empathy/LifeEvent/LifeEvent_CWave_data.h)
+        Empathy/LifeEvent/FadeInOut/FadeInOut.h
+        Empathy/You/Brain/Brain.cpp
+        Empathy/You/Brain/Brain.h
+        Empathy/LifeEvent/LifeEvent_Collection.cpp
+        Empathy/LifeEvent/LifeEvent_Collection.h
+        Empathy/LifeEvent/CWave/LifeEvent_CWave.cpp
+        Empathy/LifeEvent/CWave/LifeEvent_CWave.h
+        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.cpp
+        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

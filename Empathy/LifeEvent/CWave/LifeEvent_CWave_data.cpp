@@ -3,7 +3,7 @@
 //
 
 #include "LifeEvent_CWave_data.h"
-#include "../Shader.h"
+#include "../../Shader.h"
 using namespace std;
 
 LifeEvent_CWave_data::LifeEvent_CWave_data(GLfloat cX, GLfloat cY):centerX(cX),centerY(cY) {

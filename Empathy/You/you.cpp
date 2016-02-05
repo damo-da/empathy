@@ -1,6 +1,5 @@
 #include <iostream>
 #include "you.hpp"
-#include "../LifeEvent/Wave/wave.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
 //#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
 #include "../LifeEvent/MathWave/MathWave_Sine.h"
