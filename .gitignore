@@ -15,6 +15,9 @@ empathy
 
 # Precompiled Headers
 *.gch
+
+/tmp
+
 *.pch
 
 # Compiled Dynamic libraries
