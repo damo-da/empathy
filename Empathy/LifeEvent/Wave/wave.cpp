@@ -22,6 +22,8 @@ void LifeEvent_Wave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
 }
 
 void LifeEvent_Wave::onDestroy() {
+    LifeEvent::onDestroy();
+
     for (int i = 0; i < waveData.size(); i++) {
         waveData[i].destroy();
     }

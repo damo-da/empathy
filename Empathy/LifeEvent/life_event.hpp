@@ -31,7 +31,7 @@ public:
     bool isDestroyed()const{return destroyComplete;}
 
     virtual void draw()=0;
-    virtual void onDestroy()=0;
+    virtual void onDestroy();
     virtual void onInit();
     void init();
 protected:

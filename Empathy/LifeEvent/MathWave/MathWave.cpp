@@ -25,6 +25,8 @@ void LifeEvent_MathWave::draw() {
 }
 
 void LifeEvent_MathWave::onDestroy() {
+    LifeEvent::onDestroy();
+
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
 }

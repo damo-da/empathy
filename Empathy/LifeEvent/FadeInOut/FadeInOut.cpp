@@ -5,7 +5,7 @@
 #include "FadeInOut.h"
 
 void FadeInOut::onDestroy() {
-    LifeEvent::onInit();
+    LifeEvent::onDestroy();
 }
 
 void FadeInOut::onInit() {

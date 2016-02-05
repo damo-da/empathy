@@ -8,14 +8,12 @@ LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection() {
 
 }
 
-void LifeEvent_CWave::onRun(GLfloat delTime) {
-    LifeEvent_Collection::onRun(delTime);
+void LifeEvent_CWave::onInit() {
+    LifeEvent_Collection::onInit();
+
 }
 
-void LifeEvent_CWave::onCreate(GLfloat delTime) {
-    LifeEvent_Collection::onCreate(delTime);
-}
 
-void LifeEvent_CWave::onFinish(GLfloat delTime) {
-    LifeEvent_Collection::onFinish(delTime);
+void LifeEvent_CWave::passTime(GLfloat delTime) {
+    LifeEvent_Collection::passTime(delTime);
 }

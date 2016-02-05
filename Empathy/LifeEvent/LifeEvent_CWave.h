@@ -14,11 +14,12 @@ public:
     LifeEvent_CWave();
 
 protected:
-    virtual void onRun(GLfloat delTime) override;
+    virtual void onInit() override;
 
-    virtual void onCreate(GLfloat delTime) override;
+protected:
 
-    virtual void onFinish(GLfloat delTime) override;
+public:
+    virtual void passTime(GLfloat delTime) override;
 };
 
 

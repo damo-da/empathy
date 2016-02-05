@@ -22,14 +22,7 @@ public:
 
     virtual void draw() override;
 
-
-protected:
-    virtual void onRun(GLfloat delTime) override;
-
-    virtual void onCreate(GLfloat delTime) override;
-
-    virtual void onFinish(GLfloat delTime) override;
-
+    virtual void passTime(GLfloat delTime) override;
 
 public:
     const std::vector<LifeEvent *> &getCollection() const {

@@ -80,3 +80,7 @@ void LifeEvent::doneFinishing() {
     finishComplete=true;
     emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);
 }
+
+void LifeEvent::onDestroy() {
+    cout<<"deleted event "<<getId()<<endl;
+}
