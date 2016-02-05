@@ -113,7 +113,7 @@ void Shader::use() {
 
 GLuint Shader::shaderProgram=0;
 
-void Shader::setVertexColor(std::vector<GLfloat> color) {
+void Shader::setVertexColor(Color * color) {
     GLint vertexColorLocation = glGetUniformLocation(Shader::shaderProgram, "vertexColor");
-    glUniform4f(vertexColorLocation, color[0], color[1], color[2], color[3]);
+    glUniform4f(vertexColorLocation, color->getR(),color->getG(),color->getB(),color->getA());
 }

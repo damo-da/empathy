@@ -58,7 +58,7 @@ set (SOURCES
         Empathy/LifeEvent/CWave/LifeEvent_CWave.cpp
         Empathy/LifeEvent/CWave/LifeEvent_CWave.h
         Empathy/LifeEvent/CWave/LifeEvent_CWave_data.cpp
-        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h)
+        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h Empathy/PureMath/Wave.cpp Empathy/PureMath/Wave.h Empathy/Utils/Color.cpp Empathy/Utils/Color.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

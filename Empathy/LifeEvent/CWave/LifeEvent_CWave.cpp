@@ -7,7 +7,7 @@
 #include "../../RadioStation/TimeBroadcaster.h"
 using namespace std;
 
-LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection() {
+LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection(),Color() {
 
 }
 
@@ -18,8 +18,6 @@ void LifeEvent_CWave::onInit() {
     waveLength = 0.1f;
 
     shouldCreateNewWave=true;
-
-    color = {1.0f, 1.0f, 1.0f, 1.0f};
 }
 
 
@@ -34,7 +32,8 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
         data->setDepth(getDepth());
         data->setFrequency(getFrequency());
         data->setWaveLength(getWavelength());
-        data->setColor(color[0],color[1],color[2],color[3]);
+
+        data->setColor(this);
 
         //create a callback for next wave
         createTimeOut(getTimePeriod(),EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE);
@@ -64,9 +63,6 @@ LifeEvent_CWave::LifeEvent_CWave(GLfloat cX, GLfloat cY):
 
 }
 
-void LifeEvent_CWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
-    color = {r, g, b, a};
-}
 
 void LifeEvent_CWave::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);

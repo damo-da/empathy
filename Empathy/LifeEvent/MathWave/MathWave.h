@@ -7,12 +7,13 @@
 
 
 #include "../life_event.hpp"
+#include "../../Utils/Color.h"
 #include <vector>
 
 #define EMPATHY_LIFE_EVENT_MATH_WAVE_STARTED_DESTROYING "EMPATHY_LIFE_EVENT_MATH_WAVE_STARTED_DESTROYING"
 #define EMPATHY_LIFE_EVENT_MATH_WAVE_DESTROYED "EMPATHY_LIFE_EVENT_MATH_WAVE_DESTROYED"
 
-class LifeEvent_MathWave : public LifeEvent{
+class LifeEvent_MathWave : public LifeEvent,public Color{
 public:
     virtual GLfloat getY(GLfloat x)=0;
 

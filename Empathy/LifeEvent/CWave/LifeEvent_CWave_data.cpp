@@ -6,13 +6,11 @@
 #include "../../Shader.h"
 using namespace std;
 
-LifeEvent_CWave_data::LifeEvent_CWave_data(GLfloat cX, GLfloat cY):centerX(cX),centerY(cY) {
+LifeEvent_CWave_data::LifeEvent_CWave_data(GLfloat cX, GLfloat cY)
+        :LifeEvent(),
+         Color(),
+        centerX(cX),centerY(cY) {
 
-}
-
-
-void LifeEvent_CWave_data::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
-    color = {r, g, b, a};
 }
 
 void LifeEvent_CWave_data::onInit() {
@@ -20,8 +18,6 @@ void LifeEvent_CWave_data::onInit() {
 
     frequency=0.95f;
     waveLength = 0.1f;
-
-    color = {1.0f, 1.0f, 1.0f, 1.0f};
 
     // cout<<"initing vertex objects"<<endl;
     glGenVertexArrays(1, &VAO);
@@ -75,7 +71,7 @@ void LifeEvent_CWave_data::draw() {
     // cout<<"Drawing"<<endl;
     glLineWidth(2.5);
 
-    Shader::setVertexColor(color);
+    Shader::setVertexColor(this);
 
     glBindVertexArray(VAO);
     glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 3);

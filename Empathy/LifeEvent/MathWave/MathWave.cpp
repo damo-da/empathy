@@ -15,7 +15,7 @@ void LifeEvent_MathWave::draw() {
     glLineWidth(getPencilSize());
 
     //set Vertex Color
-    Shader::setVertexColor(color);
+    Shader::setVertexColor(this);
 
     glBindVertexArray(VAO);
     glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 3);
@@ -57,7 +57,7 @@ void LifeEvent_MathWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
 }
 
-LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent() {
+LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent(),Color() {
 
 }
 

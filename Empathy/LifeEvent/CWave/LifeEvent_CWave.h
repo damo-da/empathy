@@ -8,11 +8,12 @@
 
 #include <math.h>
 #include "../LifeEvent_Collection.h"
+#include "../../Utils/Color.h"
 
 #define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
 #define EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE "EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE"
 
-class LifeEvent_CWave : public LifeEvent_Collection {
+class LifeEvent_CWave : public LifeEvent_Collection,public Color {
 
 public:
     LifeEvent_CWave();
@@ -26,8 +27,6 @@ public:
     //constructors
     LifeEvent_CWave(GLfloat, GLfloat);
 
-    void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
-
     GLfloat getFrequency(){return frequency;}
     GLfloat getWavelength(){return waveLength;}
     void setFrequency(GLfloat f){this->frequency=f;}
@@ -39,8 +38,6 @@ public:
 
 private:
     GLfloat frequency, waveLength;
-
-    std::vector<GLfloat> color;//in rgba
 
     GLfloat centerX;
     GLfloat centerY;

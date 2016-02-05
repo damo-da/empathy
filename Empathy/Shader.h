@@ -9,6 +9,8 @@
 #include <GL/glew.h>
 #include <iostream>
 #include <vector>
+#include "Utils/Color.h"
+
 class Shader {
 public:
     static GLuint shaderProgram;
@@ -16,7 +18,7 @@ public:
 
     static void use();
 
-    static void setVertexColor(std::vector<GLfloat> color);
+    static void setVertexColor(Color * color);
 };
 
 

@@ -8,14 +8,14 @@
 
 #include <math.h>
 #include "../life_event.hpp"
+#include "../../Utils/Color.h"
 #include <vector>
-class LifeEvent_CWave_data : public LifeEvent {
+class LifeEvent_CWave_data : public LifeEvent , public Color{
 
 public:
     //constructors
     LifeEvent_CWave_data(GLfloat, GLfloat);
 
-    void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
 
     GLfloat getFrequency(){return frequency;}
     GLfloat getWavelength(){return waveLength;}
@@ -29,8 +29,6 @@ public:
     GLfloat getRadius()const {return radius;}
 private:
     GLfloat frequency, waveLength;
-
-    std::vector<GLfloat> color;//in rgba
 
     GLfloat centerX;
     GLfloat centerY;

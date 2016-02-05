@@ -40,6 +40,7 @@ void Brain::mainloop() {
 //
     LifeEvent_CWave * wave=new LifeEvent_CWave(0.0f,0.0f);
     addLifeEvent(wave);
+    wave->setColor(1.0f,0.1f,1.0f);
     wave->setFrequency(1.0f);
 //    wave->setWaveLength(0.1f);
 //
