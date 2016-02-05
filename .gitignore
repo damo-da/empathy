@@ -15,10 +15,8 @@ empathy
 
 # Precompiled Headers
 *.gch
-
-/tmp
-
 *.pch
+
 
 # Compiled Dynamic libraries
 *.so
@@ -38,3 +36,7 @@ empathy
 *.exe
 *.out
 *.app
+
+
+/tmp #temporary files
+/empathy #output build
