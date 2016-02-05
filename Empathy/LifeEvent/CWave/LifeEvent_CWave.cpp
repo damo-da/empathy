@@ -7,15 +7,13 @@
 #include "../../RadioStation/TimeBroadcaster.h"
 using namespace std;
 
-LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection(),Color() {
+LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection(),Color(),Wave() {
 
 }
 
 void LifeEvent_CWave::onInit() {
     LifeEvent_Collection::onInit();
 
-    frequency=0.95f;
-    waveLength = 0.1f;
 
     shouldCreateNewWave=true;
 }
@@ -27,11 +25,12 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
     if(shouldCreateNewWave){
 
         //create the new wave
-        LifeEvent_CWave_data * data=new LifeEvent_CWave_data(centerX,centerY);
+        LifeEvent_CWave_data * data=new LifeEvent_CWave_data();
         data->init();
-        data->setDepth(getDepth());
+        data->setCenter(0.0f,0.0f);
         data->setFrequency(getFrequency());
         data->setWaveLength(getWavelength());
+        data->setDepth(getDepth());
 
         data->setColor(this);
 
@@ -56,12 +55,6 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
 //    }
 }
 
-LifeEvent_CWave::LifeEvent_CWave(GLfloat cX, GLfloat cY):
-        centerX(cX),
-        centerY(cY)
-{
-
-}
 
 
 void LifeEvent_CWave::onReceiveEvent(Event &event) {

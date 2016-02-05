@@ -9,31 +9,15 @@
 #include <math.h>
 #include "../life_event.hpp"
 #include "../../Utils/Color.h"
+#include "../../PureMath/Wave.h"
 #include <vector>
-class LifeEvent_CWave_data : public LifeEvent , public Color{
+class LifeEvent_CWave_data : public LifeEvent , public Color, public Wave{
 
 public:
     //constructors
-    LifeEvent_CWave_data(GLfloat, GLfloat);
+    LifeEvent_CWave_data();
 
-
-    GLfloat getFrequency(){return frequency;}
-    GLfloat getWavelength(){return waveLength;}
-    void setFrequency(GLfloat f){this->frequency=f;}
-    void setWaveLength(GLfloat w){this->waveLength=w;}
-
-    GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
-    GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
-    GLfloat getTimePeriod(){return 1.0f/getFrequency();}
-
-    GLfloat getRadius()const {return radius;}
 private:
-    GLfloat frequency, waveLength;
-
-    GLfloat centerX;
-    GLfloat centerY;
-
-    GLfloat radius;
 
     GLuint VAO;
     GLuint VBO;

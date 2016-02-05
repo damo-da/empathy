@@ -6,18 +6,16 @@
 #include "../../Shader.h"
 using namespace std;
 
-LifeEvent_CWave_data::LifeEvent_CWave_data(GLfloat cX, GLfloat cY)
+LifeEvent_CWave_data::LifeEvent_CWave_data()
         :LifeEvent(),
          Color(),
-        centerX(cX),centerY(cY) {
+         Wave()
+{
 
 }
 
 void LifeEvent_CWave_data::onInit() {
     LifeEvent::onInit();
-
-    frequency=0.95f;
-    waveLength = 0.1f;
 
     // cout<<"initing vertex objects"<<endl;
     glGenVertexArrays(1, &VAO);
@@ -27,8 +25,8 @@ void LifeEvent_CWave_data::onInit() {
 void LifeEvent_CWave_data::onRun(GLfloat delTime) {
     // cout << "Calculating vertices" << endl;
     vertices.clear();
-    
-    radius = getTimeSinceRun() * getWaveSpeed();
+
+    GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
     float diff = 0.01f;
     float cerv = 2 * M_PI * radius;
@@ -37,8 +35,8 @@ void LifeEvent_CWave_data::onRun(GLfloat delTime) {
     for (float i = 0; i < cerv; i += diff) {
         float angle = 2 * M_PI * i / cerv;
 
-        float x = radius * cos(angle) + centerX;
-        float y = radius * sin(angle) + centerY;
+        float x = radius * cos(angle) + getCenterX();
+        float y = radius * sin(angle) + getCenterY();
 
         vertices.push_back(x);
         vertices.push_back(y);

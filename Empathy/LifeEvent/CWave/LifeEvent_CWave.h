@@ -9,11 +9,12 @@
 #include <math.h>
 #include "../LifeEvent_Collection.h"
 #include "../../Utils/Color.h"
+#include "../../PureMath/Wave.h"
 
 #define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
 #define EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE "EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE"
 
-class LifeEvent_CWave : public LifeEvent_Collection,public Color {
+class LifeEvent_CWave : public LifeEvent_Collection,public Color , public Wave{
 
 public:
     LifeEvent_CWave();
@@ -22,27 +23,9 @@ public:
 protected:
     virtual void onInit() override;
 
-
-public:
-    //constructors
-    LifeEvent_CWave(GLfloat, GLfloat);
-
-    GLfloat getFrequency(){return frequency;}
-    GLfloat getWavelength(){return waveLength;}
-    void setFrequency(GLfloat f){this->frequency=f;}
-    void setWaveLength(GLfloat w){this->waveLength=w;}
-
-    GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
-    GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
-    GLfloat getTimePeriod(){return 1.0f/getFrequency();}
-
 private:
-    GLfloat frequency, waveLength;
-
-    GLfloat centerX;
-    GLfloat centerY;
-
     bool shouldCreateNewWave;
+
 public:
     virtual void onReceiveEvent(Event &event) override;
 };

@@ -6,8 +6,36 @@
 #define EMPATHY_WAVE_H
 
 
-class Wave {
+#include <GL/glew.h>
+#include <math.h>
 
+class Wave {
+public:
+    Wave();
+    GLfloat getFrequency(){return frequency;}
+    GLfloat getWavelength(){return waveLength;}
+    void setFrequency(GLfloat f){this->frequency=f;}
+    void setWaveLength(GLfloat w){this->waveLength=w;}
+
+    GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
+    GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
+    GLfloat getTimePeriod(){return 1.0f/getFrequency();}
+
+
+    GLfloat getCenterX() const {
+        return centerX;
+    }
+    void setCenter(GLfloat x,GLfloat y){centerX=x;centerY=y;}
+
+    GLfloat getCenterY() const {
+        return centerY;
+    }
+
+private:
+    GLfloat frequency, waveLength;
+
+    GLfloat centerX;
+    GLfloat centerY;
 };
 
 
