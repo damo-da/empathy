@@ -40,3 +40,4 @@ empathy
 
 /tmp #temporary files
 /empathy #output build
+/.idea
