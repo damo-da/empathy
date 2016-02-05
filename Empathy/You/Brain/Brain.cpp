@@ -7,6 +7,7 @@
 #include "../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../LifeEvent/MathWave/MathWave_Line.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
+#include "../../LifeEvent/LifeEvent_CWave_data.h"
 #include <iostream>
 using namespace std;
 void Brain::onReceiveEvent(Event &event) {
@@ -26,12 +27,16 @@ void Brain::mainloop() {
     emit(EMPATHY_CREATE_EVENT);
 
     //add a base wave
-    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
-    addLifeEvent(wave);
-    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
-    wave->setCenter(0.0f,0.0f);
-    wave->setDepth(0.0f);
-    wave->setFrequency(0.4f);
+//    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
+//    addLifeEvent(wave);
+//    wave->setColor(0.0f,1.0f,0.0f,0.5f);//green
+//    wave->setCenter(0.0f,0.0f);
+//    wave->setDepth(0.0f);
+//    wave->setFrequency(0.4f);
+
+    LifeEvent_CWave_data * waveData=new LifeEvent_CWave_data(0.0f,0.0f);
+    addLifeEvent(waveData);
+
 //
 //
 //

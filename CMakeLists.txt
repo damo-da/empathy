@@ -50,7 +50,7 @@ set (SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Line.cpp
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
-        Empathy/LifeEvent/FadeInOut/FadeInOut.h Empathy/You/Brain/Brain.cpp Empathy/You/Brain/Brain.h Empathy/LifeEvent/LifeEvent_Collection.cpp Empathy/LifeEvent/LifeEvent_Collection.h Empathy/LifeEvent/LifeEvent_CWave.cpp Empathy/LifeEvent/LifeEvent_CWave.h)
+        Empathy/LifeEvent/FadeInOut/FadeInOut.h Empathy/You/Brain/Brain.cpp Empathy/You/Brain/Brain.h Empathy/LifeEvent/LifeEvent_Collection.cpp Empathy/LifeEvent/LifeEvent_Collection.h Empathy/LifeEvent/LifeEvent_CWave.cpp Empathy/LifeEvent/LifeEvent_CWave.h Empathy/LifeEvent/LifeEvent_CWave_data.cpp Empathy/LifeEvent/LifeEvent_CWave_data.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

@@ -2,28 +2,18 @@
 // Created by damo on 2/5/16.
 //
 
-#ifndef EMPATHY_LIFEEVENT_CWAVE_H
-#define EMPATHY_LIFEEVENT_CWAVE_H
+#ifndef EMPATHY_LIFEEVENT_CWAVE_DATA_H
+#define EMPATHY_LIFEEVENT_CWAVE_DATA_H
 
 
 #include <math.h>
-#include "LifeEvent_Collection.h"
-
-#define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
-
-class LifeEvent_CWave : public LifeEvent_Collection {
-
-public:
-    LifeEvent_CWave();
-    virtual void passTime(GLfloat delTime) override;
-
-protected:
-    virtual void onInit() override;
-
+#include "life_event.hpp"
+#include <vector>
+class LifeEvent_CWave_data : public LifeEvent {
 
 public:
     //constructors
-    LifeEvent_CWave(GLfloat, GLfloat);
+    LifeEvent_CWave_data(GLfloat, GLfloat);
 
     void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
 
@@ -43,8 +33,23 @@ private:
     GLfloat centerX;
     GLfloat centerY;
 
-    bool shouldCreateNewWave;
+    GLfloat radius;
+
+    GLuint VAO;
+    GLuint VBO;
+
+    std::vector<GLfloat> vertices;
+public:
+    virtual void onInit() override;
+
+protected:
+    virtual void onRun(GLfloat delTime) override;
+
+public:
+    virtual void onDestroy() override;
+
+    virtual void draw() override;
 };
 
 
-#endif //EMPATHY_LIFEEVENT_CWAVE_H
+#endif //EMPATHY_LIFEEVENT_CWAVE_DATA_H
