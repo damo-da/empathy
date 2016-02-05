@@ -20,11 +20,13 @@ public:
     GLfloat getFrequency(){return frequency;}
     GLfloat getWavelength(){return waveLength;}
     void setFrequency(GLfloat f){this->frequency=f;}
+    void setWaveLength(GLfloat w){this->waveLength=w;}
 
     GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
     GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
     GLfloat getTimePeriod(){return 1.0f/getFrequency();}
 
+    GLfloat getRadius()const {return radius;}
 private:
     GLfloat frequency, waveLength;
 

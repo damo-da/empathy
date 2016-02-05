@@ -10,6 +10,7 @@
 #include "LifeEvent_Collection.h"
 
 #define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
+#define EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE "EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE"
 
 class LifeEvent_CWave : public LifeEvent_Collection {
 
@@ -30,6 +31,7 @@ public:
     GLfloat getFrequency(){return frequency;}
     GLfloat getWavelength(){return waveLength;}
     void setFrequency(GLfloat f){this->frequency=f;}
+    void setWaveLength(GLfloat w){this->waveLength=w;}
 
     GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
     GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
@@ -44,6 +46,8 @@ private:
     GLfloat centerY;
 
     bool shouldCreateNewWave;
+public:
+    virtual void onReceiveEvent(Event &event) override;
 };
 
 

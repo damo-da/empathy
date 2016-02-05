@@ -34,6 +34,7 @@ public:
     virtual void onDestroy();
     virtual void onInit();
     void init();
+    void kill(){doneCreating();doneRunning();}
 protected:
     void doneCreating();
     void doneRunning();

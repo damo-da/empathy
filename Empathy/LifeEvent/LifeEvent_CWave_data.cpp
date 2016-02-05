@@ -31,8 +31,7 @@ void LifeEvent_CWave_data::onInit() {
 void LifeEvent_CWave_data::onRun(GLfloat delTime) {
     // cout << "Calculating vertices" << endl;
     vertices.clear();
-
-
+    
     radius = getTimeSinceRun() * getWaveSpeed();
 
     float diff = 0.01f;

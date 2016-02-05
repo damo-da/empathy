@@ -3,7 +3,9 @@
 //
 
 #include "LifeEvent_CWave.h"
-#include "Wave/wave_data.hpp"
+#include "LifeEvent_CWave_data.h"
+#include "../RadioStation/TimeBroadcaster.h"
+using namespace std;
 
 LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection() {
 
@@ -27,27 +29,29 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
     if(shouldCreateNewWave){
 
         //create the new wave
-        WaveData data( 0.0f, centerX, centerY, true);
-        data.setDepth(getDepth());
+        LifeEvent_CWave_data * data=new LifeEvent_CWave_data(centerX,centerY);
+        data->init();
+        data->setDepth(getDepth());
+        data->setFrequency(getFrequency());
+        data->setWaveLength(getWavelength());
+        data->setColor(color[0],color[1],color[2],color[3]);
 
         //create a callback for next wave
         createTimeOut(getTimePeriod(),EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE);
 
-//        addToCollection(data);
+        addToCollection(data);
 
         shouldCreateNewWave=false;
     }
-
+//
+//    std::vector<LifeEvent *> waveData=getCollection();
 //    for (int i = 0; i < waveData.size(); i++) {
+//        LifeEvent_CWave_data * data=(LifeEvent_CWave_data *)waveData[i];
+//        if (data->getRadius() > 2.0f) {
 //
-//        waveData[i].radius += getWaveSpeed()*delTime;
-//        waveData[i].calculateGlVertices();
+////            data->kill();
 //
-//        if (waveData[i].radius > 2.0f) {
-//
-//            waveData[i].destroy();
-//
-//            waveData.erase(waveData.begin() + i);
+////            removeFromCollection(data);
 //            i--;
 //        }
 //    }
@@ -62,4 +66,21 @@ LifeEvent_CWave::LifeEvent_CWave(GLfloat cX, GLfloat cY):
 
 void LifeEvent_CWave::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     color = {r, g, b, a};
+}
+
+void LifeEvent_CWave::onReceiveEvent(Event &event) {
+    Subscriber::onReceiveEvent(event);
+
+    if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
+       event.action==EMPATHY_EVENT_TIMEOUT){
+
+        shouldCreateNewWave=true;
+
+        //broadcast that a period is complete
+        Event e(EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE);
+        emit(e);
+
+    }else{
+
+    }
 }

@@ -8,12 +8,13 @@
 #include "../../LifeEvent/MathWave/MathWave_Line.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../LifeEvent/LifeEvent_CWave_data.h"
+#include "../../LifeEvent/LifeEvent_CWave.h"
 #include <iostream>
 using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
-    cout<<"recceived "<<event.action<<event.broadcaster->getId()<<endl;
+//    cout<<"received "<<event.action<<" from "<<event.broadcaster->getId()<<endl;
 }
 
 void Brain::begin() {
@@ -34,9 +35,13 @@ void Brain::mainloop() {
 //    wave->setDepth(0.0f);
 //    wave->setFrequency(0.4f);
 
-    LifeEvent_CWave_data * waveData=new LifeEvent_CWave_data(0.0f,0.0f);
-    addLifeEvent(waveData);
-
+//    LifeEvent_CWave_data * waveData=new LifeEvent_CWave_data(0.0f,0.0f);
+//    addLifeEvent(waveData);
+//
+    LifeEvent_CWave * wave=new LifeEvent_CWave(0.0f,0.0f);
+    addLifeEvent(wave);
+    wave->setFrequency(1.0f);
+//    wave->setWaveLength(0.1f);
 //
 //
 //
