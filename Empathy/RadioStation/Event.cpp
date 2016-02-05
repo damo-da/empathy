@@ -9,7 +9,8 @@
 Event::Event(std::string action):
         action(action) ,
         intData(),
+        broadcaster(nullptr),
         strData(){
-    broadcaster = nullptr;
+
 
 }

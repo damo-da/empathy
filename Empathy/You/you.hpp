@@ -14,7 +14,7 @@
 
 class You: public Subscriber{
 public:
-	std::vector<LifeEvent*> * lifeEvents;
+	std::vector<LifeEvent*> lifeEvents;
 
 	You();
 
