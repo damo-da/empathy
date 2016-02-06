@@ -16,9 +16,14 @@ void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
     if(event.broadcaster->getId()==getId()){
-        cout<<"received "<<event.action<<" from "<<event.broadcaster->getId()<<endl;
-    }
+        if(event.action==EMPATHY_EVENT_BRAIN_LINE_NUMBER){
+            int lineNumber=event.getInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
+            int caller=event.getInt(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER);
 
+            cout<<"action received"<<endl;
+            runLineNumber(lineNumber,caller);
+        }
+    }
 }
 
 Brain::Brain() {
@@ -33,6 +38,8 @@ void Brain::addLifeEvent(LifeEvent *event) {
 
 void Brain::run() {
     listenAll();
+    activateTimeoutForNextLine(1,0.0f);
+
 
     //add a base wave
 //    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
@@ -45,13 +52,7 @@ void Brain::run() {
 //    LifeEvent_CWave_data * waveData=new LifeEvent_CWave_data(0.0f,0.0f);
 //    addLifeEvent(waveData);
 //
-    LifeEvent_CWave * wave=new LifeEvent_CWave();
-    addLifeEvent(wave);
-    wave->setCenter(0.0f,0.0f);
-    wave->setColor(1.0f,0.1f,1.0f);
-    wave->setFrequency(2.0f);
 
-    cout<<getId()<<" is my id"<<endl;
 //    wave->setWaveLength(0.1f);
 //
 //
@@ -91,18 +92,51 @@ void Brain::run() {
 //    sincWave->setHead(-1.0f);
 //    sincWave->setLength(1.0f);
 //    sincWave->setPencilSize(2.0f);
-
-    activateTimeoutForNextLine(1,0.1f);
 }
 
 void Brain::runLineNumber(int number, int caller) {
+    switch (number){
+        case 1:
+        {
+            LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
+            addLifeEvent(wave);
+            wave->setCenter(0.0f,0.0f);
+            wave->setColor(1.0f,0.1f,1.0f);
+            wave->setFrequency(2.0f);
 
+            activateTimeoutForNextLine(2,5.0f);
+            break;
+        }
+        case 2:
+        {
+            MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+            addLifeEvent(sineWave);
+            sineWave->setZoomY(0.1f);
+            sineWave->setPencilSize(2.0f);
+            sineWave->setHead(-0.7f);
+            sineWave->setTail(0.0f);
+            sineWave->setPeriod(0.1f);
+            sineWave->setSpeed(0.3f);
+            sineWave->setLength(0.5f);
+            sineWave->setDepth(1.0f);
+
+
+            break;
+        }
+
+        default:
+            break;
+    }
 }
 
 void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime) {
-//    Event & event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
-//    event.putInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineNumber);
-
-//    createTimeOut(event,afterTime);
+    activateTimeoutForNextLine(lineNumber,afterTime,-1);
 }
 
+void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime, int callerLineNumber) {
+    Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
+    event.putInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineNumber);
+    event.putInt(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineNumber);
+
+    createTimeOut(afterTime,event);
+}
