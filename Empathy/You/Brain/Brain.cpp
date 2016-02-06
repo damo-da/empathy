@@ -9,7 +9,8 @@
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../LifeEvent/CWave/LifeEvent_CWave_data.h"
 #include "../../LifeEvent/CWave/LifeEvent_CWave.h"
-#include <iostream>
+#include "../you.hpp"
+
 using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
@@ -17,15 +18,18 @@ void Brain::onReceiveEvent(Event &event) {
 //    cout<<"received "<<event.action<<" from "<<event.broadcaster->getId()<<endl;
 }
 
-void Brain::begin() {
-    std::cout<<"Brain began"<<std::endl;
+Brain::Brain() {
 
-    instance=new Brain();
-    instance->mainloop();
 }
 
-void Brain::mainloop() {
-    emit(EMPATHY_CREATE_EVENT);
+void Brain::addLifeEvent(LifeEvent *event) {
+
+    You::getInstance()->addEvent(event);
+
+}
+
+void Brain::run() {
+    listenAll();
 
     //add a base wave
 //    LifeEvent_Wave * wave=new LifeEvent_Wave(0.0f,0.0f);
@@ -84,11 +88,8 @@ void Brain::mainloop() {
 //    sincWave->setHead(-1.0f);
 //    sincWave->setLength(1.0f);
 //    sincWave->setPencilSize(2.0f);
-
 }
 
-Brain * Brain::instance= nullptr;
+void Brain::runLineNumber(int number, int caller) {
 
-Brain::Brain() {
-    listenAll();
 }

@@ -59,7 +59,9 @@ void You::init(){
     //initiaulize vector to store lifeevents
     lifeEvents=std::vector<LifeEvent*>();
 
-    Brain::begin();
+    brain=new Brain();
+
+    brain->run();
 
     //initializing time
     curTime=0;

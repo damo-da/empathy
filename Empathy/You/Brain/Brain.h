@@ -9,23 +9,19 @@
 #include "../../RadioStation/Subscriber.h"
 #include "../../global.hpp"
 #include "../../LifeEvent/life_event.hpp"
-#include "../you.hpp"
 
 class Brain  : public Subscriber{
 public:
     virtual void onReceiveEvent(Event &event) override;
 
-    static void begin();
-private:
-    void mainloop();
-
-    void addLifeEvent(LifeEvent * event){
-        You::getInstance()->addEvent(event);
-    }
-
     Brain();
 
-    static Brain * instance;
+    void run();
+
+    virtual void runLineNumber(int number, int caller);
+private:
+
+    void addLifeEvent(LifeEvent * event);
 };
 
 

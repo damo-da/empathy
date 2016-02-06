@@ -9,6 +9,7 @@
  
 #include "../LifeEvent/life_event.hpp"
 #include "../global.hpp"
+#include "Brain/Brain.h"
 
 #include <vector>
 
@@ -34,6 +35,9 @@ public:
 
     virtual void onReceiveEvent(Event &) override;
 
+	Brain * brain;
+
+public:
     static You * getInstance(){return instance;}
 private:
     static You * instance;
