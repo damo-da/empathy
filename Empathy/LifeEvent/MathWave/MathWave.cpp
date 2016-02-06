@@ -93,7 +93,7 @@ void LifeEvent_MathWave::onCreate(GLfloat delTime) {
 
 void LifeEvent_MathWave::onFinish(GLfloat delTime) {
 
-    if(getHead() + getTimeSinceRun()*getSpeed()>getTail()+getLength()){
+    if(getHead() + getTimeSinceRun()*getSpeed()>getTail()){
         cout<<"done finishing"<<endl;
         doneFinishing();
     }

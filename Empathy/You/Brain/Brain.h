@@ -19,13 +19,15 @@ public:
     Brain();
 
     void run();
-private:
+protected:
     virtual void runLineNumber(int number, int caller);
 
     void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime);
     void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime,int callerLineNumber);
 
     void addLifeEvent(LifeEvent * event);
+private:
+
 };
 
 

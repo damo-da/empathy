@@ -7,6 +7,7 @@
 #include "../Shader.h"
 #include "../LifeEvent/MathWave/MathWave_Line.h"
 #include "Brain/Brain.h"
+#include "Brain/DummyBrain/DummyBrain.h"
 
 
 using namespace std;
@@ -59,8 +60,7 @@ void You::init(){
     //initiaulize vector to store lifeevents
     lifeEvents=std::vector<LifeEvent*>();
 
-    brain=new Brain();
-
+    brain=new DummyBrain();
     brain->run();
 
     //initializing time
