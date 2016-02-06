@@ -28,12 +28,12 @@ void DummyBrain::runLineNumber(int number, int caller) {
         }
         case 2:
         {
-            MathWave_Sine* sineWave=new MathWave_Sine(0.1f);
+            MathWave_Sinc* sineWave=new MathWave_Sinc();
             addLifeEvent(sineWave);
-            sineWave->setZoomY(0.1f);
+            sineWave->setZoomY(0.3f);
             sineWave->setPencilSize(2.0f);
-            sineWave->setHead(-0.7f);
-            sineWave->setTail(0.0f);
+            sineWave->setHead(-0.5f);
+            sineWave->setTail(0.5f);
             sineWave->setPeriod(0.1f);
             sineWave->setSpeed(0.3f);
             sineWave->setLength(0.5f);
@@ -49,6 +49,7 @@ void DummyBrain::runLineNumber(int number, int caller) {
             addLifeEvent(line);
             line->setOffsetY(0.3f);
             line->setDepth(0.1f);
+            line->setSpeed(0.4f);
 
             playKeyboardAudio("0C");
 
