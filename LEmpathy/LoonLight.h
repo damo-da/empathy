@@ -7,11 +7,7 @@
 
 #include <map>
 #include <iostream>
-
-
 #include <irrKlang.h>
-
-
 
 using namespace irrklang;
 
@@ -19,20 +15,25 @@ using namespace irrklang;
 
 class LoonLight : public MoonLight{
 public:
-    ISoundEngine* engine;
 
     virtual void init() override;
-
-    virtual void play(std::string id, bool repeat) override;
+    virtual void terminate() override;
 
     LoonLight() { }
 
-    virtual void terminate() override;
 private:
-    static std::string BASE;
+    ISoundEngine* engine;
     std::map<std::string,std::string> references;
 
     void initIrr();
+
+protected:
+    virtual void play(std::string id, bool repeat) override;
+    virtual void playKeyboard(std::string string) override;
+
+private:
+    static std::string BASE;
+    static std::string KEYBOARD_BASE;
 };
 
 

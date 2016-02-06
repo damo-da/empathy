@@ -22,6 +22,7 @@ void DummyBrain::runLineNumber(int number, int caller) {
             wave->setColor(1.0f,0.1f,1.0f);
             wave->setFrequency(2.0f);
 
+            playKeyboardAudio("0A");
             activateTimeoutForNextLine(2,3.0f);
             break;
         }
@@ -38,6 +39,8 @@ void DummyBrain::runLineNumber(int number, int caller) {
             sineWave->setLength(0.5f);
             sineWave->setDepth(1.0f);
 
+            playKeyboardAudio("0B");
+
             activateTimeoutForNextLine(3,4.0f);
             break;
         }
@@ -46,6 +49,8 @@ void DummyBrain::runLineNumber(int number, int caller) {
             addLifeEvent(line);
             line->setOffsetY(0.3f);
             line->setDepth(0.1f);
+
+            playKeyboardAudio("0C");
 
             activateTimeoutForNextLine(4,2.0f);
             break;
@@ -60,6 +65,8 @@ void DummyBrain::runLineNumber(int number, int caller) {
             sincWave->setHead(-1.0f);
             sincWave->setLength(1.0f);
             sincWave->setPencilSize(2.0f);
+
+            playKeyboardAudio("0D");
 
             activateTimeoutForNextLine(1,2.0f);
             break;

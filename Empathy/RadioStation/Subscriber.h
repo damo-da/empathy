@@ -35,6 +35,9 @@ public:
 
     int getId(){return id;}
 
+    void playAudio(std::string key);
+    void playKeyboardAudio(std::string key);
+
 private:
     int id;
 

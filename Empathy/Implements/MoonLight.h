@@ -8,33 +8,24 @@
 #include "../RadioStation/Subscriber.h"
 #include <map>
 
-#define EMPATHY_AUDIO_WAVE_COMPLETE "EMPATHY_AUDIO_WAVE_COMPLETE"
+#define EMPATHY_AUDIO_PLAY "EMPATHY_PLAY_AUDIO"
+#define EMPATHY_AUDIO_SHOULD_REPEAT "EMPATHY_AUDIO_SHOULD_REPEAT"
+#define EMPATHY_AUDIO_PLAY_KEYBOARD "EMPATHY_AUDIO_PLAY_KEYBOARD"
 
 class MoonLight : public Subscriber{
 public:
-    virtual void play(std::string id, bool repeat);
-    void play(std::string id);
+    virtual void onReceiveEvent(Event &event) override;
 
     MoonLight();
 
     virtual void init();
     virtual void terminate();
-
-    virtual void onReceiveEvent(Event &event) override;
-
-    void bind(std::string key,std::string value){
-        bindings[key]=value;
-    }
-
-    bool repeats(std::string key);
 private:
-    const std::map<std::string, std::string> &getBindings() const {
-        return bindings;
-    }
+    void play(std::string id);
 
-private:
-    std::map<std::string,std::string> bindings;
-    std::map<std::string,bool> repeatingBindings;
+protected:
+    virtual void playKeyboard(std::string key)=0;
+    virtual void play(std::string id, bool repeat);
 };
 
 

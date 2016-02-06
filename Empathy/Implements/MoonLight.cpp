@@ -8,7 +8,7 @@
 using namespace std;
 
 void MoonLight::play(string id) {
-    play(id,repeats(id));
+    play(id,false);
 }
 
 void MoonLight::play(string id, bool repeat) {
@@ -16,44 +16,30 @@ void MoonLight::play(string id, bool repeat) {
 }
 
 
-MoonLight::MoonLight():
-        bindings(),
-        repeatingBindings()
+MoonLight::MoonLight()
 {
-    repeatingBindings[EMPATHY_AUDIO_WAVE_COMPLETE]=false;
+
 }
 
 void MoonLight::init() {
-    //Get all keys
-    map<string,string> binds=getBindings();
-    vector<string> v;
-    for(map<string,string>::iterator it = binds.begin(); it != binds.end(); ++it) {
-        v.push_back(it->first);
-    }
-
-    //listen to all keys
-    for(int i=0;i<v.size();i++){
-        listen(v[i]);
-    }
-
-
+    listen(EMPATHY_AUDIO_PLAY);
+    listen(EMPATHY_AUDIO_PLAY_KEYBOARD);
 }
 
 void MoonLight::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
-
-    string mEvent=bindings[event.action];
-
-    play(mEvent);
-}
-
-bool MoonLight::repeats(std::string key) {
-    try{
-        return this->repeatingBindings[key];
-    }catch (int i){
-        return false;
+    if(event.action == EMPATHY_AUDIO_PLAY){
+        std::string key=event.getString(EMPATHY_AUDIO_PLAY);
+        bool repeat=event.getInt(EMPATHY_AUDIO_SHOULD_REPEAT);
+        play(key,repeat);
+    }else if(event.action==EMPATHY_AUDIO_PLAY_KEYBOARD){
+        std::string key=event.getString(EMPATHY_AUDIO_PLAY_KEYBOARD);
+        playKeyboard(key);
     }
+
+
 }
+
 
 void MoonLight::terminate() {
 

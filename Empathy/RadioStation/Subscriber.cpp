@@ -6,6 +6,8 @@
 #include "BroadcastStation.h"
 #include "../Uniqueness.h"
 #include "TimeBroadcaster.h"
+#include "../Implements/MoonLight.h"
+
 using namespace std;
 void Subscriber::emit(Event & event) {
     event.broadcaster=this;
@@ -80,4 +82,16 @@ void Subscriber::createRepeatingTimeout(GLfloat start, GLfloat interval, Event &
 
 void Subscriber::createTimeOut(GLfloat interval, Event &event) {
     TimeBroadcaster::createTimeout(this,event,interval);
+}
+
+void Subscriber::playAudio(std::string key) {
+    Event e=createEvent(EMPATHY_AUDIO_PLAY);
+    e.putString(EMPATHY_AUDIO_PLAY,key);
+    emit(e);
+}
+
+void Subscriber::playKeyboardAudio(std::string key) {
+    Event e=createEvent(EMPATHY_AUDIO_PLAY_KEYBOARD);
+    e.putString(EMPATHY_AUDIO_PLAY_KEYBOARD,key);
+    emit(e);
 }

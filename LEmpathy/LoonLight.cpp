@@ -8,7 +8,7 @@
 using namespace std;
 void LoonLight::play(std::string id, bool repeat) {
     MoonLight::play(id, repeat);
-
+    cout<<"Playing "<<id<<endl;
     try{
         std::string local=references[id];
         std::string file=BASE+local;
@@ -28,6 +28,7 @@ void LoonLight::init() {
 
     references=std::map<std::string,std::string>();
 
+    references["0A"]="keyboard/0A.ogg";
 //    references[EMPATHY_AUDIO_0A]="keyboard/0A.ogg";
 //    references[EMPATHY_AUDIO_0B]="keyboard/0A.ogg";
 //    references[EMPATHY_AUDIO_0B]="keyboard/0A.ogg";
@@ -35,7 +36,6 @@ void LoonLight::init() {
 //    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
 //    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
 //    references[EMPATHY_AUDIO_OB]="keyboard/0A.ogg";
-
 
 }
 
@@ -60,3 +60,18 @@ void LoonLight::initIrr() {
 
 
 std::string LoonLight::BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/audio/";
+std::string LoonLight::KEYBOARD_BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/audio/keyboard/";
+
+void LoonLight::playKeyboard(string key) {
+
+    cout<<"Playing "<<key<<" is keyboard"<<endl;
+    try{
+        std::string file=KEYBOARD_BASE+key+".ogg";
+        cout<<file<<endl;
+
+        engine->play2D(file.c_str());
+
+    }catch (int i){
+        return;
+    }
+}
