@@ -26,11 +26,15 @@ public:
     Subscriber();
 
     void createTimeOut(GLfloat interval,int);
+    void createTimeOut(GLfloat interval,Event&);
 
-    void createRepeatingTimeout(GLfloat,GLfloat,int);
-    void createRepeatingTimeout(GLfloat,int);
+    void createRepeatingTimeout(GLfloat start,GLfloat interval,int);
+    void createRepeatingTimeout(GLfloat interval,int);
+    void createRepeatingTimeout(GLfloat start,GLfloat interval,Event&);
+    void createRepeatingTimeout(GLfloat interval,Event&);
 
     int getId(){return id;}
+
 private:
     int id;
 
@@ -47,6 +51,10 @@ public:
     }
 private:
     static std::vector <Subscriber*> lifeEvents;
+
+protected:
+    Event createEvent();
+    Event createEvent(std::string action);
 };
 
 

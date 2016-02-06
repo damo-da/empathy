@@ -15,7 +15,10 @@ using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
-//    cout<<"received "<<event.action<<" from "<<event.broadcaster->getId()<<endl;
+    if(event.broadcaster->getId()==getId()){
+        cout<<"received "<<event.action<<" from "<<event.broadcaster->getId()<<endl;
+    }
+
 }
 
 Brain::Brain() {
@@ -88,8 +91,18 @@ void Brain::run() {
 //    sincWave->setHead(-1.0f);
 //    sincWave->setLength(1.0f);
 //    sincWave->setPencilSize(2.0f);
+
+    activateTimeoutForNextLine(1,0.1f);
 }
 
 void Brain::runLineNumber(int number, int caller) {
 
 }
+
+void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime) {
+//    Event & event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
+//    event.putInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineNumber);
+
+//    createTimeOut(event,afterTime);
+}
+

@@ -82,5 +82,5 @@ void LifeEvent::doneFinishing() {
 }
 
 void LifeEvent::onDestroy() {
-    cout<<"deleted event "<<getId()<<endl;
+//    cout<<"deleted event "<<getId()<<endl;
 }

@@ -11,6 +11,8 @@
 #include <iostream>
 #include <map>
 
+#define EMPATHY_EVENT_ACTION_NONE "EMPATHY_EVENT_ACTION_NONE"
+
 class Subscriber;
 
 class Event {

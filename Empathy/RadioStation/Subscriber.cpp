@@ -6,7 +6,7 @@
 #include "BroadcastStation.h"
 #include "../Uniqueness.h"
 #include "TimeBroadcaster.h"
-
+using namespace std;
 void Subscriber::emit(Event & event) {
     event.broadcaster=this;
     event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
@@ -28,21 +28,15 @@ Subscriber::Subscriber() {
 }
 
 void Subscriber::createTimeOut(GLfloat start, int id) {
-    Event event(EMPATHY_EVENT_TIMEOUT);
-    event.broadcaster=this;
+    Event event=createEvent(EMPATHY_EVENT_TIMEOUT);
 
-    event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
-
-    TimeBroadcaster::createTimeout(this,event,start);
+    createTimeOut(start,event);
 }
 
 void Subscriber::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
-    Event event(EMPATHY_EVENT_REPEAT_TIMEOUT);
-    event.broadcaster=this;
+    Event event=createEvent(EMPATHY_EVENT_REPEAT_TIMEOUT);
+    createRepeatingTimeout(start,interval,event);
 
-    event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
-
-    TimeBroadcaster::createRepeatingTimeout(this,event,start,interval);
 }
 
 void Subscriber::createRepeatingTimeout(GLfloat interval, int id) {
@@ -56,4 +50,34 @@ void Subscriber::emit(std::string action) {
 
 void Subscriber::listenAll() {
     BroadcastStation::subscribeAll(this);
+}
+
+
+
+Event Subscriber::createEvent() {
+    Event event=createEvent(EMPATHY_EVENT_ACTION_NONE);
+
+    return event;
+}
+
+Event  Subscriber::createEvent(std::string action) {
+    Event event=Event(action);
+
+    event.broadcaster=this;
+
+    event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
+
+    return event;
+}
+
+void Subscriber::createRepeatingTimeout(GLfloat interval, Event &event) {
+    createRepeatingTimeout(interval,interval,event);
+}
+
+void Subscriber::createRepeatingTimeout(GLfloat start, GLfloat interval, Event &event) {
+    TimeBroadcaster::createRepeatingTimeout(this,event,start,interval);
+}
+
+void Subscriber::createTimeOut(GLfloat interval, Event &event) {
+    TimeBroadcaster::createTimeout(this,event,interval);
 }

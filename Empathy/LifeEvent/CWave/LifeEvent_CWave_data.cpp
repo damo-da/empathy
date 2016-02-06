@@ -28,7 +28,7 @@ void LifeEvent_CWave_data::onRun(GLfloat delTime) {
 
     GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
-    if(radius>0.5f){
+    if(radius>EMPATHY_CWAVE_MAX_RADIUS){
         doneRunning();
         return;
     }
