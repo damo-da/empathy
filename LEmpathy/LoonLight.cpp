@@ -60,14 +60,14 @@ void LoonLight::initIrr() {
 
 
 std::string LoonLight::BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/audio/";
-std::string LoonLight::KEYBOARD_BASE="/home/damo/Desktop/dance/Empathy/LEmpathy/assets/empathy/audio/keyboard/";
+std::string LoonLight::KEYBOARD_BASE=LoonLight::BASE+"keyboard/";
 
 void LoonLight::playKeyboard(string key) {
 
-    cout<<"Playing "<<key<<" is keyboard"<<endl;
+
     try{
         std::string file=KEYBOARD_BASE+key+".ogg";
-        cout<<file<<endl;
+
 
         engine->play2D(file.c_str());
 

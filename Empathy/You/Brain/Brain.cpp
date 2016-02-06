@@ -32,7 +32,7 @@ void Brain::addLifeEvent(LifeEvent *event) {
 
 void Brain::run() {
     listenAll();
-    activateTimeoutForNextLine(1,0.0f);
+    activateTimeoutForNextLine(1,0.2f);
 }
 
 void Brain::runLineNumber(int number, int caller) {
