@@ -11,7 +11,7 @@ using namespace std;
 class MathWave_Sine : public LifeEvent_MathWave{
 
 public:
-    virtual GLfloat getY(GLfloat x) override;
+    virtual GLfloat getY(GLfloat theta) override;
 
     GLfloat getPeriod() const {
         return period;

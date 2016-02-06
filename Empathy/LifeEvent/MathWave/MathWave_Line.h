@@ -11,7 +11,7 @@
 class MathWave_Line : public LifeEvent_MathWave {
 
 public:
-    virtual GLfloat getY(GLfloat x) override;
+    virtual GLfloat getY(GLfloat) override;
 };
 
 

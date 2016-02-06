@@ -7,6 +7,8 @@
 #include "../../../LifeEvent/CWave/LifeEvent_CWave_data.h"
 #include "../../../LifeEvent/MathWave/MathWave_Line.h"
 #include "../../../LifeEvent/MathWave/MathWave_Sinc.h"
+#include "../../../LifeEvent/MathWave/MathWave_Para_Circle.h"
+
 
 DummyBrain::DummyBrain() : Brain() {
 
@@ -16,14 +18,27 @@ void DummyBrain::runLineNumber(int number, int caller) {
     switch (number){
         case 1:
         {
-            LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
-            addLifeEvent(wave);
-            wave->setCenter(0.0f,0.0f);
-            wave->setColor(1.0f,0.1f,1.0f);
-            wave->setFrequency(2.0f);
+//            LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
+//            addLifeEvent(wave);
+//            wave->setCenter(0.0f,0.0f);
+//            wave->setColor(1.0f,0.1f,1.0f);
+//            wave->setFrequency(2.0f);
 
-            playKeyboardAudio("0A");
-            activateTimeoutForNextLine(2,3.0f);
+            MathWave_Para_Circle * wave=new MathWave_Para_Circle();
+
+            addLifeEvent(wave);
+            wave->setZoomY(0.3f);
+            wave->setZoomX(0.3f);
+            wave->setPencilSize(2.0f);
+            wave->setHead(0.0f);
+            wave->setTail(M_PI*2);
+            wave->setSpeed(1.6f);
+            wave->setLength(0.5f);
+            wave->setDepth(0.0f);
+
+            playKeyboardAudio("2A");
+
+//            activateTimeoutForNextLine(2,3.0f);
             break;
         }
         case 2:

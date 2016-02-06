@@ -8,9 +8,9 @@
 
 #include <iostream>
 using namespace std;
-GLfloat MathWave_Sinc::getY(GLfloat x) {
+GLfloat MathWave_Sinc::getY(GLfloat theta) {
 
-    return MathWave_Sine::getY(x)/(x*getPeriodConstant());
+    return MathWave_Sine::getY(theta)/(theta*getPeriodConstant());
 }
 
 void MathWave_Sinc::onInit() {

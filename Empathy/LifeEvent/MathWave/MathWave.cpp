@@ -39,16 +39,22 @@ void LifeEvent_MathWave::onInit() {
 
     setOffsetX(0.0f);
     setOffsetY(0.0f);
+
     setZoomX(1.0f);
     setZoomY(1.0f);
+
     setLength(1.0f);
+
     setDiff(0.003f);
-    setHead(-0.2f);
-    setSpeed(0.1f);
-    setRotationAngle(0.0f);
-    setPencilSize(2.0f);
+
+    setHead(-0.0f);
     setTail(0.98f);
 
+    setSpeed(0.15f);
+
+    setRotationAngle(0.0f);
+
+    setPencilSize(2.0f);
 }
 
 
@@ -107,15 +113,15 @@ void LifeEvent_MathWave::calcVertices() {
 
     std::vector<GLfloat> vertices;
 
-    for(GLfloat x=getStartX();x<getEndX();x+=getDiff()){
-        GLfloat y=getY(x);
+    for(GLfloat i= getStartTheta(); i < getEndTheta(); i+=getDiff()){
+        GLfloat x=getX(i);
+        GLfloat y=getY(i);
 
         x += getOffsetX();
         y += getOffsetY();
 
         x *= getZoomX();
         y *= getZoomY();
-
 
         GLfloat outX=x*cos(rotationAngle)-y*sin(rotationAngle);
         GLfloat outY=x*sin(rotationAngle)+y*cos(rotationAngle);
@@ -128,7 +134,7 @@ void LifeEvent_MathWave::calcVertices() {
     render(vertices);
 }
 
-GLfloat LifeEvent_MathWave::getStartX() {
+GLfloat LifeEvent_MathWave::getStartTheta() {
     if(isCreating())
         return getHead();
     else if(isRunning())
@@ -137,7 +143,7 @@ GLfloat LifeEvent_MathWave::getStartX() {
         return getHead()+ getSpeed() * getTimeSinceRun();
 }
 
-GLfloat LifeEvent_MathWave::getEndX() {
+GLfloat LifeEvent_MathWave::getEndTheta() {
 
     if(isCreating())
         return getHead() + getSpeed() * getTimeSinceCreate();
@@ -146,4 +152,8 @@ GLfloat LifeEvent_MathWave::getEndX() {
     else if(isFinishing())
         return getTail();
 
+}
+
+GLfloat LifeEvent_MathWave::getX(GLfloat theta) {
+    return theta;
 }

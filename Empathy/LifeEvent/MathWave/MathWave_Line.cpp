@@ -4,6 +4,6 @@
 
 #include "MathWave_Line.h"
 
-GLfloat MathWave_Line::getY(GLfloat x) {
+GLfloat MathWave_Line::getY(GLfloat theta) {
     return 0;
 }

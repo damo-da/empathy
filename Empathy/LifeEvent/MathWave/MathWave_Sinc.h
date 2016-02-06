@@ -11,7 +11,7 @@
 class MathWave_Sinc : public MathWave_Sine{
 
 public:
-    virtual GLfloat getY(GLfloat x) override;
+    virtual GLfloat getY(GLfloat theta) override;
 
     virtual void onInit() override;
 };

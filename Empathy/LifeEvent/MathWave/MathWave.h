@@ -15,7 +15,8 @@
 
 class LifeEvent_MathWave : public LifeEvent,public Color{
 public:
-    virtual GLfloat getY(GLfloat x)=0;
+    virtual GLfloat getY(GLfloat theta)=0;
+    virtual GLfloat getX(GLfloat theta);
 
 public:
     void draw() override;
@@ -127,14 +128,14 @@ protected:
 
     virtual void onFinish(GLfloat delTime) override;
 
-    GLfloat getStartX();
-    GLfloat getEndX();
+    GLfloat getStartTheta();
+    GLfloat getEndTheta();
 
 private:
     void calcVertices();
 
-    GLfloat head;//the starting point for the initialmost x
-    GLfloat tail;//the ending poing for the finalmost x
+    GLfloat head;//the starting point for the initialmost theta
+    GLfloat tail;//the ending poing for the finalmost theta
 
     GLfloat speed; //the speed of the wave
     GLfloat length; //the length of the wave

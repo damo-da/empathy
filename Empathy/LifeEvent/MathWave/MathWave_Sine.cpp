@@ -6,9 +6,9 @@
 #include "MathWave_Sine.h"
 #include <cmath>
 using namespace std;
-GLfloat MathWave_Sine::getY(GLfloat x) {
+GLfloat MathWave_Sine::getY(GLfloat theta) {
 //    cout<<"HI"<<sin(x*getPeriodConstant())<<getPeriodConstant()<<endl;
-    return sin(x*getPeriodConstant());
+    return sin(theta*getPeriodConstant());
 }
 
 void MathWave_Sine::onInit() {
