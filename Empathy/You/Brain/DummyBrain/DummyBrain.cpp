@@ -18,74 +18,67 @@ void DummyBrain::runLineNumber(int number, int caller) {
     switch (number){
         case 1:
         {
-//            LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
-//            addLifeEvent(wave);
-//            wave->setCenter(0.0f,0.0f);
-//            wave->setColor(1.0f,0.1f,1.0f);
-//            wave->setFrequency(2.0f);
+            static int count=0;
+            count++;
 
             MathWave_Para_Circle * wave=new MathWave_Para_Circle();
-
             addLifeEvent(wave);
             wave->setZoomY(0.3f);
+            wave->setColor(1.0f,1.0f,0.0f);
             wave->setZoomX(0.3f);
             wave->setPencilSize(2.0f);
             wave->setHead(0.0f);
-            wave->setTail(M_PI*2);
+            wave->setTail(M_PI);
             wave->setSpeed(1.6f);
             wave->setLength(0.5f);
             wave->setDepth(0.0f);
 
-            playKeyboardAudio("2A");
+            if(count%2==0)
+                playKeyboardAudio("2B");
+            else
+                playKeyboardAudio("2A");
 
-//            activateTimeoutForNextLine(2,3.0f);
+            if(count<3){
+                activateTimeoutForNextLine(1,1.6f);
+            }
+            else{
+                count=0;
+                activateTimeoutForNextLine(3,1.6f);
+            }
+
             break;
         }
-        case 2:
+        case 3:
         {
-            MathWave_Sinc* sineWave=new MathWave_Sinc();
-            addLifeEvent(sineWave);
-            sineWave->setZoomY(0.3f);
-            sineWave->setPencilSize(2.0f);
-            sineWave->setHead(-0.5f);
-            sineWave->setTail(0.5f);
-            sineWave->setPeriod(0.1f);
-            sineWave->setSpeed(0.3f);
-            sineWave->setLength(0.5f);
-            sineWave->setDepth(1.0f);
 
-            playKeyboardAudio("0B");
+            MathWave_Para_Circle * wave=new MathWave_Para_Circle();
+            addLifeEvent(wave);
+            wave->setZoomY(0.3f);
+            wave->setColor(1.0f,0.5f,0.0f);
+            wave->setZoomX(0.3f);
+            wave->setPencilSize(2.0f);
+            wave->setHead(0.0f);
+            wave->setTail(M_PI);
+            wave->setSpeed(1.6f);
+            wave->setLength(0.5f);
+            wave->setDepth(0.0f);
 
-            activateTimeoutForNextLine(3,4.0f);
+            playKeyboardAudio("2C");
+
+            activateTimeoutForNextLine(4,2.2f);
+
             break;
         }
-        case 3:{
-            MathWave_Line* line=new MathWave_Line();
-            addLifeEvent(line);
-            line->setOffsetY(0.3f);
-            line->setDepth(0.1f);
-            line->setSpeed(0.4f);
+        case 4:
+        {
+            LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
+            addLifeEvent(wave);
+            wave->setColor(1.0f,0.1f,1.0f);
+            wave->setWaveLength(1.0f);
+            wave->setFrequency(0.5f);
 
-            playKeyboardAudio("0C");
-
-            activateTimeoutForNextLine(4,2.0f);
-            break;
-        }
-        case 4:{
-            MathWave_Sinc* sincWave=new MathWave_Sinc();
-            addLifeEvent(sincWave);
-            sincWave->setZoomY(0.7f);
-            sincWave->setOffsetY(-0.2f);
-            sincWave->setRotationAngle(M_PI_2);
-            sincWave->setSpeed(0.3f);
-            sincWave->setHead(-1.0f);
-            sincWave->setLength(1.0f);
-            sincWave->setPencilSize(2.0f);
-
-            playKeyboardAudio("0D");
-
+            playKeyboardAudio("2E");
             activateTimeoutForNextLine(1,2.0f);
-            break;
         }
         default:
             break;
