@@ -42,7 +42,9 @@ void Brain::mainloop() {
     addLifeEvent(wave);
     wave->setCenter(0.0f,0.0f);
     wave->setColor(1.0f,0.1f,1.0f);
-    wave->setFrequency(1.0f);
+    wave->setFrequency(2.0f);
+
+    cout<<getId()<<" is my id"<<endl;
 //    wave->setWaveLength(0.1f);
 //
 //

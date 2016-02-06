@@ -2,6 +2,7 @@
 // Created by damo on 2/5/16.
 //
 
+#include <assert.h>
 #include "LifeEvent_Collection.h"
 
 LifeEvent_Collection::LifeEvent_Collection()
@@ -29,7 +30,8 @@ void LifeEvent_Collection::onDestroy() {
 
 void LifeEvent_Collection::draw() {
     for(int i=0;i<collection.size();i++){
-        collection[i]->draw();
+        if(! collection[i]->isDestroyed())
+            collection[i]->draw();
     }
 }
 
@@ -56,5 +58,13 @@ void LifeEvent_Collection::passTime(GLfloat delTime) {
 
         if(! collection[i]->isDestroyed())
             collection[i]->passTime(delTime);
+        else{
+            removeFromCollection(collection[i]);
+            i--;
+        }
     }
+}
+
+void LifeEvent_Collection::removeCompletedFromCollection() {
+
 }

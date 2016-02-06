@@ -28,6 +28,10 @@ void LifeEvent_CWave_data::onRun(GLfloat delTime) {
 
     GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
+    if(radius>0.5f){
+        doneRunning();
+        return;
+    }
     float diff = 0.01f;
     float cerv = 2 * M_PI * radius;
 

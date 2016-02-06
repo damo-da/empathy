@@ -41,18 +41,8 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
 
         shouldCreateNewWave=false;
     }
-//
-//    std::vector<LifeEvent *> waveData=getCollection();
-//    for (int i = 0; i < waveData.size(); i++) {
-//        LifeEvent_CWave_data * data=(LifeEvent_CWave_data *)waveData[i];
-//        if (data->getRadius() > 2.0f) {
-//
-////            data->kill();
-//
-////            removeFromCollection(data);
-//            i--;
-//        }
-//    }
+
+//    cout<<"size is"<<getCollection().size()<<endl;
 }
 
 

@@ -34,6 +34,8 @@ public:
     void removeFromCollection(LifeEvent * event);
 
     void clearCollection();
+
+    void removeCompletedFromCollection();
 private:
     std::vector<LifeEvent *> collection;
 
