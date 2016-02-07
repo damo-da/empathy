@@ -59,7 +59,7 @@ void LoonLight::initIrr() {
 }
 
 
-std::string LoonLight::BASE="./LEmpathy/assets/empathy/audio/";
+std::string LoonLight::BASE="./assets/audio/";
 std::string LoonLight::KEYBOARD_BASE=LoonLight::BASE+"keyboard/";
 
 void LoonLight::playKeyboard(string key) {
