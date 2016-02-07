@@ -45,8 +45,8 @@ set (SOURCES
         LEmpathy/LoonLight.h
         Empathy/Implements/MoonLightBinder.cpp
         Empathy/Implements/MoonLightBinder.h
-        Empathy/Shader.cpp
-        Empathy/Shader.h
+        Empathy/Shader/Shader.cpp
+        Empathy/Shader/Shader.h
         Empathy/LifeEvent/MathWave/MathWave_Line.cpp
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp

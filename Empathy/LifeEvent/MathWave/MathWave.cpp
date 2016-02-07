@@ -4,7 +4,7 @@
 
 #include <math.h>
 #include "MathWave.h"
-#include "../../Shader.h"
+#include "../../Shader/Shader.h"
 
 using namespace std;
 

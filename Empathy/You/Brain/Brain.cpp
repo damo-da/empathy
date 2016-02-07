@@ -10,7 +10,7 @@ using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
-    if(event.broadcaster->getId()==getId()){
+    if(event.broadcaster != nullptr && event.broadcaster->getId()==getId()){
         if(event.action==EMPATHY_EVENT_BRAIN_LINE_NUMBER){
             int lineNumber=event.getInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
             int caller=event.getInt(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER);

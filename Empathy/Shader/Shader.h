@@ -9,7 +9,7 @@
 #include <GL/glew.h>
 #include <iostream>
 #include <vector>
-#include "Utils/Color.h"
+#include "../Utils/Color.h"
 
 class Shader {
 public:

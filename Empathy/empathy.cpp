@@ -1,6 +1,6 @@
 #include "empathy.hpp"
 #include "Implements/MoonLightBinder.h"
-#include "Shader.h"
+#include "Shader/Shader.h"
 
 using namespace std;
 

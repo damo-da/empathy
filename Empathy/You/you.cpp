@@ -4,7 +4,6 @@
 //#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
 #include "../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../LifeEvent/MathWave/MathWave_Sinc.h"
-#include "../Shader.h"
 #include "../LifeEvent/MathWave/MathWave_Line.h"
 #include "Brain/Brain.h"
 #include "Brain/DummyBrain/DummyBrain.h"
