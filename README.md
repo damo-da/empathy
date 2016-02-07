@@ -11,3 +11,7 @@ Some time ago, I was born, and some time in the near future, I will die. What I 
  Oh, wait! I realize something! I realize that, as I was seeking happiness in various activities, it was not the activity itself that mattered but how I felt doing it. I realize that my happiness is directly related to my emotions. So what if rather than playing with boring activities, I played with my emotions directly? No it's insane, I can't do that. Or maybe have I not just been reading the recent researches lately? Tons of such researches are in the internet. Brain waves--all sorts of them--scientists are using them to study their effects on emotions. Maybe I could experience one myself? I think Empathy's the answer. 
  
  Empathy plays with my emotions. Not in a bad way, but in a good way. Semi-hypnosis, Semi-meditation, Semi-game: there are lots of techniques made for me to understand how I can play with my emotions. But I also know that Empathy is just the mediator, I am responsible to what I live like. I am in control of myself. I understand that I am my emotions. Hello Empathy! Let's just be together already!
+
+##Build instructions
+
+The instructions to build can be found on the [wiki section](https://github.com/underscoredam/empathy/wiki/Build-Instructions)
