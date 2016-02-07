@@ -5,21 +5,51 @@ cmake_minimum_required(VERSION 2.8)
 project(empathy)
 
 #set source code
-file(GLOB LEMPATHY_SRC "LEmpathy/*.hpp" "LEmpathy/*.cpp")
-file(GLOB EMPATHY_SRC "Empathy/*.hpp" "Empathy/*.cpp")
+
 file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp")
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
-set (SOURCES
-        ${LEMPATHY_SRC}
+set (LEMPATHY_SOURCES
+        LEmpathy/LoonLight.cpp
+        LEmpathy/LoonLight.h
+        LEmpathy/lempathy.hpp
+        LEmpathy/lempathy.cpp
+        LEmpathy/__main__.cpp
+        )
+set (EMPATHY_SOURCES
 
-        ${EMPATHY_SRC}
+        Empathy/empathy.hpp
+        Empathy/empathy.cpp
 
-        ${EMPATHY_LIFE_EVENT_SRC}
-        ${EMPATHY_YOU_SRC}
+        Empathy/global.hpp
+
+        Empathy/Uniqueness.h
+        Empathy/Uniqueness.cpp
+
+        Empathy/LifeEvent/life_event.cpp
+        Empathy/LifeEvent/life_event.hpp
+
+        Empathy/You/you.cpp
+        Empathy/You/you.hpp
+
+        Empathy/You/Brain/Brain.cpp
+        Empathy/You/Brain/Brain.h
+
+        Empathy/You/Brain/DummyBrain/DummyBrain.cpp
+        Empathy/You/Brain/DummyBrain/DummyBrain.h
+        Empathy/You/Brain/QueryStringParser/QueryStringParser.cpp
+        Empathy/You/Brain/QueryStringParser/QueryStringParser.h
+        Empathy/You/Brain/QueryStringParser/QueryStringBlock.cpp
+        Empathy/You/Brain/QueryStringParser/QueryStringBlock.h
+        Empathy/You/Brain/QueryStringParser/QueryStringLine.cpp
+        Empathy/You/Brain/QueryStringParser/QueryStringLine.h
 
         Empathy/Implements/EmpathyBinder.cpp
         Empathy/Implements/EmpathyBinder.h
+        Empathy/Implements/MoonLight.cpp
+        Empathy/Implements/MoonLight.h
+        Empathy/Implements/MoonLightBinder.cpp
+        Empathy/Implements/MoonLightBinder.h
 
         Empathy/RadioStation/BroadcastStation.cpp
         Empathy/RadioStation/BroadcastStation.h
@@ -31,7 +61,6 @@ set (SOURCES
         Empathy/RadioStation/TimeBroadcaster.h
         Empathy/RadioStation/TimeBroadcasterObject.cpp
         Empathy/RadioStation/TimeBroadcasterObject.h
-        Empathy/Uniqueness.cpp Empathy/Uniqueness.h
 
         Empathy/LifeEvent/MathWave/MathWave.cpp
         Empathy/LifeEvent/MathWave/MathWave.h
@@ -39,46 +68,39 @@ set (SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Sinc.cpp
         Empathy/LifeEvent/MathWave/MathWave_Sine.h
         Empathy/LifeEvent/MathWave/MathWave_Sine.cpp
-        Empathy/Implements/MoonLight.cpp
-        Empathy/Implements/MoonLight.h
-        LEmpathy/LoonLight.cpp
-        LEmpathy/LoonLight.h
-        Empathy/Implements/MoonLightBinder.cpp
-        Empathy/Implements/MoonLightBinder.h
-        Empathy/Shader/DefaultShader.cpp
-        Empathy/Shader/DefaultShader.h
         Empathy/LifeEvent/MathWave/MathWave_Line.cpp
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
         Empathy/LifeEvent/FadeInOut/FadeInOut.h
-        Empathy/You/Brain/Brain.cpp
-        Empathy/You/Brain/Brain.h
         Empathy/LifeEvent/LifeEvent_Collection.cpp
         Empathy/LifeEvent/LifeEvent_Collection.h
         Empathy/LifeEvent/CWave/LifeEvent_CWave.cpp
         Empathy/LifeEvent/CWave/LifeEvent_CWave.h
         Empathy/LifeEvent/CWave/LifeEvent_CWave_data.cpp
         Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h
-        Empathy/PureMath/Wave.cpp
-        Empathy/PureMath/Wave.h
-        Empathy/Utils/Color.cpp
-        Empathy/Utils/Color.h
-        Empathy/You/Brain/DummyBrain/DummyBrain.cpp
-        Empathy/You/Brain/DummyBrain/DummyBrain.h
-        Empathy/You/Brain/QueryStringParser/QueryStringParser.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringParser.h
-        Empathy/You/Brain/QueryStringParser/QueryStringBlock.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringBlock.h
-        Empathy/You/Brain/QueryStringParser/QueryStringLine.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringLine.h
         Empathy/LifeEvent/MathWave/MathWave_Para_Circle.cpp
         Empathy/LifeEvent/MathWave/MathWave_Para_Circle.h
+
+        Empathy/Shader/DefaultShader.cpp
+        Empathy/Shader/DefaultShader.h
         Empathy/Shader/DefaultShader.cpp
         Empathy/Shader/DefaultShader.h
         Empathy/Shader/shader_utils.cpp
         Empathy/Shader/shader_utils.h
-        Empathy/Utils/file_utils.cpp Empathy/Utils/file_utils.h Empathy/Utils/file_utils.cpp Empathy/Utils/file_utils.h)
 
+        Empathy/PureMath/Wave.cpp
+        Empathy/PureMath/Wave.h
+
+        Empathy/Utils/Color.cpp
+        Empathy/Utils/Color.h
+        Empathy/Utils/file_utils.cpp
+        Empathy/Utils/file_utils.h
+        )
+
+set(SOURCES
+        ${EMPATHY_SOURCES}
+        ${LEMPATHY_SOURCES}
+        )
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 
