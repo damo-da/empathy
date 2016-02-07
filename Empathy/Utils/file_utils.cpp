@@ -18,7 +18,12 @@
 char* file_read(const char* filename)
 {
     FILE* in = fopen(filename, "rb");
-    if (in == NULL) return NULL;
+    if (in == NULL) {
+        fprintf(stderr,"Could not open file: ");
+        fprintf(stderr,filename);
+        fprintf(stderr,"\n");
+        return NULL;
+    }
 
     int res_size = BUFSIZ;
     char* res = (char*)malloc(res_size);
