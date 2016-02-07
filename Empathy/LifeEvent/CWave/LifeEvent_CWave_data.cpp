@@ -3,7 +3,7 @@
 //
 
 #include "LifeEvent_CWave_data.h"
-#include "../../Shader/Shader.h"
+#include "../../Shader/DefaultShader.h"
 
 using namespace std;
 
@@ -69,12 +69,12 @@ void LifeEvent_CWave_data::onDestroy() {
 }
 
 void LifeEvent_CWave_data::draw() {
-    Shader::use();
+    DefaultShader::use();
 
     // cout<<"Drawing"<<endl;
     glLineWidth(2.5);
 
-    Shader::setVertexColor(this);
+    DefaultShader::setVertexColor(this);
 
     glBindVertexArray(VAO);
     glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 3);

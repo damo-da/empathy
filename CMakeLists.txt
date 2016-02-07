@@ -45,8 +45,8 @@ set (SOURCES
         LEmpathy/LoonLight.h
         Empathy/Implements/MoonLightBinder.cpp
         Empathy/Implements/MoonLightBinder.h
-        Empathy/Shader/Shader.cpp
-        Empathy/Shader/Shader.h
+        Empathy/Shader/DefaultShader.cpp
+        Empathy/Shader/DefaultShader.h
         Empathy/LifeEvent/MathWave/MathWave_Line.cpp
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
@@ -71,7 +71,13 @@ set (SOURCES
         Empathy/You/Brain/QueryStringParser/QueryStringBlock.h
         Empathy/You/Brain/QueryStringParser/QueryStringLine.cpp
         Empathy/You/Brain/QueryStringParser/QueryStringLine.h
-        Empathy/LifeEvent/MathWave/MathWave_Para_Circle.cpp Empathy/LifeEvent/MathWave/MathWave_Para_Circle.h)
+        Empathy/LifeEvent/MathWave/MathWave_Para_Circle.cpp
+        Empathy/LifeEvent/MathWave/MathWave_Para_Circle.h
+        Empathy/Shader/DefaultShader.cpp
+        Empathy/Shader/DefaultShader.h
+        Empathy/Shader/shader_utils.cpp
+        Empathy/Shader/shader_utils.h
+        Empathy/Utils/file_utils.cpp Empathy/Utils/file_utils.h Empathy/Utils/file_utils.cpp Empathy/Utils/file_utils.h)
 
 #support for nullptr, etc
 add_definitions(-std=c++0x)

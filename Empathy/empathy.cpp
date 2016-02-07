@@ -1,6 +1,6 @@
 #include "empathy.hpp"
 #include "Implements/MoonLightBinder.h"
-#include "Shader/Shader.h"
+#include "Shader/DefaultShader.h"
 
 using namespace std;
 
@@ -46,7 +46,7 @@ void Empathy::initGlew(){
 }
 
 void Empathy::initShaders(){
-    Shader::init();
+    DefaultShader::init();
 }
 
 void Empathy::initGL(){

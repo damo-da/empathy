@@ -11,7 +11,7 @@
 #include <vector>
 #include "../Utils/Color.h"
 
-class Shader {
+class DefaultShader {
 public:
     static GLuint shaderProgram;
     static void init();

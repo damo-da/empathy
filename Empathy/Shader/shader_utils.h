@@ -1,16 +1,20 @@
 /**
- * From the OpenGL Programming wikibook: http://en.wikibooks.org/wiki/OpenGL_Programming
+ * Parts of this file are from the OpenGL Programming wikibook: http://en.wikibooks.org/wiki/OpenGL_Programming
  * This file is in the public domain.
  * Contributors: Sylvain Beucler
  */
 #ifndef _CREATE_SHADER_H
 #define _CREATE_SHADER_H
+
+#include <iostream>
 #include <GL/glew.h>
-char* file_read(const char* filename);
-void print_log(GLuint object);
-GLuint create_shader(const char* filename, GLenum type);
-GLuint create_program(const char* vertexfile, const char *fragmentfile);
-GLuint create_gs_program(const char* vertexfile, const char *geometryfile, const char *fragmentfile, GLint input, GLint output, GLint vertices);
-GLint get_attrib(GLuint program, const char *name);
-GLint get_uniform(GLuint program, const char *name);
+void print_gl_error_log(GLuint object);
+
+GLuint create_shader(const std::string filename, GLenum type);
+
+GLuint create_program(GLuint vertexShader,GLuint fragmentShader);
+GLuint create_program(const std::string vertexfile, const std::string fragmentfile);
+
+GLuint emCreateFragmentShader(std::string fileName);
+GLuint emCreateVertexShader(std::string fileName);
 #endif
