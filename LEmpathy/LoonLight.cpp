@@ -75,3 +75,7 @@ void LoonLight::playKeyboard(string key) {
         return;
     }
 }
+
+LoonLight::LoonLight():MoonLight() {
+
+}

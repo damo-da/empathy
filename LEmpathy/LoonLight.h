@@ -19,7 +19,7 @@ public:
     virtual void init() override;
     virtual void terminate() override;
 
-    LoonLight() { }
+    LoonLight();
 
 private:
     ISoundEngine* engine;

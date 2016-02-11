@@ -14,7 +14,6 @@ LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection(),Color(),Wave() {
 void LifeEvent_CWave::onInit() {
     LifeEvent_Collection::onInit();
 
-
     shouldCreateNewWave=true;
 }
 

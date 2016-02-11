@@ -19,7 +19,19 @@ public:
     Brain();
 
     void run();
+
+
+    GLfloat getDelay() const {
+        return delay;
+    }
+
+    void setDelay(GLfloat delay) {
+        Brain::delay = delay;
+    }
+
 protected:
+    GLfloat delay;
+
     virtual void runLineNumber(int number, int caller);
 
     void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime);

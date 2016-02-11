@@ -20,7 +20,8 @@ void Brain::onReceiveEvent(Event &event) {
     }
 }
 
-Brain::Brain() {
+Brain::Brain():
+delay(1.0f){
 
 }
 
@@ -32,7 +33,7 @@ void Brain::addLifeEvent(LifeEvent *event) {
 
 void Brain::run() {
     listenAll();
-    activateTimeoutForNextLine(1,0.5f);
+    activateTimeoutForNextLine(1,getDelay());
 }
 
 void Brain::runLineNumber(int number, int caller) {

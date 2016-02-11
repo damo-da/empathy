@@ -8,6 +8,7 @@
 #include "TimeBroadcaster.h"
 #include "../Implements/MoonLight.h"
 
+
 using namespace std;
 void Subscriber::emit(Event & event) {
     event.broadcaster=this;
@@ -27,6 +28,7 @@ void Subscriber::onReceiveEvent(Event & event) {
 
 Subscriber::Subscriber() {
     id=Uniqueness::newId();
+
 }
 
 void Subscriber::createTimeOut(GLfloat start, int id) {
@@ -95,3 +97,5 @@ void Subscriber::playKeyboardAudio(std::string key) {
     e.putString(EMPATHY_AUDIO_PLAY_KEYBOARD,key);
     emit(e);
 }
+
+std::vector<Subscriber *> Subscriber::subscribers=std::vector<Subscriber*>();

@@ -16,13 +16,13 @@ void MoonLight::play(string id, bool repeat) {
 }
 
 
-MoonLight::MoonLight()
+MoonLight::MoonLight():Subscriber()
 {
 
 }
 
 void MoonLight::init() {
-    listen(EMPATHY_AUDIO_PLAY);
+//    listen(EMPATHY_AUDIO_PLAY);
     listen(EMPATHY_AUDIO_PLAY_KEYBOARD);
 }
 

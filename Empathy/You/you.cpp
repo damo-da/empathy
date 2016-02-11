@@ -7,6 +7,7 @@ using namespace std;
 You::You():brains()
 {
     instance=this;
+
 }
 
 
@@ -56,7 +57,6 @@ void You::init(){
     //initializing time
     curTime=0;
 
-    listen(EMPATHY_CREATE_EVENT);
 }
 
 void You::addEvent(LifeEvent * e) {

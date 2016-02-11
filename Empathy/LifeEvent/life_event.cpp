@@ -4,7 +4,7 @@
 #include "../Uniqueness.h"
 
 using namespace std;
-LifeEvent::LifeEvent(){
+LifeEvent::LifeEvent(): Subscriber(){
     totalTime=0.0f;
 
 }

@@ -6,9 +6,12 @@ using namespace std;
 int  main(){
 	LEmpathy * empathy=new LEmpathy();
 
-    empathy->addBrain(new DummyBrain());
+    DummyBrain *brain1=new DummyBrain();
+    empathy->addBrain(brain1);
 
-    empathy->addBrain(new DummyBrain());
+    DummyBrain *brain2=new DummyBrain();
+//    brain2->setDelay(1.1f);
+    empathy->addBrain(brain2);
 
 	empathy->run();
 }

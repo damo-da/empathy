@@ -44,16 +44,16 @@ private:
 
 public:
     static Subscriber* getById(int id){
-        for(int i=0;i<lifeEvents.size();i++){
-            if(lifeEvents[i]->getId()==id){
-                return lifeEvents[i];
+        for(int i=0;i<subscribers.size();i++){
+            if(subscribers[i]->getId()==id){
+                return subscribers[i];
             }
         }
 
         return nullptr;
     }
 private:
-    static std::vector <Subscriber*> lifeEvents;
+    static std::vector <Subscriber*> subscribers;
 
 protected:
     Event createEvent();
