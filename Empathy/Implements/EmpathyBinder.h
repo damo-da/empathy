@@ -7,7 +7,8 @@
 
 #include <GL/glew.h>
 #include "MoonLight.h"
-
+#include "../You/Brain/Brain.h"
+#include <vector>
 
 class EmpathyBinder {
 public:
@@ -19,8 +20,19 @@ public:
 
     virtual void terminate();
 
-    EmpathyBinder(){}
+    EmpathyBinder();
 
+
+
+    void addBrain(Brain * brain);
+
+
+    const std::vector<Brain *> &getBrains() const {
+        return brains;
+    }
+
+private:
+    std::vector<Brain *> brains;
 };
 
 

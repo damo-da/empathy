@@ -1,17 +1,11 @@
 #include <iostream>
 #include "you.hpp"
 #include "../RadioStation/TimeBroadcaster.h"
-//#include "../LifeEvent/SineWave/LifeEvent_SineWave.h"
-#include "../LifeEvent/MathWave/MathWave_Sine.h"
-#include "../LifeEvent/MathWave/MathWave_Sinc.h"
-#include "../LifeEvent/MathWave/MathWave_Line.h"
-#include "Brain/Brain.h"
-#include "Brain/DummyBrain/DummyBrain.h"
-
 
 using namespace std;
 
-You::You(){
+You::You():brains()
+{
     instance=this;
 }
 
@@ -59,9 +53,6 @@ void You::init(){
     //initiaulize vector to store lifeevents
     lifeEvents=std::vector<LifeEvent*>();
 
-    brain=new DummyBrain();
-    brain->run();
-
     //initializing time
     curTime=0;
 
@@ -105,3 +96,8 @@ void You::blit(){
 }
 
 You * You::instance=nullptr;
+
+void You::addBrain(Brain *brain) {
+    brains.push_back(brain);
+    brain->run();
+}

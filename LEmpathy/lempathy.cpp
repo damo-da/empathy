@@ -116,3 +116,7 @@ void LEmpathy::pollEvents() {
 void LEmpathy::swapBuffers() {
     glfwSwapBuffers(window);
 }
+
+LEmpathy::LEmpathy() : EmpathyBinder() {
+
+}

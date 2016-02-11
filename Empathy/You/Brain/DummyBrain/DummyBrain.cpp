@@ -18,6 +18,9 @@ void DummyBrain::runLineNumber(int number, int caller) {
     switch (number){
         case 1:
         {
+//            activateTimeoutForNextLine(2,1.6f);
+//            return;
+
             static int count=0;
             count++;
 
@@ -33,10 +36,14 @@ void DummyBrain::runLineNumber(int number, int caller) {
             wave->setLength(0.5f);
             wave->setDepth(0.0f);
 
-            if(count%2==0)
+            if(count%2==0){
                 playKeyboardAudio("2B");
-            else
+                wave->setColor(0.8f,0.8f,0.0f);
+            }
+            else{
                 playKeyboardAudio("2A");
+            }
+
 
             if(count<3){
                 activateTimeoutForNextLine(1,1.6f);

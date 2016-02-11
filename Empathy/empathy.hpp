@@ -28,7 +28,6 @@ public:
 
 	void setScreenSize(int,int);
 
-
 	void flush();
 
 	You * you;

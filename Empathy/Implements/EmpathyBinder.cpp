@@ -23,3 +23,11 @@ void EmpathyBinder::pollEvents() {
 void EmpathyBinder::terminate() {
 
 }
+
+EmpathyBinder::EmpathyBinder():brains() {
+
+}
+
+void EmpathyBinder::addBrain(Brain *brain) {
+    brains.push_back(brain);
+}

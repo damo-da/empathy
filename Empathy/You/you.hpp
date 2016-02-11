@@ -35,7 +35,9 @@ public:
 
     virtual void onReceiveEvent(Event &) override;
 
-	Brain * brain;
+	std::vector<Brain *> brains;
+
+    void addBrain(Brain * );
 
 public:
     static You * getInstance(){return instance;}

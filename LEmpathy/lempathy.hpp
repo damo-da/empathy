@@ -18,6 +18,9 @@ class LEmpathy:public EmpathyBinder{
 	*/
 
 public:
+    LEmpathy();
+
+public:
 	//The instance for the Empathy app
 	Empathy * empathy;
 
