@@ -32,7 +32,7 @@ public:
 protected:
     GLfloat delay;
 
-    virtual void runLineNumber(int number, int caller);
+    virtual void runLineNumber(int number, int caller)=0;
 
     void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime);
     void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime,int callerLineNumber);

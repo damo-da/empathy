@@ -36,9 +36,7 @@ void Brain::run() {
     activateTimeoutForNextLine(1,getDelay());
 }
 
-void Brain::runLineNumber(int number, int caller) {
 
-}
 
 void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime) {
     activateTimeoutForNextLine(lineNumber,afterTime,-1);

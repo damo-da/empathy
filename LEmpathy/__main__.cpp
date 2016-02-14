@@ -1,5 +1,7 @@
 #include "lempathy.hpp"
 #include "../Empathy/You/Brain/DummyBrain/DummyBrain.h"
+#include "../Empathy/Utils/string_utils.h"
+#include "../Empathy/You/Brain/MusicalBrain/MusicalBrain.h"
 
 using namespace std;
 
@@ -9,9 +11,10 @@ int  main(){
     DummyBrain *brain1=new DummyBrain();
     empathy->addBrain(brain1);
 
-    DummyBrain *brain2=new DummyBrain();
-//    brain2->setDelay(1.1f);
-    empathy->addBrain(brain2);
+    MusicalBrain * musicalBrain=new MusicalBrain();
+    musicalBrain->setFrequency(1.0f);
+    musicalBrain->setMusic("0As 0As 0As, 0Bs, 0Cs");
+    empathy->addBrain(musicalBrain);
 
 	empathy->run();
 }

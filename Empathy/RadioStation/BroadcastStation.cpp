@@ -39,14 +39,13 @@ BroadcastStation::BroadcastStation():
 BroadcastStation * BroadcastStation::instance= nullptr;
 
 void BroadcastStation::dispatch() {
-
     for (int i=0;i<instance->events.size();i++){
-        cout<<"dispatching"<<endl;
+
         Event e=instance->events[i];
 
         std::vector<Subscriber*> subscribers= instance->channels[e.action];
         for(int j=0;j<subscribers.size();j++){
-            assert(subscribers[i] != nullptr);
+            assert(subscribers[j] != nullptr);
 
             subscribers[j]->onReceiveEvent(e);
         }
