@@ -100,7 +100,7 @@ set (EMPATHY_SOURCES
 set(SOURCES
         ${EMPATHY_SOURCES}
         ${LEMPATHY_SOURCES}
-        Empathy/You/Brain/MusicalBrain/MusicalBrain.cpp Empathy/You/Brain/MusicalBrain/MusicalBrain.h Empathy/Utils/string_utils.cpp Empathy/Utils/string_utils.h)
+        Empathy/You/Brain/MusicalBrain/MusicalBrain.cpp Empathy/You/Brain/MusicalBrain/MusicalBrain.h Empathy/Utils/string_utils.cpp Empathy/Utils/string_utils.h Empathy/Packages/CanonInD.cpp Empathy/Packages/CanonInD.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

@@ -49,3 +49,7 @@ void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime, int ca
 
     createTimeOut(afterTime,event);
 }
+
+void Brain::addTo(EmpathyBinder *binder) {
+    binder->addBrain(this);
+}

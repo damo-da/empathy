@@ -30,6 +30,7 @@ void TimeBroadcaster::poll(GLfloat delTime){
         if(item.nextOccurance<=0){
             item.subscriber->onReceiveEvent(item.event);
 
+
             if(!item.repeat){
                 items.erase(items.begin()+i);
 

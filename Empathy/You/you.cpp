@@ -31,6 +31,7 @@ int You::calcFPS(GLfloat curTime){
 void You::passTime(GLfloat timeLength){
     curTime += timeLength;
 
+//    cout<<"passing time"<<endl;
     for(int i=0;i<lifeEvents.size();i++){
         LifeEvent * event=lifeEvents[i];
 
@@ -40,9 +41,9 @@ void You::passTime(GLfloat timeLength){
             continue;
         }
 
-
         event->passTime(timeLength);
     }
+//    cout<<"passed time"<<endl;
     TimeBroadcaster::poll(timeLength);
 }
 

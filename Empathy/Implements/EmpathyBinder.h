@@ -10,6 +10,7 @@
 #include "../You/Brain/Brain.h"
 #include <vector>
 
+class Brain;
 class EmpathyBinder {
 public:
     virtual bool shouldTerminate();
@@ -21,7 +22,6 @@ public:
     virtual void terminate();
 
     EmpathyBinder();
-
 
 
     void addBrain(Brain * brain);

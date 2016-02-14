@@ -11,7 +11,9 @@
 #include "../../RadioStation/Subscriber.h"
 #include "../../global.hpp"
 #include "../../LifeEvent/life_event.hpp"
+#include "../../Implements/EmpathyBinder.h"
 
+class EmpathyBinder;
 class Brain  : public Subscriber{
 public:
     virtual void onReceiveEvent(Event &event) override;
@@ -28,6 +30,8 @@ public:
     void setDelay(GLfloat delay) {
         Brain::delay = delay;
     }
+
+    virtual void addTo(EmpathyBinder * binder);
 
 protected:
     GLfloat delay;
