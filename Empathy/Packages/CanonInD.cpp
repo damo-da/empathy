@@ -23,6 +23,7 @@ void CanonInD::runLineNumber(int number, int caller) {
         default:
             break;
     }
+
 }
 
 void CanonInD::addTo(EmpathyBinder *binder) {
@@ -30,7 +31,7 @@ void CanonInD::addTo(EmpathyBinder *binder) {
 
     MusicalBrain * musicalBrain=new MusicalBrain();
     musicalBrain->setFrequency(1.0f);
-    musicalBrain->setMusic("2D,4Fs,2A,3D,3Fs,1A 4E,2E,2A,3Cs,1B 4D,2Fs,2B,3D,1Fs 4Cs,2Cs,1Fs,1A,1G 3B, 2D, 2G, 2B,1D 3A,1A, 2D, 2Fs, 1G 3B, 2D, 2G,2B,1A 4Cs, 2E, 2A, 3Cs");
+    musicalBrain->setMusic("2D 4Fs,2A,3D,3Fs,1A 4E,2E,2A,3Cs,1B 4D,2Fs,2B,3D,1Fs 4Cs,2Cs,1Fs,1A,1G 3B, 2D, 2G, 2B,1D 3A,1A, 2D, 2Fs, 1G 3B, 2D, 2G,2B,1A 4Cs, 2E, 2A, 3Cs");
 //    musicalBrain->setMusic("1C , 2D, 3E");
     binder->addBrain(musicalBrain);
     musicalBrain->setDelay(getDelay());

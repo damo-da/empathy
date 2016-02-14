@@ -7,8 +7,8 @@
 using namespace std;
 
 void MusicalBrain::runLineNumber(int number, int caller) {
-    while(number>=sequence.size())number -= sequence.size();
-    int item=number;
+    while(number>sequence.size())number -= sequence.size();
+    int item=number-1;
 
     cout<<"playing "<<number<<": ";
     for(int i=0;i<sequence[item].size();i++){
