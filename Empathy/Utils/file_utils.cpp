@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "file_utils.h"
+#include "string_utils.h"
 
 
 /**
@@ -43,4 +44,13 @@ char* file_read(const char* filename)
     res = (char*)realloc(res, nb_read_total + 1);
     res[nb_read_total] = '\0';
     return res;
+}
+
+std::vector<std::string> file_readlines(const char* filename) {
+    std::string content=file_read(filename);
+
+    std::vector<std::string> ret;
+    str_split(content,'\n',ret);
+
+    return ret;
 }

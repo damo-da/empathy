@@ -6,7 +6,7 @@
 #define EMPATHY_CANONIND_H
 
 
-#include "../You/Brain/Brain.h"
+#include "../../You/Brain/Brain.h"
 
 class CanonInD : public Brain{
 public:

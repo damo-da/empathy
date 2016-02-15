@@ -3,8 +3,8 @@
 //
 
 #include "CanonInD.h"
-#include "../You/Brain/MusicalBrain/MusicalBrain.h"
-#include "../LifeEvent/CWave/LifeEvent_CWave_data.h"
+#include "../../You/Brain/MusicalBrain/MusicalBrain.h"
+#include "../../LifeEvent/CWave/LifeEvent_CWave_data.h"
 
 CanonInD::CanonInD() : Brain() {
 

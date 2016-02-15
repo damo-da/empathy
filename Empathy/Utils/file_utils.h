@@ -10,6 +10,9 @@
 #ifndef EMPATHY_FILE_UTILS_H
 #define EMPATHY_FILE_UTILS_H
 
-char* file_read(const char* filename);
+#include <iostream>
+#include <vector>
 
+char* file_read(const char* filename);
+std::vector<std::string> file_readlines(const char* filename);
 #endif //EMPATHY_FILE_UTILS_H

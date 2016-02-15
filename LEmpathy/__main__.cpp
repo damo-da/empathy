@@ -1,5 +1,5 @@
 #include "lempathy.hpp"
-#include "../Empathy/Packages/CanonInD.h"
+#include "../Empathy/Packages/CanonInD/CanonInD.h"
 
 using namespace std;
 
