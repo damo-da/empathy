@@ -15,7 +15,7 @@ void Empathy::flush(){
 
     binder->terminate();
     moonLight->terminate();
-
+    you->terminate();
 }
 
 void Empathy::init() {
@@ -87,8 +87,6 @@ void Empathy::begin() {
 
         binder->swapBuffers();
     }
-
-    you->clearEvents();
 
     flush();
 }

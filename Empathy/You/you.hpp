@@ -39,6 +39,7 @@ public:
 
     void addBrain(Brain * );
 
+	void terminate();
 public:
     static You * getInstance(){return instance;}
 private:

@@ -33,6 +33,7 @@ public:
 
     virtual void addTo(EmpathyBinder * binder);
 
+    virtual void terminate();
 protected:
     GLfloat delay;
 

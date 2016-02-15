@@ -99,7 +99,11 @@ set(SOURCES
         Empathy/Utils/string_utils.cpp
         Empathy/Utils/string_utils.h
         Empathy/Packages/CanonInD/CanonInD.cpp
-        Empathy/Packages/CanonInD/CanonInD.h)
+        Empathy/Packages/CanonInD/CanonInD.h
+
+        Empathy/Libs/cJSON/cJSON.c
+        Empathy/Libs/cJSON/cJSON.h
+        Empathy/You/Brain/JSONBrain.cpp Empathy/You/Brain/JSONBrain.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

@@ -102,3 +102,11 @@ void You::addBrain(Brain *brain) {
     brains.push_back(brain);
     brain->run();
 }
+
+void You::terminate() {
+    clearEvents();
+
+    for(int i=0;i<brains.size();i++){
+        brains[i]->terminate();
+    }
+}

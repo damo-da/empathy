@@ -53,3 +53,7 @@ void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, st
 void Brain::addTo(EmpathyBinder *binder) {
     binder->addBrain(this);
 }
+
+void Brain::terminate() {
+
+}
