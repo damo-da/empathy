@@ -5,19 +5,22 @@
 #include "CanonInD.h"
 #include "../../You/Brain/MusicalBrain/MusicalBrain.h"
 #include "../../LifeEvent/CWave/LifeEvent_CWave_data.h"
+#include "../../Utils/string_utils.h"
 
 CanonInD::CanonInD() : Brain() {
 
 }
 
-void CanonInD::runLineNumber(int number, int caller) {
+void CanonInD::runLineNumber(std::string lineID, std::string callerID) {
+    int number=str_to_int(lineID);
+
     switch (number){
         case 1: {
             LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
             wave->setColor(0.8f,0.1f,0.8f);
             addLifeEvent(wave);
 
-            activateTimeoutForNextLine(1,4.0f);
+            activateTimeoutForNextLine("1",4.0f);
             break;
         }
         default:

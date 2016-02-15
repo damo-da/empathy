@@ -1,5 +1,6 @@
 #include "lempathy.hpp"
 #include "../Empathy/Packages/CanonInD/CanonInD.h"
+#include "../Empathy/Utils/string_utils.h"
 
 using namespace std;
 

@@ -10,7 +10,7 @@
 
 class DummyBrain : public Brain{
 
-    virtual void runLineNumber(int number, int caller) override;
+    virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
 public:
     DummyBrain();

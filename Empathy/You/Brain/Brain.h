@@ -36,10 +36,10 @@ public:
 protected:
     GLfloat delay;
 
-    virtual void runLineNumber(int number, int caller)=0;
+    virtual void runLineNumber(std::string lineID, std::string callerID)=0;
 
-    void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime);
-    void activateTimeoutForNextLine(int lineNumber,GLfloat afterTime,int callerLineNumber);
+    void activateTimeoutForNextLine(std::string lineID,GLfloat afterTime);
+    void activateTimeoutForNextLine(std::string lineID,GLfloat afterTime,std::string callerLineID);
 
     void addLifeEvent(LifeEvent * event);
 private:

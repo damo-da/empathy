@@ -12,10 +12,10 @@ void Brain::onReceiveEvent(Event &event) {
 
     if(event.broadcaster != nullptr && event.broadcaster->getId()==getId()){
         if(event.action==EMPATHY_EVENT_BRAIN_LINE_NUMBER){
-            int lineNumber=event.getInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
-            int caller=event.getInt(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER);
+            std::string lineID=event.getString(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
+            std::string caller=event.getString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER);
 
-            runLineNumber(lineNumber,caller);
+            runLineNumber(lineID,caller);
         }
     }
 }
@@ -33,19 +33,19 @@ void Brain::addLifeEvent(LifeEvent *event) {
 
 void Brain::run() {
     listenAll();
-    activateTimeoutForNextLine(1,getDelay());
+    activateTimeoutForNextLine("begin",getDelay());
 }
 
 
 
-void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime) {
-    activateTimeoutForNextLine(lineNumber,afterTime,-1);
+void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime) {
+    activateTimeoutForNextLine(lineID,afterTime,"");
 }
 
-void Brain::activateTimeoutForNextLine(int lineNumber, GLfloat afterTime, int callerLineNumber) {
+void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID) {
     Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
-    event.putInt(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineNumber);
-    event.putInt(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineNumber);
+    event.putString(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineID);
+    event.putString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineID);
 
     createTimeOut(afterTime,event);
 }

@@ -13,4 +13,6 @@ std::string str_trim(const std::string string);
 std::string str_replace(const std::string string,const char initial,const char final);
 std::string str_remove_char(const std::string string,const char toRemove);
 
+int str_to_int(std::string string);
+std::string int_to_str(int integer);
 #endif //EMPATHY_STRING_UTILS_H

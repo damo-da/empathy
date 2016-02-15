@@ -6,7 +6,15 @@
 #include "../../../Utils/string_utils.h"
 using namespace std;
 
-void MusicalBrain::runLineNumber(int number, int caller) {
+void MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {
+    int number;
+    if(lineID=="begin"){
+        number=1;
+    }else{
+        number=str_to_int(lineID);
+    }
+
+
     while(number>sequence.size())number -= sequence.size();
     int item=number-1;
 
@@ -17,7 +25,7 @@ void MusicalBrain::runLineNumber(int number, int caller) {
     }
     cout<<endl;
 
-    activateTimeoutForNextLine(number +1,1.0f,number);
+    activateTimeoutForNextLine(int_to_str(number +1),1.0f,int_to_str(number));
 }
 
 MusicalBrain::MusicalBrain() :

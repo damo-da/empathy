@@ -37,12 +37,6 @@ set (EMPATHY_SOURCES
 
         Empathy/You/Brain/DummyBrain/DummyBrain.cpp
         Empathy/You/Brain/DummyBrain/DummyBrain.h
-        Empathy/You/Brain/QueryStringParser/QueryStringParser.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringParser.h
-        Empathy/You/Brain/QueryStringParser/QueryStringBlock.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringBlock.h
-        Empathy/You/Brain/QueryStringParser/QueryStringLine.cpp
-        Empathy/You/Brain/QueryStringParser/QueryStringLine.h
 
         Empathy/Implements/EmpathyBinder.cpp
         Empathy/Implements/EmpathyBinder.h

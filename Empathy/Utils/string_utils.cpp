@@ -63,3 +63,33 @@ std::string str_remove_char(const std::string string, const char toRemove) {
     }
     return ret;
 }
+
+int str_to_int(std::string string) {
+    const char *p = string.c_str();
+
+    char *end;
+
+    for (long i = strtol(p, &end, 10);
+         p != end;
+         i = strtol(p, &end, 10))
+    {
+        p = end;
+        if (errno == ERANGE){
+            errno = 0;
+
+            //TODO raise RuntimeException
+            return -1;
+        }
+
+        return i;
+
+    }
+}
+
+std::string int_to_str(int integer) {
+    char str[20];
+    sprintf(str, "%d", integer);
+    std::string string(str);
+
+    return string;
+}
