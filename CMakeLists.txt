@@ -98,12 +98,10 @@ set(SOURCES
         Empathy/You/Brain/MusicalBrain/MusicalBrain.h
         Empathy/Utils/string_utils.cpp
         Empathy/Utils/string_utils.h
-        Empathy/Packages/CanonInD/CanonInD.cpp
-        Empathy/Packages/CanonInD/CanonInD.h
 
         Empathy/Libs/cJSON/cJSON.c
         Empathy/Libs/cJSON/cJSON.h
-        Empathy/You/Brain/JSONBrain.cpp Empathy/You/Brain/JSONBrain.h Empathy/Libs/cJSON/cJSON_utils.cpp Empathy/Libs/cJSON/cJSON_utils.h)
+        Empathy/You/Brain/JSONBrain/JSONBrain.cpp Empathy/You/Brain/JSONBrain/JSONBrain.h Empathy/Libs/cJSON/cJSON_utils.cpp Empathy/Libs/cJSON/cJSON_utils.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

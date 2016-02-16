@@ -3,9 +3,9 @@
 //
 
 #include "JSONBrain.h"
-#include "../../Utils/file_utils.h"
-#include "../../Libs/cJSON/cJSON_utils.h"
-#include "../../Utils/string_utils.h"
+#include "../../../Utils/file_utils.h"
+#include "../../../Libs/cJSON/cJSON_utils.h"
+#include "../../../Utils/string_utils.h"
 #include <vector>
 
 using namespace std;

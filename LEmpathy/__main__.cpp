@@ -1,9 +1,8 @@
 #include "lempathy.hpp"
-#include "../Empathy/Packages/CanonInD/CanonInD.h"
-#include "../Empathy/Utils/string_utils.h"
-#include "../Empathy/You/Brain/JSONBrain.h"
-#include "../Empathy/Utils/file_utils.h"
-#include <vector>
+
+
+#include "../Empathy/You/Brain/JSONBrain/JSONBrain.h"
+
 
 using namespace std;
 

@@ -2,37 +2,143 @@
   "author":"Damodar Dahal",
   "version":0.0,
   "steps": {
-    "begin":[
-      {
-        "type": "audio",
-        "instrumental": true,
-        "instrument": "keyboard",
-        "name": "0A"
-      },
-      {
-        "type": "audio",
-        "instrumental": true,
-        "instrument": "keyboard",
-        "name": "0B"
-      },
-      {
-        "type":"goto",
-        "stepID":"1",
-        "in":1.2
-      }
-    ],
+    "begin":[{"type":"goto","stepID":"1","in":0.5}],
+
     "1":[
-      {
-        "type": "audio",
-        "instrumental": true,
-        "instrument": "keyboard",
-        "name": "0D"
-      },
-      {
-        "type":"goto",
-        "stepID":"begin",
-        "in":0.3
-      }
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"2","in":0.8}
+    ],
+    "2":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type":"goto","stepID":"3","in":0.8}
+    ],
+    "3":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type":"goto","stepID":"4","in":0.8}
+    ],
+    "4":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"5","in":0.8}
+    ],
+    "5":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"6","in":0.8}
+    ],
+    "6":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type":"goto","stepID":"7","in":0.8}
+    ],
+    "7":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type":"goto","stepID":"8","in":0.8}
+    ],
+    "8":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
+      {"type":"goto","stepID":"9","in":0.8}
+    ],
+    "9":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"10","in":0.8}
+    ],
+    "10":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type":"goto","stepID":"11","in":0.8}
+    ],
+    "11":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type":"goto","stepID":"12","in":0.8}
+    ],
+    "12":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type":"goto","stepID":"13","in":0.8}
+    ],
+    "13":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"14","in":0.8}
+    ],
+    "14":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type":"goto","stepID":"15","in":0.8}
+    ],
+    "15":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type":"goto","stepID":"16","in":0.8}
+    ],
+    "16":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type":"goto","stepID":"17","in":0.8}
+    ],
+    "17":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"18","in":0.8}
+    ],
+    "18":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type":"goto","stepID":"19","in":0.8}
+    ],
+    "19":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type":"goto","stepID":"20","in":0.8}
+    ],
+    "20":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type":"goto","stepID":"21","in":0.8}
+    ],
+    "21":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"22","in":0.8}
+    ],
+    "22":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type":"goto","stepID":"23","in":0.8}
+    ],
+    "23":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type":"goto","stepID":"24","in":0.8}
+    ],
+    "24":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type":"goto","stepID":"25","in":0.8}
+    ],
+    "25":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"26","in":0.8}
+    ],
+    "26":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type":"goto","stepID":"27","in":0.8}
+    ],
+    "27":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type":"goto","stepID":"28","in":0.8}
+    ],
+    "28":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type":"goto","stepID":"29","in":0.8}
+    ],
+    "29":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"30","in":0.8}
+    ],
+    "30":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type":"goto","stepID":"31","in":0.8}
+    ],
+    "31":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type":"goto","stepID":"32","in":0.8}
+    ],
+    "32":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
+      {"type":"goto","stepID":"1","in":0.8}
     ]
   }
 }
