@@ -6,13 +6,14 @@
 #include "../../../Utils/file_utils.h"
 #include "../../../Libs/cJSON/cJSON_utils.h"
 #include "../../../Utils/string_utils.h"
+#include "../../../LifeEvent/CWave/LifeEvent_CWave_data.h"
 #include <vector>
 
 using namespace std;
 
 void JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
     std::vector<cJSON*> actions=steps[lineID];
-
+    cout<<"running "<<lineID<<endl;
     for(int i=0;i<actions.size();i++){
         std::string action=cJSON_GetObjectItem(actions[i],"type")->valuestring;
         executeJson(action,actions[i]);
@@ -65,7 +66,7 @@ void JSONBrain::executeJson(const std::string action,cJSON *json) {
     if(action=="audio"){
 
         std::string name=cJSON_GetObjectItem(json, "name")->valuestring;
-        bool instrumental=cJSON_GetObjectItem(json,"instrumental")->valueint;
+        bool instrumental=(bool)cJSON_GetObjectItem(json,"instrumental")->valueint;
 
         if(instrumental){
 
@@ -80,5 +81,40 @@ void JSONBrain::executeJson(const std::string action,cJSON *json) {
         double after=cJSON_GetObjectItem(json,"in")->valuedouble;
 
         activateTimeoutForNextLine(stepID,after);
+    }else if(action=="create"){
+        std::string object=cJSON_GetObjectItem(json,"create")->valuestring;
+        createLifeEventFromJson(object,json);
+    }
+}
+
+void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
+    if(action=="cwave"){
+        std::vector<std::string> keys=cJSON_get_keys(json);
+
+        LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
+
+        for(int i=0;i<keys.size();i++){
+            std::string key=keys[i];
+            cJSON* value=cJSON_GetObjectItem(json,key.c_str());
+
+            if(key=="colorRed"){
+                wave->setR(value->valuedouble);
+            }else if(key=="colorGreen"){
+                wave->setG(value->valuedouble);
+            }else if(key=="colorBlue"){
+                wave->setB(value->valuedouble);
+            }else if(key=="frequency"){
+                wave->setFrequency(value->valuedouble);
+            }else if(key=="wavelength"){
+                wave->setWaveLength(value->valuedouble);
+            }else if(key=="centerX"){
+                wave->setCenterX(value->valuedouble);
+            }else if(key=="centerY"){
+                wave->setCenterY(value->valuedouble);
+            }
+        }
+        cout<<"Center is "<<wave->getCenterX()<<","<<wave->getCenterY()<<endl;
+
+        addLifeEvent(wave);
     }
 }

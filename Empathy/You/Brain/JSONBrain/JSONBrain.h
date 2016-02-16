@@ -20,13 +20,15 @@ public:
 protected:
     virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
-    void executeJson(const std::string action,cJSON * json);
+    virtual void executeJson(const std::string action,cJSON * json);
+    virtual void createLifeEventFromJson(const std::string action,cJSON * json);
 private:
     cJSON * root;
 
     std::map<std::string,std::vector<cJSON*>> steps;
 public:
     virtual void addTo(EmpathyBinder *binder) override;
+
 };
 
 

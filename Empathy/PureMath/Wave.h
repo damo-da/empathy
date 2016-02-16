@@ -25,7 +25,9 @@ public:
     GLfloat getCenterX() const {
         return centerX;
     }
-    void setCenter(GLfloat x,GLfloat y){centerX=x;centerY=y;}
+    void setCenter(GLfloat x,GLfloat y){setCenterX(x);setCenterY(y);}
+    void setCenterX(GLfloat x){centerX=x;};
+    void setCenterY(GLfloat y){centerY=y;};
 
     GLfloat getCenterY() const {
         return centerY;
