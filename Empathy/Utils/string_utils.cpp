@@ -4,6 +4,8 @@
 
 #include <sstream>
 #include "string_utils.h"
+#include <algorithm>
+#include <string>
 
 std::vector<std::string> str_split(const std::string &s, char delim) {
     std::vector<std::string> elems;
@@ -92,4 +94,9 @@ std::string int_to_str(int integer) {
     std::string string(str);
 
     return string;
+}
+
+std::string str_to_lower(std::string str) {
+    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+
 }

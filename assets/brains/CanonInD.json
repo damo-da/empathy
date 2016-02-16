@@ -1,31 +1,37 @@
 {
   "author":"Damodar Dahal",
   "version":0.0,
-  "code": {
+  "steps": {
+    "begin":[
+      {
+        "type": "audio",
+        "instrumental": true,
+        "instrument": "keyboard",
+        "name": "0A"
+      },
+      {
+        "type": "audio",
+        "instrumental": true,
+        "instrument": "keyboard",
+        "name": "0B"
+      },
+      {
+        "type":"goto",
+        "stepID":"1",
+        "in":1.2
+      }
+    ],
     "1":[
       {
         "type": "audio",
         "instrumental": true,
         "instrument": "keyboard",
-        "fileName": "0A.ogg"
+        "name": "0D"
       },
       {
         "type":"goto",
-        "line":"2",
-        "in":"1.2"
-      }
-    ],
-    "2":[
-      {
-        "type": "audio",
-        "instrumental": true,
-        "instrument": "keyboard",
-        "fileName": "0B.ogg"
-      },
-      {
-        "type":"goto",
-        "line":"1",
-        "in":0.3,
+        "stepID":"begin",
+        "in":0.3
       }
     ]
   }

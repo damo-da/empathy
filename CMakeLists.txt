@@ -103,7 +103,7 @@ set(SOURCES
 
         Empathy/Libs/cJSON/cJSON.c
         Empathy/Libs/cJSON/cJSON.h
-        Empathy/You/Brain/JSONBrain.cpp Empathy/You/Brain/JSONBrain.h)
+        Empathy/You/Brain/JSONBrain.cpp Empathy/You/Brain/JSONBrain.h Empathy/Libs/cJSON/cJSON_utils.cpp Empathy/Libs/cJSON/cJSON_utils.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

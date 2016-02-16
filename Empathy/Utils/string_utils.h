@@ -15,4 +15,6 @@ std::string str_remove_char(const std::string string,const char toRemove);
 
 int str_to_int(std::string string);
 std::string int_to_str(int integer);
+
+std::string str_to_lower(std::string);
 #endif //EMPATHY_STRING_UTILS_H

@@ -107,6 +107,7 @@ void You::terminate() {
     clearEvents();
 
     for(int i=0;i<brains.size();i++){
+
         brains[i]->terminate();
     }
 }

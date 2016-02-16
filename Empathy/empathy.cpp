@@ -31,9 +31,10 @@ void Empathy::init() {
 
     MoonLightBinder::init(moonLight);
 
+
     std::vector<Brain *> brains=this->binder->getBrains();
     for(int i=0;i<brains.size();i++){
-        brains[i]->run();
+        you->addBrain(brains[i]);
     }
     this->moonLight->init();
 }
