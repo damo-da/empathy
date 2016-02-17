@@ -17,7 +17,8 @@
 
 
 class TimeBroadcaster {
-
+private:
+    static void addItems();
 public:
     static void createRepeatingTimeout(Subscriber *,Event&,GLfloat,GLfloat);
 
@@ -25,7 +26,9 @@ public:
 
     static void poll(GLfloat);
 
+
     static std::vector<TimeBroadcasterObject> items;
+    static std::vector<TimeBroadcasterObject> toAddItems;
 };
 
 

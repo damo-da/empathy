@@ -14,6 +14,7 @@ using namespace std;
 void JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
     std::vector<cJSON*> actions=steps[lineID];
     cout<<"running "<<lineID<<endl;
+
     for(int i=0;i<actions.size();i++){
         std::string action=cJSON_GetObjectItem(actions[i],"type")->valuestring;
         executeJson(action,actions[i]);
@@ -113,7 +114,6 @@ void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
                 wave->setCenterY(value->valuedouble);
             }
         }
-        cout<<"Center is "<<wave->getCenterX()<<","<<wave->getCenterY()<<endl;
 
         addLifeEvent(wave);
     }

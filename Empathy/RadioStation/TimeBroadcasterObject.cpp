@@ -11,7 +11,7 @@ TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance,
         nextOccurance(nextOccurance),
         subscriber(subscriber),
         repeat(false),
-        period(0)
+        period(0.0f)
 {
 
 }
@@ -26,4 +26,15 @@ TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance,
         repeat(true)
 {
 
+}
+
+void TimeBroadcasterObject::printDebug() {
+    cout<<"---printdebug--"<<endl;
+    cout<<"object: TimeBroadcasterObject"<<endl;
+    cout<<"event "<<event.action<<endl;
+    cout<<"nextOccurance "<<nextOccurance<<endl;
+    cout<<"subscriber "<<subscriber<<endl;
+    cout<<" repeating "<<repeat<<endl;
+    cout<<" period "<<period<<endl;
+    cout<<"--endprintdebug--"<<endl;
 }

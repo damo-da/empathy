@@ -24,6 +24,8 @@ public:
 
     TimeBroadcasterObject(Event,GLfloat,Subscriber * );
     TimeBroadcasterObject(Event,GLfloat,Subscriber*,GLfloat);
+
+    void printDebug();
 };
 
 
