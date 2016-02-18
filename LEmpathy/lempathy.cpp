@@ -54,14 +54,13 @@ void LEmpathy::init(){
 	instance=this;
 
 	initGlfw();
-	initEmpathyInstance();
+    
+    empathy->setMoonLight(getMoonLight());
+    empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 
 	empathy->init();
 }
-void LEmpathy::initEmpathyInstance() {
-    empathy->setMoonLight(getMoonLight());
-	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
-}
+
 
 void LEmpathy::initGlfw() {
 //	cout<<"glfwInit"<<endl;

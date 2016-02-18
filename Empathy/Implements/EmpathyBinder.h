@@ -36,15 +36,6 @@ public:
     EmpathyBinder();
 
 
-    void addBrain(Brain * brain);
-
-
-    const std::vector<Brain *> &getBrains() const {
-        return brains;
-    }
-
-    std::vector<Brain *> brains;
-
 private:
 
 };

@@ -11,7 +11,7 @@ int  main(){
 	LEmpathy * empathy=new LEmpathy();
 
     JSONBrain * brain=new JSONBrain("assets/brains/CanonInD.json");
-    brain->addTo(empathy);
+    brain->addTo(empathy->empathy);
 
 	empathy->run();
 }

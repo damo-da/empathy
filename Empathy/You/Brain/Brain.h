@@ -14,6 +14,7 @@
 #include "../../Implements/EmpathyBinder.h"
 
 class EmpathyBinder;
+class Empathy;
 class Brain  : public Subscriber{
 public:
     virtual void onReceiveEvent(Event &event) override;
@@ -31,7 +32,7 @@ public:
         Brain::delay = delay;
     }
 
-    virtual void addTo(EmpathyBinder * binder);
+    virtual void addTo(Empathy * binder);
 
     virtual void terminate();
 protected:

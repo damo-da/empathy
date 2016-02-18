@@ -59,7 +59,7 @@ void JSONBrain::terminate() {
     cJSON_Delete(root);
 }
 
-void JSONBrain::addTo(EmpathyBinder *binder) {
+void JSONBrain::addTo(Empathy *binder) {
     Brain::addTo(binder);
 }
 

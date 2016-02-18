@@ -50,7 +50,7 @@ void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, st
     createTimeOut(afterTime,event);
 }
 
-void Brain::addTo(EmpathyBinder *binder) {
+void Brain::addTo(Empathy *binder) {
     binder->addBrain(this);
 }
 

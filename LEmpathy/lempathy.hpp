@@ -32,9 +32,6 @@ public:
 	//Initialize the desktop window manager: GLFW3
 	void initGlfw();
 
-	//Creates an instance of the empathy app on this LEmpathy instance.
-	void initEmpathyInstance();
-
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 

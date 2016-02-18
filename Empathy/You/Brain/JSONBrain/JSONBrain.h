@@ -27,7 +27,7 @@ private:
 
     std::map<std::string,std::vector<cJSON*>> steps;
 public:
-    virtual void addTo(EmpathyBinder *binder) override;
+    virtual void addTo(Empathy *binder) override;
 
 };
 

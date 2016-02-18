@@ -13,6 +13,7 @@
 
 class EmpathyBinder;
 class You;
+class Brain;
 class Empathy{
 public:
     EmpathyBinder * binder;
@@ -35,6 +36,15 @@ public:
 	You * you;
 
     static BroadcastStation broadcastStation;
+
+    void addBrain(Brain * brain);
+
+
+    const std::vector<Brain *> &getBrains() const {
+        return brains;
+    }
+
+    std::vector<Brain *> brains;
 
 private:
 	//Screen Size
