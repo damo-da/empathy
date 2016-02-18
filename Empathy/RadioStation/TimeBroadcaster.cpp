@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "TimeBroadcaster.h"
-#include "../LifeEvent/life_event.hpp"
 
 using namespace std;
 

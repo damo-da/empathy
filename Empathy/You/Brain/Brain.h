@@ -9,10 +9,10 @@
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
 
 #include "../../RadioStation/Subscriber.h"
-#include "../../global.hpp"
-#include "../../LifeEvent/life_event.hpp"
+#include "../../global.h"
+#include "../../LifeEvent/life_event.h"
 
-#include "../../empathy.hpp"
+#include "../../empathy.h"
 class Empathy;
 class Brain  : public Subscriber{
 public:

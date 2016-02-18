@@ -5,7 +5,7 @@
 #ifndef EMPATHY_FADEINOUT_H
 #define EMPATHY_FADEINOUT_H
 
-#include "../life_event.hpp"
+#include "../life_event.h"
 
 class FadeInOut : public LifeEvent{
 

@@ -1,5 +1,5 @@
 #include "DEmpathy.h"
-#include "../Empathy/global.hpp"
+
 #include "DoonLight.h"
 
 using namespace std;

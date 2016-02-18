@@ -8,7 +8,7 @@
 #define EMPATHY_CWAVE_MAX_RADIUS 2.25
 
 #include <math.h>
-#include "../life_event.hpp"
+#include "../life_event.h"
 #include "../../Utils/Color.h"
 #include "../../PureMath/Wave.h"
 #include <vector>

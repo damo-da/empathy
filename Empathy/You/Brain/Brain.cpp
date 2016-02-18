@@ -4,8 +4,6 @@
 
 #include "Brain.h"
 
-#include "../you.hpp"
-
 using namespace std;
 void Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);

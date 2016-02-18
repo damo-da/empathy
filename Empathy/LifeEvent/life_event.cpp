@@ -1,5 +1,5 @@
 #include <iostream>
-#include "life_event.hpp"
+#include "life_event.h"
 
 using namespace std;
 LifeEvent::LifeEvent(): Subscriber(){

@@ -6,7 +6,7 @@
 #define EMPATHY_MATHWAVE_H
 
 
-#include "../life_event.hpp"
+#include "../life_event.h"
 #include "../../Utils/Color.h"
 #include <vector>
 

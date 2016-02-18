@@ -6,7 +6,7 @@
 #define EMPATHY_LIFEEVENT_COLLECTION_H
 
 
-#include "life_event.hpp"
+#include "life_event.h"
 #include <vector>
 
 class LifeEvent_Collection : public LifeEvent{

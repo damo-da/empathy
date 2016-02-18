@@ -7,8 +7,8 @@
 #define EMPATHY_YOU
 
  
-#include "../LifeEvent/life_event.hpp"
-#include "../global.hpp"
+#include "../LifeEvent/life_event.h"
+#include "../global.h"
 #include "Brain/Brain.h"
 
 #include <vector>

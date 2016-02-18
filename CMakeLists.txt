@@ -6,9 +6,6 @@ project(empathy)
 
 #set source code
 
-file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp")
-file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
-
 set (DEMPATHY_SOURCES
         DEmpathy/DoonLight.cpp
         DEmpathy/DoonLight.h
@@ -18,19 +15,19 @@ set (DEMPATHY_SOURCES
         )
 set (EMPATHY_SOURCES
 
-        Empathy/empathy.hpp
+        Empathy/empathy.h
         Empathy/empathy.cpp
 
-        Empathy/global.hpp
+        Empathy/global.h
 
         Empathy/Utils/Uniqueness.h
         Empathy/Utils/Uniqueness.cpp
 
         Empathy/LifeEvent/life_event.cpp
-        Empathy/LifeEvent/life_event.hpp
+        Empathy/LifeEvent/life_event.h
 
         Empathy/You/you.cpp
-        Empathy/You/you.hpp
+        Empathy/You/you.h
 
         Empathy/You/Brain/Brain.cpp
         Empathy/You/Brain/Brain.h

@@ -1,11 +1,11 @@
 #ifndef EMPATHY
 #define EMPATHY
 
-#include "global.hpp"
+#include "global.h"
 
-#include "You/you.hpp"
+#include "You/you.h"
 
-#include "LifeEvent/life_event.hpp"
+#include "LifeEvent/life_event.h"
 #include "RadioStation/BroadcastStation.h"
 
 #include "Implements/MoonLight.h"

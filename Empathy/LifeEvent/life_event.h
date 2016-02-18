@@ -6,7 +6,7 @@
 #ifndef EMPATHY_LIFE_EVENT
 #define EMPATHY_LIFE_EVENT
 
-#include "../global.hpp"
+#include "../global.h"
 #include "../RadioStation/Subscriber.h"
 
 #include <GL/glew.h>

@@ -1,4 +1,4 @@
-#include "empathy.hpp"
+#include "empathy.h"
 #include "Implements/MoonLightBinder.h"
 #include "Shader/DefaultShader.h"
 
