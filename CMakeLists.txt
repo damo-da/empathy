@@ -9,7 +9,7 @@ project(empathy)
 file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.cpp")
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
-set (LEMPATHY_SOURCES
+set (DEMPATHY_SOURCES
         DEmpathy/DoonLight.cpp
         DEmpathy/DoonLight.h
         DEmpathy/DEmpathy.h
@@ -91,7 +91,7 @@ set (EMPATHY_SOURCES
 
 set(SOURCES
         ${EMPATHY_SOURCES}
-        ${LEMPATHY_SOURCES}
+        ${DEMPATHY_SOURCES}
         Empathy/You/Brain/MusicalBrain/MusicalBrain.cpp
         Empathy/You/Brain/MusicalBrain/MusicalBrain.h
         Empathy/Utils/string_utils.cpp
@@ -103,12 +103,6 @@ set(SOURCES
         Empathy/You/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-
-#        DEmpathy/DEmpathy.cpp
-#        DEmpathy/DEmpathy.h
-#        DEmpathy/DoonLight.cpp
-#        DEmpathy/DoonLight.h
-#        DEmpathy/__main__.cpp
         )
 #support for nullptr, etc
 add_definitions(-std=c++0x)
