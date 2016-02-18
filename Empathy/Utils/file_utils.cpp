@@ -21,7 +21,7 @@ char* file_read(const char* filename)
     FILE* in = fopen(filename, "rb");
     if (in == NULL) {
         fprintf(stderr,"Could not open file: ");
-        fprintf(stderr,filename);
+        fprintf(stderr,"%s",filename);
         fprintf(stderr,"\n");
         return NULL;
     }

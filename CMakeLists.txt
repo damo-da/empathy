@@ -10,11 +10,11 @@ file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
 set (LEMPATHY_SOURCES
-        LEmpathy/DoonLight.cpp
-        LEmpathy/DoonLight.h
-        LEmpathy/DEmpathy.h
-        LEmpathy/DEmpathy.cpp
-        LEmpathy/__main__.cpp
+        DEmpathy/DoonLight.cpp
+        DEmpathy/DoonLight.h
+        DEmpathy/DEmpathy.h
+        DEmpathy/DEmpathy.cpp
+        DEmpathy/__main__.cpp
         )
 set (EMPATHY_SOURCES
 
@@ -137,7 +137,7 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_DIRS})
 
-include_directories(LEmpathy/libs/irrKlang-64bit-1.5.0/include/)
+include_directories(DEmpathy/libs/irrKlang-64bit-1.5.0/include/)
 
 #add source files for compilation
 add_executable(empathy ${SOURCES})
@@ -153,6 +153,6 @@ target_link_libraries(empathy
         ${xrandr_LIBRARIES}
 
 #        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
-        "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
-#        "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
+        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
+#        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
         )
