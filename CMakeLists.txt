@@ -23,8 +23,8 @@ set (EMPATHY_SOURCES
 
         Empathy/global.hpp
 
-        Empathy/Uniqueness.h
-        Empathy/Uniqueness.cpp
+        Empathy/Utils/Uniqueness.h
+        Empathy/Utils/Uniqueness.cpp
 
         Empathy/LifeEvent/life_event.cpp
         Empathy/LifeEvent/life_event.hpp

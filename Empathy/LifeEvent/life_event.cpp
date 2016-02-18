@@ -1,7 +1,5 @@
 #include <iostream>
 #include "life_event.hpp"
-#include "../RadioStation/TimeBroadcaster.h"
-#include "../Uniqueness.h"
 
 using namespace std;
 LifeEvent::LifeEvent(): Subscriber(){
