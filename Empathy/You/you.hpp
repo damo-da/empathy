@@ -12,7 +12,7 @@
 #include "Brain/Brain.h"
 
 #include <vector>
-
+class Brain;
 class You: public Subscriber{
 public:
 	std::vector<LifeEvent*> lifeEvents;

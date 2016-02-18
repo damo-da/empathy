@@ -16,6 +16,7 @@ void LEmpathy::run(){
 
         glfwSwapBuffers(window);
     }
+    terminate();
     empathy->flush();
 
     cout<<"\n\n--------------Program End-------------\n\n"<<endl;
@@ -58,9 +59,7 @@ void LEmpathy::init(){
 	empathy->init();
 }
 void LEmpathy::initEmpathyInstance() {
-
-	empathy =new Empathy(this);
-    empathy->setMoonLight(new LoonLight());
+    empathy->setMoonLight(getMoonLight());
 	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 }
 
@@ -91,15 +90,9 @@ void LEmpathy::initGlfw() {
 
 LEmpathy * LEmpathy::instance=nullptr;
 
-bool LEmpathy::shouldTerminate() {
-    return glfwWindowShouldClose(window);
-}
-
 void LEmpathy::terminate() {
     // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
-
-	
 }
 
 GLfloat LEmpathy::getTime() {
@@ -108,5 +101,5 @@ GLfloat LEmpathy::getTime() {
 
 
 LEmpathy::LEmpathy() : EmpathyBinder() {
-
+    setMoonLight(new LoonLight());
 }

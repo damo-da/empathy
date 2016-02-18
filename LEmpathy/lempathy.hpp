@@ -21,16 +21,13 @@ public:
     LEmpathy();
 
 public:
-	//The instance for the Empathy app
-	Empathy * empathy;
-
 	GLFWwindow * window;
 
 	//Called by the user. Begins the process of the app
 	virtual void run();
 
-//Self explanatory
-	void init();
+	//Self explanatory
+	virtual void init() override;
 
 	//Initialize the desktop window manager: GLFW3
 	void initGlfw();
@@ -38,15 +35,10 @@ public:
 	//Creates an instance of the empathy app on this LEmpathy instance.
 	void initEmpathyInstance();
 
-	//Called to begin the app. Create a window, start progressing empathy, and everything else
-	void begin();
-
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 
 private:
-    virtual bool shouldTerminate() override;
-
     virtual void terminate() override;
 
     virtual GLfloat getTime() override;

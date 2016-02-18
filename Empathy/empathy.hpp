@@ -11,6 +11,8 @@
 #include "Implements/EmpathyBinder.h"
 #include "Implements/MoonLight.h"
 
+class EmpathyBinder;
+class You;
 class Empathy{
 public:
     EmpathyBinder * binder;
@@ -33,6 +35,7 @@ public:
 	You * you;
 
     static BroadcastStation broadcastStation;
+
 private:
 	//Screen Size
 	uint sc_size_x,sc_size_y;

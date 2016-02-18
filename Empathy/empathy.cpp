@@ -14,7 +14,6 @@ moonLight(nullptr)
 void Empathy::flush(){
     cout<<"Flush done"<<endl;
 
-    binder->terminate();
     moonLight->terminate();
     you->terminate();
 }

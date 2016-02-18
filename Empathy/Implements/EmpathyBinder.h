@@ -8,17 +8,30 @@
 #include <GL/glew.h>
 #include "MoonLight.h"
 #include "../You/Brain/Brain.h"
+#include "../empathy.hpp"
 #include <vector>
-
+class Empathy;
 class Brain;
 class EmpathyBinder {
     MoonLight * moonLight;
 public:
-    virtual bool shouldTerminate()=0;
+
+    MoonLight *getMoonLight() const {
+        return moonLight;
+    }
+
+    void setMoonLight(MoonLight *moonLight) {
+        EmpathyBinder::moonLight = moonLight;
+    }
+
+    //The instance for the Empathy app
+    Empathy * empathy;
+
+    virtual void init()=0;
 
     virtual GLfloat  getTime()=0;
-
     virtual void terminate()=0;
+    virtual void run()=0;
 
     EmpathyBinder();
 
@@ -30,10 +43,10 @@ public:
         return brains;
     }
 
-    virtual void run()=0;
+    std::vector<Brain *> brains;
 
 private:
-    std::vector<Brain *> brains;
+
 };
 
 
