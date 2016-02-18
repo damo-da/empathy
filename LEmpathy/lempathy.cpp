@@ -88,7 +88,6 @@ void LEmpathy::initGlfw() {
 
 	//set key call back
 	glfwSetKeyCallback(window, key_callback);
-
 }
 
 LEmpathy * LEmpathy::instance=nullptr;
@@ -108,15 +107,15 @@ GLfloat LEmpathy::getTime() {
     return glfwGetTime();
 }
 
-void LEmpathy::pollEvents() {
-    glfwPollEvents();
-
-}
-
-void LEmpathy::swapBuffers() {
-    glfwSwapBuffers(window);
-}
 
 LEmpathy::LEmpathy() : EmpathyBinder() {
 
+}
+
+void LEmpathy::preLoop() {
+	glfwPollEvents();
+}
+
+void LEmpathy::postLoop() {
+	glfwSwapBuffers(window);
 }

@@ -8,17 +8,6 @@ bool EmpathyBinder::shouldTerminate() {
     return false;
 }
 
-void EmpathyBinder::swapBuffers() {
-
-}
-
-GLfloat EmpathyBinder::getTime() {
-    return 0;
-}
-
-void EmpathyBinder::pollEvents() {
-
-}
 
 void EmpathyBinder::terminate() {
 

@@ -29,7 +29,11 @@ public:
 	//Called by the user. Begins the process of the app
 	void run();
 
-	//Self explanatory
+	virtual void preLoop() override;
+
+	virtual void postLoop() override;
+
+//Self explanatory
 	void init();
 
 	//Initialize the desktop window manager: GLFW3
@@ -50,10 +54,6 @@ private:
     virtual void terminate() override;
 
     virtual GLfloat getTime() override;
-
-    virtual void pollEvents() override;
-
-    virtual void swapBuffers() override;
 
     static LEmpathy * instance;
 };

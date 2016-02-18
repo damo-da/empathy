@@ -16,8 +16,8 @@ public:
     EmpathyBinder * binder;
 	MoonLight * moonLight;
 
-	//init the cross-platform system ready.
-	void init();
+    //init the cross-platform system ready.
+    virtual void init();
 
 	//The constructor
 	Empathy(EmpathyBinder * binder,MoonLight * moonLightBinder);

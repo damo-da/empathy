@@ -101,7 +101,17 @@ set(SOURCES
 
         Empathy/Libs/cJSON/cJSON.c
         Empathy/Libs/cJSON/cJSON.h
-        Empathy/You/Brain/JSONBrain/JSONBrain.cpp Empathy/You/Brain/JSONBrain/JSONBrain.h Empathy/Libs/cJSON/cJSON_utils.cpp Empathy/Libs/cJSON/cJSON_utils.h)
+        Empathy/You/Brain/JSONBrain/JSONBrain.cpp
+        Empathy/You/Brain/JSONBrain/JSONBrain.h
+        Empathy/Libs/cJSON/cJSON_utils.cpp
+        Empathy/Libs/cJSON/cJSON_utils.h
+
+#        DEmpathy/DEmpathy.cpp
+#        DEmpathy/DEmpathy.h
+#        DEmpathy/DoonLight.cpp
+#        DEmpathy/DoonLight.h
+#        DEmpathy/__main__.cpp
+        )
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 
@@ -144,7 +154,7 @@ target_link_libraries(empathy
         ${xxf86vm_LIBRARIES}
         ${xrandr_LIBRARIES}
 
-
+#        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
         "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
 #        "${CMAKE_CURRENT_SOURCE_DIR}/LEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
         )

@@ -15,14 +15,15 @@ class EmpathyBinder {
 public:
     virtual bool shouldTerminate();
 
-    virtual GLfloat  getTime();
-    virtual void pollEvents();
-    virtual void swapBuffers();
+    virtual GLfloat  getTime()=0;
+
 
     virtual void terminate();
 
     EmpathyBinder();
 
+    virtual void preLoop()=0;
+    virtual void postLoop()=0;
 
     void addBrain(Brain * brain);
 

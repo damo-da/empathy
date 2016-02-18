@@ -4,14 +4,15 @@
 
 using namespace std;
 
-Empathy::Empathy(EmpathyBinder *binder,MoonLight * moonLightBinder) {
+Empathy::Empathy(EmpathyBinder *binder,MoonLight * moonLightBinder)
+{
     this->binder=binder;
     this->moonLight=moonLightBinder;
 }
 
 
 void Empathy::flush(){
-	cout<<"Flush done"<<endl;
+    cout<<"Flush done"<<endl;
 
     binder->terminate();
     moonLight->terminate();
@@ -21,13 +22,13 @@ void Empathy::flush(){
 void Empathy::init() {
 //	cout<<"initing emp"<<endl;
 
-	initGlew();
+    initGlew();
 
-	initGL();
+    initGL();
 
-	initShaders();
+    initShaders();
 
-	initYou();
+    initYou();
 
     MoonLightBinder::init(moonLight);
 
@@ -41,13 +42,13 @@ void Empathy::init() {
 void Empathy::initGlew(){
 //	cout<<"initing glew"<<endl;
 
-	//initialize GLEW
-	glewExperimental = GL_TRUE;
-	if (glewInit() != GLEW_OK)
-	{
-		std::cout << "Failed to initialize GLEW" << std::endl;
+    //initialize GLEW
+    glewExperimental = GL_TRUE;
+    if (glewInit() != GLEW_OK)
+    {
+        std::cout << "Failed to initialize GLEW" << std::endl;
 
-	}
+    }
 }
 
 void Empathy::initShaders(){
@@ -56,12 +57,12 @@ void Empathy::initShaders(){
 
 void Empathy::initGL(){
 //	cout<<"initing glViewport"<<sc_size_x<<","<<sc_size_y<<endl;
-	glViewport(0, 0, sc_size_x, sc_size_y);
+    glViewport(0, 0, sc_size_x, sc_size_y);
 }
 
 void Empathy::initYou(){
-	you=new You();
-	you->init();
+    you=new You();
+    you->init();
 }
 
 
@@ -76,7 +77,8 @@ void Empathy::begin() {
 
 
     while (! binder->shouldTerminate()) {
-        binder->pollEvents();
+        binder->preLoop();
+
         BroadcastStation::dispatch();
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -86,7 +88,8 @@ void Empathy::begin() {
 
         you->blit();
 
-        binder->swapBuffers();
+        binder->postLoop();
+
     }
 
     flush();
