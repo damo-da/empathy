@@ -2,11 +2,11 @@
 // Created by damo on 1/29/16.
 //
 
-#include "LoonLight.h"
+#include "DoonLight.h"
 
 #include <iostream>
 using namespace std;
-void LoonLight::play(std::string id, bool repeat) {
+void DoonLight::play(std::string id, bool repeat) {
     MoonLight::play(id, repeat);
     cout<<"Playing "<<id<<endl;
     try{
@@ -22,7 +22,7 @@ void LoonLight::play(std::string id, bool repeat) {
 
 }
 
-void LoonLight::init() {
+void DoonLight::init() {
     MoonLight::init();
     initIrr();
 
@@ -39,14 +39,14 @@ void LoonLight::init() {
 
 }
 
-void LoonLight::terminate() {
+void DoonLight::terminate() {
     MoonLight::terminate();
 
     cout<<"terminating loonlinght"<<endl;
     engine->drop(); // delete engine
 }
 
-void LoonLight::initIrr() {
+void DoonLight::initIrr() {
     // start the sound engine with default parameters
     engine = createIrrKlangDevice();
 
@@ -59,10 +59,10 @@ void LoonLight::initIrr() {
 }
 
 
-std::string LoonLight::BASE="./assets/audio/";
-std::string LoonLight::KEYBOARD_BASE=LoonLight::BASE+"keyboard/";
+std::string DoonLight::BASE="./assets/audio/";
+std::string DoonLight::KEYBOARD_BASE= DoonLight::BASE + "keyboard/";
 
-void LoonLight::playKeyboard(string key) {
+void DoonLight::playKeyboard(string key) {
 
 
     try{
@@ -76,6 +76,6 @@ void LoonLight::playKeyboard(string key) {
     }
 }
 
-LoonLight::LoonLight():MoonLight() {
+DoonLight::DoonLight(): MoonLight() {
 
 }

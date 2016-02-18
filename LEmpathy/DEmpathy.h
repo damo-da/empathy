@@ -12,13 +12,13 @@
 #define SC_SIZE_X 700
 #define SC_SIZE_Y 700
 
-class LEmpathy:public Empathy{
+class DEmpathy : public Empathy{
 	/*
-	The foundation module for LEmpathy. It manages everything required for the desktop and only the desktop.
+	The foundation module for DEmpathy. It manages everything required for the desktop and only the desktop.
 	*/
 
 public:
-    LEmpathy();
+    DEmpathy();
 
 public:
 	GLFWwindow * window;
@@ -40,7 +40,7 @@ private:
 
     virtual GLfloat getTime() override;
 
-    static LEmpathy * instance;
+    static DEmpathy * instance;
 };
 
 

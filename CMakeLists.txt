@@ -10,10 +10,10 @@ file(GLOB EMPATHY_LIFE_EVENT_SRC "Empathy/LifeEvent/*.hpp" "Empathy/LifeEvent/*.
 file(GLOB EMPATHY_YOU_SRC "Empathy/You/*.hpp" "Empathy/You/*.cpp")
 
 set (LEMPATHY_SOURCES
-        LEmpathy/LoonLight.cpp
-        LEmpathy/LoonLight.h
-        LEmpathy/lempathy.hpp
-        LEmpathy/lempathy.cpp
+        LEmpathy/DoonLight.cpp
+        LEmpathy/DoonLight.h
+        LEmpathy/DEmpathy.h
+        LEmpathy/DEmpathy.cpp
         LEmpathy/__main__.cpp
         )
 set (EMPATHY_SOURCES

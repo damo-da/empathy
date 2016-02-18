@@ -1,4 +1,4 @@
-#include "lempathy.hpp"
+#include "DEmpathy.h"
 
 
 #include "../Empathy/You/Brain/JSONBrain/JSONBrain.h"
@@ -8,7 +8,7 @@ using namespace std;
 
 
 int  main(){
-	LEmpathy * empathy=new LEmpathy();
+	DEmpathy * empathy=new DEmpathy();
 
     JSONBrain * brain=new JSONBrain("assets/brains/CanonInD.json");
     brain->addTo(empathy);

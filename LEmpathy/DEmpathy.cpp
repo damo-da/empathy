@@ -1,9 +1,9 @@
-#include "lempathy.hpp"
+#include "DEmpathy.h"
 #include "../Empathy/global.hpp"
-#include "LoonLight.h"
+#include "DoonLight.h"
 
 using namespace std;
-void LEmpathy::run(){
+void DEmpathy::run(){
     cout<<"\n\n\n\n\n--------------Program Begin-------------\n\n"<<endl;
 
     init();
@@ -23,7 +23,7 @@ void LEmpathy::run(){
 
 }
 
-void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+void DEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
 //    std::cout<<"key call back received"<<action<<std::endl;
 
 	// When a user presses the escape key, we set the WindowShouldClose property to true,
@@ -50,19 +50,19 @@ void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
 
 }
 
-void LEmpathy::init(){
+void DEmpathy::init(){
 	instance=this;
 
 	initGlfw();
 
-    setMoonLight(new LoonLight());
+    setMoonLight(new DoonLight());
     setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 
     Empathy::init();
 }
 
 
-void LEmpathy::initGlfw() {
+void DEmpathy::initGlfw() {
 //	cout<<"glfwInit"<<endl;
 
 	glfwInit();
@@ -87,18 +87,18 @@ void LEmpathy::initGlfw() {
 	glfwSetKeyCallback(window, key_callback);
 }
 
-LEmpathy * LEmpathy::instance=nullptr;
+DEmpathy *DEmpathy::instance=nullptr;
 
-void LEmpathy::terminate() {
+void DEmpathy::terminate() {
     // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
 }
 
-GLfloat LEmpathy::getTime() {
+GLfloat DEmpathy::getTime() {
     return glfwGetTime();
 }
 
 
-LEmpathy::LEmpathy() : Empathy() {
+DEmpathy::DEmpathy() : Empathy() {
 
 }

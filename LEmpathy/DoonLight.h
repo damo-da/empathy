@@ -13,13 +13,13 @@ using namespace irrklang;
 
 #include "../Empathy/Implements/MoonLight.h"
 
-class LoonLight : public MoonLight{
+class DoonLight : public MoonLight{
 public:
 
     virtual void init() override;
     virtual void terminate() override;
 
-    LoonLight();
+    DoonLight();
 
 private:
     ISoundEngine* engine;
