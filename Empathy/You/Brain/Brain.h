@@ -11,9 +11,8 @@
 #include "../../RadioStation/Subscriber.h"
 #include "../../global.hpp"
 #include "../../LifeEvent/life_event.hpp"
-#include "../../Implements/EmpathyBinder.h"
 
-class EmpathyBinder;
+#include "../../empathy.hpp"
 class Empathy;
 class Brain  : public Subscriber{
 public:

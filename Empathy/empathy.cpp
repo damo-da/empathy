@@ -4,10 +4,10 @@
 
 using namespace std;
 
-Empathy::Empathy(EmpathyBinder *binder):
+Empathy::Empathy():
 moonLight(nullptr)
 {
-    this->binder=binder;
+
 }
 
 
@@ -81,7 +81,7 @@ void Empathy::loop() {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT );
 
-    you->setTime(binder -> getTime());
+    you->setTime(getTime());
 
     you->blit();
 

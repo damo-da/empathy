@@ -38,8 +38,6 @@ set (EMPATHY_SOURCES
         Empathy/You/Brain/DummyBrain/DummyBrain.cpp
         Empathy/You/Brain/DummyBrain/DummyBrain.h
 
-        Empathy/Implements/EmpathyBinder.cpp
-        Empathy/Implements/EmpathyBinder.h
         Empathy/Implements/MoonLight.cpp
         Empathy/Implements/MoonLight.h
         Empathy/Implements/MoonLightBinder.cpp

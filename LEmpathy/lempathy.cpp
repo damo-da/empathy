@@ -12,12 +12,12 @@ void LEmpathy::run(){
 
         glfwPollEvents();
 
-        empathy->loop();
+        loop();
 
         glfwSwapBuffers(window);
     }
     terminate();
-    empathy->flush();
+    flush();
 
     cout<<"\n\n--------------Program End-------------\n\n"<<endl;
 
@@ -54,11 +54,11 @@ void LEmpathy::init(){
 	instance=this;
 
 	initGlfw();
-    
-    empathy->setMoonLight(getMoonLight());
-    empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 
-	empathy->init();
+    setMoonLight(new LoonLight());
+    setScreenSize(SC_SIZE_X, SC_SIZE_Y);
+
+    Empathy::init();
 }
 
 
@@ -99,6 +99,6 @@ GLfloat LEmpathy::getTime() {
 }
 
 
-LEmpathy::LEmpathy() : EmpathyBinder() {
-    setMoonLight(new LoonLight());
+LEmpathy::LEmpathy() : Empathy() {
+
 }

@@ -8,22 +8,24 @@
 #include "LifeEvent/life_event.hpp"
 #include "RadioStation/BroadcastStation.h"
 
-#include "Implements/EmpathyBinder.h"
 #include "Implements/MoonLight.h"
 
-class EmpathyBinder;
 class You;
 class Brain;
 class Empathy{
 public:
-    EmpathyBinder * binder;
 	MoonLight * moonLight;
+
+    virtual GLfloat  getTime()=0;
+    virtual void terminate()=0;
+    virtual void run()=0;
+
 
     //init the cross-platform system ready.
     virtual void init();
 
 	//The constructor
-	Empathy(EmpathyBinder * binder);
+	Empathy();
 
     void setMoonLight(MoonLight *m){moonLight=m;}
 

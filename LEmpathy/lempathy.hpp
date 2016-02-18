@@ -6,13 +6,13 @@
 #define LEMPATHY
 
 #include "../Empathy/empathy.hpp"
-#include "../Empathy/Implements/EmpathyBinder.h"
+
 #include <GLFW/glfw3.h>
 
 #define SC_SIZE_X 700
 #define SC_SIZE_Y 700
 
-class LEmpathy:public EmpathyBinder{
+class LEmpathy:public Empathy{
 	/*
 	The foundation module for LEmpathy. It manages everything required for the desktop and only the desktop.
 	*/
