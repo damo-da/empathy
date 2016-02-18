@@ -72,27 +72,18 @@ void Empathy::setScreenSize(int x,int y){
     sc_size_y=y;
 }
 
-void Empathy::begin() {
-//    cout << "empathy begin" << endl;
-
-
-    while (! binder->shouldTerminate()) {
-        binder->preLoop();
-
-        BroadcastStation::dispatch();
-
-        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-        glClear(GL_COLOR_BUFFER_BIT );
-
-        you->setTime(binder -> getTime());
-
-        you->blit();
-
-        binder->postLoop();
-
-    }
-
-    flush();
-}
 
 BroadcastStation Empathy::broadcastStation= BroadcastStation();
+
+void Empathy::loop() {
+
+    BroadcastStation::dispatch();
+
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClear(GL_COLOR_BUFFER_BIT );
+
+    you->setTime(binder -> getTime());
+
+    you->blit();
+
+}

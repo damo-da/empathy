@@ -18,13 +18,10 @@ public:
 
     virtual GLfloat  getTime()=0;
 
-
     virtual void terminate()=0;
 
     EmpathyBinder();
 
-    virtual void preLoop()=0;
-    virtual void postLoop()=0;
 
     void addBrain(Brain * brain);
 
@@ -32,6 +29,8 @@ public:
     const std::vector<Brain *> &getBrains() const {
         return brains;
     }
+
+    virtual void run()=0;
 
 private:
     std::vector<Brain *> brains;

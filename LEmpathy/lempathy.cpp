@@ -4,22 +4,22 @@
 
 using namespace std;
 void LEmpathy::run(){
-	
-	cout<<"\n\n\n\n\n--------------Program Begin-------------\n\n"<<endl;
-	
-	init();
+    cout<<"\n\n\n\n\n--------------Program Begin-------------\n\n"<<endl;
 
-	begin();
+    init();
 
-	cout<<"\n\n--------------Program End-------------\n\n"<<endl;
-}
+    while(! glfwWindowShouldClose(window)){
 
-void LEmpathy::begin(){
-	cout<<"lempathy begin"<<endl;
+        glfwPollEvents();
 
-	empathy->begin();
+        empathy->loop();
 
-	cout << "Finished everything" << endl;
+        glfwSwapBuffers(window);
+    }
+    empathy->flush();
+
+    cout<<"\n\n--------------Program End-------------\n\n"<<endl;
+
 }
 
 void LEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
@@ -109,12 +109,4 @@ GLfloat LEmpathy::getTime() {
 
 LEmpathy::LEmpathy() : EmpathyBinder() {
 
-}
-
-void LEmpathy::preLoop() {
-	glfwPollEvents();
-}
-
-void LEmpathy::postLoop() {
-	glfwSwapBuffers(window);
 }

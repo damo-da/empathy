@@ -24,9 +24,7 @@ public:
 
     void setMoonLight(MoonLight *m){moonLight=m;}
 
-	//The window is created. Begin serving empathy
-	void begin();
-	
+    void loop();
 
 	void setScreenSize(int,int);
 

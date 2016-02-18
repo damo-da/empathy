@@ -27,11 +27,7 @@ public:
 	GLFWwindow * window;
 
 	//Called by the user. Begins the process of the app
-	void run();
-
-	virtual void preLoop() override;
-
-	virtual void postLoop() override;
+	virtual void run();
 
 //Self explanatory
 	void init();
