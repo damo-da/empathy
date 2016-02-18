@@ -20,7 +20,9 @@ public:
     virtual void init();
 
 	//The constructor
-	Empathy(EmpathyBinder * binder,MoonLight * moonLightBinder);
+	Empathy(EmpathyBinder * binder);
+
+    void setMoonLight(MoonLight *m){moonLight=m;}
 
 	//The window is created. Begin serving empathy
 	void begin();

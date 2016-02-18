@@ -4,10 +4,10 @@
 
 using namespace std;
 
-Empathy::Empathy(EmpathyBinder *binder,MoonLight * moonLightBinder)
+Empathy::Empathy(EmpathyBinder *binder):
+moonLight(nullptr)
 {
     this->binder=binder;
-    this->moonLight=moonLightBinder;
 }
 
 

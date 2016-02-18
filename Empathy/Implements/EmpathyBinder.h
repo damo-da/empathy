@@ -12,13 +12,14 @@
 
 class Brain;
 class EmpathyBinder {
+    MoonLight * moonLight;
 public:
-    virtual bool shouldTerminate();
+    virtual bool shouldTerminate()=0;
 
     virtual GLfloat  getTime()=0;
 
 
-    virtual void terminate();
+    virtual void terminate()=0;
 
     EmpathyBinder();
 

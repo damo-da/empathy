@@ -4,16 +4,11 @@
 
 #include "EmpathyBinder.h"
 
-bool EmpathyBinder::shouldTerminate() {
-    return false;
-}
 
-
-void EmpathyBinder::terminate() {
-
-}
-
-EmpathyBinder::EmpathyBinder():brains() {
+EmpathyBinder::EmpathyBinder():
+        brains(),
+        moonLight(nullptr)
+{
 
 }
 

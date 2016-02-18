@@ -58,13 +58,14 @@ void LEmpathy::init(){
 	empathy->init();
 }
 void LEmpathy::initEmpathyInstance() {
-	empathy =new Empathy(this,new LoonLight());
+
+	empathy =new Empathy(this);
+    empathy->setMoonLight(new LoonLight());
 	empathy->setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 }
 
 void LEmpathy::initGlfw() {
 //	cout<<"glfwInit"<<endl;
-
 
 	glfwInit();
 
@@ -80,9 +81,7 @@ void LEmpathy::initGlfw() {
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
 		exit(EXIT_FAILURE);
-
 	}
-
 
 	glfwMakeContextCurrent(window);
 
