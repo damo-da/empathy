@@ -14,15 +14,26 @@ GLfloat MathWave_Sine::getY(GLfloat theta) {
 void MathWave_Sine::onInit() {
     LifeEvent_MathWave::onInit();
 
-    setPeriod(0.2f);
+
 }
 
-MathWave_Sine::MathWave_Sine(GLfloat period)
-        :period(period)
+MathWave_Sine::MathWave_Sine(GLfloat period) :
+        LifeEvent_MathWave(),
+        period(period)
 {
 
 }
 
-MathWave_Sine::MathWave_Sine():period(0.1f) {
+MathWave_Sine::MathWave_Sine():
+        LifeEvent_MathWave(),
+        period(0.1f) {
 
+}
+
+void MathWave_Sine::decodeJson(std::string key, cJSON *value) {
+    LifeEvent_MathWave::decodeJson(key, value);
+
+    if(key=="period"){
+        setPeriod(value->valuedouble);
+    }
 }

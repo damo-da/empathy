@@ -9,6 +9,9 @@
 #include "../../../LifeEvent/CWave/LifeEvent_CWave_data.h"
 #include "../../../LifeEvent/MathWave/MathWave.h"
 #include "../../../LifeEvent/MathWave/MathWave_Line.h"
+#include "../../../LifeEvent/MathWave/MathWave_Sine.h"
+#include "../../../LifeEvent/MathWave/MathWave_Sinc.h"
+#include "../../../LifeEvent/MathWave/MathWave_Para_Circle.h"
 #include <vector>
 
 using namespace std;
@@ -114,7 +117,14 @@ LifeEvent *JSONBrain::createEventFromString(const std::string name) {
         return new LifeEvent_CWave_data();
     }else if(name=="mathwave_line"){
         return new MathWave_Line();
+    }else if(name=="mathwave_para_circle"){
+        return new MathWave_Para_Circle();
+    }else if(name=="mathwave_sinc"){
+        return new MathWave_Sinc();
+    }else if(name=="mathwave_sine"){
+        return new MathWave_Sine();
     }
+
 
     return nullptr;
 }

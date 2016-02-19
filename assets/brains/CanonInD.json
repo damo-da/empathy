@@ -23,7 +23,20 @@
         "create":"mathwave_line",
         "offsetX":0.2,
         "offsetY":0.2,
-        "length":0.1
+        "length":0.1,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1
+      },
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.2,
+        "offsetY":0.2,
+        "length":0.1,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1
       }
     ],
     "1":[

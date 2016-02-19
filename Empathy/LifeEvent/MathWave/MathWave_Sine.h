@@ -31,6 +31,8 @@ public:
 
     MathWave_Sine();
 
+    virtual void decodeJson(std::string key, cJSON *value) override;
+
 private:
 
     GLfloat period;
