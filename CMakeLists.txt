@@ -37,8 +37,6 @@ set (EMPATHY_SOURCES
 
         Empathy/Implements/MoonLight.cpp
         Empathy/Implements/MoonLight.h
-        Empathy/Implements/MoonLightBinder.cpp
-        Empathy/Implements/MoonLightBinder.h
 
         Empathy/RadioStation/BroadcastStation.cpp
         Empathy/RadioStation/BroadcastStation.h

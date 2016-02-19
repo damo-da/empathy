@@ -1,5 +1,5 @@
 #include "empathy.h"
-#include "Implements/MoonLightBinder.h"
+
 #include "Shader/DefaultShader.h"
 
 using namespace std;
@@ -28,8 +28,6 @@ void Empathy::init() {
     initShaders();
 
     initYou();
-
-    MoonLightBinder::init(moonLight);
 
 
     std::vector<Brain *> brains=this->getBrains();
