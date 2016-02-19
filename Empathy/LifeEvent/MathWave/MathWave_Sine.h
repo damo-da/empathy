@@ -25,6 +25,15 @@ public:
         return 2.0f/getPeriod();
     }
 
+
+    GLfloat getThetaOffset() const {
+        return thetaOffset;
+    }
+
+    void setThetaOffset(GLfloat thetaOffset) {
+        MathWave_Sine::thetaOffset = thetaOffset;
+    }
+
     virtual void onInit() override ;
 
     MathWave_Sine(GLfloat period);
@@ -34,7 +43,7 @@ public:
     virtual void decodeJson(std::string key, cJSON *value) override;
 
 private:
-
+    GLfloat thetaOffset;
     GLfloat period;
 };
 

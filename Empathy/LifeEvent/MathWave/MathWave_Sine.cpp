@@ -8,7 +8,7 @@
 using namespace std;
 GLfloat MathWave_Sine::getY(GLfloat theta) {
 //    cout<<"HI"<<sin(x*getPeriodConstant())<<getPeriodConstant()<<endl;
-    return sin(theta*getPeriodConstant());
+    return sin(theta*getPeriodConstant()+getThetaOffset());
 }
 
 void MathWave_Sine::onInit() {
@@ -19,14 +19,17 @@ void MathWave_Sine::onInit() {
 
 MathWave_Sine::MathWave_Sine(GLfloat period) :
         LifeEvent_MathWave(),
-        period(period)
+        period(period),
+        thetaOffset(0.0f)
 {
 
 }
 
 MathWave_Sine::MathWave_Sine():
         LifeEvent_MathWave(),
-        period(0.1f) {
+        period(0.1f),
+        thetaOffset(0.0f)
+{
 
 }
 
@@ -35,5 +38,7 @@ void MathWave_Sine::decodeJson(std::string key, cJSON *value) {
 
     if(key=="period"){
         setPeriod(value->valuedouble);
+    }else if(key=="sine_thetaOffset"){
+        setThetaOffset(value->valuedouble);
     }
 }

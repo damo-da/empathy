@@ -20,23 +20,55 @@
     "paleBlueDot":[
       {
         "type":"create",
-        "create":"mathwave_line",
-        "offsetX":0.2,
-        "offsetY":0.2,
-        "length":0.1,
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.17,
         "colorRed":0.5,
         "colorGreen":0.2,
-        "colorBlue":0.1
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":-1.57
+
       },
       {
         "type":"create",
-        "create":"mathwave_sine",
-        "offsetX":0.2,
-        "offsetY":0.2,
-        "length":0.1,
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":1.0,
+        "length":0.15,
         "colorRed":0.5,
         "colorGreen":0.2,
-        "colorBlue":0.1
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+
+      }
+    ],
+    "paleBlueDot1":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.17,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":1.15
       }
     ],
     "1":[
@@ -115,6 +147,7 @@
     "17":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"paleBlueDot1","in":0.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"18","in":0.8}
     ],
@@ -188,6 +221,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"paleBlueDot","in":0.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"34","in":0.8}
     ],
@@ -265,6 +299,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"paleBlueDot1","in":0.0},
       {"type":"goto","stepID":"50","in":0.8}
     ],
     "50":[
