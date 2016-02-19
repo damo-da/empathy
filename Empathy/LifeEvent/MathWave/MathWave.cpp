@@ -36,29 +36,24 @@ void LifeEvent_MathWave::onInit() {
 
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-
-    setOffsetX(0.0f);
-    setOffsetY(0.0f);
-
-    setZoomX(1.0f);
-    setZoomY(1.0f);
-
-    setLength(1.0f);
-
-    setDiff(0.003f);
-
-    setHead(-0.0f);
-    setTail(0.98f);
-
-    setSpeed(0.15f);
-
-    setRotationAngle(0.0f);
-
-    setPencilSize(2.0f);
 }
 
 
-LifeEvent_MathWave::LifeEvent_MathWave():LifeEvent(),Color() {
+LifeEvent_MathWave::LifeEvent_MathWave():
+        LifeEvent(),
+        Color(),
+        offsetX(0.0f),
+        offsetY(0.0f),
+        zoomX(1.0f),
+        zoomY(1.0f),
+        length(1.0f),
+        diff(0.003f),
+        head(-0.0f),
+        tail(0.9f),
+        speed(0.15f),
+        rotationAngle(0.0f),
+        pencilSize(2.0f)
+{
 
 }
 
@@ -160,6 +155,30 @@ GLfloat LifeEvent_MathWave::getX(GLfloat theta) {
 
 void LifeEvent_MathWave::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
+    Color::decodeJson(key,value);
 
+    if(key=="offsetX"){
+        setOffsetX(value->valuedouble);
+    }else if(key=="offsetY"){
+        setOffsetY(value->valuedouble);
+    }else if(key=="length"){
+        setLength(value->valuedouble);
+    }else if(key=="zoomX"){
+        setZoomX(value->valuedouble);
+    }else if(key=="zoomY"){
+        setZoomY(value->valuedouble);
+    }else if(key=="rendering_diff"){
+        setDiff(value->valuedouble);
+    }else if(key=="speed"){
+        setSpeed(value->valuedouble);
+    }else if(key=="rotationAngle"){
+        setRotationAngle(value->valuedouble);
+    }else if(key=="pencilSize"){
+        setPencilSize(value->valuedouble);
+    }else if(key=="head"){
+        setHead(value->valuedouble);
+    }else if(key=="tail"){
+        setTail(value->valuedouble);
+    }
 
 }

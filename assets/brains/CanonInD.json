@@ -20,7 +20,7 @@
     "paleBlueDot":[
       {
         "type":"create",
-        "create":"math_line",
+        "create":"mathwave_line",
         "offsetX":0.2,
         "offsetY":0.2,
         "length":0.1

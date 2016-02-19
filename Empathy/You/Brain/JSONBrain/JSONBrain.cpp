@@ -7,6 +7,8 @@
 #include "../../../Libs/cJSON/cJSON_utils.h"
 #include "../../../Utils/string_utils.h"
 #include "../../../LifeEvent/CWave/LifeEvent_CWave_data.h"
+#include "../../../LifeEvent/MathWave/MathWave.h"
+#include "../../../LifeEvent/MathWave/MathWave_Line.h"
 #include <vector>
 
 using namespace std;
@@ -110,6 +112,8 @@ void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
 LifeEvent *JSONBrain::createEventFromString(const std::string name) {
     if(name=="cwave"){
         return new LifeEvent_CWave_data();
+    }else if(name=="mathwave_line"){
+        return new MathWave_Line();
     }
 
     return nullptr;
