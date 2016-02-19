@@ -82,3 +82,7 @@ void LifeEvent::doneFinishing() {
 void LifeEvent::onDestroy() {
 //    cout<<"deleted event "<<getId()<<endl;
 }
+
+void LifeEvent::decodeJson(std::string key, cJSON *value) {
+
+}

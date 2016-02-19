@@ -89,32 +89,28 @@ void JSONBrain::executeJson(const std::string action,cJSON *json) {
 }
 
 void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
-    if(action=="cwave"){
-        std::vector<std::string> keys=cJSON_get_keys(json);
+    std::vector<std::string> keys=cJSON_get_keys(json);
 
-        LifeEvent_CWave_data * wave=new LifeEvent_CWave_data();
+    LifeEvent * event= createEventFromString(action);
 
+    if(event != nullptr){
         for(int i=0;i<keys.size();i++){
             std::string key=keys[i];
             cJSON* value=cJSON_GetObjectItem(json,key.c_str());
 
-            if(key=="colorRed"){
-                wave->setR(value->valuedouble);
-            }else if(key=="colorGreen"){
-                wave->setG(value->valuedouble);
-            }else if(key=="colorBlue"){
-                wave->setB(value->valuedouble);
-            }else if(key=="frequency"){
-                wave->setFrequency(value->valuedouble);
-            }else if(key=="wavelength"){
-                wave->setWaveLength(value->valuedouble);
-            }else if(key=="centerX"){
-                wave->setCenterX(value->valuedouble);
-            }else if(key=="centerY"){
-                wave->setCenterY(value->valuedouble);
-            }
+            event->decodeJson(key,value);
+
         }
 
-        addLifeEvent(wave);
+        addLifeEvent(event);
     }
+
+}
+
+LifeEvent *JSONBrain::createEventFromString(const std::string name) {
+    if(name=="cwave"){
+        return new LifeEvent_CWave_data();
+    }
+
+    return nullptr;
 }

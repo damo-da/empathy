@@ -9,6 +9,8 @@
 #include <GL/glew.h>
 #include <math.h>
 #include <iostream>
+#include "../Libs/cJSON/cJSON.h"
+
 using namespace std;
 
 class Wave {
@@ -35,6 +37,7 @@ public:
         return centerY;
     }
 
+    void decodeJson(std::string key,cJSON* value);
 
     GLfloat getAmplitude() const {
         return amplitude;

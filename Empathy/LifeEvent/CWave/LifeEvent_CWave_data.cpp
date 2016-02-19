@@ -86,3 +86,9 @@ void LifeEvent_CWave_data::draw() {
 
     glUseProgram(0);
 }
+
+void LifeEvent_CWave_data::decodeJson(std::string key, cJSON *value) {
+    LifeEvent::decodeJson(key, value);
+    Color::decodeJson(key,value);
+    Wave::decodeJson(key,value);
+}

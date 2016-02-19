@@ -21,9 +21,12 @@ protected:
     virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
     virtual void executeJson(const std::string action,cJSON * json);
-    virtual void createLifeEventFromJson(const std::string action,cJSON * json);
+
+    virtual LifeEvent * createEventFromString(const std::string name);
 private:
     cJSON * root;
+
+    void createLifeEventFromJson(const std::string action,cJSON * json);
 
     std::map<std::string,std::vector<cJSON*>> steps;
 public:

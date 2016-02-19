@@ -8,6 +8,7 @@
 
 #include "../global.h"
 #include "../RadioStation/Subscriber.h"
+#include "../Libs/cJSON/cJSON.h"
 
 #include <GL/glew.h>
 #include <map>
@@ -35,6 +36,8 @@ public:
     virtual void onInit();
     void init();
     void kill(){doneCreating();doneRunning();}
+
+    virtual void decodeJson(std::string key,cJSON* value);
 protected:
     void doneCreating();
     void doneRunning();
@@ -43,6 +46,8 @@ protected:
     virtual void onCreate(GLfloat delTime);
     virtual void onRun(GLfloat delTime);
     virtual void onFinish(GLfloat delTime);
+
+
 
     GLfloat getTimeSinceRun()const {return runTime+finishTime;}
     GLfloat getTimeSinceCreate()const{return createTime+runTime+finishTime;}

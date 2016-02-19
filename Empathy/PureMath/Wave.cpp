@@ -16,3 +16,19 @@ Wave::Wave():
 
 
 }
+
+void Wave::decodeJson(std::string key, cJSON *value) {
+    if(key=="frequency"){
+        setFrequency(value->valuedouble);
+    }else if(key=="wavelength"){
+        setWaveLength(value->valuedouble);
+    }else if(key=="centerX"){
+        setCenterX(value->valuedouble);
+    }else if(key=="centerY"){
+        setCenterY(value->valuedouble);
+    }else if(key=="damping"){
+        setDampingConst(value->valuedouble);
+    }else if(key=="initialPhase"){
+        setInitialPhase(value->valuedouble);
+    }
+}

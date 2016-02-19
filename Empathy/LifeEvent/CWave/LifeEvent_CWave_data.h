@@ -30,6 +30,10 @@ public:
 protected:
     virtual void onRun(GLfloat delTime) override;
 
+
+public:
+    virtual void decodeJson(std::string key, cJSON *value) override;
+
 public:
     virtual void onDestroy() override;
 

@@ -62,3 +62,10 @@ void LifeEvent_CWave::onReceiveEvent(Event &event) {
 
     }
 }
+
+void LifeEvent_CWave::decodeJson(std::string key, cJSON *value) {
+    LifeEvent_Collection::decodeJson(key,value);
+    Color::decodeJson(key, value);
+    Wave::decodeJson(key,value);
+
+}

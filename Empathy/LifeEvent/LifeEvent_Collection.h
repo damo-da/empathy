@@ -22,6 +22,8 @@ public:
 
     virtual void draw() override;
 
+    virtual void decodeJson(std::string key, cJSON *value) override;
+
     virtual void passTime(GLfloat delTime) override;
 
 public:

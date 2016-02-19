@@ -10,13 +10,27 @@
         "create":"cwave",
         "colorRed":0.9,
         "colorBlue":0.8,
-        "colorGreen":0.1
+        "colorGreen":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paleBlueDot":[
+      {
+        "type":"create",
+        "create":"math_line",
+        "offsetX":0.2,
+        "offsetY":0.2,
+        "length":0.1
       }
     ],
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
       {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"paleBlueDot","in":0.0},
       {"type":"goto","stepID":"2","in":0.8}
     ],
     "2":[
@@ -161,6 +175,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"34","in":0.8}
     ],
     "34":[
@@ -179,6 +194,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"38","in":0.8}
     ],
     "38":[
@@ -197,6 +213,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"42","in":0.8}
     ],
     "42":[
@@ -215,6 +232,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"46","in":0.8}
     ],
     "46":[
@@ -233,6 +251,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"50","in":0.8}
     ],
     "50":[
@@ -251,6 +270,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"54","in":0.8}
     ],
     "54":[
@@ -269,6 +289,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"58","in":0.8}
     ],
     "58":[
@@ -287,6 +308,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"62","in":0.8}
     ],
     "62":[

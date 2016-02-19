@@ -68,3 +68,11 @@ void LifeEvent_Collection::passTime(GLfloat delTime) {
 void LifeEvent_Collection::removeCompletedFromCollection() {
 
 }
+
+void LifeEvent_Collection::decodeJson(std::string key, cJSON *value) {
+    LifeEvent::decodeJson(key, value);
+
+    for(int i=0;i<getCollection().size();i++){
+        collection[i]->decodeJson(key,value);
+    }
+}

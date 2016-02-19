@@ -9,7 +9,7 @@
 #include <vector>
 #include "cJSON.h"
 
-std::vector<std::string> cJSON_get_keys(cJSON *object);
-void cJSON_print_keys(cJSON * object);
+std::vector<std::string> cJSON_get_keys(const cJSON *object);
+void cJSON_print_keys(const cJSON * object);
 
 #endif //EMPATHY_CJSON_UTILS_H

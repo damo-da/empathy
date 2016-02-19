@@ -131,6 +131,9 @@ protected:
     GLfloat getStartTheta();
     GLfloat getEndTheta();
 
+public:
+    virtual void decodeJson(std::string key, cJSON *value) override;
+
 private:
     void calcVertices();
 

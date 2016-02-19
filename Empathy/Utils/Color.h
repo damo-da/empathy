@@ -9,6 +9,8 @@
 #include <GL/glew.h>
 #include <iostream>
 #include <vector>
+#include "../Libs/cJSON/cJSON.h"
+
 class Color {
 public:
     void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
@@ -51,6 +53,7 @@ public:
         Color::a = a;
     }
 
+    virtual void decodeJson(std::string key,cJSON* value);
 private:
     GLfloat r,g,b,a;
 };

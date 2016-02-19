@@ -5,7 +5,7 @@
 #include "cJSON_utils.h"
 using namespace std;
 
-std::vector<std::string> cJSON_get_keys(cJSON *object) {
+std::vector<std::string> cJSON_get_keys(const cJSON *object){
 
     std::vector<std::string> result;
 
@@ -21,7 +21,7 @@ std::vector<std::string> cJSON_get_keys(cJSON *object) {
     return result;
 }
 
-void cJSON_print_keys(cJSON *object) {
+void cJSON_print_keys(const cJSON *object){
     std::vector<std::string> keys;
     keys=cJSON_get_keys(object);
     for(int i=0;i<keys.size();i++){

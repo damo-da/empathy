@@ -157,3 +157,9 @@ GLfloat LifeEvent_MathWave::getEndTheta() {
 GLfloat LifeEvent_MathWave::getX(GLfloat theta) {
     return theta;
 }
+
+void LifeEvent_MathWave::decodeJson(std::string key, cJSON *value) {
+    LifeEvent::decodeJson(key, value);
+
+
+}
