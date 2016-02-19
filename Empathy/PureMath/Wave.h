@@ -8,18 +8,20 @@
 
 #include <GL/glew.h>
 #include <math.h>
+#include <iostream>
+using namespace std;
 
 class Wave {
 public:
     Wave();
-    GLfloat getFrequency(){return frequency;}
-    GLfloat getWavelength(){return waveLength;}
+    GLfloat getFrequency()const{return frequency;}
+
     void setFrequency(GLfloat f){this->frequency=f;}
     void setWaveLength(GLfloat w){this->waveLength=w;}
 
-    GLfloat getWaveSpeed(){return getFrequency()*getWavelength();}
-    GLdouble getAngularMomentum(){return M_2_PI*getFrequency();}
-    GLfloat getTimePeriod(){return 1.0f/getFrequency();}
+    GLfloat getWaveSpeed()const {return getFrequency()*getWaveLength();}
+    GLdouble getAngularMomentum()const {return M_2_PI*getFrequency();}
+    GLfloat getTimePeriod()const{return 1.0f/getFrequency();}
 
 
     GLfloat getCenterX() const {
@@ -33,8 +35,59 @@ public:
         return centerY;
     }
 
+
+    GLfloat getAmplitude() const {
+        return amplitude;
+    }
+
+    void setAmplitude(GLfloat amplitude) {
+        Wave::amplitude = amplitude;
+    }
+
+
+    GLfloat getWaveLength() const {
+        return waveLength;
+    }
+
+    GLfloat getAmplitudeAt(GLfloat distance)const {
+        GLfloat time=getTime()-distance/getWaveSpeed();
+
+        return getAmplitude()*sin(getAngularMomentum()*time + getInitialPhase())*exp(-getDampingConst()*distance);
+    }
+
+
+    GLfloat getDampingConst() const {
+        return dampingConst;
+    }
+
+    void setDampingConst(GLfloat dampingConst) {
+        Wave::dampingConst = dampingConst;
+    }
+
+
+    GLfloat getTime() const {
+        return time;
+    }
+
+    void setTime(GLfloat time) {
+        Wave::time = time;
+    }
+
+    void setInitialPhase(GLfloat theta){
+        Wave::initialPhase=theta;
+    }
+    GLfloat getInitialPhase()const{return initialPhase;}
 private:
-    GLfloat frequency, waveLength;
+    GLfloat frequency;
+    GLfloat waveLength;
+
+    GLfloat time;
+
+    GLfloat amplitude;//the total amplitude of the wav]e
+
+    GLfloat dampingConst;
+
+    GLfloat initialPhase;
 
     GLfloat centerX;
     GLfloat centerY;

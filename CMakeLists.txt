@@ -100,7 +100,7 @@ set(SOURCES
         Empathy/You/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        )
+        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

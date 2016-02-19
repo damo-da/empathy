@@ -30,7 +30,7 @@ public:
     void setDelay(GLfloat delay) {
         Brain::delay = delay;
     }
-
+public:
     virtual void addTo(Empathy * binder);
 
     virtual void terminate();

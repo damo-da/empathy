@@ -28,7 +28,7 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
         data->init();
         data->setCenter(0.0f,0.0f);
         data->setFrequency(getFrequency());
-        data->setWaveLength(getWavelength());
+        data->setWaveLength(getWaveLength());
         data->setDepth(getDepth());
 
         data->setColor(this);

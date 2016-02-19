@@ -8,7 +8,7 @@
       {
         "type":"create",
         "create":"cwave",
-        "colorRed":0.0,
+        "colorRed":0.9,
         "colorBlue":0.8,
         "colorGreen":0.1
       }

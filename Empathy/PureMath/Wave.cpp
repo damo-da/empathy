@@ -7,8 +7,11 @@
 Wave::Wave():
         centerX(0.0f),
         centerY(0.0f),
-        frequency(0.95f),
-        waveLength(0.1f)
+        frequency(1.95f),
+        waveLength(0.08f),
+        amplitude(1.0f),
+        dampingConst(1.0f),
+        initialPhase(M_PI_2)
 {
 
 

@@ -27,15 +27,18 @@ void LifeEvent_CWave_data::onRun(GLfloat delTime) {
     // cout << "Calculating vertices" << endl;
     vertices.clear();
 
+    Wave::setTime(getTimeSinceCreate());
+
     GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
-    if(radius>EMPATHY_CWAVE_MAX_RADIUS){
+    if(radius> EMPATHY_CWAVE_MAXIMUM_DISTANCE){
         doneRunning();
         return;
     }
     float diff = 0.01f;
     float cerv = 2 * M_PI * radius;
 
+    setA(getAmplitudeAt(radius));
 
     for (float i = 0; i < cerv; i += diff) {
         float angle = 2 * M_PI * i / cerv;
@@ -77,6 +80,7 @@ void LifeEvent_CWave_data::draw() {
     DefaultShader::setVertexColor(this);
 
     glBindVertexArray(VAO);
+
     glDrawArrays(GL_LINE_LOOP, 0, vertices.size() / 3);
     glBindVertexArray(0);
 

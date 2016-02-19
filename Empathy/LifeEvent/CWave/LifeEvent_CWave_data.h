@@ -5,7 +5,7 @@
 #ifndef EMPATHY_LIFEEVENT_CWAVE_DATA_H
 #define EMPATHY_LIFEEVENT_CWAVE_DATA_H
 
-#define EMPATHY_CWAVE_MAX_RADIUS 2.25
+#define EMPATHY_CWAVE_MAXIMUM_DISTANCE 2.25
 
 #include <math.h>
 #include "../life_event.h"
