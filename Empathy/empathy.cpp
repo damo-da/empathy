@@ -49,7 +49,7 @@ void Empathy::initGlew(){
 }
 
 void Empathy::initShaders(){
-    DefaultShader::init();
+    empathy::shader::DefaultShader::init();
 }
 
 void Empathy::initGL(){

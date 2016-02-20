@@ -72,12 +72,12 @@ void empathy::life_event::CWave_data::onDestroy() {
 }
 
 void empathy::life_event::CWave_data::draw() {
-    DefaultShader::use();
+    empathy::shader::DefaultShader::use();
 
     // cout<<"Drawing"<<endl;
     glLineWidth(2.5);
 
-    DefaultShader::setVertexColor(this);
+    empathy::shader::DefaultShader::setVertexColor(this);
 
     glBindVertexArray(VAO);
 

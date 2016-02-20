@@ -10,16 +10,19 @@
 #include <iostream>
 #include <vector>
 #include "../Utils/Color.h"
+namespace empathy {
+    namespace shader {
 
-class DefaultShader {
-public:
-    static GLuint shaderProgram;
-    static void init();
+        class DefaultShader {
+        public:
+            static GLuint shaderProgram;
 
-    static void use();
+            static void init();
 
-    static void setVertexColor(Color * color);
-};
+            static void use();
 
-
+            static void setVertexColor(Color *color);
+        };
+    }
+}
 #endif //EMPATHY_SHADER_H

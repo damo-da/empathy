@@ -9,13 +9,13 @@
 using namespace std;
 
 void empathy::life_event::MathWave::draw() {
-    DefaultShader::use();
+    empathy::shader::DefaultShader::use();
 
     // cout<<"Drawing"<<endl;
     glLineWidth(getPencilSize());
 
     //set Vertex Color
-    DefaultShader::setVertexColor(this);
+    empathy::shader::DefaultShader::setVertexColor(this);
 
     glBindVertexArray(VAO);
     glDrawArrays(GL_LINE_STRIP, 0, vertices.size() / 3);
