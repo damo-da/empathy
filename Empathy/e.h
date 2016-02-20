@@ -51,7 +51,7 @@ namespace empathy{
 
     };
 
-//    class Empathy;
+    class Empathy;
     class You;
 };
 //

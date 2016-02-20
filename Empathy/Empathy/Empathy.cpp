@@ -5,21 +5,21 @@
 #include "../You/include.h"
 using namespace std;
 
-Empathy::Empathy():
+empathy::Empathy::Empathy():
 moonLight(nullptr)
 {
 
 }
 
 
-void Empathy::flush(){
+void empathy::Empathy::flush(){
     cout<<"Flush done"<<endl;
 
     moonLight->terminate();
     you->terminate();
 }
 
-void Empathy::init() {
+void empathy::Empathy::init() {
 //	cout<<"initing emp"<<endl;
 
     initGlew();
@@ -37,7 +37,7 @@ void Empathy::init() {
     }
     this->moonLight->init();
 }
-void Empathy::initGlew(){
+void empathy::Empathy::initGlew(){
 //	cout<<"initing glew"<<endl;
 
     //initialize GLEW
@@ -49,31 +49,31 @@ void Empathy::initGlew(){
     }
 }
 
-void Empathy::initShaders(){
+void empathy::Empathy::initShaders(){
     empathy::shader::DefaultShader::init();
 }
 
-void Empathy::initGL(){
+void empathy::Empathy::initGL(){
 //	cout<<"initing glViewport"<<sc_size_x<<","<<sc_size_y<<endl;
     glViewport(0, 0, sc_size_x, sc_size_y);
 }
 
-void Empathy::initYou(){
+void empathy::Empathy::initYou(){
     you=new empathy::You();
     you->init();
 }
 
 
-void Empathy::setScreenSize(int x,int y){
+void empathy::Empathy::setScreenSize(int x,int y){
 //    cout<<"Set setScreenSize"<<endl;
     sc_size_x=x;
     sc_size_y=y;
 }
 
 
-empathy::radio::BroadcastStation Empathy::broadcastStation= empathy::radio::BroadcastStation();
+empathy::radio::BroadcastStation empathy::Empathy::broadcastStation= empathy::radio::BroadcastStation();
 
-void Empathy::loop() {
+void empathy::Empathy::loop() {
 
     empathy::radio::BroadcastStation::dispatch();
 
@@ -86,6 +86,6 @@ void Empathy::loop() {
 
 }
 
-void Empathy::addBrain(empathy::brain::Brain *brain) {
+void empathy::Empathy::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
 }

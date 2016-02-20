@@ -12,7 +12,7 @@
 #define SC_SIZE_X 700
 #define SC_SIZE_Y 700
 
-class DEmpathy : public Empathy{
+class DEmpathy : public empathy::Empathy{
 	/*
 	The foundation module for DEmpathy. It manages everything required for the desktop and only the desktop.
 	*/

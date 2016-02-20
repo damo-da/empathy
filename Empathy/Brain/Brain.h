@@ -8,10 +8,9 @@
 #define EMPATHY_EVENT_BRAIN_LINE_NUMBER "EMPATHY_EVENT_BRAIN_LINE_NUMBER"
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
 
+#include "../e.h"
 #include "../RadioStation/Subscriber.h"
 #include "../LifeEvent/include.h"
-
-class Empathy;
 
 namespace empathy {
     namespace brain {
@@ -34,7 +33,7 @@ namespace empathy {
             }
 
         public:
-            virtual void addTo(Empathy *binder);
+            virtual void addTo(empathy::Empathy *binder);
 
             virtual void terminate();
 
