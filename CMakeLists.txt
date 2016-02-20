@@ -23,17 +23,17 @@ set (EMPATHY_SOURCES
         Empathy/Utils/Uniqueness.h
         Empathy/Utils/Uniqueness.cpp
 
-        Empathy/LifeEvent/life_event.cpp
-        Empathy/LifeEvent/life_event.h
+        Empathy/LifeEvent/LifeEvent.cpp
+        Empathy/LifeEvent/LifeEvent.h
 
         Empathy/You/you.cpp
         Empathy/You/you.h
 
-        Empathy/You/Brain/Brain.cpp
-        Empathy/You/Brain/Brain.h
+        Empathy/Brain/Brain.cpp
+        Empathy/Brain/Brain.h
 
-        Empathy/You/Brain/DummyBrain/DummyBrain.cpp
-        Empathy/You/Brain/DummyBrain/DummyBrain.h
+        Empathy/Brain/DummyBrain/DummyBrain.cpp
+        Empathy/Brain/DummyBrain/DummyBrain.h
 
         Empathy/MoonLight/MoonLight.cpp
         Empathy/MoonLight/MoonLight.h
@@ -87,18 +87,18 @@ set (EMPATHY_SOURCES
 set(SOURCES
         ${EMPATHY_SOURCES}
         ${DEMPATHY_SOURCES}
-        Empathy/You/Brain/MusicalBrain/MusicalBrain.cpp
-        Empathy/You/Brain/MusicalBrain/MusicalBrain.h
+        Empathy/Brain/MusicalBrain/MusicalBrain.cpp
+        Empathy/Brain/MusicalBrain/MusicalBrain.h
         Empathy/Utils/string_utils.cpp
         Empathy/Utils/string_utils.h
 
         Empathy/Libs/cJSON/cJSON.c
         Empathy/Libs/cJSON/cJSON.h
-        Empathy/You/Brain/JSONBrain/JSONBrain.cpp
-        Empathy/You/Brain/JSONBrain/JSONBrain.h
+        Empathy/Brain/JSONBrain/JSONBrain.cpp
+        Empathy/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h)
+        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h Empathy/LifeEvent/life_event.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

@@ -8,11 +8,11 @@
 #define EMPATHY_CWAVE_MAXIMUM_DISTANCE 2.25
 
 #include <math.h>
-#include "../life_event.h"
+
 #include "../../Utils/Color.h"
 #include "../../PureMath/Wave.h"
 #include <vector>
-#include "../../e.h"
+#include "../LifeEvent.h"
 
 namespace empathy{
     namespace life_event {

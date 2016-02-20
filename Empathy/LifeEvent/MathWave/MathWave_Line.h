@@ -7,9 +7,10 @@
 
 
 #include "MathWave.h"
+
 namespace empathy {
     namespace life_event {
-        class MathWave_Line : public LifeEvent_MathWave {
+        class MathWave_Line : public MathWave {
 
         public:
             virtual GLfloat getY(GLfloat) override;

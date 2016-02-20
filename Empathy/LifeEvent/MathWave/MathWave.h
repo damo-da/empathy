@@ -6,7 +6,7 @@
 #define EMPATHY_MATHWAVE_H
 
 
-#include "../life_event.h"
+#include "../LifeEvent.h"
 #include "../../Utils/Color.h"
 #include <vector>
 
@@ -15,7 +15,7 @@
 
 namespace empathy {
     namespace life_event {
-        class LifeEvent_MathWave : public LifeEvent, public Color {
+        class MathWave : public LifeEvent, public Color {
         public:
             virtual GLfloat getY(GLfloat theta) = 0;
 
@@ -29,11 +29,11 @@ namespace empathy {
             virtual void onInit() override;
 
             void setZoomY(GLfloat zoomY) {
-                empathy::life_event::LifeEvent_MathWave::zoomY = zoomY;
+                empathy::life_event::MathWave::zoomY = zoomY;
             }
 
         public:
-            LifeEvent_MathWave();
+            MathWave();
 
 
             void render(std::vector<GLfloat> &vertices);
@@ -43,7 +43,7 @@ namespace empathy {
             }
 
             void setDiff(GLfloat diff) {
-                empathy::life_event::LifeEvent_MathWave::diff = diff;
+                empathy::life_event::MathWave::diff = diff;
             }
 
             GLfloat getHead() const {
@@ -51,7 +51,7 @@ namespace empathy {
             }
 
             void setHead(GLfloat head) {
-                empathy::life_event::LifeEvent_MathWave::head = head;
+                empathy::life_event::MathWave::head = head;
             }
 
 
@@ -60,7 +60,7 @@ namespace empathy {
             }
 
             void setTail(GLfloat tail) {
-                empathy::life_event::LifeEvent_MathWave::tail = tail;
+                empathy::life_event::MathWave::tail = tail;
             }
 
             GLfloat getSpeed() const {
@@ -68,7 +68,7 @@ namespace empathy {
             }
 
             void setSpeed(GLfloat speed) {
-                empathy::life_event::LifeEvent_MathWave::speed = speed;
+                empathy::life_event::MathWave::speed = speed;
             }
 
             GLfloat getLength() const {
@@ -76,7 +76,7 @@ namespace empathy {
             }
 
             void setLength(GLfloat length) {
-                empathy::life_event::LifeEvent_MathWave::length = length;
+                empathy::life_event::MathWave::length = length;
             }
 
             GLfloat getZoomX() const {
@@ -84,7 +84,7 @@ namespace empathy {
             }
 
             void setZoomX(GLfloat zoomX) {
-                empathy::life_event::LifeEvent_MathWave::zoomX = zoomX;
+                empathy::life_event::MathWave::zoomX = zoomX;
             }
 
             GLfloat getZoomY() const {
@@ -96,7 +96,7 @@ namespace empathy {
             }
 
             void setOffsetX(GLfloat offsetX) {
-                empathy::life_event::LifeEvent_MathWave::offsetX = offsetX;
+                empathy::life_event::MathWave::offsetX = offsetX;
             }
 
             GLfloat getOffsetY() const {
@@ -104,7 +104,7 @@ namespace empathy {
             }
 
             void setOffsetY(GLfloat offsetY) {
-                empathy::life_event::LifeEvent_MathWave::offsetY = offsetY;
+                empathy::life_event::MathWave::offsetY = offsetY;
             }
 
             GLfloat getPencilSize() const {
@@ -112,7 +112,7 @@ namespace empathy {
             }
 
             void setPencilSize(GLfloat pencilSize) {
-                empathy::life_event::LifeEvent_MathWave::pencilSize = pencilSize;
+                empathy::life_event::MathWave::pencilSize = pencilSize;
             }
 
 
@@ -121,7 +121,7 @@ namespace empathy {
             }
 
             void setRotationAngle(GLfloat rotationAngle) {
-                empathy::life_event::LifeEvent_MathWave::rotationAngle = rotationAngle;
+                empathy::life_event::MathWave::rotationAngle = rotationAngle;
             }
 
         protected:

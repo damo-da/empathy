@@ -7,7 +7,7 @@
 
 
 #include "../Brain.h"
-#include "../../../Libs/cJSON/cJSON.h"
+#include "../../Libs/cJSON/cJSON.h"
 
 #include <map>
 class JSONBrain : public Brain{

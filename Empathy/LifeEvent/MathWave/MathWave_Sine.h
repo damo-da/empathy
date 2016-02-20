@@ -11,7 +11,7 @@ using namespace std;
 
 namespace empathy{
     namespace life_event {
-        class MathWave_Sine : public LifeEvent_MathWave {
+        class MathWave_Sine : public MathWave {
 
         public:
             virtual GLfloat getY(GLfloat theta) override;

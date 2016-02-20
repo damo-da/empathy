@@ -1,7 +1,7 @@
 #include "DEmpathy.h"
 
 
-#include "../Empathy/You/Brain/JSONBrain/JSONBrain.h"
+#include "../Empathy/Brain/JSONBrain/JSONBrain.h"
 #include "tests/CWave_Test.h"
 
 

@@ -3,7 +3,7 @@
 //
 
 #include "MusicalBrain.h"
-#include "../../../Utils/string_utils.h"
+#include "../../Utils/string_utils.h"
 using namespace std;
 
 void MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {

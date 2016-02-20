@@ -8,11 +8,11 @@
 #define EMPATHY_EVENT_BRAIN_LINE_NUMBER "EMPATHY_EVENT_BRAIN_LINE_NUMBER"
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
 
-#include "../../RadioStation/Subscriber.h"
-#include "../../global.h"
-#include "../../LifeEvent/life_event.h"
+#include "../RadioStation/Subscriber.h"
+#include "../global.h"
+#include "../LifeEvent/LifeEvent.h"
 
-#include "../../empathy.h"
+#include "../empathy.h"
 class Empathy;
 class Brain  : public Subscriber{
 public:

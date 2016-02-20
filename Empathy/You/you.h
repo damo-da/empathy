@@ -7,9 +7,9 @@
 #define EMPATHY_YOU
 
  
-#include "../LifeEvent/life_event.h"
+#include "../LifeEvent/LifeEvent.h"
 #include "../global.h"
-#include "Brain/Brain.h"
+#include "../Brain/Brain.h"
 
 #include <vector>
 class Brain;

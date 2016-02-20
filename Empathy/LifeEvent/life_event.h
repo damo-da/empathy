@@ -1,121 +1,36 @@
-/*
- * LifeEvents come as happenings. Together, You process LifeEvents to find out the meaning behind Empathy.
- *
- */
+//
+// Created by damo on 2/20/16.
+//
 
-#ifndef EMPATHY_LIFE_EVENT
-#define EMPATHY_LIFE_EVENT
+#ifndef EMPATHY_LIFEEVENT_H
+#define EMPATHY_LIFEEVENT_H
 
-#include "../global.h"
-#include "../RadioStation/Subscriber.h"
-#include "../Libs/cJSON/cJSON.h"
+#include "LifeEvent.h"
+#include "Collection.h"
+#include "MathWave/MathWave.h"
+#include "MathWave/MathWave_Line.h"
+#include "MathWave/MathWave_Para_Circle.h"
+#include "MathWave/MathWave_Sinc.h"
+#include "MathWave/MathWave_Sine.h"
+#include "CWave/CWave.h"
+#include "CWave/CWave_data.h"
+#include "FadeInOut/FadeInOut.h"
 
-#include <GL/glew.h>
-#include <map>
-#include <vector>
+namespace empathy{
+    namespace life_event{
+        class LifeEvent;
+        class Collection;
 
-#define EMPATHY_LIFE_EVENT_CREATE_COMPLETE "EMPATHY_LIFE_EVENT_CREATE_COMPLETE"
-#define EMPATHY_LIFE_EVENT_RUN_COMPLETE "EMPATHY_LIFE_EVENT_RUN_COMPLETE"
-#define EMPATHY_LIFE_EVENT_FINISH_COMPLETE "EMPATHY_LIFE_EVENT_FINISH_COMPLETE"
-#define EMPATHY_LIFE_EVENT_DESTROYED "EMPATHY_LIFE_EVENT_DESTROYED"
-namespace empathy {
-    namespace life_event {
+        class CWave;
+        class CWave_data;
 
-        class LifeEvent : public Subscriber {
-        public:
-            LifeEvent();
+        class FadeInOut;
 
-/*Activity lifecycle*/
-        public:
-            bool isCreating() const { return !createComplete; }
-
-            bool isRunning() const { return createComplete && !runComplete; }
-
-            bool isFinishing() const { return createComplete && runComplete && !finishComplete; }
-
-            bool isFinished() const { return finishComplete; }
-
-            bool isDestroyed() const { return destroyComplete; }
-
-            virtual void draw() = 0;
-
-            virtual void onDestroy();
-
-            virtual void onInit();
-
-            void init();
-
-            void kill() {
-                doneCreating();
-                doneRunning();
-            }
-
-            virtual void decodeJson(std::string key, cJSON *value);
-
-        protected:
-            void doneCreating();
-
-            void doneRunning();
-
-            void doneFinishing();
-
-            virtual void onCreate(GLfloat delTime);
-
-            virtual void onRun(GLfloat delTime);
-
-            virtual void onFinish(GLfloat delTime);
-
-
-            GLfloat getTimeSinceRun() const { return runTime + finishTime; }
-
-            GLfloat getTimeSinceCreate() const { return createTime + runTime + finishTime; }
-
-            GLfloat getTimeSinceFinish() const { return finishTime; }
-
-        private:
-            void doneDestroying() {
-                destroyComplete = true;
-                emit(EMPATHY_LIFE_EVENT_DESTROYED);
-            }
-
-            bool initComplete;
-            bool runComplete;
-            bool createComplete;
-            bool finishComplete;
-            bool destroyComplete;
-
-            GLfloat createTime;
-            GLfloat runTime;
-            GLfloat finishTime;
-
-/*End of Activity life cycle*/
-
-//Time and loop handlers
-        public:
-            GLfloat getTotalTime();
-
-            //game loop
-            virtual void passTime(GLfloat delTime);
-
-        private:
-            GLfloat totalTime;
-
-//Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the object goes
-        public:
-            GLfloat getDepth() const {
-                return depth;
-            }
-
-
-            void setDepth(GLfloat depth) {
-                LifeEvent::depth = depth;
-            }
-
-        private:
-            GLfloat depth;
-        };
+        class MathWave;
+        class MathWave_Line;
+        class MathWave_Para_Circle;
+        class MathWave_Sinc;
+        class MathWave_Sine;
     }
 }
-
-
-#endif
+#endif //EMPATHY_LIFEEVENT_H

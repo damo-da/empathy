@@ -1,5 +1,5 @@
 #include <iostream>
-#include "life_event.h"
+#include "LifeEvent.h"
 
 using namespace std;
 empathy::life_event::LifeEvent::LifeEvent(): Subscriber(){

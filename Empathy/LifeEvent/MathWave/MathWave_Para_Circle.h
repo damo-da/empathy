@@ -10,7 +10,7 @@
 namespace empathy {
     namespace life_event {
 
-        class MathWave_Para_Circle : public LifeEvent_MathWave {
+        class MathWave_Para_Circle : public MathWave {
 
         public:
             virtual GLfloat getY(GLfloat x) override;

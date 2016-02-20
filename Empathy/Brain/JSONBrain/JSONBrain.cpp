@@ -3,16 +3,12 @@
 //
 
 #include "JSONBrain.h"
-#include "../../../Utils/file_utils.h"
-#include "../../../Libs/cJSON/cJSON_utils.h"
-#include "../../../Utils/string_utils.h"
+#include "../../Utils/file_utils.h"
+#include "../../Libs/cJSON/cJSON_utils.h"
+#include "../../Utils/string_utils.h"
 
-#include "../../../LifeEvent/MathWave/MathWave.h"
-#include "../../../LifeEvent/MathWave/MathWave_Line.h"
-#include "../../../LifeEvent/MathWave/MathWave_Sine.h"
-#include "../../../LifeEvent/MathWave/MathWave_Sinc.h"
-#include "../../../LifeEvent/MathWave/MathWave_Para_Circle.h"
-#include "../../../LifeEvent/CWave/CWave_data.h"
+#include "../../e.h"
+
 #include <vector>
 
 using namespace std;

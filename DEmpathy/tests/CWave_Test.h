@@ -6,7 +6,7 @@
 #define EMPATHY_CWAVE_TEST_H
 
 
-#include "../../Empathy/You/Brain/Brain.h"
+#include "../../Empathy/Brain/Brain.h"
 
 class CWave_Test : public Brain{
 

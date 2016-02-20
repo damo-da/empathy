@@ -6,7 +6,7 @@
 #define EMPATHY_LIFEEVENT_COLLECTION_H
 
 
-#include "life_event.h"
+#include "LifeEvent.h"
 #include <vector>
 namespace empathy {
     namespace life_event {

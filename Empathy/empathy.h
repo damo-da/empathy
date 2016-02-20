@@ -5,7 +5,7 @@
 
 #include "You/you.h"
 
-#include "LifeEvent/life_event.h"
+#include "LifeEvent/LifeEvent.h"
 #include "RadioStation/BroadcastStation.h"
 
 #include "MoonLight/MoonLight.h"
