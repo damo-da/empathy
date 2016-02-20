@@ -4,7 +4,7 @@
 
 #include "DefaultShader.h"
 #include "shader_utils.h"
-#include <iostream>
+
 using namespace std;
 
 void empathy::shader::DefaultShader::init() {

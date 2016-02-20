@@ -4,7 +4,6 @@
 
 #include "CWave.h"
 #include "CWave_data.h"
-#include "../../RadioStation/TimeBroadcaster.h"
 
 using namespace std;
 
@@ -67,6 +66,6 @@ void empathy::life_event::CWave::onReceiveEvent(empathy::radio::Event &event) {
 void empathy::life_event::CWave::decodeJson(std::string key, cJSON *value) {
     Collection::decodeJson(key, value);
     Color::decodeJson(key, value);
-    Wave::decodeJson(key,value);
+    pure_math::Wave::decodeJson(key,value);
 
 }

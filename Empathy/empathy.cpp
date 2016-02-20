@@ -1,6 +1,6 @@
 #include "empathy.h"
 
-#include "Shader/DefaultShader.h"
+#include "Shader/include.h"
 #include "MoonLight/include.h"
 #include "You/include.h"
 using namespace std;

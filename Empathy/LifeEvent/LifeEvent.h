@@ -6,13 +6,13 @@
 #ifndef EMPATHY_LIFE_EVENT
 #define EMPATHY_LIFE_EVENT
 
-#include "../RadioStation/Subscriber.h"
+#include "../RadioStation/include.h"
 #include "../Libs/cJSON/cJSON.h"
 
 #include <GL/glew.h>
 #include <map>
 #include <vector>
-#include "../RadioStation/include.h"
+
 
 #define EMPATHY_LIFE_EVENT_CREATE_COMPLETE "EMPATHY_LIFE_EVENT_CREATE_COMPLETE"
 #define EMPATHY_LIFE_EVENT_RUN_COMPLETE "EMPATHY_LIFE_EVENT_RUN_COMPLETE"

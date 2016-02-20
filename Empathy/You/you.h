@@ -8,8 +8,8 @@
 
 #include "../e.h"
 #include "../RadioStation/include.h"
-
 #include <vector>
+
 namespace empathy {
     class You : public empathy::radio::Subscriber {
 

@@ -2,7 +2,6 @@
 // Created by damo on 2/5/16.
 //
 
-#include <assert.h>
 #include "Collection.h"
 
 empathy::life_event::Collection::Collection()

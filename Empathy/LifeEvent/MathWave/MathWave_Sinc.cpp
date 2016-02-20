@@ -3,10 +3,7 @@
 //
 
 #include "MathWave_Sinc.h"
-#include "MathWave_Sine.h"
-#include <cmath>
 
-#include <iostream>
 using namespace std;
 GLfloat empathy::life_event::MathWave_Sinc::getY(GLfloat theta) {
 

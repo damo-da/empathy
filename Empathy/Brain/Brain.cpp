@@ -3,7 +3,7 @@
 //
 
 #include "Brain.h"
-#include "../You/you.h"
+#include "../You/include.h"
 #include "../empathy.h"
 
 using namespace std;

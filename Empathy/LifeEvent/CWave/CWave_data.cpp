@@ -27,7 +27,7 @@ void empathy::life_event::CWave_data::onRun(GLfloat delTime) {
     // cout << "Calculating vertices" << endl;
     vertices.clear();
 
-    Wave::setTime(getTimeSinceCreate());
+    pure_math::Wave::setTime(getTimeSinceCreate());
 
     GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
@@ -90,5 +90,5 @@ void empathy::life_event::CWave_data::draw() {
 void empathy::life_event::CWave_data::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
     Color::decodeJson(key,value);
-    Wave::decodeJson(key,value);
+    pure_math::Wave::decodeJson(key,value);
 }

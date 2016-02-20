@@ -5,7 +5,6 @@
 #ifndef EMPATHY_MOONLIGHT_H
 #define EMPATHY_MOONLIGHT_H
 
-#include "../RadioStation/Subscriber.h"
 #include <map>
 #include "../RadioStation/include.h"
 
