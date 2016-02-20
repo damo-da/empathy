@@ -6,7 +6,7 @@
 #define EMPATHY_MOONLIGHT_H
 
 #include <map>
-#include "../RadioStation/include.h"
+#include "../RadioStation/Subscriber.h"
 
 #define EMPATHY_AUDIO_PLAY "EMPATHY_PLAY_AUDIO"
 #define EMPATHY_AUDIO_SHOULD_REPEAT "EMPATHY_AUDIO_SHOULD_REPEAT"

@@ -1,8 +1,8 @@
-#include "empathy.h"
+#include "Empathy.h"
 
-#include "Shader/include.h"
-#include "MoonLight/include.h"
-#include "You/include.h"
+#include "../Shader/include.h"
+#include "../MoonLight/include.h"
+#include "../You/include.h"
 using namespace std;
 
 Empathy::Empathy():

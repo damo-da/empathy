@@ -3,9 +3,9 @@
 
 #include <GL/glew.h>
 
-#include "e.h"
+#include "../e.h"
 
-#include "RadioStation/include.h"
+#include "../RadioStation/BroadcastStation.h"
 
 #include <vector>
 

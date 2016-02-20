@@ -5,7 +5,7 @@
 #ifndef LEMPATHY
 #define LEMPATHY
 
-#include "../Empathy/empathy.h"
+#include "../Empathy/Empathy/Empathy.h"
 
 #include <GLFW/glfw3.h>
 

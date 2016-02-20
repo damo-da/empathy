@@ -3,6 +3,7 @@
 
 #include "../LifeEvent/include.h"
 #include "../Brain/include.h"
+#include "../RadioStation/TimeBroadcaster.h"
 
 using namespace std;
 

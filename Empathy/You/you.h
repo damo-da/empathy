@@ -7,8 +7,10 @@
 #define EMPATHY_YOU
 
 #include "../e.h"
-#include "../RadioStation/include.h"
+#include "../RadioStation/Subscriber.h"
+
 #include <vector>
+#include <GL/glew.h>
 
 namespace empathy {
     class You : public empathy::radio::Subscriber {

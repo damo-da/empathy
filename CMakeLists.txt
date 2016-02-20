@@ -15,10 +15,8 @@ set (DEMPATHY_SOURCES
         )
 set (EMPATHY_SOURCES
 
-        Empathy/empathy.h
-        Empathy/empathy.cpp
-
-        Empathy/global.h
+        Empathy/Empathy/Empathy.h
+        Empathy/Empathy/Empathy.cpp
 
         Empathy/Utils/Uniqueness.h
         Empathy/Utils/Uniqueness.cpp
@@ -98,7 +96,15 @@ set(SOURCES
         Empathy/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h Empathy/LifeEvent/include.h Empathy/MoonLight/include.h Empathy/Brain/include.h Empathy/PureMath/include.h Empathy/RadioStation/include.h Empathy/Shader/include.h Empathy/You/include.h)
+        DEmpathy/tests/CWave_Test.cpp
+        DEmpathy/tests/CWave_Test.h
+        Empathy/e.h
+        Empathy/LifeEvent/include.h
+        Empathy/MoonLight/include.h
+        Empathy/Brain/include.h
+        Empathy/PureMath/include.h
+        Empathy/Shader/include.h
+        Empathy/You/include.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

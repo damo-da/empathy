@@ -5,9 +5,8 @@
 #ifndef EMPATHY_MATHWAVE_H
 #define EMPATHY_MATHWAVE_H
 
-
-#include "../LifeEvent.h"
 #include "../../Utils/Color.h"
+#include "../LifeEvent.h"
 #include <vector>
 
 #define EMPATHY_LIFE_EVENT_MATH_WAVE_STARTED_DESTROYING "EMPATHY_LIFE_EVENT_MATH_WAVE_STARTED_DESTROYING"

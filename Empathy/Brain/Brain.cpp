@@ -4,7 +4,7 @@
 
 #include "Brain.h"
 #include "../You/include.h"
-#include "../empathy.h"
+#include "../Empathy/Empathy.h"
 
 using namespace std;
 void empathy::brain::Brain::onReceiveEvent(empathy::radio::Event &event) {

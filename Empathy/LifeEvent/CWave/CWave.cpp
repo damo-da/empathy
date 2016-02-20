@@ -4,6 +4,7 @@
 
 #include "CWave.h"
 #include "CWave_data.h"
+#include "../../RadioStation/TimeBroadcaster.h"
 
 using namespace std;
 
