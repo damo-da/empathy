@@ -7,9 +7,4 @@
 
 #include "Wave.h"
 
-namespace empathy{
-    namespace pure_math{
-        class Wave;
-    }
-}
 #endif //EMPATHY_INCLUDE_PURE_MATH_H

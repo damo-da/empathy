@@ -1,14 +1,13 @@
 #ifndef EMPATHY
 #define EMPATHY
 
-#include "global.h"
+#include <GL/glew.h>
 
-#include "You/include.h"
+#include "e.h"
 
-#include "LifeEvent/include.h"
 #include "RadioStation/include.h"
 
-#include "MoonLight/include.h"
+#include <vector>
 
 class Empathy{
 public:

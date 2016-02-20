@@ -7,9 +7,4 @@
 
 #include "MoonLight.h"
 
-namespace empathy{
-    namespace moonlight{
-        class MoonLight;
-    }
-}
 #endif //EMPATHY_MOONLIGHT_H2

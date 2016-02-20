@@ -16,21 +16,4 @@
 #include "CWave/CWave_data.h"
 #include "FadeInOut/FadeInOut.h"
 
-namespace empathy{
-    namespace life_event{
-        class LifeEvent;
-        class Collection;
-
-        class CWave;
-        class CWave_data;
-
-        class FadeInOut;
-
-        class MathWave;
-        class MathWave_Line;
-        class MathWave_Para_Circle;
-        class MathWave_Sinc;
-        class MathWave_Sine;
-    }
-}
 #endif //EMPATHY_INCLUDE_LIFEEVENT_H

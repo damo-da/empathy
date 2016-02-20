@@ -10,16 +10,4 @@
 #include "JSONBrain/JSONBrain.h"
 #include "DummyBrain/DummyBrain.h"
 
-namespace empathy{
-    namespace brain{
-
-        class Brain;
-
-        class MusicalBrain;
-
-        class JSONBrain;
-
-        class DummyBrain;
-    }
-}
 #endif //EMPATHY_INCLUDE_BRAIN_H2

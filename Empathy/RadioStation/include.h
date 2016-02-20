@@ -10,12 +10,12 @@
 #include "TimeBroadcaster.h"
 #include "Subscriber.h"
 
-namespace empathy{
-    namespace radio{
-        class BroadcastStation;
-        class Event;
-        class Subscriber;
-        class TimeBroadcaster;
-    }
-};
+//namespace empathy{
+//    namespace radio{
+//        class BroadcastStation;
+//        class Event;
+//        class Subscriber;
+//        class TimeBroadcaster;
+//    }
+//};
 #endif //EMPATHY_RADIO_INCLUDE_H

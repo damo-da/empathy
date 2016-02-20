@@ -8,35 +8,73 @@
 
 namespace empathy{
     namespace life_event{
+        class LifeEvent;
+        class Collection;
 
-    };
+        class CWave;
+        class CWave_data;
+
+        class FadeInOut;
+
+        class MathWave;
+        class MathWave_Line;
+        class MathWave_Para_Circle;
+        class MathWave_Sinc;
+        class MathWave_Sine;
+    }
+
     namespace brain{
+        class Brain;
 
+        class MusicalBrain;
+
+        class JSONBrain;
+
+        class DummyBrain;
     };
     namespace moonlight{
-
+        class MoonLight;
     };
+
     namespace pure_math{
-
-    };
+        class Wave;
+    }
 
     namespace radio{
-
-    };
+        class BroadcastStation;
+        class Event;
+        class Subscriber;
+        class TimeBroadcaster;
+    }
 
     namespace utils{
 
     };
 
+//    class Empathy;
     class You;
 };
+//
+//#include "PureMath/include.h"
+//#include "RadioStation/include.h"
+//#include "LifeEvent/include.h"
+//#include "MoonLight/include.h"
+//
+//#include "Brain/include.h"
+//#include "You/include.h"
 
-#include "PureMath/include.h"
-#include "RadioStation/include.h"
-#include "LifeEvent/include.h"
-#include "MoonLight/include.h"
 
-#include "Brain/include.h"
-#include "You/include.h"
+
+#ifndef EMPATHY_GLOBAL
+#define EMPATHY_GLOBAL
+
+#define EMPATHY_EVENT_INPUT_KEY_PRESS "EMPATHY_EVENT_INPUT_KEY_PRESS"
+#define EMPATHY_EVENT_INPUT_KEY_RELEASE "EMPATHY_EVENT_INPUT_KEY_PRESS"
+#define EMPATHY_EVENT_INPUT_KEY_REPEAT "EMPATHY_EVENT_INPUT_KEY_PRESS"
+
+#define EMPATHY_EVENT_INPUT_KEY "EMPATHY_EVENT_INPUT_KEY"
+
+#define EMPATHY_CREATE_EVENT "EMPATHY_CREATE_EVENT"
+#endif
 
 #endif //EMPATHY_E_H

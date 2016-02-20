@@ -1,7 +1,8 @@
 #include <iostream>
 #include "you.h"
-#include "../RadioStation/TimeBroadcaster.h"
 
+#include "../LifeEvent/include.h"
+#include "../Brain/include.h"
 using namespace std;
 
 empathy::You::You():brains()

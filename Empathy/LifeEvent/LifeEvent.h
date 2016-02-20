@@ -6,7 +6,6 @@
 #ifndef EMPATHY_LIFE_EVENT
 #define EMPATHY_LIFE_EVENT
 
-#include "../global.h"
 #include "../RadioStation/Subscriber.h"
 #include "../Libs/cJSON/cJSON.h"
 

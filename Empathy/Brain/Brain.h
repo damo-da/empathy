@@ -9,7 +9,6 @@
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
 
 
-#include "../global.h"
 #include "../LifeEvent/include.h"
 #include "../RadioStation/include.h"
 class Empathy;

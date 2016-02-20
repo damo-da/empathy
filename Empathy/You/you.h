@@ -6,9 +6,8 @@
 #ifndef EMPATHY_YOU
 #define EMPATHY_YOU
 
-
-#include "../global.h"
 #include "../e.h"
+#include "../RadioStation/include.h"
 
 #include <vector>
 namespace empathy {

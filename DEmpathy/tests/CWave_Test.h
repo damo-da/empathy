@@ -6,7 +6,9 @@
 #define EMPATHY_CWAVE_TEST_H
 
 #include "../../Empathy/e.h"
+#include "../../Empathy/Brain/include.h"
 
+#include <iostream>
 class CWave_Test : public empathy::brain::Brain{
 
     virtual void runLineNumber(std::string lineID, std::string callerID) override;
