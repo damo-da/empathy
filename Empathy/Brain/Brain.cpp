@@ -3,9 +3,11 @@
 //
 
 #include "Brain.h"
+#include "../You/you.h"
+#include "../empathy.h"
 
 using namespace std;
-void Brain::onReceiveEvent(Event &event) {
+void empathy::brain::Brain::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
     if(event.broadcaster != nullptr && event.broadcaster->getId()==getId()){
@@ -18,29 +20,29 @@ void Brain::onReceiveEvent(Event &event) {
     }
 }
 
-Brain::Brain():
+empathy::brain::Brain::Brain():
 delay(1.0f){
 
 }
 
-void Brain::addLifeEvent(empathy::life_event::LifeEvent *event) {
+void empathy::brain::Brain::addLifeEvent(empathy::life_event::LifeEvent *event) {
 
     You::getInstance()->addEvent(event);
 
 }
 
-void Brain::run() {
+void empathy::brain::Brain::run() {
     listenAll();
     activateTimeoutForNextLine("begin",getDelay());
 }
 
 
 
-void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime) {
+void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime) {
     activateTimeoutForNextLine(lineID,afterTime,"");
 }
 
-void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID) {
+void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID) {
     Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
     event.putString(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineID);
     event.putString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineID);
@@ -48,10 +50,10 @@ void Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, st
     createTimeOut(afterTime,event);
 }
 
-void Brain::addTo(Empathy *binder) {
+void empathy::brain::Brain::addTo(Empathy *binder) {
     binder->addBrain(this);
 }
 
-void Brain::terminate() {
+void empathy::brain::Brain::terminate() {
 
 }

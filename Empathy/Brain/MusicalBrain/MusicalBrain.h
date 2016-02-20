@@ -8,29 +8,34 @@
 
 #include "../Brain.h"
 
-class MusicalBrain : public Brain{
+namespace empathy {
+    namespace brain {
 
-public:
-    MusicalBrain();
+        class MusicalBrain : public Brain {
 
-protected:
-    virtual void runLineNumber(std::string lineID, std::string callerID) override;
+        public:
+            MusicalBrain();
 
-public:
-    GLfloat getFrequency() const {
-        return frequency;
+        protected:
+            virtual void runLineNumber(std::string lineID, std::string callerID) override;
+
+        public:
+            GLfloat getFrequency() const {
+                return frequency;
+            }
+
+            void setFrequency(GLfloat frequency) {
+                empathy::brain::MusicalBrain::frequency = frequency;
+            }
+
+            void setMusic(std::string);
+
+        private:
+            GLfloat frequency;
+
+            std::vector<std::vector<std::string>> sequence;
+        };
     }
-
-    void setFrequency(GLfloat frequency) {
-        MusicalBrain::frequency = frequency;
-    }
-
-    void setMusic(std::string);
-private:
-    GLfloat frequency;
-
-    std::vector<std::vector<std::string>> sequence;
-};
-
+}
 
 #endif //EMPATHY_MUSICALBRAIN_H

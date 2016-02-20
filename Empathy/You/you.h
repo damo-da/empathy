@@ -6,13 +6,12 @@
 #ifndef EMPATHY_YOU
 #define EMPATHY_YOU
 
- 
-#include "../LifeEvent/LifeEvent.h"
+
 #include "../global.h"
-#include "../Brain/Brain.h"
+#include "../e.h"
 
 #include <vector>
-class Brain;
+
 class You: public Subscriber{
 public:
 	std::vector<empathy::life_event::LifeEvent*> lifeEvents;
@@ -35,9 +34,9 @@ public:
 
     virtual void onReceiveEvent(Event &) override;
 
-	std::vector<Brain *> brains;
+	std::vector<empathy::brain::Brain *> brains;
 
-    void addBrain(Brain * );
+    void addBrain(empathy::brain::Brain * );
 
 	void terminate();
 public:

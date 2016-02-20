@@ -30,7 +30,7 @@ void Empathy::init() {
     initYou();
 
 
-    std::vector<Brain *> brains=this->getBrains();
+    std::vector<empathy::brain::Brain *> brains=this->getBrains();
     for(int i=0;i<brains.size();i++){
         you->addBrain(brains[i]);
     }
@@ -85,6 +85,6 @@ void Empathy::loop() {
 
 }
 
-void Empathy::addBrain(Brain *brain) {
+void Empathy::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
 }

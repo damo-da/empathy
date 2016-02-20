@@ -6,7 +6,7 @@
 #include "../../Utils/string_utils.h"
 using namespace std;
 
-void MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {
     int number;
     if(lineID=="begin"){
         number=1;
@@ -28,7 +28,7 @@ void MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {
     activateTimeoutForNextLine(int_to_str(number +1),1.0f,int_to_str(number));
 }
 
-MusicalBrain::MusicalBrain() :
+empathy::brain::MusicalBrain::MusicalBrain() :
         Brain(),
         frequency(1.0f),
         sequence()
@@ -36,7 +36,7 @@ MusicalBrain::MusicalBrain() :
 
 }
 
-void MusicalBrain::setMusic(std::string string) {
+void empathy::brain::MusicalBrain::setMusic(std::string string) {
     std::vector<std::string> notes=str_split(string,',');
 
     for(int i=0;i<notes.size();i++){

@@ -7,14 +7,18 @@
 
 
 #include "../Brain.h"
+namespace empathy {
+    namespace brain {
 
-class DummyBrain : public Brain{
+        class DummyBrain : public Brain {
 
-    virtual void runLineNumber(std::string lineID, std::string callerID) override;
+            virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
-public:
-    DummyBrain();
-};
+        public:
+            DummyBrain();
+        };
+    }
+}
 
 
 #endif //EMPATHY_DUMMYBRAIN_H

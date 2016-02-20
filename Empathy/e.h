@@ -7,6 +7,7 @@
 
 #include "LifeEvent/life_event.h"
 #include "MoonLight/moonlight.h"
+#include "Brain/brain.h"
 
 namespace empathy{
     namespace life_event{

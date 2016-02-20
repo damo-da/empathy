@@ -4,11 +4,11 @@
 
 #include "DummyBrain.h"
 
-DummyBrain::DummyBrain() : Brain() {
+empathy::brain::DummyBrain::DummyBrain() : Brain() {
 
 }
 
-void DummyBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::DummyBrain::runLineNumber(std::string lineID, std::string callerID) {
 
 }
 

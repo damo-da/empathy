@@ -11,7 +11,7 @@
 #include "MoonLight/MoonLight.h"
 
 class You;
-class Brain;
+
 class Empathy{
 public:
     empathy::moonlight::MoonLight * moonLight;
@@ -39,14 +39,14 @@ public:
 
     static BroadcastStation broadcastStation;
 
-    void addBrain(Brain * brain);
+    void addBrain(empathy::brain::Brain * brain);
 
 
-    const std::vector<Brain *> &getBrains() const {
+    const std::vector<empathy::brain::Brain *> &getBrains() const {
         return brains;
     }
 
-    std::vector<Brain *> brains;
+    std::vector<empathy::brain::Brain *> brains;
 
 private:
 	//Screen Size

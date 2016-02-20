@@ -5,10 +5,9 @@
 #ifndef EMPATHY_CWAVE_TEST_H
 #define EMPATHY_CWAVE_TEST_H
 
+#include "../../Empathy/e.h"
 
-#include "../../Empathy/Brain/Brain.h"
-
-class CWave_Test : public Brain{
+class CWave_Test : public empathy::brain::Brain{
 
     virtual void runLineNumber(std::string lineID, std::string callerID) override;
 };

@@ -13,7 +13,7 @@
 
 using namespace std;
 
-void JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
     std::vector<cJSON*> actions=steps[lineID];
     cout<<"running "<<lineID<<endl;
 
@@ -23,7 +23,7 @@ void JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
     }
 }
 
-JSONBrain::JSONBrain(std::string fileName) :
+empathy::brain::JSONBrain::JSONBrain(std::string fileName) :
         Brain(),
         root(nullptr),
         steps()
@@ -55,17 +55,17 @@ JSONBrain::JSONBrain(std::string fileName) :
 
 }
 
-void JSONBrain::terminate() {
-    Brain::terminate();
+void empathy::brain::JSONBrain::terminate() {
+    empathy::brain::Brain::terminate();
 
     cJSON_Delete(root);
 }
 
-void JSONBrain::addTo(Empathy *binder) {
-    Brain::addTo(binder);
+void empathy::brain::JSONBrain::addTo(Empathy *binder) {
+    empathy::brain::Brain::addTo(binder);
 }
 
-void JSONBrain::executeJson(const std::string action,cJSON *json) {
+void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json) {
     if(action=="audio"){
 
         std::string name=cJSON_GetObjectItem(json, "name")->valuestring;
@@ -90,7 +90,7 @@ void JSONBrain::executeJson(const std::string action,cJSON *json) {
     }
 }
 
-void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
+void empathy::brain::JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
     std::vector<std::string> keys=cJSON_get_keys(json);
 
     empathy::life_event::LifeEvent * event= createEventFromString(action);
@@ -109,7 +109,7 @@ void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
 
 }
 
-empathy::life_event::LifeEvent *JSONBrain::createEventFromString(const std::string name) {
+empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString(const std::string name) {
     if(name=="cwave"){
         return new empathy::life_event::CWave_data();
     }else if(name=="mathwave_line"){

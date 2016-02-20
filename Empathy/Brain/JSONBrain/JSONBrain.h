@@ -10,29 +10,35 @@
 #include "../../Libs/cJSON/cJSON.h"
 
 #include <map>
-class JSONBrain : public Brain{
+namespace empathy {
+    namespace brain {
 
-public:
-    JSONBrain(std::string fileName);
+        class JSONBrain : public Brain {
 
-    virtual void terminate() override;
+        public:
+            JSONBrain(std::string fileName);
 
-protected:
-    virtual void runLineNumber(std::string lineID, std::string callerID) override;
+            virtual void terminate() override;
 
-    virtual void executeJson(const std::string action,cJSON * json);
+        protected:
+            virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
-    virtual empathy::life_event::LifeEvent * createEventFromString(const std::string name);
-private:
-    cJSON * root;
+            virtual void executeJson(const std::string action, cJSON *json);
 
-    void createLifeEventFromJson(const std::string action,cJSON * json);
+            virtual empathy::life_event::LifeEvent *createEventFromString(const std::string name);
 
-    std::map<std::string,std::vector<cJSON*>> steps;
-public:
-    virtual void addTo(Empathy *binder) override;
+        private:
+            cJSON *root;
 
-};
+            void createLifeEventFromJson(const std::string action, cJSON *json);
+
+            std::map<std::string, std::vector<cJSON *>> steps;
+        public:
+            virtual void addTo(Empathy *binder) override;
+
+        };
+    }
+}
 
 
 #endif //EMPATHY_JSONBRAIN_H

@@ -101,7 +101,7 @@ void You::blit(){
 
 You * You::instance=nullptr;
 
-void You::addBrain(Brain *brain) {
+void You::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
     brain->run();
 }
