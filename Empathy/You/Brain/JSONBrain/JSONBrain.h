@@ -22,7 +22,7 @@ protected:
 
     virtual void executeJson(const std::string action,cJSON * json);
 
-    virtual LifeEvent * createEventFromString(const std::string name);
+    virtual empathy::life_event::LifeEvent * createEventFromString(const std::string name);
 private:
     cJSON * root;
 

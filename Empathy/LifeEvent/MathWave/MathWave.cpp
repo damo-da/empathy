@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void LifeEvent_MathWave::draw() {
+void empathy::life_event::LifeEvent_MathWave::draw() {
     DefaultShader::use();
 
     // cout<<"Drawing"<<endl;
@@ -24,14 +24,14 @@ void LifeEvent_MathWave::draw() {
     glUseProgram(0);
 }
 
-void LifeEvent_MathWave::onDestroy() {
+void empathy::life_event::LifeEvent_MathWave::onDestroy() {
     LifeEvent::onDestroy();
 
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
 }
 
-void LifeEvent_MathWave::onInit() {
+void empathy::life_event::LifeEvent_MathWave::onInit() {
     LifeEvent::onInit();
 
     glGenVertexArrays(1, &VAO);
@@ -39,7 +39,7 @@ void LifeEvent_MathWave::onInit() {
 }
 
 
-LifeEvent_MathWave::LifeEvent_MathWave():
+empathy::life_event::LifeEvent_MathWave::LifeEvent_MathWave():
         LifeEvent(),
         Color(),
         offsetX(0.0f),
@@ -57,7 +57,7 @@ LifeEvent_MathWave::LifeEvent_MathWave():
 
 }
 
-void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
+void empathy::life_event::LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
 
     this->vertices=vertices;
 
@@ -75,7 +75,7 @@ void LifeEvent_MathWave::render(std::vector<GLfloat> &vertices) {
 }
 
 
-void LifeEvent_MathWave::onRun(GLfloat delTime) {
+void empathy::life_event::LifeEvent_MathWave::onRun(GLfloat delTime) {
     if(getTail() < getSpeed()*getTimeSinceRun()+getLength() + getHead()){
         doneRunning();
     }
@@ -83,7 +83,7 @@ void LifeEvent_MathWave::onRun(GLfloat delTime) {
     calcVertices();
 }
 
-void LifeEvent_MathWave::onCreate(GLfloat delTime) {
+void empathy::life_event::LifeEvent_MathWave::onCreate(GLfloat delTime) {
     if(getLength() <= getTimeSinceCreate()*getSpeed()){
         doneCreating();
     }
@@ -91,7 +91,7 @@ void LifeEvent_MathWave::onCreate(GLfloat delTime) {
     calcVertices();
 }
 
-void LifeEvent_MathWave::onFinish(GLfloat delTime) {
+void empathy::life_event::LifeEvent_MathWave::onFinish(GLfloat delTime) {
 
     if(getHead() + getTimeSinceRun()*getSpeed()>getTail()){
         doneFinishing();
@@ -100,7 +100,7 @@ void LifeEvent_MathWave::onFinish(GLfloat delTime) {
     calcVertices();
 }
 
-void LifeEvent_MathWave::calcVertices() {
+void empathy::life_event::LifeEvent_MathWave::calcVertices() {
 //    cout<<"calculating"<<endl;
     if (!(VAO && VBO))return;
 
@@ -129,7 +129,7 @@ void LifeEvent_MathWave::calcVertices() {
     render(vertices);
 }
 
-GLfloat LifeEvent_MathWave::getStartTheta() {
+GLfloat empathy::life_event::LifeEvent_MathWave::getStartTheta() {
     if(isCreating())
         return getHead();
     else if(isRunning())
@@ -138,7 +138,7 @@ GLfloat LifeEvent_MathWave::getStartTheta() {
         return getHead()+ getSpeed() * getTimeSinceRun();
 }
 
-GLfloat LifeEvent_MathWave::getEndTheta() {
+GLfloat empathy::life_event::LifeEvent_MathWave::getEndTheta() {
 
     if(isCreating())
         return getHead() + getSpeed() * getTimeSinceCreate();
@@ -149,11 +149,11 @@ GLfloat LifeEvent_MathWave::getEndTheta() {
 
 }
 
-GLfloat LifeEvent_MathWave::getX(GLfloat theta) {
+GLfloat empathy::life_event::LifeEvent_MathWave::getX(GLfloat theta) {
     return theta;
 }
 
-void LifeEvent_MathWave::decodeJson(std::string key, cJSON *value) {
+void empathy::life_event::LifeEvent_MathWave::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
     Color::decodeJson(key,value);
 

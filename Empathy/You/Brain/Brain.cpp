@@ -23,7 +23,7 @@ delay(1.0f){
 
 }
 
-void Brain::addLifeEvent(LifeEvent *event) {
+void Brain::addLifeEvent(empathy::life_event::LifeEvent *event) {
 
     You::getInstance()->addEvent(event);
 

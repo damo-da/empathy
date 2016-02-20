@@ -5,10 +5,10 @@
 #include "MathWave_Para_Circle.h"
 #include <math.h>
 
-GLfloat MathWave_Para_Circle::getY(GLfloat theta) {
+GLfloat empathy::life_event::MathWave_Para_Circle::getY(GLfloat theta) {
     return sin(theta);
 }
 
-GLfloat MathWave_Para_Circle::getX(GLfloat theta) {
+GLfloat empathy::life_event::MathWave_Para_Circle::getX(GLfloat theta) {
     return cos(theta);
 }

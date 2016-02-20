@@ -59,12 +59,12 @@ set (EMPATHY_SOURCES
         Empathy/LifeEvent/MathWave/MathWave_Line.h
         Empathy/LifeEvent/FadeInOut/FadeInOut.cpp
         Empathy/LifeEvent/FadeInOut/FadeInOut.h
-        Empathy/LifeEvent/LifeEvent_Collection.cpp
-        Empathy/LifeEvent/LifeEvent_Collection.h
-        Empathy/LifeEvent/CWave/LifeEvent_CWave.cpp
-        Empathy/LifeEvent/CWave/LifeEvent_CWave.h
-        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.cpp
-        Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h
+        Empathy/LifeEvent/Collection.cpp
+        Empathy/LifeEvent/Collection.h
+        Empathy/LifeEvent/CWave/CWave.cpp
+        Empathy/LifeEvent/CWave/CWave.h
+        Empathy/LifeEvent/CWave/CWave_data.cpp
+        Empathy/LifeEvent/CWave/CWave_data.h
         Empathy/LifeEvent/MathWave/MathWave_Para_Circle.cpp
         Empathy/LifeEvent/MathWave/MathWave_Para_Circle.h
 
@@ -98,7 +98,7 @@ set(SOURCES
         Empathy/You/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h)
+        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

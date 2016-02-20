@@ -6,18 +6,18 @@
 #include "MathWave_Sine.h"
 #include <cmath>
 using namespace std;
-GLfloat MathWave_Sine::getY(GLfloat theta) {
+GLfloat empathy::life_event::MathWave_Sine::getY(GLfloat theta) {
 //    cout<<"HI"<<sin(x*getPeriodConstant())<<getPeriodConstant()<<endl;
     return sin(theta*getPeriodConstant()+getThetaOffset());
 }
 
-void MathWave_Sine::onInit() {
-    LifeEvent_MathWave::onInit();
+void empathy::life_event::MathWave_Sine::onInit() {
+    empathy::life_event::LifeEvent_MathWave::onInit();
 
 
 }
 
-MathWave_Sine::MathWave_Sine(GLfloat period) :
+empathy::life_event::MathWave_Sine::MathWave_Sine(GLfloat period) :
         LifeEvent_MathWave(),
         period(period),
         thetaOffset(0.0f)
@@ -25,7 +25,7 @@ MathWave_Sine::MathWave_Sine(GLfloat period) :
 
 }
 
-MathWave_Sine::MathWave_Sine():
+empathy::life_event::MathWave_Sine::MathWave_Sine():
         LifeEvent_MathWave(),
         period(0.1f),
         thetaOffset(0.0f)
@@ -33,8 +33,8 @@ MathWave_Sine::MathWave_Sine():
 
 }
 
-void MathWave_Sine::decodeJson(std::string key, cJSON *value) {
-    LifeEvent_MathWave::decodeJson(key, value);
+void empathy::life_event::MathWave_Sine::decodeJson(std::string key, cJSON *value) {
+    empathy::life_event::LifeEvent_MathWave::decodeJson(key, value);
 
     if(key=="period"){
         setPeriod(value->valuedouble);

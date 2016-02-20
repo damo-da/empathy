@@ -42,7 +42,7 @@ protected:
     void activateTimeoutForNextLine(std::string lineID,GLfloat afterTime);
     void activateTimeoutForNextLine(std::string lineID,GLfloat afterTime,std::string callerLineID);
 
-    void addLifeEvent(LifeEvent * event);
+    void addLifeEvent(empathy::life_event::LifeEvent * event);
 private:
 
 };

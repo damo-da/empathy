@@ -15,7 +15,7 @@
 class Brain;
 class You: public Subscriber{
 public:
-	std::vector<LifeEvent*> lifeEvents;
+	std::vector<empathy::life_event::LifeEvent*> lifeEvents;
 
 	You();
 
@@ -23,8 +23,8 @@ public:
 
 	void blit();
 
-	void addEvent(LifeEvent *);
-	void removeEvent(LifeEvent *);
+	void addEvent(empathy::life_event::LifeEvent *);
+	void removeEvent(empathy::life_event::LifeEvent *);
 	void clearEvents();
 
 	long curTime;

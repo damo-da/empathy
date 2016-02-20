@@ -2,11 +2,11 @@
 #include "life_event.h"
 
 using namespace std;
-LifeEvent::LifeEvent(): Subscriber(){
+empathy::life_event::LifeEvent::LifeEvent(): Subscriber(){
     totalTime=0.0f;
 
 }
-void LifeEvent::passTime(GLfloat delTime){
+void empathy::life_event::LifeEvent::passTime(GLfloat delTime){
     totalTime += delTime;
     if(isCreating()){
         createTime += delTime;
@@ -29,7 +29,7 @@ void LifeEvent::passTime(GLfloat delTime){
 }
 
 
-void LifeEvent::onInit(){
+void empathy::life_event::LifeEvent::onInit(){
     createComplete=false;
     runComplete=false;
     finishComplete=false;
@@ -41,48 +41,48 @@ void LifeEvent::onInit(){
     finishTime=0.0f;
 }
 
-void LifeEvent::onCreate(GLfloat delTime) {
+void empathy::life_event::LifeEvent::onCreate(GLfloat delTime) {
     doneCreating();
 }
 
-void LifeEvent::onRun(GLfloat delTime) {
+void empathy::life_event::LifeEvent::onRun(GLfloat delTime) {
     doneRunning();
 }
 
-void LifeEvent::onFinish(GLfloat delTime) {
+void empathy::life_event::LifeEvent::onFinish(GLfloat delTime) {
     doneFinishing();
 }
 
-GLfloat LifeEvent::getTotalTime() {
+GLfloat empathy::life_event::LifeEvent::getTotalTime() {
     return totalTime;
 }
 
-void LifeEvent::init() {
+void empathy::life_event::LifeEvent::init() {
     if(! initComplete){
         onInit();
     }
     initComplete=true;
 }
 
-void LifeEvent::doneCreating() {
+void empathy::life_event::LifeEvent::doneCreating() {
     createComplete=true;
     emit(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);
 }
 
-void LifeEvent::doneRunning() {
+void empathy::life_event::LifeEvent::doneRunning() {
     runComplete=true;
     emit(EMPATHY_LIFE_EVENT_RUN_COMPLETE);
 }
 
-void LifeEvent::doneFinishing() {
+void empathy::life_event::LifeEvent::doneFinishing() {
     finishComplete=true;
     emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);
 }
 
-void LifeEvent::onDestroy() {
+void empathy::life_event::LifeEvent::onDestroy() {
 //    cout<<"deleted event "<<getId()<<endl;
 }
 
-void LifeEvent::decodeJson(std::string key, cJSON *value) {
+void empathy::life_event::LifeEvent::decodeJson(std::string key, cJSON *value) {
 
 }

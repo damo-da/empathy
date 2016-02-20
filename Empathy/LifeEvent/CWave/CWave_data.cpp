@@ -2,12 +2,12 @@
 // Created by damo on 2/5/16.
 //
 
-#include "LifeEvent_CWave_data.h"
+#include "CWave_data.h"
 #include "../../Shader/DefaultShader.h"
 
 using namespace std;
 
-LifeEvent_CWave_data::LifeEvent_CWave_data()
+empathy::life_event::CWave_data::CWave_data()
         :LifeEvent(),
          Color(),
          Wave()
@@ -15,7 +15,7 @@ LifeEvent_CWave_data::LifeEvent_CWave_data()
 
 }
 
-void LifeEvent_CWave_data::onInit() {
+void empathy::life_event::CWave_data::onInit() {
     LifeEvent::onInit();
 
     // cout<<"initing vertex objects"<<endl;
@@ -23,7 +23,7 @@ void LifeEvent_CWave_data::onInit() {
     glGenBuffers(1, &VBO);
 }
 
-void LifeEvent_CWave_data::onRun(GLfloat delTime) {
+void empathy::life_event::CWave_data::onRun(GLfloat delTime) {
     // cout << "Calculating vertices" << endl;
     vertices.clear();
 
@@ -64,14 +64,14 @@ void LifeEvent_CWave_data::onRun(GLfloat delTime) {
     // cout<<"calculated vertices"<<endl;
 }
 
-void LifeEvent_CWave_data::onDestroy() {
+void empathy::life_event::CWave_data::onDestroy() {
     LifeEvent::onDestroy();
 
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
 }
 
-void LifeEvent_CWave_data::draw() {
+void empathy::life_event::CWave_data::draw() {
     DefaultShader::use();
 
     // cout<<"Drawing"<<endl;
@@ -87,7 +87,7 @@ void LifeEvent_CWave_data::draw() {
     glUseProgram(0);
 }
 
-void LifeEvent_CWave_data::decodeJson(std::string key, cJSON *value) {
+void empathy::life_event::CWave_data::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
     Color::decodeJson(key,value);
     Wave::decodeJson(key,value);

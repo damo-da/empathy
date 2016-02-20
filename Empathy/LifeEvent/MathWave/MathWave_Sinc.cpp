@@ -8,13 +8,13 @@
 
 #include <iostream>
 using namespace std;
-GLfloat MathWave_Sinc::getY(GLfloat theta) {
+GLfloat empathy::life_event::MathWave_Sinc::getY(GLfloat theta) {
 
-    return MathWave_Sine::getY(theta)/(theta*getPeriodConstant());
+    return empathy::life_event::MathWave_Sine::getY(theta)/(theta*getPeriodConstant());
 }
 
-void MathWave_Sinc::onInit() {
-    MathWave_Sine::onInit();
+void empathy::life_event::MathWave_Sinc::onInit() {
+    empathy::life_event::MathWave_Sine::onInit();
 
     setPeriod(0.8f);
 }

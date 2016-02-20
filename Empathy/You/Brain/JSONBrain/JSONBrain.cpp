@@ -6,12 +6,13 @@
 #include "../../../Utils/file_utils.h"
 #include "../../../Libs/cJSON/cJSON_utils.h"
 #include "../../../Utils/string_utils.h"
-#include "../../../LifeEvent/CWave/LifeEvent_CWave_data.h"
+
 #include "../../../LifeEvent/MathWave/MathWave.h"
 #include "../../../LifeEvent/MathWave/MathWave_Line.h"
 #include "../../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../../LifeEvent/MathWave/MathWave_Para_Circle.h"
+#include "../../../LifeEvent/CWave/CWave_data.h"
 #include <vector>
 
 using namespace std;
@@ -96,7 +97,7 @@ void JSONBrain::executeJson(const std::string action,cJSON *json) {
 void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
     std::vector<std::string> keys=cJSON_get_keys(json);
 
-    LifeEvent * event= createEventFromString(action);
+    empathy::life_event::LifeEvent * event= createEventFromString(action);
 
     if(event != nullptr){
         for(int i=0;i<keys.size();i++){
@@ -112,17 +113,17 @@ void JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
 
 }
 
-LifeEvent *JSONBrain::createEventFromString(const std::string name) {
+empathy::life_event::LifeEvent *JSONBrain::createEventFromString(const std::string name) {
     if(name=="cwave"){
-        return new LifeEvent_CWave_data();
+        return new empathy::life_event::CWave_data();
     }else if(name=="mathwave_line"){
-        return new MathWave_Line();
+        return new empathy::life_event::MathWave_Line();
     }else if(name=="mathwave_para_circle"){
-        return new MathWave_Para_Circle();
+        return new empathy::life_event::MathWave_Para_Circle();
     }else if(name=="mathwave_sinc"){
-        return new MathWave_Sinc();
+        return new empathy::life_event::MathWave_Sinc();
     }else if(name=="mathwave_sine"){
-        return new MathWave_Sine();
+        return new empathy::life_event::MathWave_Sine();
     }
 
 

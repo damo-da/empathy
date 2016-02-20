@@ -33,7 +33,7 @@ void You::passTime(GLfloat timeLength){
 
 //    cout<<"passing time"<<endl;
     for(int i=0;i<lifeEvents.size();i++){
-        LifeEvent * event=lifeEvents[i];
+        empathy::life_event::LifeEvent * event=lifeEvents[i];
 
         if(event->isDestroyed()){
             removeEvent(event);
@@ -53,7 +53,7 @@ void You::setTime(GLfloat time){
 }
 void You::init(){
     //initiaulize vector to store lifeevents
-    lifeEvents=std::vector<LifeEvent*>();
+    lifeEvents=std::vector<empathy::life_event::LifeEvent*>();
 
     glEnable (GL_BLEND);
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -63,11 +63,11 @@ void You::init(){
 
 }
 
-void You::addEvent(LifeEvent * e) {
+void You::addEvent(empathy::life_event::LifeEvent * e) {
     e->init();
     lifeEvents.push_back(e);
 }
-void You::removeEvent(LifeEvent * e) {
+void You::removeEvent(empathy::life_event::LifeEvent * e) {
 
     for (int i = 0; i < lifeEvents.size(); i++) {
         if ( lifeEvents[i]->getId() == e->getId()) {
@@ -82,7 +82,7 @@ void You::removeEvent(LifeEvent * e) {
 void You::clearEvents() {
 
     while(lifeEvents.size()>0){
-        LifeEvent * event = lifeEvents[0];
+        empathy::life_event::LifeEvent * event = lifeEvents[0];
 
         removeEvent(event);
     }
@@ -93,7 +93,7 @@ void You::blit(){
     // cout<<"blitting you"<<endl;
 
     for(int i=0;i<lifeEvents.size();i++){
-        LifeEvent * event=lifeEvents[i];
+        empathy::life_event::LifeEvent * event=lifeEvents[i];
 
         event->draw();
     }

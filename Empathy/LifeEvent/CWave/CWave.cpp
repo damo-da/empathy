@@ -2,29 +2,30 @@
 // Created by damo on 2/5/16.
 //
 
-#include "LifeEvent_CWave.h"
-#include "LifeEvent_CWave_data.h"
+#include "CWave.h"
+#include "CWave_data.h"
 #include "../../RadioStation/TimeBroadcaster.h"
+
 using namespace std;
 
-LifeEvent_CWave::LifeEvent_CWave() : LifeEvent_Collection(),Color(),Wave() {
+empathy::life_event::CWave::CWave() : Collection(), Color(), Wave() {
 
 }
 
-void LifeEvent_CWave::onInit() {
-    LifeEvent_Collection::onInit();
+void empathy::life_event::CWave::onInit() {
+    Collection::onInit();
 
     shouldCreateNewWave=true;
 }
 
 
-void LifeEvent_CWave::passTime(GLfloat delTime) {
-    LifeEvent_Collection::passTime(delTime);
+void empathy::life_event::CWave::passTime(GLfloat delTime) {
+    Collection::passTime(delTime);
 
     if(shouldCreateNewWave){
 
         //create the new wave
-        LifeEvent_CWave_data * data=new LifeEvent_CWave_data();
+        empathy::life_event::CWave_data * data=new empathy::life_event::CWave_data();
         data->init();
         data->setCenter(0.0f,0.0f);
         data->setFrequency(getFrequency());
@@ -46,7 +47,7 @@ void LifeEvent_CWave::passTime(GLfloat delTime) {
 
 
 
-void LifeEvent_CWave::onReceiveEvent(Event &event) {
+void empathy::life_event::CWave::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
 
     if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
@@ -63,8 +64,8 @@ void LifeEvent_CWave::onReceiveEvent(Event &event) {
     }
 }
 
-void LifeEvent_CWave::decodeJson(std::string key, cJSON *value) {
-    LifeEvent_Collection::decodeJson(key,value);
+void empathy::life_event::CWave::decodeJson(std::string key, cJSON *value) {
+    Collection::decodeJson(key, value);
     Color::decodeJson(key, value);
     Wave::decodeJson(key,value);
 

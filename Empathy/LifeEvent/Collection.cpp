@@ -3,16 +3,16 @@
 //
 
 #include <assert.h>
-#include "LifeEvent_Collection.h"
+#include "Collection.h"
 
-LifeEvent_Collection::LifeEvent_Collection()
+empathy::life_event::Collection::Collection()
         : LifeEvent(),
           collection()
 {
 
 }
 
-void LifeEvent_Collection::onInit() {
+void empathy::life_event::Collection::onInit() {
     LifeEvent::onInit();
 
     for(int i=0;i<collection.size();i++){
@@ -20,7 +20,7 @@ void LifeEvent_Collection::onInit() {
     }
 }
 
-void LifeEvent_Collection::onDestroy() {
+void empathy::life_event::Collection::onDestroy() {
     LifeEvent::onDestroy();
 
     for(int i=0;i<collection.size();i++){
@@ -28,14 +28,14 @@ void LifeEvent_Collection::onDestroy() {
     }
 }
 
-void LifeEvent_Collection::draw() {
+void empathy::life_event::Collection::draw() {
     for(int i=0;i<collection.size();i++){
         if(! collection[i]->isDestroyed())
             collection[i]->draw();
     }
 }
 
-void LifeEvent_Collection::removeFromCollection(LifeEvent *event) {
+void empathy::life_event::Collection::removeFromCollection(LifeEvent *event) {
     for (int i = 0; i < collection.size(); i++) {
         if ( collection[i]->getId() == event->getId()) {
 
@@ -45,15 +45,15 @@ void LifeEvent_Collection::removeFromCollection(LifeEvent *event) {
     }
 }
 
-void LifeEvent_Collection::addToCollection(LifeEvent *event) {
+void empathy::life_event::Collection::addToCollection(LifeEvent *event) {
     collection.push_back(event);
 }
 
-void LifeEvent_Collection::clearCollection() {
+void empathy::life_event::Collection::clearCollection() {
     collection.clear();
 }
 
-void LifeEvent_Collection::passTime(GLfloat delTime) {
+void empathy::life_event::Collection::passTime(GLfloat delTime) {
     for(int i=0;i<collection.size();i++){
 
         if(! collection[i]->isDestroyed())
@@ -65,11 +65,11 @@ void LifeEvent_Collection::passTime(GLfloat delTime) {
     }
 }
 
-void LifeEvent_Collection::removeCompletedFromCollection() {
+void empathy::life_event::Collection::removeCompletedFromCollection() {
 
 }
 
-void LifeEvent_Collection::decodeJson(std::string key, cJSON *value) {
+void empathy::life_event::Collection::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
 
     for(int i=0;i<getCollection().size();i++){

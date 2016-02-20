@@ -4,37 +4,37 @@
 
 #include "FadeInOut.h"
 
-void FadeInOut::onDestroy() {
+void empathy::life_event::FadeInOut::onDestroy() {
     LifeEvent::onDestroy();
 }
 
-void FadeInOut::onInit() {
+void empathy::life_event::FadeInOut::onInit() {
     LifeEvent::onInit();
 
 
 }
 
-void FadeInOut::onCreate(GLfloat delTime) {
+void empathy::life_event::FadeInOut::onCreate(GLfloat delTime) {
     if(getTimeSinceCreate()>1.0f)
         doneCreating();
 }
 
-void FadeInOut::onRun(GLfloat delTime) {
+void empathy::life_event::FadeInOut::onRun(GLfloat delTime) {
     if(getTimeSinceRun()>1.0f)
         doneRunning();
 }
 
-void FadeInOut::onFinish(GLfloat delTime) {
+void empathy::life_event::FadeInOut::onFinish(GLfloat delTime) {
     if(getTimeSinceFinish()>1.0f)
         doneFinishing();
 
 
 }
 
-GLfloat FadeInOut::getX() {
+GLfloat empathy::life_event::FadeInOut::getX() {
     return 0;
 }
 
-GLfloat FadeInOut::getY() {
+GLfloat empathy::life_event::FadeInOut::getY() {
     return 0;
 }

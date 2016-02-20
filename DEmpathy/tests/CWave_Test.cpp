@@ -3,16 +3,17 @@
 //
 
 #include "CWave_Test.h"
-#include "../../Empathy/LifeEvent/CWave/LifeEvent_CWave.h"
-#include "../../Empathy/LifeEvent/CWave/LifeEvent_CWave_data.h"
+
+#include "../../Empathy/LifeEvent/CWave/CWave.h"
+#include "../../Empathy/LifeEvent/CWave/CWave_data.h"
 
 void CWave_Test::runLineNumber(std::string lineID, std::string callerID) {
     if(lineID=="begin"){
-        LifeEvent_CWave * cWave=new LifeEvent_CWave();
+        empathy::life_event::CWave * cWave=new empathy::life_event::CWave();
 
         addLifeEvent(cWave);
 
-        LifeEvent_CWave_data * data=new LifeEvent_CWave_data();
+        empathy::life_event::CWave_data * data=new empathy::life_event::CWave_data();
 //        addLifeEvent(data);
     }
 }
