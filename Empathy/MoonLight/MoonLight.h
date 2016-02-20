@@ -14,7 +14,6 @@
 namespace empathy {
     namespace moonlight {
 
-
         class MoonLight : public Subscriber {
         public:
             virtual void onReceiveEvent(Event &event) override;

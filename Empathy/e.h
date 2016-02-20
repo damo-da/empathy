@@ -5,7 +5,8 @@
 #ifndef EMPATHY_E_H
 #define EMPATHY_E_H
 
-#include "life_event.h"
+#include "LifeEvent/life_event.h"
+#include "MoonLight/moonlight.h"
 
 namespace empathy{
     namespace life_event{
