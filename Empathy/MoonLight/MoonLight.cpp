@@ -7,26 +7,26 @@
 #include <vector>
 using namespace std;
 
-void MoonLight::play(string id) {
+void empathy::moonlight::MoonLight::play(string id) {
     play(id,false);
 }
 
-void MoonLight::play(string id, bool repeat) {
+void empathy::moonlight::MoonLight::play(string id, bool repeat) {
 
 }
 
 
-MoonLight::MoonLight():Subscriber()
+empathy::moonlight::MoonLight::MoonLight():Subscriber()
 {
 
 }
 
-void MoonLight::init() {
+void empathy::moonlight::MoonLight::init() {
 //    listen(EMPATHY_AUDIO_PLAY);
     listen(EMPATHY_AUDIO_PLAY_KEYBOARD);
 }
 
-void MoonLight::onReceiveEvent(Event &event) {
+void empathy::moonlight::MoonLight::onReceiveEvent(Event &event) {
     Subscriber::onReceiveEvent(event);
     if(event.action == EMPATHY_AUDIO_PLAY){
         std::string key=event.getString(EMPATHY_AUDIO_PLAY);
@@ -41,6 +41,6 @@ void MoonLight::onReceiveEvent(Event &event) {
 }
 
 
-void MoonLight::terminate() {
+void empathy::moonlight::MoonLight::terminate() {
 
 }

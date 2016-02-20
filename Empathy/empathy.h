@@ -8,13 +8,13 @@
 #include "LifeEvent/life_event.h"
 #include "RadioStation/BroadcastStation.h"
 
-#include "Implements/MoonLight.h"
+#include "MoonLight/MoonLight.h"
 
 class You;
 class Brain;
 class Empathy{
 public:
-	MoonLight * moonLight;
+    empathy::moonlight::MoonLight * moonLight;
 
     virtual GLfloat  getTime()=0;
     virtual void terminate()=0;
@@ -27,7 +27,7 @@ public:
 	//The constructor
 	Empathy();
 
-    void setMoonLight(MoonLight *m){moonLight=m;}
+    void setMoonLight(empathy::moonlight::MoonLight *m){moonLight=m;}
 
     void loop();
 

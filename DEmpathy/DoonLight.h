@@ -11,9 +11,9 @@
 
 using namespace irrklang;
 
-#include "../Empathy/Implements/MoonLight.h"
+#include "../Empathy/MoonLight/MoonLight.h"
 
-class DoonLight : public MoonLight{
+class DoonLight : public empathy::moonlight::MoonLight{
 public:
 
     virtual void init() override;

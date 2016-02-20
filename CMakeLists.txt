@@ -35,8 +35,8 @@ set (EMPATHY_SOURCES
         Empathy/You/Brain/DummyBrain/DummyBrain.cpp
         Empathy/You/Brain/DummyBrain/DummyBrain.h
 
-        Empathy/Implements/MoonLight.cpp
-        Empathy/Implements/MoonLight.h
+        Empathy/MoonLight/MoonLight.cpp
+        Empathy/MoonLight/MoonLight.h
 
         Empathy/RadioStation/BroadcastStation.cpp
         Empathy/RadioStation/BroadcastStation.h

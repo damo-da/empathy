@@ -21,5 +21,9 @@ namespace empathy{
     namespace brain{
 
     };
+
+    namespace moon_light{
+
+    };
 };
 #endif //EMPATHY_E_H
