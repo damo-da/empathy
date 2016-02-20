@@ -10,7 +10,7 @@
 
 #include "../empathy.h"
 #include "../RadioStation/Subscriber.h"
-#include "../LifeEvent/include.h"
+#include "../LifeEvent/LifeEvent.h"
 
 namespace empathy {
     namespace brain {

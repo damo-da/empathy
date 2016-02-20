@@ -10,7 +10,7 @@
 #include <math.h>
 
 #include "../../Utils/Color.h"
-#include "../../PureMath/include.h"
+#include "../../PureMath/Wave.h"
 #include <vector>
 #include "../LifeEvent.h"
 

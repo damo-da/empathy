@@ -2,7 +2,7 @@
 
 
 #include "../Empathy/empathy.h"
-#include "../Empathy/Brain/include.h"
+#include "../Empathy/Brain/JSONBrain/JSONBrain.h"
 using namespace std;
 
 

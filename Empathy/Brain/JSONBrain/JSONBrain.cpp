@@ -6,6 +6,15 @@
 #include "../../Utils/file_utils.h"
 #include "../../Libs/cJSON/cJSON_utils.h"
 
+#include "../../LifeEvent/CWave/CWave.h"
+#include "../../LifeEvent/CWave/CWave_data.h"
+#include "../../LifeEvent/FadeInOut/FadeInOut.h"
+#include "../../LifeEvent/MathWave/MathWave_Line.h"
+#include "../../LifeEvent/MathWave/MathWave_Para_Circle.h"
+#include "../../LifeEvent/MathWave/MathWave_Sine.h"
+#include "../../LifeEvent/MathWave/MathWave_Sinc.h"
+
+
 using namespace std;
 
 void empathy::brain::JSONBrain::runLineNumber(std::string lineID, std::string callerID) {

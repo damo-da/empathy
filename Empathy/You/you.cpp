@@ -1,8 +1,8 @@
 #include <iostream>
 #include "you.h"
 
-#include "../LifeEvent/include.h"
-#include "../Brain/include.h"
+#include "../LifeEvent/LifeEvent.h"
+#include "../Brain/Brain.h"
 #include "../RadioStation/TimeBroadcaster.h"
 
 using namespace std;

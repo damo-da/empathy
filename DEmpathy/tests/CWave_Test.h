@@ -6,7 +6,7 @@
 #define EMPATHY_CWAVE_TEST_H
 
 #include "../../Empathy/empathy.h"
-#include "../../Empathy/Brain/include.h"
+#include "../../Empathy/Brain/Brain.h"
 
 #include <iostream>
 class CWave_Test : public empathy::brain::Brain{

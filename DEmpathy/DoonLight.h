@@ -12,7 +12,7 @@
 using namespace irrklang;
 
 #include "../Empathy/empathy.h"
-#include "../Empathy/MoonLight/include.h"
+#include "../Empathy/MoonLight/MoonLight.h"
 
 class DoonLight : public empathy::moonlight::MoonLight{
 public:

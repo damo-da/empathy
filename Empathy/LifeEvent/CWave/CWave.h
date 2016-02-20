@@ -11,7 +11,7 @@
 #include "../../Utils/Color.h"
 
 #include "../Collection.h"
-#include "../../PureMath/include.h"
+#include "../../PureMath/Wave.h"
 
 #define EMPATHY_LIFE_EVENT_CWAVE_CREATE_NEW_WAVE 0
 #define EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE "EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE"

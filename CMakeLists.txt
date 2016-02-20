@@ -98,13 +98,9 @@ set(SOURCES
         Empathy/Libs/cJSON/cJSON_utils.h
         DEmpathy/tests/CWave_Test.cpp
         DEmpathy/tests/CWave_Test.h
+
         Empathy/empathy.h
-        Empathy/LifeEvent/include.h
-        Empathy/MoonLight/include.h
-        Empathy/Brain/include.h
-        Empathy/PureMath/include.h
-        Empathy/Shader/include.h
-        Empathy/You/include.h)
+        )
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 
