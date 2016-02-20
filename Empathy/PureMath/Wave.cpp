@@ -4,7 +4,7 @@
 
 #include "Wave.h"
 
-Wave::Wave():
+empathy::pure_math::Wave::Wave():
         centerX(0.0f),
         centerY(0.0f),
         frequency(1.95f),
@@ -17,7 +17,7 @@ Wave::Wave():
 
 }
 
-void Wave::decodeJson(std::string key, cJSON *value) {
+void empathy::pure_math::Wave::decodeJson(std::string key, cJSON *value) {
     if(key=="frequency"){
         setFrequency(value->valuedouble);
     }else if(key=="wavelength"){

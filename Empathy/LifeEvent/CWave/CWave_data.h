@@ -10,13 +10,13 @@
 #include <math.h>
 
 #include "../../Utils/Color.h"
-#include "../../PureMath/Wave.h"
+#include "../../PureMath/include.h"
 #include <vector>
 #include "../LifeEvent.h"
 
 namespace empathy{
     namespace life_event {
-        class CWave_data : public LifeEvent, public Color, public Wave {
+        class CWave_data : public LifeEvent, public Color, public empathy::pure_math::Wave {
 
         public:
             //constructors

@@ -10,7 +10,7 @@
 
 #include "../RadioStation/Subscriber.h"
 #include "../global.h"
-#include "../LifeEvent/life_event.h"
+#include "../LifeEvent/include.h"
 
 class Empathy;
 
