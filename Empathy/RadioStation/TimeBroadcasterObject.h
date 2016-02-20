@@ -6,8 +6,9 @@
 #define EMPATHY_TIMEBROADCASTEROBJECT_H
 
 
-#include <GL/glew.h>
+
 #include "Subscriber.h"
+#include <GL/glew.h>
 
 class TimeBroadcasterObject {
 private:
