@@ -4,20 +4,20 @@
 
 using namespace std;
 
-You::You():brains()
+empathy::You::You():brains()
 {
     instance=this;
 
 }
 
 
-void You::onReceiveEvent(empathy::radio::Event & event) {
+void empathy::You::onReceiveEvent(empathy::radio::Event & event) {
     empathy::radio::Subscriber::onReceiveEvent(event);
 
 }
 
 
-int You::calcFPS(GLfloat curTime){
+int empathy::You::calcFPS(GLfloat curTime){
 
     deltaTime=curTime-lastTime;
 
@@ -28,7 +28,7 @@ int You::calcFPS(GLfloat curTime){
     return FPS;
 }
 
-void You::passTime(GLfloat timeLength){
+void empathy::You::passTime(GLfloat timeLength){
     curTime += timeLength;
 
 //    cout<<"passing time"<<endl;
@@ -47,11 +47,11 @@ void You::passTime(GLfloat timeLength){
     empathy::radio::TimeBroadcaster::poll(timeLength);
 }
 
-void You::setTime(GLfloat time){
+void empathy::You::setTime(GLfloat time){
     calcFPS(time);
     passTime(deltaTime);
 }
-void You::init(){
+void empathy::You::init(){
     //initiaulize vector to store lifeevents
     lifeEvents=std::vector<empathy::life_event::LifeEvent*>();
 
@@ -63,11 +63,11 @@ void You::init(){
 
 }
 
-void You::addEvent(empathy::life_event::LifeEvent * e) {
+void empathy::You::addEvent(empathy::life_event::LifeEvent * e) {
     e->init();
     lifeEvents.push_back(e);
 }
-void You::removeEvent(empathy::life_event::LifeEvent * e) {
+void empathy::You::removeEvent(empathy::life_event::LifeEvent * e) {
 
     for (int i = 0; i < lifeEvents.size(); i++) {
         if ( lifeEvents[i]->getId() == e->getId()) {
@@ -79,7 +79,7 @@ void You::removeEvent(empathy::life_event::LifeEvent * e) {
     }
 }
 
-void You::clearEvents() {
+void empathy::You::clearEvents() {
 
     while(lifeEvents.size()>0){
         empathy::life_event::LifeEvent * event = lifeEvents[0];
@@ -88,7 +88,7 @@ void You::clearEvents() {
     }
 }
 
-void You::blit(){
+void empathy::You::blit(){
 
     // cout<<"blitting you"<<endl;
 
@@ -99,14 +99,14 @@ void You::blit(){
     }
 }
 
-You * You::instance=nullptr;
+empathy::You * empathy::You::instance=nullptr;
 
-void You::addBrain(empathy::brain::Brain *brain) {
+void empathy::You::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
     brain->run();
 }
 
-void You::terminate() {
+void empathy::You::terminate() {
     clearEvents();
 
     for(int i=0;i<brains.size();i++){

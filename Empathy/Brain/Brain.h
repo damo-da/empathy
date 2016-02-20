@@ -8,7 +8,7 @@
 #define EMPATHY_EVENT_BRAIN_LINE_NUMBER "EMPATHY_EVENT_BRAIN_LINE_NUMBER"
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
 
-#include "../RadioStation/Subscriber.h"
+
 #include "../global.h"
 #include "../LifeEvent/include.h"
 #include "../RadioStation/include.h"

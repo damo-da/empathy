@@ -5,17 +5,20 @@
 #ifndef EMPATHY_E_H
 #define EMPATHY_E_H
 
-#include "Brain/include.h"
-#include "PureMath/include.h"
-#include "LifeEvent/include.h"
-#include "MoonLight/include.h"
-#include "RadioStation/include.h"
 
 namespace empathy{
-    namespace life_event{ };
-    namespace brain{ };
-    namespace moonlight{ };
-    namespace pure_math{};
+    namespace life_event{
+
+    };
+    namespace brain{
+
+    };
+    namespace moonlight{
+
+    };
+    namespace pure_math{
+
+    };
 
     namespace radio{
 
@@ -24,5 +27,16 @@ namespace empathy{
     namespace utils{
 
     };
+
+    class You;
 };
+
+#include "PureMath/include.h"
+#include "RadioStation/include.h"
+#include "LifeEvent/include.h"
+#include "MoonLight/include.h"
+
+#include "Brain/include.h"
+#include "You/include.h"
+
 #endif //EMPATHY_E_H

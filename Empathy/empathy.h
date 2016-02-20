@@ -3,14 +3,12 @@
 
 #include "global.h"
 
-#include "You/you.h"
+#include "You/include.h"
 
-#include "LifeEvent/LifeEvent.h"
-#include "RadioStation/BroadcastStation.h"
+#include "LifeEvent/include.h"
+#include "RadioStation/include.h"
 
-#include "MoonLight/MoonLight.h"
-
-class You;
+#include "MoonLight/include.h"
 
 class Empathy{
 public:
@@ -35,7 +33,7 @@ public:
 
 	void flush();
 
-	You * you;
+	empathy::You * you;
 
     static empathy::radio::BroadcastStation broadcastStation;
 

@@ -58,7 +58,7 @@ void Empathy::initGL(){
 }
 
 void Empathy::initYou(){
-    you=new You();
+    you=new empathy::You();
     you->init();
 }
 

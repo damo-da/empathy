@@ -11,39 +11,46 @@
 #include "../e.h"
 
 #include <vector>
-#include "../RadioStation/include.h"
+namespace empathy {
+    class You : public empathy::radio::Subscriber {
 
-class You: public empathy::radio::Subscriber{
-public:
-	std::vector<empathy::life_event::LifeEvent*> lifeEvents;
+    public:
+        std::vector<empathy::life_event::LifeEvent *> lifeEvents;
 
-	You();
+        You();
 
-	void init();
+        void init();
 
-	void blit();
+        void blit();
 
-	void addEvent(empathy::life_event::LifeEvent *);
-	void removeEvent(empathy::life_event::LifeEvent *);
-	void clearEvents();
+        void addEvent(empathy::life_event::LifeEvent *);
 
-	long curTime;
-	float lastTime,deltaTime;
-	int calcFPS(GLfloat curTime);
-	void passTime(GLfloat);
-	void setTime(GLfloat);
+        void removeEvent(empathy::life_event::LifeEvent *);
 
-    virtual void onReceiveEvent(empathy::radio::Event &) override;
+        void clearEvents();
 
-	std::vector<empathy::brain::Brain *> brains;
+        long curTime;
+        float lastTime, deltaTime;
 
-    void addBrain(empathy::brain::Brain * );
+        int calcFPS(GLfloat curTime);
 
-	void terminate();
-public:
-    static You * getInstance(){return instance;}
-private:
-    static You * instance;
-};
+        void passTime(GLfloat);
 
+        void setTime(GLfloat);
+
+        virtual void onReceiveEvent(empathy::radio::Event &) override;
+
+        std::vector<empathy::brain::Brain *> brains;
+
+        void addBrain(empathy::brain::Brain *);
+
+        void terminate();
+
+    public:
+        static You *getInstance() { return instance; }
+
+    private:
+        static You *instance;
+    };
+}
 #endif
