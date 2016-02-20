@@ -1,7 +1,7 @@
 #include "DEmpathy.h"
 
 
-#include "../Empathy/e.h"
+#include "../Empathy/empathy.h"
 #include "../Empathy/Brain/include.h"
 using namespace std;
 

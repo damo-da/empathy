@@ -5,7 +5,7 @@
 #ifndef EMPATHY_CWAVE_TEST_H
 #define EMPATHY_CWAVE_TEST_H
 
-#include "../../Empathy/e.h"
+#include "../../Empathy/empathy.h"
 #include "../../Empathy/Brain/include.h"
 
 #include <iostream>

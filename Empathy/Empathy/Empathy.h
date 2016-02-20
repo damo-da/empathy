@@ -3,7 +3,7 @@
 
 #include <GL/glew.h>
 
-#include "../e.h"
+#include "../empathy.h"
 
 #include "../RadioStation/BroadcastStation.h"
 

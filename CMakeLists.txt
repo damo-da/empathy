@@ -98,7 +98,7 @@ set(SOURCES
         Empathy/Libs/cJSON/cJSON_utils.h
         DEmpathy/tests/CWave_Test.cpp
         DEmpathy/tests/CWave_Test.h
-        Empathy/e.h
+        Empathy/empathy.h
         Empathy/LifeEvent/include.h
         Empathy/MoonLight/include.h
         Empathy/Brain/include.h
