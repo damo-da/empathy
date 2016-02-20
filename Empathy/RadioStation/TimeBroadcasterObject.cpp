@@ -6,7 +6,9 @@
 #include "TimeBroadcasterObject.h"
 using namespace std;
 
-TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance, Subscriber *subscriber):
+TimeBroadcasterObject::TimeBroadcasterObject(empathy::radio::Event event,
+                                             GLfloat nextOccurance,
+                                             empathy::radio::Subscriber *subscriber):
         event(event),
         nextOccurance(nextOccurance),
         subscriber(subscriber),
@@ -18,7 +20,10 @@ TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance,
 
 
 
-TimeBroadcasterObject::TimeBroadcasterObject(Event event, GLfloat nextOccurance, Subscriber *subscriber, GLfloat period) :
+TimeBroadcasterObject::TimeBroadcasterObject(empathy::radio::Event event,
+                                             GLfloat nextOccurance,
+                                             empathy::radio::Subscriber *subscriber,
+                                             GLfloat period) :
         event(event),
         nextOccurance(nextOccurance),
         subscriber(subscriber),

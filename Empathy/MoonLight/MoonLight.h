@@ -7,6 +7,7 @@
 
 #include "../RadioStation/Subscriber.h"
 #include <map>
+#include "../RadioStation/include.h"
 
 #define EMPATHY_AUDIO_PLAY "EMPATHY_PLAY_AUDIO"
 #define EMPATHY_AUDIO_SHOULD_REPEAT "EMPATHY_AUDIO_SHOULD_REPEAT"
@@ -14,9 +15,9 @@
 namespace empathy {
     namespace moonlight {
 
-        class MoonLight : public Subscriber {
+        class MoonLight : public empathy::radio::Subscriber {
         public:
-            virtual void onReceiveEvent(Event &event) override;
+            virtual void onReceiveEvent(empathy::radio::Event &event) override;
 
             MoonLight();
 

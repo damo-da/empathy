@@ -98,7 +98,7 @@ set(SOURCES
         Empathy/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h Empathy/LifeEvent/include.h Empathy/MoonLight/include.h Empathy/Brain/include.h Empathy/PureMath/include.h)
+        DEmpathy/tests/CWave_Test.cpp DEmpathy/tests/CWave_Test.h Empathy/e.h Empathy/LifeEvent/include.h Empathy/MoonLight/include.h Empathy/Brain/include.h Empathy/PureMath/include.h Empathy/RadioStation/include.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

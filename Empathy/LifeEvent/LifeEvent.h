@@ -13,6 +13,7 @@
 #include <GL/glew.h>
 #include <map>
 #include <vector>
+#include "../RadioStation/include.h"
 
 #define EMPATHY_LIFE_EVENT_CREATE_COMPLETE "EMPATHY_LIFE_EVENT_CREATE_COMPLETE"
 #define EMPATHY_LIFE_EVENT_RUN_COMPLETE "EMPATHY_LIFE_EVENT_RUN_COMPLETE"
@@ -21,7 +22,7 @@
 namespace empathy {
     namespace life_event {
 
-        class LifeEvent : public Subscriber {
+        class LifeEvent : public empathy::radio::Subscriber {
         public:
             LifeEvent();
 

@@ -7,8 +7,8 @@
 #include "../empathy.h"
 
 using namespace std;
-void empathy::brain::Brain::onReceiveEvent(Event &event) {
-    Subscriber::onReceiveEvent(event);
+void empathy::brain::Brain::onReceiveEvent(empathy::radio::Event &event) {
+    empathy::radio::Subscriber::onReceiveEvent(event);
 
     if(event.broadcaster != nullptr && event.broadcaster->getId()==getId()){
         if(event.action==EMPATHY_EVENT_BRAIN_LINE_NUMBER){
@@ -43,7 +43,7 @@ void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLflo
 }
 
 void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID) {
-    Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
+    empathy::radio::Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
     event.putString(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineID);
     event.putString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineID);
 

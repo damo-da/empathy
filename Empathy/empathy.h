@@ -37,7 +37,7 @@ public:
 
 	You * you;
 
-    static BroadcastStation broadcastStation;
+    static empathy::radio::BroadcastStation broadcastStation;
 
     void addBrain(empathy::brain::Brain * brain);
 

@@ -42,10 +42,10 @@ void DEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
 		myAction=EMPATHY_EVENT_INPUT_KEY_REPEAT;
 	}
     if(myAction != ""){
-        Event event=Event(myAction);
+        empathy::radio::Event event=empathy::radio::Event(myAction);
         event.putInt(EMPATHY_EVENT_INPUT_KEY,key);
 
-        BroadcastStation::emit(event);
+        empathy::radio::BroadcastStation::emit(event);
     }
 
 }

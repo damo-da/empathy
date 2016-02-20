@@ -10,55 +10,68 @@
 
 #define EMPATHY_SUBSCRIBER_ID "EMPATHY_SUBSCRIBER_ID"
 
-class Event;
+namespace empathy {
+    namespace radio {
+        class Event;
 
-//The class to be overridden to emit/receive broadcasts
-class Subscriber {
-public:
-    virtual void onReceiveEvent(Event &);
+        //The class to be overridden to emit/receive broadcasts
+        class Subscriber {
+        public:
+            virtual void onReceiveEvent(Event &);
 
-    void emit(Event&);
-    void emit(std::string);
+            void emit(Event &);
 
-    void listen(std::string);
-    void listenAll();
+            void emit(std::string);
 
-    Subscriber();
+            void listen(std::string);
 
-    void createTimeOut(GLfloat interval,int);
-    void createTimeOut(GLfloat interval,Event&);
+            void listenAll();
 
-    void createRepeatingTimeout(GLfloat start,GLfloat interval,int);
-    void createRepeatingTimeout(GLfloat interval,int);
-    void createRepeatingTimeout(GLfloat start,GLfloat interval,Event&);
-    void createRepeatingTimeout(GLfloat interval,Event&);
+            Subscriber();
 
-    int getId(){return id;}
+            void createTimeOut(GLfloat interval, int);
 
-    void playAudio(std::string key);
-    void playKeyboardAudio(std::string key);
+            void createTimeOut(GLfloat interval, Event &);
 
-private:
-    int id;
+            void createRepeatingTimeout(GLfloat start, GLfloat interval, int);
+
+            void createRepeatingTimeout(GLfloat interval, int);
+
+            void createRepeatingTimeout(GLfloat start, GLfloat interval, Event &);
+
+            void createRepeatingTimeout(GLfloat interval, Event &);
+
+            int getId() { return id; }
+
+            void playAudio(std::string key);
+
+            void playKeyboardAudio(std::string key);
+
+        private:
+            int id;
 
 
-public:
-    static Subscriber* getById(int id){
-        for(int i=0;i<subscribers.size();i++){
-            if(subscribers[i]->getId()==id){
-                return subscribers[i];
+        public:
+            static Subscriber *getById(int id) {
+                for (int i = 0; i < subscribers.size(); i++) {
+                    if (subscribers[i]->getId() == id) {
+                        return subscribers[i];
+                    }
+                }
+
+                return nullptr;
             }
-        }
 
-        return nullptr;
+        private:
+            static std::vector<Subscriber *> subscribers;
+
+        protected:
+            Event createEvent();
+
+            Event createEvent(std::string action);
+        };
+
     }
-private:
-    static std::vector <Subscriber*> subscribers;
-
-protected:
-    Event createEvent();
-    Event createEvent(std::string action);
-};
-
+}
 
 #endif //EMPATHY_STATIONBASE_H

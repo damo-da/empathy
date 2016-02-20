@@ -13,8 +13,8 @@ class TimeBroadcasterObject {
 private:
 
 public:
-    Subscriber * subscriber;
-    Event event;
+    empathy::radio::Subscriber * subscriber;
+    empathy::radio::Event event;
 
     GLfloat period;
 
@@ -22,8 +22,8 @@ public:
 
     GLfloat nextOccurance;
 
-    TimeBroadcasterObject(Event,GLfloat,Subscriber * );
-    TimeBroadcasterObject(Event,GLfloat,Subscriber*,GLfloat);
+    TimeBroadcasterObject(empathy::radio::Event,GLfloat,empathy::radio::Subscriber * );
+    TimeBroadcasterObject(empathy::radio::Event,GLfloat,empathy::radio::Subscriber*,GLfloat);
 
     void printDebug();
 };

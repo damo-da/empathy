@@ -11,8 +11,8 @@ You::You():brains()
 }
 
 
-void You::onReceiveEvent(Event & event) {
-    Subscriber::onReceiveEvent(event);
+void You::onReceiveEvent(empathy::radio::Event & event) {
+    empathy::radio::Subscriber::onReceiveEvent(event);
 
 }
 
@@ -44,7 +44,7 @@ void You::passTime(GLfloat timeLength){
         event->passTime(timeLength);
     }
 //    cout<<"passed time"<<endl;
-    TimeBroadcaster::poll(timeLength);
+    empathy::radio::TimeBroadcaster::poll(timeLength);
 }
 
 void You::setTime(GLfloat time){

@@ -11,8 +11,9 @@
 #include "../e.h"
 
 #include <vector>
+#include "../RadioStation/include.h"
 
-class You: public Subscriber{
+class You: public empathy::radio::Subscriber{
 public:
 	std::vector<empathy::life_event::LifeEvent*> lifeEvents;
 
@@ -32,7 +33,7 @@ public:
 	void passTime(GLfloat);
 	void setTime(GLfloat);
 
-    virtual void onReceiveEvent(Event &) override;
+    virtual void onReceiveEvent(empathy::radio::Event &) override;
 
 	std::vector<empathy::brain::Brain *> brains;
 

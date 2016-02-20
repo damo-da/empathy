@@ -11,15 +11,15 @@
 #include "../RadioStation/Subscriber.h"
 #include "../global.h"
 #include "../LifeEvent/include.h"
-
+#include "../RadioStation/include.h"
 class Empathy;
 
 namespace empathy {
     namespace brain {
 
-        class Brain : public Subscriber {
+        class Brain : public empathy::radio::Subscriber {
         public:
-            virtual void onReceiveEvent(Event &event) override;
+            virtual void onReceiveEvent(empathy::radio::Event &event) override;
 
             Brain();
 

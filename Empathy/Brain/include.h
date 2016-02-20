@@ -2,8 +2,8 @@
 // Created by damo on 2/20/16.
 //
 
-#ifndef EMPATHY_BRAIN_H2
-#define EMPATHY_BRAIN_H2
+#ifndef EMPATHY_INCLUDE_BRAIN_H
+#define EMPATHY_INCLUDE_BRAIN_H
 
 #include "Brain.h"
 #include "MusicalBrain/MusicalBrain.h"
@@ -22,4 +22,4 @@ namespace empathy{
         class DummyBrain;
     }
 }
-#endif //EMPATHY_BRAIN_H2
+#endif //EMPATHY_INCLUDE_BRAIN_H2

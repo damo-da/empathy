@@ -10,61 +10,61 @@
 
 
 using namespace std;
-void Subscriber::emit(Event & event) {
+void empathy::radio::Subscriber::emit(Event & event) {
     event.broadcaster=this;
     event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
 
-    BroadcastStation::emit(event);
+    empathy::radio::BroadcastStation::emit(event);
 }
 
 
-void Subscriber::listen(std::string id) {
+void empathy::radio::Subscriber::listen(std::string id) {
     BroadcastStation::subscribe(this,id);
 }
 
-void Subscriber::onReceiveEvent(Event & event) {
+void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
 
 }
 
-Subscriber::Subscriber() {
+empathy::radio::Subscriber::Subscriber() {
     id=Uniqueness::newId();
 
 }
 
-void Subscriber::createTimeOut(GLfloat start, int id) {
+void empathy::radio::Subscriber::createTimeOut(GLfloat start, int id) {
     Event event=createEvent(EMPATHY_EVENT_TIMEOUT);
 
     createTimeOut(start,event);
 }
 
-void Subscriber::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
+void empathy::radio::Subscriber::createRepeatingTimeout(GLfloat start,GLfloat interval, int id) {
     Event event=createEvent(EMPATHY_EVENT_REPEAT_TIMEOUT);
     createRepeatingTimeout(start,interval,event);
 
 }
 
-void Subscriber::createRepeatingTimeout(GLfloat interval, int id) {
+void empathy::radio::Subscriber::createRepeatingTimeout(GLfloat interval, int id) {
     createRepeatingTimeout(interval,interval,id);
 }
 
-void Subscriber::emit(std::string action) {
+void empathy::radio::Subscriber::emit(std::string action) {
     Event event=Event(action);
     emit(event);
 }
 
-void Subscriber::listenAll() {
+void empathy::radio::Subscriber::listenAll() {
     BroadcastStation::subscribeAll(this);
 }
 
 
 
-Event Subscriber::createEvent() {
+empathy::radio::Event empathy::radio::Subscriber::createEvent() {
     Event event=createEvent(EMPATHY_EVENT_ACTION_NONE);
 
     return event;
 }
 
-Event  Subscriber::createEvent(std::string action) {
+empathy::radio::Event  empathy::radio::Subscriber::createEvent(std::string action) {
     Event event=Event(action);
 
     event.broadcaster=this;
@@ -74,28 +74,28 @@ Event  Subscriber::createEvent(std::string action) {
     return event;
 }
 
-void Subscriber::createRepeatingTimeout(GLfloat interval, Event &event) {
+void empathy::radio::Subscriber::createRepeatingTimeout(GLfloat interval, Event &event) {
     createRepeatingTimeout(interval,interval,event);
 }
 
-void Subscriber::createRepeatingTimeout(GLfloat start, GLfloat interval, Event &event) {
+void empathy::radio::Subscriber::createRepeatingTimeout(GLfloat start, GLfloat interval, Event &event) {
     TimeBroadcaster::createRepeatingTimeout(this,event,start,interval);
 }
 
-void Subscriber::createTimeOut(GLfloat interval, Event &event) {
+void empathy::radio::Subscriber::createTimeOut(GLfloat interval, Event &event) {
     TimeBroadcaster::createTimeout(this,event,interval);
 }
 
-void Subscriber::playAudio(std::string key) {
+void empathy::radio::Subscriber::playAudio(std::string key) {
     Event e=createEvent(EMPATHY_AUDIO_PLAY);
     e.putString(EMPATHY_AUDIO_PLAY,key);
     emit(e);
 }
 
-void Subscriber::playKeyboardAudio(std::string key) {
+void empathy::radio::Subscriber::playKeyboardAudio(std::string key) {
     Event e=createEvent(EMPATHY_AUDIO_PLAY_KEYBOARD);
     e.putString(EMPATHY_AUDIO_PLAY_KEYBOARD,key);
     emit(e);
 }
 
-std::vector<Subscriber *> Subscriber::subscribers=std::vector<Subscriber*>();
+std::vector<empathy::radio::Subscriber *> empathy::radio::Subscriber::subscribers=std::vector<empathy::radio::Subscriber*>();

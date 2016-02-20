@@ -9,6 +9,7 @@
 #include "PureMath/include.h"
 #include "LifeEvent/include.h"
 #include "MoonLight/include.h"
+#include "RadioStation/include.h"
 
 namespace empathy{
     namespace life_event{ };

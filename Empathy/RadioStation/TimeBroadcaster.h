@@ -16,22 +16,27 @@
 #define EMPATHY_EVENT_REPEAT_TIMEOUT "EMPATHY_EVENT_REPEAT_TIMEOUT"
 
 
-class TimeBroadcaster {
-private:
-    static void addItems();
-public:
-    static void createRepeatingTimeout(Subscriber *,Event&,GLfloat,GLfloat);
+namespace empathy {
+    namespace radio {
 
-    static void createTimeout(Subscriber *, Event&, GLfloat);
+        class TimeBroadcaster {
+        private:
+            static void addItems();
 
-    static void poll(GLfloat);
+        public:
+            static void createRepeatingTimeout(Subscriber *, Event &, GLfloat, GLfloat);
 
+            static void createTimeout(Subscriber *, Event &, GLfloat);
 
-    static std::vector<TimeBroadcasterObject> items;
-    static std::vector<TimeBroadcasterObject> toAddItems;
-};
-
+            static void poll(GLfloat);
 
 
+            static std::vector<TimeBroadcasterObject> items;
+            static std::vector<TimeBroadcasterObject> toAddItems;
+        };
+
+
+    }
+}
 
 #endif //EMPATHY_TIMEBROADCASTER_H

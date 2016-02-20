@@ -70,11 +70,11 @@ void Empathy::setScreenSize(int x,int y){
 }
 
 
-BroadcastStation Empathy::broadcastStation= BroadcastStation();
+empathy::radio::BroadcastStation Empathy::broadcastStation= empathy::radio::BroadcastStation();
 
 void Empathy::loop() {
 
-    BroadcastStation::dispatch();
+    empathy::radio::BroadcastStation::dispatch();
 
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT );

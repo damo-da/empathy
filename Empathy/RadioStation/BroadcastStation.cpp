@@ -4,11 +4,13 @@
 
 #include <assert.h>
 #include "BroadcastStation.h"
+#include "Event.h"
+#include "Subscriber.h"
 
 using namespace std;
 
 
-void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
+void empathy::radio::BroadcastStation::subscribe(empathy::radio::Subscriber *subscriber, std::string id) {
     if(!instance->existsChannel(id)){
         instance->addChannel(id);
     }
@@ -18,27 +20,27 @@ void BroadcastStation::subscribe(Subscriber *subscriber, std::string id) {
     instance->channels[id].push_back(subscriber);
 }
 
-void BroadcastStation::emit(Event & e) {
+void empathy::radio::BroadcastStation::emit(empathy::radio::Event & e) {
     instance->events.push_back(e);
 }
 
-bool BroadcastStation::existsChannel(std::string i) {
+bool empathy::radio::BroadcastStation::existsChannel(std::string i) {
     return !(channels.find(i) == channels.end());
 }
 
-void BroadcastStation::addChannel(std::string id) {
+void empathy::radio::BroadcastStation::addChannel(std::string id) {
     channels[id]=std::vector<Subscriber *>();
 }
 
-BroadcastStation::BroadcastStation():
+empathy::radio::BroadcastStation::BroadcastStation():
         vipSubscribers(),
         channels()
 {
     instance=this;
 }
-BroadcastStation * BroadcastStation::instance= nullptr;
+empathy::radio::BroadcastStation * empathy::radio::BroadcastStation::instance= nullptr;
 
-void BroadcastStation::dispatch() {
+void empathy::radio::BroadcastStation::dispatch() {
     for (int i=0;i<instance->events.size();i++){
 
         Event e=instance->events[i];
@@ -60,7 +62,7 @@ void BroadcastStation::dispatch() {
     instance->events.clear();
 }
 
-void BroadcastStation::subscribeAll(Subscriber *subscriber) {
+void empathy::radio::BroadcastStation::subscribeAll(Subscriber *subscriber) {
     cout<<subscriber->getId()<<" is listening all"<<endl;
     instance->vipSubscribers.push_back(subscriber);
 

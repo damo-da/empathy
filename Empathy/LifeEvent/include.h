@@ -2,8 +2,8 @@
 // Created by damo on 2/20/16.
 //
 
-#ifndef EMPATHY_LIFEEVENT_H
-#define EMPATHY_LIFEEVENT_H
+#ifndef EMPATHY_INCLUDE_LIFEEVENT_H
+#define EMPATHY_INCLUDE_LIFEEVENT_H
 
 #include "LifeEvent.h"
 #include "Collection.h"
@@ -33,4 +33,4 @@ namespace empathy{
         class MathWave_Sine;
     }
 }
-#endif //EMPATHY_LIFEEVENT_H
+#endif //EMPATHY_INCLUDE_LIFEEVENT_H

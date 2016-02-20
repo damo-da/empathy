@@ -7,36 +7,42 @@
 
 #include <vector>
 #include <iostream>
-#include "Subscriber.h"
-#include "Event.h"
+
 #include <map>
+#include "Subscriber.h"
 
-class BroadcastStation {
-public:
-    //subscribes  a subscriber.
-    static void subscribe(Subscriber *base, std::string id);
+namespace empathy {
+    namespace radio {
 
-    BroadcastStation();
+        class BroadcastStation {
+        public:
+            //subscribes  a subscriber.
+            static void subscribe(Subscriber *base, std::string id);
 
-    //emit an event to the whole world
-    static void emit(Event&);
+            BroadcastStation();
 
-    static void dispatch();
+            //emit an event to the whole world
+            static void emit(Event &);
 
-    static void subscribeAll(Subscriber *subscriber);
+            static void dispatch();
 
-protected:
-    static BroadcastStation * instance;
+            static void subscribeAll(Subscriber *subscriber);
 
-private:
-    std::map<std::string,std::vector<Subscriber *>> channels;
+        protected:
+            static BroadcastStation *instance;
 
-    std::vector<Event> events;
+        private:
+            std::map<std::string, std::vector<Subscriber *>> channels;
 
-    bool existsChannel(std::string);
-    void addChannel(std::string);
+            std::vector<Event> events;
 
-    std::vector<Subscriber *> vipSubscribers;
-};
+            bool existsChannel(std::string);
+
+            void addChannel(std::string);
+
+            std::vector<Subscriber *> vipSubscribers;
+        };
+    }
+}
 
 #endif //EMPATHY_BROADCAST_H

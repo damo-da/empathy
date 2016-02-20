@@ -26,8 +26,8 @@ void empathy::moonlight::MoonLight::init() {
     listen(EMPATHY_AUDIO_PLAY_KEYBOARD);
 }
 
-void empathy::moonlight::MoonLight::onReceiveEvent(Event &event) {
-    Subscriber::onReceiveEvent(event);
+void empathy::moonlight::MoonLight::onReceiveEvent(empathy::radio::Event &event) {
+    empathy::radio::Subscriber::onReceiveEvent(event);
     if(event.action == EMPATHY_AUDIO_PLAY){
         std::string key=event.getString(EMPATHY_AUDIO_PLAY);
         bool repeat=event.getInt(EMPATHY_AUDIO_SHOULD_REPEAT);

@@ -6,7 +6,7 @@
 
 
 
-Event::Event(std::string action):
+empathy::radio::Event::Event(std::string action):
         action(action) ,
         intData(),
         broadcaster(nullptr),

@@ -47,8 +47,8 @@ void empathy::life_event::CWave::passTime(GLfloat delTime) {
 
 
 
-void empathy::life_event::CWave::onReceiveEvent(Event &event) {
-    Subscriber::onReceiveEvent(event);
+void empathy::life_event::CWave::onReceiveEvent(empathy::radio::Event &event) {
+    empathy::radio::Subscriber::onReceiveEvent(event);
 
     if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
        event.action==EMPATHY_EVENT_TIMEOUT){
@@ -56,7 +56,7 @@ void empathy::life_event::CWave::onReceiveEvent(Event &event) {
         shouldCreateNewWave=true;
 
         //broadcast that a period is complete
-        Event e(EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE);
+        empathy::radio::Event e(EMPATHY_LIFE_EVENT_CWAVE_PERIOD_COMPLETE);
         emit(e);
 
     }else{

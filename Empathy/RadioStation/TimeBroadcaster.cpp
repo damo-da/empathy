@@ -7,19 +7,19 @@
 
 using namespace std;
 
-void TimeBroadcaster::createRepeatingTimeout(Subscriber *subscriber, Event & event, GLfloat start,GLfloat period) {
+void empathy::radio::TimeBroadcaster::createRepeatingTimeout(Subscriber *subscriber, Event & event, GLfloat start,GLfloat period) {
     TimeBroadcasterObject object(event,start,subscriber,period);
 
     toAddItems.push_back(object);
 }
 
-void TimeBroadcaster::createTimeout(Subscriber *subscriber, Event & event, GLfloat start) {
+void empathy::radio::TimeBroadcaster::createTimeout(Subscriber *subscriber, Event & event, GLfloat start) {
     TimeBroadcasterObject object(event,start,subscriber);
 
     toAddItems.push_back(object);
 }
 
-void TimeBroadcaster::poll(GLfloat delTime){
+void empathy::radio::TimeBroadcaster::poll(GLfloat delTime){
     addItems();
 
     for(int i=0;i<items.size();i++){
@@ -45,10 +45,10 @@ void TimeBroadcaster::poll(GLfloat delTime){
 
 
 
-std::vector<TimeBroadcasterObject> TimeBroadcaster::items=std::vector<TimeBroadcasterObject>();
-std::vector<TimeBroadcasterObject> TimeBroadcaster::toAddItems=std::vector<TimeBroadcasterObject>();
+std::vector<TimeBroadcasterObject> empathy::radio::TimeBroadcaster::items=std::vector<TimeBroadcasterObject>();
+std::vector<TimeBroadcasterObject> empathy::radio::TimeBroadcaster::toAddItems=std::vector<TimeBroadcasterObject>();
 
-void TimeBroadcaster::addItems() {
+void empathy::radio::TimeBroadcaster::addItems() {
     for(int i=0;i<toAddItems.size();i++){
         items.push_back(toAddItems[i]);
     }

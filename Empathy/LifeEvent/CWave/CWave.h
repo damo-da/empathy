@@ -35,7 +35,7 @@ namespace empathy{
             virtual void decodeJson(std::string key, cJSON *value) override;
 
         public:
-            virtual void onReceiveEvent(Event &event) override;
+            virtual void onReceiveEvent(empathy::radio::Event &event) override;
         };
     }
 }
