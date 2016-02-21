@@ -11,15 +11,15 @@
 #include <vector>
 #include "../Libs/cJSON/cJSON.h"
 
+/* The color class to hold a RGBA color value. */
 class Color {
 public:
-    void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
-    void setColor(GLfloat r, GLfloat g, GLfloat b);
+    void setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f);
 
-    Color();
+    Color(GLfloat r=1.0f,GLfloat g=1.0f,GLfloat b=1.0f,GLfloat a=1.0f);
 
+    /* Something like a "pointer" copy constructor. */
     void setColor(Color * color);
-
 
     GLfloat getR() const {
         return r;
@@ -53,6 +53,7 @@ public:
         Color::a = a;
     }
 
+    /* Apply color from JSON. */
     virtual void decodeJson(std::string key,cJSON* value);
 private:
     GLfloat r,g,b,a;

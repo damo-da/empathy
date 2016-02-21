@@ -41,29 +41,6 @@ std::string str_trim(const std::string string){
     return ret;
 }
 
-std::string str_replace(const std::string string, const char initial, const char final) {
-    std::string ret="";
-    for(int i=0;i<string.size();i++){
-        if(string[i]==initial){
-            ret += final;
-        }else {
-            ret += string[i];
-        }
-    }
-    return ret;
-}
-
-std::string str_remove_char(const std::string string, const char toRemove) {
-    std::string ret="";
-    for(int i=0;i<string.size();i++){
-        if(string[i]==toRemove){
-            continue;
-        }else {
-            ret += string[i];
-        }
-    }
-    return ret;
-}
 
 int str_to_int(std::string string) {
     const char *p = string.c_str();
@@ -93,9 +70,4 @@ std::string int_to_str(int integer) {
     std::string string(str);
 
     return string;
-}
-
-std::string str_to_lower(std::string str) {
-    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
-
 }

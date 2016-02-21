@@ -73,7 +73,7 @@ void empathy::You::addEvent(empathy::life_event::LifeEvent * e) {
 void empathy::You::removeEvent(empathy::life_event::LifeEvent * e) {
 
     for (int i = 0; i < lifeEvents.size(); i++) {
-        if ( lifeEvents[i]->getId() == e->getId()) {
+        if (e->getId() == lifeEvents[i]->getId()) {
 
             lifeEvents.erase(lifeEvents.begin() + i);
 //            delete(e);

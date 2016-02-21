@@ -45,12 +45,3 @@ char* file_read(const char* filename)
     res[nb_read_total] = '\0';
     return res;
 }
-
-std::vector<std::string> file_readlines(const char* filename) {
-    std::string content=file_read(filename);
-
-    std::vector<std::string> ret;
-    str_split(content,'\n',ret);
-
-    return ret;
-}

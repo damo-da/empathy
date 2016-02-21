@@ -13,6 +13,8 @@
 #include <iostream>
 #include <vector>
 
+/* Read the contents of a file. */
 char* file_read(const char* filename);
-std::vector<std::string> file_readlines(const char* filename);
+
+
 #endif //EMPATHY_FILE_UTILS_H

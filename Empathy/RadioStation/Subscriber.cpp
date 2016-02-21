@@ -4,7 +4,7 @@
 
 #include "Subscriber.h"
 #include "BroadcastStation.h"
-#include "../Utils/Uniqueness.h"
+#include "../Utils/UniqueObject.h"
 #include "TimeBroadcaster.h"
 #include "../MoonLight/MoonLight.h"
 
@@ -26,10 +26,10 @@ void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
 
 }
 
-empathy::radio::Subscriber::Subscriber() {
-    id=Uniqueness::newId();
+empathy::radio::Subscriber::Subscriber():
+        UniqueObject()
+{
 
-    subscribers.push_back(this);
 }
 
 void empathy::radio::Subscriber::createTimeOut(GLfloat start, int id) {
@@ -98,5 +98,3 @@ void empathy::radio::Subscriber::playKeyboardAudio(std::string key) {
     e.putString(EMPATHY_AUDIO_PLAY_KEYBOARD,key);
     emit(e);
 }
-
-std::vector<empathy::radio::Subscriber *> empathy::radio::Subscriber::subscribers=std::vector<empathy::radio::Subscriber*>();

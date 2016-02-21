@@ -4,7 +4,7 @@
 
 #include "Color.h"
 
-Color::Color():r(1.0f),g(1.0f),b(1.0f),a(1.0f) {
+Color::Color(GLfloat r,GLfloat g, GLfloat b, GLfloat a):r(r),g(g),b(b),a(a) {
 
 
 }
@@ -14,13 +14,6 @@ void Color::setColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a) {
     setG(g);
     setB(b);
     setA(a);
-}
-
-void Color::setColor(GLfloat r, GLfloat g, GLfloat b) {
-    setR(r);
-    setG(g);
-    setB(b);
-    setA(1.0f);
 }
 
 void Color::setColor(Color *color) {
@@ -37,5 +30,7 @@ void Color::decodeJson(std::string key, cJSON *value) {
         setG(value->valuedouble);
     }else if(key=="colorBlue"){
         setB(value->valuedouble);
+    }else if(key=="colorAlpha"){
+        setA(value->valuedouble);
     }
 }

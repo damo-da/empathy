@@ -6,6 +6,7 @@
 #define EMPATHY_STATIONBASE_H
 
 #include "Event.h"
+#include "../Utils/UniqueObject.h"
 #include <vector>
 
 #define EMPATHY_SUBSCRIBER_ID "EMPATHY_SUBSCRIBER_ID"
@@ -19,7 +20,7 @@ namespace empathy {
          * See <Event> to know more about events.
          *
          * */
-        class Subscriber {
+        class Subscriber : public UniqueObject {
 
         public:
             /* Called when an event is received for this subscriber.*/
@@ -88,9 +89,6 @@ namespace empathy {
              * */
             void createRepeatingTimeout(GLfloat interval, Event & event);
 
-            /* Get my ID. */
-            int getId() { return id; }
-
             /* Emit an intent to play an audio.
              *
              * @key the identification of the audio.
@@ -103,32 +101,6 @@ namespace empathy {
              *
              * */
             void playKeyboardAudio(std::string key);
-
-        private:
-            /* MY ID. */
-            int id;
-
-
-        public:
-            /* Get a subscriber by it's id.
-             *
-             * @static
-             * */
-            static Subscriber *getById(int id) {
-                for (int i = 0; i < subscribers.size(); i++) {
-                    if (subscribers[i]->getId() == id) {
-                        return subscribers[i];
-                    }
-                }
-
-                return nullptr;
-            }
-
-        private:
-            /* List of all subscribers.
-             *
-             */
-            static std::vector<Subscriber *> subscribers;
 
         protected:
             /* Create an empty event. of empty action. */

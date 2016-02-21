@@ -18,8 +18,8 @@ set (EMPATHY_SOURCES
         Empathy/Empathy/Empathy.h
         Empathy/Empathy/Empathy.cpp
 
-        Empathy/Utils/Uniqueness.h
-        Empathy/Utils/Uniqueness.cpp
+        Empathy/Utils/UniqueObject.h
+        Empathy/Utils/UniqueObject.cpp
 
         Empathy/LifeEvent/LifeEvent.cpp
         Empathy/LifeEvent/LifeEvent.h
