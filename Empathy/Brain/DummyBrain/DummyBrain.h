@@ -8,13 +8,19 @@
 
 #include "../Brain.h"
 namespace empathy {
+
     namespace brain {
 
+        /*
+         * It's a dummy brain. What do you want from a dummy?
+         */
         class DummyBrain : public Brain {
 
+            /* @inherit */
             virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
         public:
+            /* Constructor */
             DummyBrain();
         };
     }

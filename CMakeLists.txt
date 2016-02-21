@@ -147,3 +147,11 @@ target_link_libraries(empathy
         "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
 #        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
         )
+set(HEADERS $(wildcard transport/*.h))
+set(COMMON_DOC_FLAGS --report --merge docs --output html $(HEADERS))
+
+add_custom_target(
+        doc
+        echo "HELLO"
+
+)

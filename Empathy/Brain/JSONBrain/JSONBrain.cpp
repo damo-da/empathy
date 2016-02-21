@@ -65,10 +65,6 @@ void empathy::brain::JSONBrain::terminate() {
     cJSON_Delete(root);
 }
 
-void empathy::brain::JSONBrain::addTo(Empathy *binder) {
-    empathy::brain::Brain::addTo(binder);
-}
-
 void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json) {
     if(action=="audio"){
 
@@ -90,28 +86,29 @@ void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json
         activateTimeoutForNextLine(stepID,after);
     }else if(action=="create"){
         std::string object=cJSON_GetObjectItem(json,"create")->valuestring;
-        createLifeEventFromJson(object,json);
-    }
-}
 
-void empathy::brain::JSONBrain::createLifeEventFromJson(const std::string action, cJSON *json) {
-    std::vector<std::string> keys=cJSON_get_keys(json);
+        //create this new object
+        empathy::life_event::LifeEvent * event= createEventFromString(object);
 
-    empathy::life_event::LifeEvent * event= createEventFromString(action);
+        if(event != nullptr){
 
-    if(event != nullptr){
-        for(int i=0;i<keys.size();i++){
-            std::string key=keys[i];
-            cJSON* value=cJSON_GetObjectItem(json,key.c_str());
+            //and pass the options to this object.
+            std::vector<std::string> keys=cJSON_get_keys(json);
 
-            event->decodeJson(key,value);
+            for(int i=0;i<keys.size();i++){
+                std::string key=keys[i];
+                cJSON* value=cJSON_GetObjectItem(json,key.c_str());
 
+                event->decodeJson(key,value);
+
+            }
+
+            //finally add this LifeEvent to the gamescreen.
+            addLifeEvent(event);
         }
-
-        addLifeEvent(event);
     }
-
 }
+
 
 empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString(const std::string name) {
     if(name=="cwave"){

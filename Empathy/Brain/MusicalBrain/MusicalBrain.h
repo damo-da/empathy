@@ -9,6 +9,7 @@
 #include "../Brain.h"
 
 namespace empathy {
+
     namespace brain {
 
         class MusicalBrain : public Brain {
@@ -18,10 +19,11 @@ namespace empathy {
              * and MusicalBrain runs! Tada!
              *
              * Usage:
-             * MusicalBrain* mBrain=new MusicalBrain();
-             * mBrain->setMusic("1As 2As,2Bs,1C");
-             * mBrain->setFrequency(1.0f);
-             * mBrain->addTo(empathy);
+             *
+             *     MusicalBrain* mBrain=new MusicalBrain();
+             *     mBrain->setMusic("1As 2As,2Bs,1C");
+             *     mBrain->setFrequency(1.0f);
+             *     mBrain->addTo(empathy);
              *
              * Music notation : <moment>,<moment>,<moment>,...
              * <moment> ::= <beat>[<space><beat>][<space><beat>]...
@@ -33,33 +35,42 @@ namespace empathy {
              */
 
         public:
+            /* Default Constructor */
             MusicalBrain();
 
         protected:
+            /* @inherit */
             virtual void runLineNumber(std::string lineID, std::string callerID) override;
 
         public:
 
-            /*Warning: not frequency of music but the beat per second frequency*/
-            GLfloat getFrequency() const {
-                return frequency;
-            }
+            /* Get the beats per second of the music notation.
+             *
+             * Warning: not frequency of music but the beat per second frequency
+             * */
+            GLfloat getFrequency() const { return frequency; }
 
-            /*Warning: not frequency of music but the beat per second frequency*/
-            void setFrequency(GLfloat frequency) {
-                MusicalBrain::frequency = frequency;
-            }
+            /* Set the beats per second of the music notation.
+             *
+             * Warning: not frequency of music but the beat per second frequency
+             * */
+            void setFrequency(GLfloat frequency) { MusicalBrain::frequency = frequency; }
 
-            /*Warning: not frequency of music but the beat per second frequency*/
+        private:
+
+            /* The beats per second of the music notation.
+             *
+             * Warning: not frequency of music but the beat per second frequency
+             * */
             GLfloat frequency;
 
         public:
 
-            /*Set the music. See the manual above for more info.*/
+            /* Set the music. See the manual above for <MusicalBrain> for more info. */
             void setMusic(std::string);
 
         private:
-            /*The music sequence, decoded from string.*/
+            /* The music sequence, decoded from string. */
             std::vector<std::vector<std::string>> sequence;
         };
     }
