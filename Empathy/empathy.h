@@ -5,8 +5,14 @@
 #ifndef EMPATHY_E_H
 #define EMPATHY_E_H
 
-
+/* The empathy namespace and classes header file.
+ * This file contains the definition for all classes and namespaces used by the platform-independent Empathy.
+ *
+ * It is recommended that all files include this header file at the beginning.
+ */
 namespace empathy{
+
+    /* Life Events run on the gamescreen to make it colorful and beautiful. */
     namespace life_event{
         class LifeEvent;
         class Collection;
@@ -23,6 +29,7 @@ namespace empathy{
         class MathWave_Sine;
     }
 
+    /* Brains gives logic to the program. They determine when and how a lifeEvent appears on the screen. */
     namespace brain{
         class Brain;
 
@@ -32,14 +39,24 @@ namespace empathy{
 
         class DummyBrain;
     };
+
+    /* It's amazing how audio sounds the best in moonlight. */
     namespace moonlight{
         class MoonLight;
     };
 
+    /* All mathematical stuffs will be placed here. And that's an order. */
     namespace pure_math{
         class Wave;
     }
 
+    /* Used to communicate within the app.
+     *
+     * Uses over Radio frequency of frquency: 98.02 Mhz.
+     * Just kidding! it communicates using emission and reception of events.
+     * To either emit or receive an event, one must override the <Subscriber> class.
+     * Also see: <Event> and <Subscriber>
+     */
     namespace radio{
         class BroadcastStation;
         class Event;
@@ -47,11 +64,15 @@ namespace empathy{
         class TimeBroadcaster;
     }
 
+    /* Empathy Utilities. */
     namespace utils{
 
     };
 
+    /* The main Empathy app. */
     class Empathy;
+
+    /* You have all the brains. And the brains manipulate lifeEvents on You. */
     class You;
 };
 
