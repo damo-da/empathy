@@ -29,6 +29,7 @@ void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
 empathy::radio::Subscriber::Subscriber() {
     id=Uniqueness::newId();
 
+    subscribers.push_back(this);
 }
 
 void empathy::radio::Subscriber::createTimeOut(GLfloat start, int id) {
