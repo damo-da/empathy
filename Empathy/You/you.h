@@ -13,45 +13,59 @@
 #include <GL/glew.h>
 
 namespace empathy {
-    class You : public empathy::radio::Subscriber {
+    class You : public radio::Subscriber {
 
     public:
-        std::vector<empathy::life_event::LifeEvent *> lifeEvents;
-
+        /* The constructor. */
         You();
 
+        /* Initialize You. And GL. */
         void init();
 
+        /* Render all lifeEvents on the screen. */
         void blit();
 
-        void addEvent(empathy::life_event::LifeEvent *);
+        /* Add a lifeEvent to the queue. */
+        void addLifeEvent(life_event::LifeEvent *);
 
-        void removeEvent(empathy::life_event::LifeEvent *);
+        /* Remove a lifeEvent from the queue. */
+        void removeLifeEvent(life_event::LifeEvent *);
 
-        void clearEvents();
+        /* Clear the lifeEvents queue. */
+        void clearLifeEvents();
 
-        long curTime;
-        float lastTime, deltaTime;
-
+        /* Calculate FPS. */
         int calcFPS(GLfloat curTime);
 
-        void passTime(GLfloat);
-
+        /* Called from the Empathy app. This comes directly from the flavor in which Empathy runs on. */
         void setTime(GLfloat);
 
-        virtual void onReceiveEvent(empathy::radio::Event &) override;
+        /* Start a brain. */
+        void addBrain(brain::Brain *);
 
-        std::vector<empathy::brain::Brain *> brains;
-
-        void addBrain(empathy::brain::Brain *);
-
+        /* The Terminator kills you. o.o */
         void terminate();
 
-    public:
-        static You *getInstance() { return instance; }
-
     private:
+        /* FPS stuffs. */
+        GLfloat lastTime, deltaTime;
+
+        /* The lifeEvent list. These lifeEvents are currently being shown on gamescreen.*/
+        std::vector<life_event::LifeEvent *> lifeEvents;
+
+        /* THe brain list. THese brains are currently running. */
+        std::vector<brain::Brain *> brains;
+
+        /* pass a certain amount of time. */
+        void passTime(GLfloat delTime);
+
+    public:
+        /* Return the lastinstance. */
+        static You *getInstance() { return instance; }
+    private:
+        /* The last instance holder. */
         static You *instance;
+
     };
 }
 #endif

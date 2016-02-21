@@ -14,11 +14,6 @@ empathy::You::You():brains()
 }
 
 
-void empathy::You::onReceiveEvent(empathy::radio::Event & event) {
-    empathy::radio::Subscriber::onReceiveEvent(event);
-
-}
-
 
 int empathy::You::calcFPS(GLfloat curTime){
 
@@ -26,20 +21,19 @@ int empathy::You::calcFPS(GLfloat curTime){
 
     lastTime=curTime;
 
-    int FPS=1/deltaTime;
+    int FPS=(int)(1.0f/deltaTime);
 //    cout<<"FPS "<<FPS<<endl;
     return FPS;
 }
 
 void empathy::You::passTime(GLfloat timeLength){
-    curTime += timeLength;
 
 //    cout<<"passing time"<<endl;
     for(int i=0;i<lifeEvents.size();i++){
         empathy::life_event::LifeEvent * event=lifeEvents[i];
 
         if(event->isDestroyed()){
-            removeEvent(event);
+            removeLifeEvent(event);
             i--;
             continue;
         }
@@ -61,16 +55,13 @@ void empathy::You::init(){
     glEnable (GL_BLEND);
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    //initializing time
-    curTime=0;
-
 }
 
-void empathy::You::addEvent(empathy::life_event::LifeEvent * e) {
+void empathy::You::addLifeEvent(empathy::life_event::LifeEvent *e) {
     e->init();
     lifeEvents.push_back(e);
 }
-void empathy::You::removeEvent(empathy::life_event::LifeEvent * e) {
+void empathy::You::removeLifeEvent(empathy::life_event::LifeEvent *e) {
 
     for (int i = 0; i < lifeEvents.size(); i++) {
         if (e->getId() == lifeEvents[i]->getId()) {
@@ -82,12 +73,12 @@ void empathy::You::removeEvent(empathy::life_event::LifeEvent * e) {
     }
 }
 
-void empathy::You::clearEvents() {
+void empathy::You::clearLifeEvents() {
 
     while(lifeEvents.size()>0){
         empathy::life_event::LifeEvent * event = lifeEvents[0];
 
-        removeEvent(event);
+        removeLifeEvent(event);
     }
 }
 
@@ -110,7 +101,7 @@ void empathy::You::addBrain(empathy::brain::Brain *brain) {
 }
 
 void empathy::You::terminate() {
-    clearEvents();
+    clearLifeEvents();
 
     for(int i=0;i<brains.size();i++){
 
