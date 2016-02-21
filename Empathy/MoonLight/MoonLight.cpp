@@ -43,3 +43,7 @@ void empathy::moonlight::MoonLight::onReceiveEvent(empathy::radio::Event &event)
 void empathy::moonlight::MoonLight::terminate() {
 
 }
+
+void empathy::moonlight::MoonLight::playKeyboard(std::string key) {
+
+}

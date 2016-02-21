@@ -20,11 +20,11 @@ class DEmpathy : public empathy::Empathy{
 public:
     DEmpathy();
 
-public:
-	GLFWwindow * window;
-
 	//Called by the user. Begins the process of the app
 	virtual void run();
+
+    static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
+protected:
 
 	//Self explanatory
 	virtual void init() override;
@@ -32,15 +32,15 @@ public:
 	//Initialize the desktop window manager: GLFW3
 	void initGlfw();
 
-	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
-
-
-private:
-    virtual void terminate() override;
+    virtual void flush() override;
 
     virtual GLfloat getTime() override;
 
+private:
+
     static DEmpathy * instance;
+
+    GLFWwindow * window;
 };
 
 

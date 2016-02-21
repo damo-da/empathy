@@ -16,7 +16,7 @@ void DEmpathy::run(){
 
         glfwSwapBuffers(window);
     }
-    terminate();
+
     flush();
 
     cout<<"\n\n--------------Program End-------------\n\n"<<endl;
@@ -58,7 +58,7 @@ void DEmpathy::init(){
     setMoonLight(new DoonLight());
     setScreenSize(SC_SIZE_X, SC_SIZE_Y);
 
-    Empathy::init();
+    empathy::Empathy::init();
 }
 
 
@@ -89,7 +89,9 @@ void DEmpathy::initGlfw() {
 
 DEmpathy *DEmpathy::instance=nullptr;
 
-void DEmpathy::terminate() {
+void DEmpathy::flush() {
+    empathy::Empathy::flush();
+
     // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
 }

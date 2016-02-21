@@ -32,3 +32,15 @@ void empathy::pure_math::Wave::decodeJson(std::string key, cJSON *value) {
         setInitialPhase(value->valuedouble);
     }
 }
+
+GLfloat empathy::pure_math::Wave::getAmplitudeAt(GLfloat distance) const {
+
+    GLfloat time = getTime() - distance / getWaveSpeed();
+
+    return (GLfloat)(
+            getAmplitude() * //maximum amplitude
+            sin(getAngularMomentum() * time + getInitialPhase()) * //its current position in the sinusoidal
+            exp(-getDampingConst() * distance)//because of damping
+    );
+
+}

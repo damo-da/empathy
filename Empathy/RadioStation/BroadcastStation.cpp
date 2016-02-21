@@ -34,9 +34,8 @@ empathy::radio::BroadcastStation::BroadcastStation():
         vipSubscribers(),
         channels()
 {
-    instance=this;
 }
-empathy::radio::BroadcastStation * empathy::radio::BroadcastStation::instance= nullptr;
+empathy::radio::BroadcastStation * empathy::radio::BroadcastStation::instance= new empathy::radio::BroadcastStation();
 
 void empathy::radio::BroadcastStation::dispatch() {
     for (int i=0;i<instance->events.size();i++){

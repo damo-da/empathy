@@ -30,12 +30,8 @@ void empathy::Empathy::init() {
 
     initYou();
 
-
-    std::vector<empathy::brain::Brain *> brains=this->getBrains();
-    for(int i=0;i<brains.size();i++){
-        you->addBrain(brains[i]);
-    }
-    this->moonLight->init();
+    if(this->moonLight != nullptr)
+        this->moonLight->init();
 }
 void empathy::Empathy::initGlew(){
 //	cout<<"initing glew"<<endl;
@@ -61,6 +57,11 @@ void empathy::Empathy::initGL(){
 void empathy::Empathy::initYou(){
     you=new empathy::You();
     you->init();
+
+    std::vector<empathy::brain::Brain *> brains=this->getBrains();
+    for(int i=0;i<brains.size();i++){
+        you->addBrain(brains[i]);
+    }
 }
 
 
@@ -69,9 +70,6 @@ void empathy::Empathy::setScreenSize(int x,int y){
     sc_size_x=x;
     sc_size_y=y;
 }
-
-
-empathy::radio::BroadcastStation empathy::Empathy::broadcastStation= empathy::radio::BroadcastStation();
 
 void empathy::Empathy::loop() {
 
