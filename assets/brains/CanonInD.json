@@ -1,6 +1,8 @@
 {
   "author":"Damodar Dahal",
   "version":0.0,
+  "title":"Canon in D (Pachelbel)",
+  "copyright":"Creative Commons",
   "steps": {
     "begin":[{"type":"goto","stepID":"1","in":0.5}],
 
@@ -24,7 +26,7 @@
         "offsetX":0.0,
         "offsetY":0,
         "length":0.15,
-        "speed":0.17,
+        "speed":0.19,
         "colorRed":0.5,
         "colorGreen":0.2,
         "colorBlue":0.1,
@@ -35,6 +37,10 @@
         "sine_thetaOffset":-1.57
 
       },
+      {"type":"goto","stepID":"heartBeat","in":0.0}
+    ],
+    "heartBeat":[
+
       {
         "type":"create",
         "create":"mathwave_sinc",
@@ -50,7 +56,6 @@
         "period":6.5,
         "zoomY":0.3,
         "sine_thetaOffset":-1.15
-
       }
     ],
     "paleBlueDot1":[
@@ -71,151 +76,328 @@
         "sine_thetaOffset":1.15
       }
     ],
+    "artisticLineDown":[
+      {
+        "type":"create",
+        "create":"mathwave_line",
+        "rotationAngle":-1.57,
+        "offsetY":0.9,
+        "length":0.2,
+        "head":-0.9,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "artisticLineDown2":[
+      {
+        "type":"create",
+        "create":"mathwave_line",
+        "rotationAngle":-1.57,
+        "offsetY":0.9,
+        "length":0.2,
+        "speed":0.5,
+        "head":-0.9,
+        "colorRed":1.0,
+        "colorGreen":0.0,
+        "colorBlue":1.0
+      }
+    ],
+    "artisticSineWave":[
+    {
+        "type":"create",
+        "create":"mathwave_sine",
+        "period":0.75,
+        "offsetY":-2.8,
+        "zoomY":0.3,
+        "speed":1,
+        "length":0.2,
+        "head":-0.9,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "extendedBaseWave":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.8,
+        "centerY":-0.8
+      }
+    ],
+    "extendedBaseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":-0.4
+      }
+    ],
+    "extendedBaseWave3":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":1.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":0.6
+      }
+    ],
+    "extendedBaseWave4":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":0.2,
+        "colorGreen":1.0,
+        "initialPhase":1.0,
+        "damping":10.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.5,
+        "centerY":-0.6
+      }
+    ],
+    "extendedBaseWave5":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorBlue":0.5,
+        "colorGreen":0.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":0.3
+      }
+    ],
+    "baseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.0,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paraCircle1":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle2","in":2.3}
+    ],
+    "paraCircle2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle3","in":2.5}
+    ],
+    "paraCircle3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
       {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"paleBlueDot","in":0.0},
-      {"type":"goto","stepID":"2","in":0.8}
+      {"type":"goto","stepID":"artisticLineDown","in":0.0},
+      {"type":"goto","stepID":"2","in":0.7500001}
     ],
     "2":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"3","in":0.8}
+      {"type":"goto","stepID":"3","in":0.7500001}
     ],
     "3":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
-      {"type":"goto","stepID":"4","in":0.8}
+      {"type":"goto","stepID":"4","in":0.7500001}
     ],
     "4":[
-      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"5","in":0.8}
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3F#"},
+      {"type":"goto","stepID":"5","in":0.7500001}
     ],
     "5":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"6","in":0.8}
+      {"type":"goto","stepID":"6","in":0.7500001}
     ],
     "6":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
-      {"type":"goto","stepID":"7","in":0.8}
+      {"type":"goto","stepID":"7","in":0.7500001}
     ],
     "7":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"8","in":0.8}
+      {"type":"goto","stepID":"8","in":0.7500001}
     ],
     "8":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"9","in":0.8}
+      {"type":"goto","stepID":"9","in":0.7500001}
     ],
     "9":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"10","in":0.8}
+      {"type":"goto","stepID":"10","in":0.7500001}
     ],
     "10":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
-      {"type":"goto","stepID":"11","in":0.8}
+      {"type":"goto","stepID":"11","in":0.7500001}
     ],
     "11":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"12","in":0.8}
+      {"type":"goto","stepID":"12","in":0.7500001}
     ],
     "12":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
-      {"type":"goto","stepID":"13","in":0.8}
+      {"type":"goto","stepID":"13","in":0.7500001}
     ],
     "13":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"14","in":0.8}
+      {"type":"goto","stepID":"14","in":0.7500001}
     ],
     "14":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
-      {"type":"goto","stepID":"15","in":0.8}
+      {"type":"goto","stepID":"15","in":0.7500001}
     ],
     "15":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
-      {"type":"goto","stepID":"16","in":0.8}
+      {"type":"goto","stepID":"16","in":0.7500001}
     ],
     "16":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
-      {"type":"goto","stepID":"17","in":0.8}
+      {"type":"goto","stepID":"17","in":0.7500001}
     ],
     "17":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type":"goto","stepID":"paleBlueDot1","in":0.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"18","in":0.8}
+      {"type":"goto","stepID":"18","in":0.7500001}
     ],
     "18":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"19","in":0.8}
+      {"type":"goto","stepID":"19","in":0.7500001}
     ],
     "19":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
-      {"type":"goto","stepID":"20","in":0.8}
+      {"type":"goto","stepID":"20","in":0.7500001}
     ],
     "20":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"21","in":0.8}
+      {"type":"goto","stepID":"21","in":0.7500001}
     ],
     "21":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"22","in":0.8}
+      {"type":"goto","stepID":"22","in":0.7500001}
     ],
     "22":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
-      {"type":"goto","stepID":"23","in":0.8}
+      {"type":"goto","stepID":"23","in":0.7500001}
     ],
     "23":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"24","in":0.8}
+      {"type":"goto","stepID":"24","in":0.7500001}
     ],
     "24":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
-      {"type":"goto","stepID":"25","in":0.8}
+      {"type":"goto","stepID":"25","in":0.7500001}
     ],
     "25":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"26","in":0.8}
+      {"type":"goto","stepID":"26","in":0.7500001}
     ],
     "26":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"27","in":0.8}
+      {"type":"goto","stepID":"27","in":0.7500001}
     ],
     "27":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
-      {"type":"goto","stepID":"28","in":0.8}
+      {"type":"goto","stepID":"28","in":0.7500001}
     ],
     "28":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"29","in":0.8}
+      {"type":"goto","stepID":"29","in":0.7500001}
     ],
     "29":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"artisticSineWave","in":0.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"30","in":0.8}
+      {"type":"goto","stepID":"30","in":0.7500001}
     ],
     "30":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
-      {"type":"goto","stepID":"31","in":0.8}
+      {"type":"goto","stepID":"31","in":0.7500001}
     ],
     "31":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"32","in":0.8}
+      {"type":"goto","stepID":"32","in":0.7500001}
     ],
     "32":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"33","in":0.8}
+      {"type":"goto","stepID":"33","in":0.7500001}
     ],
 
 
@@ -228,149 +410,150 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
       {"type":"goto","stepID":"paleBlueDot","in":0.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"34","in":0.8}
+      {"type":"goto","stepID":"34","in":0.70001}
     ],
     "34":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"35","in":0.8}
+      {"type":"goto","stepID":"35","in":0.70001}
     ],
     "35":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
-      {"type":"goto","stepID":"36","in":0.8}
+      {"type":"goto","stepID":"36","in":0.70001}
     ],
     "36":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"37","in":0.8}
+      {"type":"goto","stepID":"37","in":0.70001}
     ],
     "37":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"38","in":0.8}
+      {"type":"goto","stepID":"38","in":0.70001}
     ],
     "38":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
-      {"type":"goto","stepID":"39","in":0.8}
+      {"type":"goto","stepID":"39","in":0.70001}
     ],
     "39":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"40","in":0.8}
+      {"type":"goto","stepID":"40","in":0.70001}
     ],
     "40":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"41","in":0.8}
+      {"type":"goto","stepID":"41","in":0.70001}
     ],
     "41":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"42","in":0.8}
+      {"type":"goto","stepID":"42","in":0.70001}
     ],
     "42":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
-      {"type":"goto","stepID":"43","in":0.8}
+      {"type":"goto","stepID":"43","in":0.70001}
     ],
     "43":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"44","in":0.8}
+      {"type":"goto","stepID":"44","in":0.70001}
     ],
     "44":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
-      {"type":"goto","stepID":"45","in":0.8}
+      {"type":"goto","stepID":"45","in":0.70001}
     ],
     "45":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"46","in":0.8}
+      {"type":"goto","stepID":"46","in":0.70001}
     ],
     "46":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
-      {"type":"goto","stepID":"47","in":0.8}
+      {"type":"goto","stepID":"47","in":0.70001}
     ],
     "47":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
-      {"type":"goto","stepID":"48","in":0.8}
+      {"type":"goto","stepID":"48","in":0.70001}
     ],
     "48":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"49","in":0.8}
+      {"type":"goto","stepID":"49","in":0.70001}
     ],
     "49":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave","in":0.0},
       {"type":"goto","stepID":"paleBlueDot1","in":0.0},
-      {"type":"goto","stepID":"50","in":0.8}
+      {"type":"goto","stepID":"50","in":0.70001}
     ],
     "50":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"51","in":0.8}
+      {"type":"goto","stepID":"51","in":0.70001}
     ],
     "51":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
-      {"type":"goto","stepID":"52","in":0.8}
+      {"type":"goto","stepID":"52","in":0.70001}
     ],
     "52":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"53","in":0.8}
+      {"type":"goto","stepID":"53","in":0.70001}
     ],
     "53":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"54","in":0.8}
+      {"type":"goto","stepID":"54","in":0.70001}
     ],
     "54":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
-      {"type":"goto","stepID":"55","in":0.8}
+      {"type":"goto","stepID":"55","in":0.70001}
     ],
     "55":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"56","in":0.8}
+      {"type":"goto","stepID":"56","in":0.70001}
     ],
     "56":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
-      {"type":"goto","stepID":"57","in":0.8}
+      {"type":"goto","stepID":"57","in":0.70001}
     ],
     "57":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"58","in":0.8}
+      {"type":"goto","stepID":"58","in":0.70001}
     ],
     "58":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
-      {"type":"goto","stepID":"59","in":0.8}
+      {"type":"goto","stepID":"59","in":0.70001}
     ],
     "59":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
-      {"type":"goto","stepID":"60","in":0.8}
+      {"type":"goto","stepID":"60","in":0.70001}
     ],
     "60":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"61","in":0.8}
+      {"type":"goto","stepID":"61","in":0.70001}
     ],
     "61":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"62","in":0.8}
+      {"type":"goto","stepID":"62","in":0.70001}
     ],
     "62":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
-      {"type":"goto","stepID":"63","in":0.8}
+      {"type":"goto","stepID":"63","in":0.70001}
     ],
     "63":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"64","in":0.8}
+      {"type":"goto","stepID":"64","in":0.70001}
     ],
 
 
@@ -380,6 +563,8 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+
+      {"type":"goto","stepID":"paraCircle1","in":0.0},
       {"type":"goto","stepID":"65","in":0.600001}
     ],
     "65":[
@@ -394,6 +579,7 @@
     "67":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"artisticLineDown2","in":0.0},
       {"type":"goto","stepID":"68","in":0.600001}
     ],
     "68":[
@@ -451,6 +637,7 @@
     "78":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"artisticSineWave","in":0.0},
       {"type":"goto","stepID":"79","in":0.600001}
     ],
     "79":[
@@ -548,16 +735,20 @@
     "96":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
-      {"type":"goto","stepID":"97","in":0.600001}
+      {"type":"goto","stepID":"extendedBaseWave2","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
+      {"type":"goto","stepID":"97","in":0.500001}
     ],
     "97":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"98","in":0.600001}
+      {"type":"goto","stepID":"98","in":0.300001}
     ],
     "98":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"99","in":0.600001}
+      {"type":"goto","stepID":"99","in":0.250001}
     ],
     "99":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
@@ -567,510 +758,524 @@
     "100":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"101","in":0.600001}
+      {"type":"goto","stepID":"101","in":0.300001}
     ],
     "101":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"102","in":0.600001}
+      {"type":"goto","stepID":"102","in":0.300001}
     ],
     "102":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
-      {"type":"goto","stepID":"103","in":0.600001}
+      {"type":"goto","stepID":"103","in":0.300001}
     ],
     "103":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"104","in":0.600001}
+      {"type":"goto","stepID":"104","in":0.300001}
     ],
     "104":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"105","in":0.600001}
+      {"type":"goto","stepID":"105","in":0.300001}
     ],
     "105":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"106","in":0.600001}
+      {"type":"goto","stepID":"106","in":0.300001}
     ],
     "106":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"107","in":0.600001}
+      {"type":"goto","stepID":"107","in":0.300001}
     ],
     "107":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"108","in":0.600001}
+      {"type":"goto","stepID":"108","in":0.300001}
     ],
     "108":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"109","in":0.600001}
+      {"type":"goto","stepID":"109","in":0.300001}
     ],
     "109":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"110","in":0.600001}
+      {"type":"goto","stepID":"110","in":0.300001}
     ],
     "110":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"extendedBaseWave2","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
       {"type":"goto","stepID":"111","in":0.600001}
     ],
     "111":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"112","in":0.600001}
+      {"type":"goto","stepID":"112","in":0.300001}
     ],
     "112":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"113","in":0.600001}
+      {"type":"goto","stepID":"113","in":0.300001}
     ],
     "113":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"114","in":0.600001}
+      {"type":"goto","stepID":"114","in":0.300001}
     ],
     "114":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"115","in":0.600001}
+      {"type":"goto","stepID":"115","in":0.300001}
     ],
     "115":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"116","in":0.600001}
+      {"type":"goto","stepID":"116","in":0.300001}
     ],
     "116":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"117","in":0.600001}
+      {"type":"goto","stepID":"117","in":0.300001}
     ],
     "117":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"118","in":0.600001}
+      {"type":"goto","stepID":"118","in":0.300001}
     ],
     "118":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"119","in":0.600001}
+      {"type":"goto","stepID":"119","in":0.300001}
     ],
     "119":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"120","in":0.600001}
+      {"type":"goto","stepID":"120","in":0.300001}
     ],
     "120":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"121","in":0.600001}
+      {"type":"goto","stepID":"121","in":0.300001}
     ],
     "121":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"122","in":0.600001}
+      {"type":"goto","stepID":"122","in":0.300001}
     ],
     "122":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"123","in":0.600001}
+      {"type":"goto","stepID":"123","in":0.300001}
     ],
     "123":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"124","in":0.600001}
+      {"type":"goto","stepID":"124","in":0.300001}
     ],
     "124":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"125","in":0.600001}
+      {"type":"goto","stepID":"125","in":0.300001}
     ],
     "125":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"126","in":0.600001}
+      {"type":"goto","stepID":"126","in":0.300001}
     ],
     "126":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"127","in":0.600001}
+      {"type":"goto","stepID":"127","in":0.300001}
     ],
     "127":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"128","in":0.600001}
+      {"type":"goto","stepID":"128","in":0.300001}
     ],
     "128":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"129","in":0.600001}
+      {"type":"goto","stepID":"129","in":0.300001}
     ],
     "129":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
-      {"type":"goto","stepID":"130","in":0.600001}
+      {"type":"goto","stepID":"130","in":0.300001}
     ],
     "130":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
-      {"type":"goto","stepID":"131","in":0.600001}
+      {"type":"goto","stepID":"131","in":0.300001}
     ],
     "131":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"132","in":0.600001}
+      {"type":"goto","stepID":"132","in":0.300001}
     ],
     "132":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
-      {"type":"goto","stepID":"133","in":0.600001}
+      {"type":"goto","stepID":"133","in":0.300001}
     ],
     "133":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
-      {"type":"goto","stepID":"134","in":0.600001}
+      {"type":"goto","stepID":"134","in":0.300001}
     ],
     "134":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
-      {"type":"goto","stepID":"135","in":0.600001}
+      {"type":"goto","stepID":"135","in":0.300001}
     ],
     "135":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"136","in":0.600001}
+      {"type":"goto","stepID":"136","in":0.300001}
     ],
     "136":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"137","in":0.600001}
+      {"type":"goto","stepID":"heartBeat","in":0.0},
+      {"type":"goto","stepID":"137","in":0.300001}
     ],
     "137":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"138","in":0.600001}
+      {"type":"goto","stepID":"138","in":0.300001}
     ],
     "138":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"139","in":0.600001}
+      {"type":"goto","stepID":"139","in":0.300001}
     ],
     "139":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"140","in":0.600001}
+      {"type":"goto","stepID":"140","in":0.300001}
     ],
     "140":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"141","in":0.600001}
+      {"type":"goto","stepID":"141","in":0.300001}
     ],
     "141":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"142","in":0.600001}
+      {"type":"goto","stepID":"142","in":0.300001}
     ],
     "142":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"143","in":0.600001}
+      {"type":"goto","stepID":"143","in":0.300001}
     ],
     "143":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"144","in":0.600001}
+      {"type":"goto","stepID":"144","in":0.300001}
     ],
     "144":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"145","in":0.600001}
+      {"type":"goto","stepID":"145","in":0.300001}
     ],
     "145":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"146","in":0.600001}
+      {"type":"goto","stepID":"146","in":0.300001}
     ],
     "146":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"147","in":0.600001}
+      {"type":"goto","stepID":"147","in":0.300001}
     ],
     "147":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"148","in":0.600001}
+      {"type":"goto","stepID":"148","in":0.300001}
     ],
     "148":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"149","in":0.600001}
+      {"type":"goto","stepID":"149","in":0.300001}
     ],
     "149":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"150","in":0.600001}
+      {"type":"goto","stepID":"150","in":0.300001}
     ],
     "150":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"151","in":0.600001}
+      {"type":"goto","stepID":"151","in":0.300001}
     ],
     "151":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"152","in":0.600001}
+      {"type":"goto","stepID":"152","in":0.300001}
     ],
     "152":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"153","in":0.600001}
+      {"type":"goto","stepID":"153","in":0.300001}
     ],
     "153":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
-      {"type":"goto","stepID":"154","in":0.600001}
+      {"type":"goto","stepID":"extendedBaseWave2","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
+      {"type":"goto","stepID":"154","in":0.500001}
     ],
     "154":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"155","in":0.600001}
+      {"type":"goto","stepID":"155","in":0.300001}
     ],
     "155":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"156","in":0.600001}
+      {"type":"goto","stepID":"156","in":0.300001}
     ],
     "156":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
-      {"type":"goto","stepID":"157","in":0.600001}
+      {"type":"goto","stepID":"157","in":0.500001}
     ],
     "157":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"158","in":0.600001}
+      {"type":"goto","stepID":"158","in":0.300001}
     ],
     "158":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"159","in":0.600001}
+      {"type":"goto","stepID":"159","in":0.300001}
     ],
     "159":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
-      {"type":"goto","stepID":"160","in":0.600001}
+      {"type":"goto","stepID":"160","in":0.300001}
     ],
     "160":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"161","in":0.600001}
+      {"type":"goto","stepID":"161","in":0.300001}
     ],
     "161":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"162","in":0.600001}
+      {"type":"goto","stepID":"162","in":0.300001}
     ],
     "162":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"163","in":0.600001}
+      {"type":"goto","stepID":"163","in":0.300001}
     ],
     "163":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"164","in":0.600001}
+      {"type":"goto","stepID":"164","in":0.300001}
     ],
     "164":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"165","in":0.600001}
+      {"type":"goto","stepID":"165","in":0.300001}
     ],
     "165":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"166","in":0.600001}
+      {"type":"goto","stepID":"166","in":0.300001}
     ],
     "166":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"167","in":0.600001}
+      {"type":"goto","stepID":"167","in":0.300001}
     ],
     "167":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"extendedBaseWave2","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
       {"type":"goto","stepID":"168","in":0.600001}
     ],
     "168":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"169","in":0.600001}
+      {"type":"goto","stepID":"169","in":0.300001}
     ],
     "169":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"170","in":0.600001}
+      {"type":"goto","stepID":"170","in":0.300001}
     ],
     "170":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"171","in":0.600001}
+      {"type":"goto","stepID":"171","in":0.300001}
     ],
     "171":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"172","in":0.600001}
+      {"type":"goto","stepID":"172","in":0.300001}
     ],
     "172":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"173","in":0.600001}
+      {"type":"goto","stepID":"173","in":0.300001}
     ],
     "173":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"174","in":0.600001}
+      {"type":"goto","stepID":"174","in":0.300001}
     ],
     "174":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"175","in":0.600001}
+      {"type":"goto","stepID":"175","in":0.300001}
     ],
     "175":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"176","in":0.600001}
+      {"type":"goto","stepID":"176","in":0.300001}
     ],
     "176":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"177","in":0.600001}
+      {"type":"goto","stepID":"177","in":0.300001}
     ],
     "177":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"178","in":0.600001}
+      {"type":"goto","stepID":"178","in":0.300001}
     ],
     "178":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"179","in":0.600001}
+      {"type":"goto","stepID":"179","in":0.300001}
     ],
     "179":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"180","in":0.600001}
+      {"type":"goto","stepID":"180","in":0.300001}
     ],
     "180":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"181","in":0.600001}
+      {"type":"goto","stepID":"181","in":0.300001}
     ],
     "181":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"182","in":0.600001}
+      {"type":"goto","stepID":"182","in":0.300001}
     ],
     "182":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"183","in":0.600001}
+      {"type":"goto","stepID":"183","in":0.300001}
     ],
     "183":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"184","in":0.600001}
+      {"type":"goto","stepID":"184","in":0.300001}
     ],
     "184":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"185","in":0.600001}
+      {"type":"goto","stepID":"185","in":0.300001}
     ],
     "185":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"186","in":0.600001}
+      {"type":"goto","stepID":"186","in":0.300001}
     ],
     "186":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"187","in":0.600001}
+      {"type":"goto","stepID":"187","in":0.300001}
     ],
     "187":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"188","in":0.600001}
+      {"type":"goto","stepID":"188","in":0.300001}
     ],
     "188":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"189","in":0.600001}
+      {"type":"goto","stepID":"189","in":0.300001}
     ],
     "189":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
-      {"type":"goto","stepID":"190","in":0.600001}
+      {"type":"goto","stepID":"190","in":0.310001}
     ],
     "190":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"191","in":0.600001}
+      {"type":"goto","stepID":"191","in":0.310001}
     ],
     "191":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"192","in":0.600001}
+      {"type":"goto","stepID":"192","in":0.310001}
     ],
     "192":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"193","in":0.600001}
+      {"type":"goto","stepID":"193","in":0.320001}
     ],
     "193":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"194","in":0.600001}
+      {"type":"goto","stepID":"heartBeat","in":0.0},
+      {"type":"goto","stepID":"194","in":0.320001}
     ],
     "194":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"195","in":0.600001}
+      {"type":"goto","stepID":"195","in":0.320001}
     ],
     "195":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"196","in":0.600001}
+      {"type":"goto","stepID":"196","in":0.330001}
     ],
     "196":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"197","in":0.600001}
+      {"type":"goto","stepID":"197","in":0.330001}
     ],
     "197":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"198","in":0.600001}
+      {"type":"goto","stepID":"198","in":0.330001}
     ],
     "198":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"199","in":0.600001}
+      {"type":"goto","stepID":"199","in":0.340001}
     ],
     "199":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"200","in":0.600001}
+      {"type":"goto","stepID":"200","in":0.340001}
     ],
     "200":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"201","in":0.600001}
+      {"type":"goto","stepID":"201","in":0.340001}
     ],
     "201":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"202","in":0.600001}
+      {"type":"goto","stepID":"202","in":0.350001}
     ],
     "202":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"203","in":0.600001}
+      {"type":"goto","stepID":"203","in":0.350001}
     ],
     "203":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"204","in":0.600001}
+      {"type":"goto","stepID":"204","in":0.350001}
     ],
     "204":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"205","in":0.600001}
+      {"type":"goto","stepID":"205","in":0.400001}
     ],
     "205":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"206","in":0.600001}
+      {"type":"goto","stepID":"206","in":0.510001}
     ],
     "206":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"1","in":0.600001}
+      {"type":"goto","stepID":"1","in":0.560001}
     ]
 
 

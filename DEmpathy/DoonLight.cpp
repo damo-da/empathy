@@ -56,7 +56,7 @@ void DoonLight::initIrr() {
         printf("Could not startup engine\n");
     }
 
-//    engine->setSoundVolume(0.05f);
+    engine->setSoundVolume(0.5f);
 }
 
 
@@ -65,20 +65,22 @@ std::string DoonLight::KEYBOARD_BASE= DoonLight::BASE + "keyboard/";
 
 void DoonLight::playKeyboard(string key) {
     int pitch=str_to_int(key);
-    bool sharp=str_has_character(key,'s');
-
+    bool sharp=str_has_character(key,'s') || str_has_character(key,'#');
 
     std::string main=str_to_lower(
             str_remove_character(
-                    str_remove_character(key, int_to_single_char(pitch))
-                    ,'s'));
+                    str_remove_character(
+                            str_remove_character(key, int_to_single_char(pitch))
+                            ,'s')
+            ,'#'));
+
     pitch -= 1;
     std::string final=main;
     if(pitch>0)final += int_to_str(pitch);
     if(sharp){
         final="#"+final;
     }
-    cout<<"Playing "<<final<<endl;
+//    cout<<"Playing "<<final<<endl;
     try{
 //        std::string file=KEYBOARD_BASE+key+".ogg";
         std::string file=KEYBOARD_BASE+"music/"+final+".mp3";
