@@ -217,6 +217,11 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
       {"type":"goto","stepID":"33","in":0.8}
     ],
+
+
+
+
+
     "33":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
@@ -365,8 +370,709 @@
     ],
     "63":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
-      {"type":"goto","stepID":"1","in":0.8}
+      {"type":"goto","stepID":"64","in":0.8}
+    ],
+
+
+
+
+    "64":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"65","in":0.600001}
+    ],
+    "65":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"66","in":0.600001}
+    ],
+    "66":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type":"goto","stepID":"67","in":0.600001}
+    ],
+    "67":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"68","in":0.600001}
+    ],
+    "68":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"69","in":0.600001}
+    ],
+    "69":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"70","in":0.600001}
+    ],
+    "70":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"71","in":0.600001}
+    ],
+    "71":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"72","in":0.600001}
+    ],
+    "72":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"73","in":0.600001}
+    ],
+    "73":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"74","in":0.600001}
+    ],
+    "74":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"75","in":0.600001}
+    ],
+    "75":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"76","in":0.600001}
+    ],
+    "76":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"77","in":0.600001}
+    ],
+    "77":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"78","in":0.600001}
+    ],
+    "78":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"79","in":0.600001}
+    ],
+    "79":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4B"},
+      {"type":"goto","stepID":"80","in":0.600001}
+    ],
+    "80":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"81","in":0.600001}
+    ],
+    "81":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"82","in":0.600001}
+    ],
+    "82":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"83","in":0.600001}
+    ],
+    "83":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"84","in":0.600001}
+    ],
+    "84":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"85","in":0.600001}
+    ],
+    "85":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"86","in":0.600001}
+    ],
+    "86":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"87","in":0.600001}
+    ],
+    "87":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"88","in":0.600001}
+    ],
+    "88":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"89","in":0.600001}
+    ],
+    "89":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"90","in":0.600001}
+    ],
+    "90":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"91","in":0.600001}
+    ],
+    "91":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"92","in":0.600001}
+    ],
+    "92":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"93","in":0.600001}
+    ],
+    "93":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type":"goto","stepID":"94","in":0.600001}
+    ],
+    "94":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"95","in":0.600001}
+    ],
+    "95":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type":"goto","stepID":"96","in":0.600001}
+    ],
+
+
+
+
+    "96":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"97","in":0.600001}
+    ],
+    "97":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"98","in":0.600001}
+    ],
+    "98":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"99","in":0.600001}
+    ],
+    "99":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"100","in":0.600001}
+    ],
+    "100":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"101","in":0.600001}
+    ],
+    "101":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"102","in":0.600001}
+    ],
+    "102":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"103","in":0.600001}
+    ],
+    "103":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"104","in":0.600001}
+    ],
+    "104":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"105","in":0.600001}
+    ],
+    "105":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"106","in":0.600001}
+    ],
+    "106":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"107","in":0.600001}
+    ],
+    "107":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"108","in":0.600001}
+    ],
+    "108":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"109","in":0.600001}
+    ],
+    "109":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"110","in":0.600001}
+    ],
+    "110":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"111","in":0.600001}
+    ],
+    "111":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"112","in":0.600001}
+    ],
+    "112":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"113","in":0.600001}
+    ],
+    "113":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"114","in":0.600001}
+    ],
+    "114":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"115","in":0.600001}
+    ],
+    "115":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"116","in":0.600001}
+    ],
+    "116":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"117","in":0.600001}
+    ],
+    "117":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"118","in":0.600001}
+    ],
+    "118":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"119","in":0.600001}
+    ],
+    "119":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"120","in":0.600001}
+    ],
+    "120":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"121","in":0.600001}
+    ],
+    "121":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"122","in":0.600001}
+    ],
+    "122":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"123","in":0.600001}
+    ],
+    "123":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"124","in":0.600001}
+    ],
+    "124":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"125","in":0.600001}
+    ],
+    "125":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"126","in":0.600001}
+    ],
+    "126":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"127","in":0.600001}
+    ],
+    "127":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"128","in":0.600001}
+    ],
+    "128":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"129","in":0.600001}
+    ],
+    "129":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type":"goto","stepID":"130","in":0.600001}
+    ],
+    "130":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type":"goto","stepID":"131","in":0.600001}
+    ],
+    "131":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"132","in":0.600001}
+    ],
+    "132":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type":"goto","stepID":"133","in":0.600001}
+    ],
+    "133":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type":"goto","stepID":"134","in":0.600001}
+    ],
+    "134":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3E"},
+      {"type":"goto","stepID":"135","in":0.600001}
+    ],
+    "135":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"136","in":0.600001}
+    ],
+    "136":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"137","in":0.600001}
+    ],
+    "137":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"138","in":0.600001}
+    ],
+    "138":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"139","in":0.600001}
+    ],
+    "139":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"140","in":0.600001}
+    ],
+    "140":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"141","in":0.600001}
+    ],
+    "141":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"142","in":0.600001}
+    ],
+    "142":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"143","in":0.600001}
+    ],
+    "143":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"144","in":0.600001}
+    ],
+    "144":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"145","in":0.600001}
+    ],
+    "145":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"146","in":0.600001}
+    ],
+    "146":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"147","in":0.600001}
+    ],
+    "147":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"148","in":0.600001}
+    ],
+    "148":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"149","in":0.600001}
+    ],
+    "149":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"150","in":0.600001}
+    ],
+    "150":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"151","in":0.600001}
+    ],
+    "151":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"152","in":0.600001}
+    ],
+    "152":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"153","in":0.600001}
+    ],
+    "153":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"154","in":0.600001}
+    ],
+    "154":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"155","in":0.600001}
+    ],
+    "155":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"156","in":0.600001}
+    ],
+    "156":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"157","in":0.600001}
+    ],
+    "157":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"158","in":0.600001}
+    ],
+    "158":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"159","in":0.600001}
+    ],
+    "159":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
+      {"type":"goto","stepID":"160","in":0.600001}
+    ],
+    "160":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"161","in":0.600001}
+    ],
+    "161":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"162","in":0.600001}
+    ],
+    "162":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"163","in":0.600001}
+    ],
+    "163":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"164","in":0.600001}
+    ],
+    "164":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"165","in":0.600001}
+    ],
+    "165":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"166","in":0.600001}
+    ],
+    "166":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"167","in":0.600001}
+    ],
+    "167":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"168","in":0.600001}
+    ],
+    "168":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"169","in":0.600001}
+    ],
+    "169":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"170","in":0.600001}
+    ],
+    "170":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"171","in":0.600001}
+    ],
+    "171":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"172","in":0.600001}
+    ],
+    "172":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"173","in":0.600001}
+    ],
+    "173":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"174","in":0.600001}
+    ],
+    "174":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"175","in":0.600001}
+    ],
+    "175":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"176","in":0.600001}
+    ],
+    "176":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"177","in":0.600001}
+    ],
+    "177":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"178","in":0.600001}
+    ],
+    "178":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"179","in":0.600001}
+    ],
+    "179":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"180","in":0.600001}
+    ],
+    "180":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"181","in":0.600001}
+    ],
+    "181":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"182","in":0.600001}
+    ],
+    "182":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"183","in":0.600001}
+    ],
+    "183":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Cs"},
+      {"type":"goto","stepID":"184","in":0.600001}
+    ],
+    "184":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"185","in":0.600001}
+    ],
+    "185":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"186","in":0.600001}
+    ],
+    "186":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"187","in":0.600001}
+    ],
+    "187":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"188","in":0.600001}
+    ],
+    "188":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"189","in":0.600001}
+    ],
+    "189":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"goto","stepID":"190","in":0.600001}
+    ],
+    "190":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"191","in":0.600001}
+    ],
+    "191":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"192","in":0.600001}
+    ],
+    "192":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"193","in":0.600001}
+    ],
+    "193":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"194","in":0.600001}
+    ],
+    "194":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"195","in":0.600001}
+    ],
+    "195":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"196","in":0.600001}
+    ],
+    "196":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2G"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"197","in":0.600001}
+    ],
+    "197":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"198","in":0.600001}
+    ],
+    "198":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"199","in":0.600001}
+    ],
+    "199":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"200","in":0.600001}
+    ],
+    "200":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"201","in":0.600001}
+    ],
+    "201":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
+      {"type":"goto","stepID":"202","in":0.600001}
+    ],
+    "202":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"203","in":0.600001}
+    ],
+    "203":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"204","in":0.600001}
+    ],
+    "204":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
+      {"type":"goto","stepID":"205","in":0.600001}
+    ],
+    "205":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2E"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"206","in":0.600001}
+    ],
+    "206":[
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"goto","stepID":"1","in":0.600001}
     ]
-    
+
+
   }
 }
