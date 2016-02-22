@@ -38,4 +38,14 @@ int str_to_int(std::string string);
 std::string int_to_str(int integer);
 
 
+std::string str_replace(const std::string str, const char from, const char to);
+
+std::string str_remove_character(const std::string str,const char mChar);
+
+bool str_has_character(const std::string str,const char mChar);
+
+char int_to_single_char(const int num);
+
+std::string str_to_lower(const std::string str);
+
 #endif //EMPATHY_STRING_UTILS_H

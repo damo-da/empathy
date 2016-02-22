@@ -133,6 +133,7 @@ include_directories(DEmpathy/libs/irrKlang-64bit-1.5.0/include/)
 #add source files for compilation
 add_executable(empathy ${SOURCES})
 
+
 #link the libraries
 target_link_libraries(empathy
         ${GLFW_STATIC_LIBRARIES}
@@ -143,10 +144,9 @@ target_link_libraries(empathy
         ${xxf86vm_LIBRARIES}
         ${xrandr_LIBRARIES}
 
-#        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
         "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
-#        "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/ikpMP3.so"
         )
+
 set(HEADERS $(wildcard transport/*.h))
 set(COMMON_DOC_FLAGS --report --merge docs --output html $(HEADERS))
 

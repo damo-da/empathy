@@ -5,6 +5,7 @@
 #include <sstream>
 #include "string_utils.h"
 #include <algorithm>
+#include <string>
 
 std::vector<std::string> str_split(const std::string &s, char delim) {
     std::vector<std::string> elems;
@@ -70,4 +71,41 @@ std::string int_to_str(int integer) {
     std::string string(str);
 
     return string;
+}
+
+std::string str_replace(const std::string str, const char from, const char to) {
+    std::string ret="";
+
+    std::vector<std::string> boxes=str_split(str,from);
+    for(int i=0;i<boxes.size();i++){
+        ret += boxes[i];
+
+        if(i<boxes.size()-1){
+            if(to != '\0')
+                ret += to;
+        }
+    }
+
+    return ret;
+}
+
+std::string str_remove_character(const std::string str, const char mChar) {
+    return str_replace(str,mChar,'\0');
+}
+
+bool str_has_character(const std::string str, const char mChar) {
+    for(int i=0;i<str.size();i++){
+        if(str[i]==mChar)return true;
+    }
+    return false;
+}
+
+char int_to_single_char(const int num) {
+    return int_to_str(num).c_str()[0];
+}
+
+std::string str_to_lower(const std::string str) {
+    std::string data = str;
+    std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+    return data;
 }
