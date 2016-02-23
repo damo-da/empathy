@@ -2,9 +2,9 @@
   "author":"Damodar Dahal",
   "version":0.0,
   "title":"Canon in D (Pachelbel)",
-  "copyright":"Creative Commons",
+  "copyright":"Public Domain",
   "steps": {
-    "begin":[{"type":"goto","stepID":"12","in":0.5}],
+    "begin":[{"type":"goto","stepID":"1","in":0.5}],
 
     "baseWave":[
       {
@@ -13,6 +13,97 @@
         "colorRed":0.9,
         "colorBlue":0.8,
         "colorGreen":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveA":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveB":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveC":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveD":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveE":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveF":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.3,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveG":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3,
         "initialPhase":1.0,
         "damping":5.0,
         "wavelength":0.1,
@@ -80,30 +171,47 @@
         "type":"create",
         "create":"mathwave_sine",
         "rotationAngle":-1.57,
-        "zoomY":0.1,
+        "zoomY":0.03,
         "offsetX":0.1,
-        "length":0.2,
+        "offsetY":-31,
+        "sine_thetaOffset":0,
+        "length":0.4,
         "head":-1.05,
-        "tail":-0.5,
+        "tail":1,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      },
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":-1.57,
+        "zoomY":0.03,
+        "offsetX":0.1,
+        "offsetY":31,
+        "length":0.4,
+        "head":-1.05,
+        "tail":1,
         "colorRed":0.8,
         "colorGreen":0.1,
         "colorBlue":0.7
       }
     ],
-    "artisticLineDown5":[
+    "artisticLineForward":[
       {
         "type":"create",
         "create":"mathwave_sine",
-        "rotationAngle":-1.57,
-        "zoomY":0.1,
+        "rotationAngle":0,
+        "zoomY":0.02,
         "offsetX":0.1,
+        "offsetY":-47,
         "length":0.2,
-        "head":0.4,
+        "head":-1.0,
         "sine_thetaOffset":1.57,
         "tail":1.0,
         "colorRed":0.8,
         "colorGreen":0.1,
-        "colorBlue":0.7
+        "colorBlue":0.2
       }
     ],
     "artisticLineDown2":[
@@ -135,6 +243,22 @@
         "colorBlue":0.7
       }
     ],
+    "artisticSineWave2":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "period":0.75,
+        "offsetY":2.8,
+        "zoomY":0.3,
+        "speed":1,
+        "sine_thetaOffset":1.5,
+        "length":0.2,
+        "head":-0.9,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
     "extendedBaseWave":[
       {
         "type":"create",
@@ -145,7 +269,7 @@
         "initialPhase":1.0,
         "damping":5.0,
         "wavelength":0.1,
-        "frequency":1.0,
+        "frequency":2.0,
         "centerX":0.8,
         "centerY":-0.8
       }
@@ -243,7 +367,19 @@
         "zoomY":0.2,
         "speed":0.74,
         "tail":6.28,
-        "length":0.14,
+        "length":0.24,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.05,
+        "zoomY":0.05,
+        "speed":0.74,
+        "tail":6.28,
+        "length":1.4,
         "colorRed":0.5,
         "colorGreen":0.5,
         "colorBlue":1.0
@@ -279,12 +415,316 @@
         "colorBlue":1.0
       }
     ],
+    "solarSun":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.005,
+        "zoomY":0.005,
+        "speed":0.9,
+        "tail":6.28,
+        "length":6.28,
+        "colorRed":1.0,
+        "colorGreen":0.2,
+        "colorBlue":0.2
+      }
+    ],
+    "solarMercury":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.15,
+        "zoomY":0.15,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.7,
+        "colorGreen":0.1,
+        "colorBlue":0.1
+      }
+    ],
+    "solarEarth":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.3,
+        "zoomY":0.3,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.0,
+        "colorGreen":1.0,
+        "colorBlue":0.3
+      }
+    ],
+    "solarSystem":[
+      {"type":"goto","stepID":"solarSun","in":0.0},
+      {"type":"goto","stepID":"solarMercury","in":0.0},
+      {"type":"goto","stepID":"solarEarth","in":0.0}
+    ],
+    "binaryStar":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStar2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternate":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      }
+    ],
+    "binaryStarAlternate2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      }
+    ],
+    "binaryStarAlternateB":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2
+      }
+    ],
+    "binaryStarAlternateB2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2
+      }
+    ],
+    "binaryStarAlternateC":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1
+      }
+    ],
+    "binaryStarAlternateC2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1
+      }
+    ],
+    "binaryStarAlternateD":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateD2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateE":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateE2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateF":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.3,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternateF2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.3,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternateG":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3
+      }
+    ],
+    "binaryStarAlternateG2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3
+      }
+    ],
 
+    "binaryStarSystem":[
+      {"type":"goto","stepID":"binaryStar","in":0.0},
+      {"type":"goto","stepID":"binaryStar2","in":0.0},
+
+      {"type":"goto","stepID":"binaryStarAlternate","in":2.85},
+      {"type":"goto","stepID":"binaryStarAlternate2","in":2.85},
+
+      {"type":"goto","stepID":"binaryStarAlternateB","in":5.7},
+      {"type":"goto","stepID":"binaryStarAlternateB2","in":5.7},
+
+      {"type":"goto","stepID":"binaryStarAlternateC","in":8.55},
+      {"type":"goto","stepID":"binaryStarAlternateC2","in":8.55},
+
+      {"type":"goto","stepID":"binaryStarAlternateD","in":11.4},
+      {"type":"goto","stepID":"binaryStarAlternateD2","in":11.4},
+
+      {"type":"goto","stepID":"binaryStarAlternateE","in":14.25},
+      {"type":"goto","stepID":"binaryStarAlternateE2","in":14.25},
+
+      {"type":"goto","stepID":"binaryStarAlternateF","in":17.1},
+      {"type":"goto","stepID":"binaryStarAlternateF2","in":17.1},
+
+      {"type":"goto","stepID":"binaryStarAlternateG","in":19.95},
+      {"type":"goto","stepID":"binaryStarAlternateG2","in":19.95}
+
+    ],
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-
       {"type":"goto","stepID":"artisticLineDown","in":0.0},
       {"type":"goto","stepID":"2","in":0.7500001}
     ],
@@ -303,7 +743,7 @@
     "5":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveA","in":0.0},
       {"type":"goto","stepID":"6","in":0.7500001}
     ],
     "6":[
@@ -321,7 +761,8 @@
     "9":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"baseWave2","in":0.0},
+      {"type":"goto","stepID":"baseWaveB","in":0.0},
+      {"type":"goto","stepID":"artisticLineForward","in":0.0},
       {"type":"goto","stepID":"10","in":0.7500001}
     ],
     "10":[
@@ -330,7 +771,6 @@
     ],
     "11":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"artisticLineDown5","in":0.0},
       {"type":"goto","stepID":"12","in":0.7500001}
     ],
     "12":[
@@ -338,9 +778,9 @@
       {"type":"goto","stepID":"13","in":0.7500001}
     ],
     "13":[
-      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveC","in":0.0},
       {"type":"goto","stepID":"14","in":0.7500001}
     ],
     "14":[
@@ -358,7 +798,7 @@
     "17":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveD","in":0.0},
       {"type":"goto","stepID":"18","in":0.7500001}
     ],
     "18":[
@@ -376,7 +816,7 @@
     "21":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveE","in":0.0},
       {"type":"goto","stepID":"22","in":0.7500001}
     ],
     "22":[
@@ -394,7 +834,7 @@
     "25":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveF","in":0.0},
       {"type":"goto","stepID":"26","in":0.7500001}
     ],
     "26":[
@@ -413,7 +853,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type":"goto","stepID":"artisticSineWave","in":0.0},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"baseWaveG","in":0.0},
       {"type":"goto","stepID":"30","in":0.7500001}
     ],
     "30":[
@@ -437,7 +877,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"binaryStarSystem","in":0.0},
       {"type":"goto","stepID":"34","in":0.70001}
     ],
     "34":[
@@ -456,7 +896,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4E"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"38","in":0.70001}
     ],
     "38":[
@@ -475,7 +914,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"42","in":0.70001}
     ],
     "42":[
@@ -494,7 +932,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"46","in":0.70001}
     ],
     "46":[
@@ -513,7 +950,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"extendedBaseWave","in":0.0},
       {"type":"goto","stepID":"50","in":0.70001}
     ],
@@ -533,7 +969,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"54","in":0.70001}
     ],
     "54":[
@@ -552,7 +987,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"58","in":0.70001}
     ],
     "58":[
@@ -677,6 +1111,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
+      {"type":"goto","stepID":"artisticSineWave2","in":0.0},
       {"type":"goto","stepID":"81","in":0.600001}
     ],
     "81":[
@@ -720,6 +1155,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"artisticSineWave2","in":0.600001},
       {"type":"goto","stepID":"89","in":0.600001}
     ],
     "89":[
@@ -768,7 +1204,7 @@
       {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
       {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
       {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
-      {"type":"goto","stepID":"97","in":0.500001}
+      {"type":"goto","stepID":"97","in":0.600001}
     ],
     "97":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
@@ -955,7 +1391,6 @@
     ],
     "136":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
-      {"type":"goto","stepID":"heartBeat","in":0.0},
       {"type":"goto","stepID":"137","in":0.300001}
     ],
     "137":[
@@ -1039,7 +1474,7 @@
       {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
       {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
       {"type":"goto","stepID":"extendedBaseWave5","in":0.0},
-      {"type":"goto","stepID":"154","in":0.500001}
+      {"type":"goto","stepID":"154","in":0.550001}
     ],
     "154":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2A"},
@@ -1242,7 +1677,6 @@
     "193":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
-      {"type":"goto","stepID":"heartBeat","in":0.0},
       {"type":"goto","stepID":"194","in":0.320001}
     ],
     "194":[
@@ -1268,6 +1702,7 @@
     ],
     "198":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"heartBeat","in":0.0},
       {"type":"goto","stepID":"199","in":0.340001}
     ],
     "199":[
