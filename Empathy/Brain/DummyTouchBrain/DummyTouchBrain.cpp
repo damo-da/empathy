@@ -65,7 +65,7 @@ void empathy::brain::DummyTouchBrain::onReceiveEvent(empathy::radio::Event &even
 
         }
         level ++;
-
+		wave->setDampingConst(20.0f);
         wave->setColor(r,g,b);
 
         addLifeEvent(wave);
