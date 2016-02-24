@@ -1,5 +1,5 @@
 {
-  "author":"Damodar Dahal",
+  "fileAuthor":"Damodar Dahal",
   "version":0.0,
   "title":"Canon in D (Pachelbel)",
   "copyright":"Public Domain",
@@ -148,6 +148,25 @@
         "sine_thetaOffset":-1.15
       }
     ],
+    "heartBeat2":[
+
+      {
+        "type":"create",
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":2.0,
+        "length":0.15,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+      }
+    ],
     "paleBlueDot1":[
       {
         "type":"create",
@@ -176,6 +195,7 @@
         "offsetY":-31,
         "sine_thetaOffset":0,
         "length":0.4,
+        "speed":0.5,
         "head":-1.05,
         "tail":1,
         "colorRed":0.8,
@@ -184,6 +204,7 @@
       },
       {
         "type":"create",
+        "speed":0.5,
         "create":"mathwave_sine",
         "rotationAngle":-1.57,
         "zoomY":0.03,
@@ -204,10 +225,29 @@
         "rotationAngle":0,
         "zoomY":0.02,
         "offsetX":0.1,
-        "offsetY":-47,
+        "offsetY":-40,
         "length":0.2,
         "head":-1.0,
         "sine_thetaOffset":1.57,
+        "speed":0.5,
+        "tail":1.0,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.2
+      }
+    ],
+    "artisticLineForward2":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":0,
+        "zoomY":0.1,
+        "offsetX":0.1,
+        "offsetY":0,
+        "length":0.2,
+        "head":-1.0,
+        "sine_thetaOffset":1.57,
+        "speed":0.5,
         "tail":1.0,
         "colorRed":0.8,
         "colorGreen":0.1,
@@ -229,7 +269,7 @@
       }
     ],
     "artisticSineWave":[
-    {
+      {
         "type":"create",
         "create":"mathwave_sine",
         "period":0.75,
@@ -645,7 +685,7 @@
         "speed":1.13,
         "tail":3.14,
         "length":0.8,
-        "colorRed":0.7,
+        "colorRed":0.4,
         "colorGreen":0.3,
         "colorBlue":1.0
       }
@@ -660,7 +700,7 @@
         "head":3.14,
         "tail":6.28,
         "length":0.8,
-        "colorRed":0.7,
+        "colorRed":0.4,
         "colorGreen":0.3,
         "colorBlue":1.0
       }
@@ -695,6 +735,58 @@
       }
     ],
 
+    "rotatedEllipse":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.28,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse2","in":2.5}
+
+    ],
+    "rotatedEllipse2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse3","in":2.5}
+
+    ],
+    "rotatedEllipse3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      }
+
+    ],
+
+
     "binaryStarSystem":[
       {"type":"goto","stepID":"binaryStar","in":0.0},
       {"type":"goto","stepID":"binaryStar2","in":0.0},
@@ -725,7 +817,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
       {"type":"goto","stepID":"baseWave","in":0.0},
-      {"type":"goto","stepID":"artisticLineDown","in":0.0},
       {"type":"goto","stepID":"2","in":0.7500001}
     ],
     "2":[
@@ -762,7 +853,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type":"goto","stepID":"baseWaveB","in":0.0},
-      {"type":"goto","stepID":"artisticLineForward","in":0.0},
       {"type":"goto","stepID":"10","in":0.7500001}
     ],
     "10":[
@@ -775,6 +865,7 @@
     ],
     "12":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},
+      {"type":"goto","stepID":"artisticSineWave","in":0.0},
       {"type":"goto","stepID":"13","in":0.7500001}
     ],
     "13":[
@@ -817,6 +908,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
       {"type":"goto","stepID":"baseWaveE","in":0.0},
+      {"type":"goto","stepID":"artisticSineWave2","in":0.0},
       {"type":"goto","stepID":"22","in":0.7500001}
     ],
     "22":[
@@ -1111,7 +1203,6 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"artisticSineWave2","in":0.0},
       {"type":"goto","stepID":"81","in":0.600001}
     ],
     "81":[
@@ -1309,6 +1400,7 @@
     "118":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"goto","stepID":"artisticLineForward","in":0.0},
       {"type":"goto","stepID":"119","in":0.300001}
     ],
     "119":[
@@ -1356,6 +1448,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
+      {"type":"goto","stepID":"artisticLineForward2","in":0.0},
       {"type":"goto","stepID":"129","in":0.300001}
     ],
     "129":[
@@ -1437,6 +1530,7 @@
     ],
     "146":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"goto","stepID":"heartBeat2","in":0.0},
       {"type":"goto","stepID":"147","in":0.300001}
     ],
     "147":[
@@ -1567,6 +1661,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+      {"type":"goto","stepID":"rotatedEllipse","in":0.0},
       {"type":"goto","stepID":"171","in":0.300001}
     ],
     "171":[
