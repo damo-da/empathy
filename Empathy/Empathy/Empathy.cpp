@@ -8,7 +8,7 @@ using namespace std;
 empathy::Empathy::Empathy():
 moonLight(nullptr)
 {
-
+    instance=this;
 }
 
 
@@ -87,3 +87,5 @@ void empathy::Empathy::loop() {
 void empathy::Empathy::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
 }
+
+empathy::Empathy * empathy::Empathy::instance= nullptr;

@@ -37,6 +37,13 @@ namespace empathy {
                 return strData[key];
             }
 
+            void putDouble(std::string key,GLdouble value){
+                doubleData[key]=value;
+            }
+            GLdouble getDouble(const std::string key){
+                return doubleData[key];
+            }
+
             Event(std::string);
 
             std::string action;
@@ -45,6 +52,7 @@ namespace empathy {
         private:
             std::map<std::string, int> intData;
             std::map<std::string, std::string> strData;
+            std::map<std::string, GLdouble > doubleData;
         };
 
     }

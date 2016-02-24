@@ -33,6 +33,8 @@ void DEmpathy::key_callback(GLFWwindow* window, int key, int scancode, int actio
         glfwSetWindowShouldClose(instance->window, GL_TRUE);
         return;
     }
+
+    cout<<"KEY callback"<<endl;
     std::string myAction="";
     if(action==GLFW_PRESS){
         myAction=EMPATHY_EVENT_INPUT_KEY_PRESS;
@@ -72,8 +74,13 @@ void DEmpathy::initGlfw() {
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
+    int count;
+    GLFWmonitor** monitors=glfwGetMonitors(&count);
+
 	//Create a GLFW window
-	window = glfwCreateWindow((GLuint)SC_SIZE_X, (GLuint)SC_SIZE_Y, "Linux Empathy", nullptr, nullptr);
+	window = glfwCreateWindow((GLuint)SC_SIZE_X, (GLuint)SC_SIZE_Y, "Linux Empathy",
+                              FULL_SCREEN?glfwGetPrimaryMonitor(): nullptr,
+                              nullptr);
 	if (window == nullptr)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -83,8 +90,10 @@ void DEmpathy::initGlfw() {
 
 	glfwMakeContextCurrent(window);
 
-	//set key call back
+	//set event receiver call backs.
 	glfwSetKeyCallback(window, key_callback);
+    glfwSetMouseButtonCallback(window,mouse_input_callback);
+    glfwSetCursorPosCallback(window,mouse_position_callback);
 }
 
 DEmpathy *DEmpathy::instance=nullptr;
@@ -103,4 +112,21 @@ GLfloat DEmpathy::getTime() {
 
 DEmpathy::DEmpathy() : Empathy() {
 
+}
+
+void DEmpathy::mouse_input_callback(GLFWwindow *window, int button, int action, int mods) {
+    if(button==GLFW_MOUSE_BUTTON_LEFT && action==GLFW_PRESS){
+
+        empathy::radio::Event event=empathy::radio::Event(EMPATHY_EVENT_INPUT_MOUSE_LEFT_KEY_PRESS);
+        event.putDouble(EMPATHY_MOUSE_XPOS,instance->mouseX);
+        event.putDouble(EMPATHY_MOUSE_YPOS,SC_SIZE_Y-instance->mouseY);
+
+
+        empathy::radio::BroadcastStation::emit(event);
+    }
+}
+
+void DEmpathy::mouse_position_callback(GLFWwindow *window, double xpos, double ypos) {
+    instance->mouseX=xpos;
+    instance->mouseY=ypos;
 }

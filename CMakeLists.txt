@@ -100,7 +100,7 @@ set(SOURCES
         DEmpathy/tests/CWave_Test.h
 
         Empathy/empathy.h
-        )
+        Empathy/Brain/DummyTouchBrain/DummyTouchBrain.cpp Empathy/Brain/DummyTouchBrain/DummyTouchBrain.h)
 #support for nullptr, etc
 add_definitions(-std=c++0x)
 

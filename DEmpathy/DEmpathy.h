@@ -12,6 +12,8 @@
 #define SC_SIZE_X 700
 #define SC_SIZE_Y 700
 
+#define FULL_SCREEN false
+
 class DEmpathy : public empathy::Empathy{
 	/*
 	The foundation module for DEmpathy. It manages everything required for the desktop and only the desktop.
@@ -24,6 +26,10 @@ public:
 	virtual void run();
 
     static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
+	static void mouse_input_callback(GLFWwindow* window, int button, int action, int mods);
+	static void mouse_position_callback(GLFWwindow* window,double xpos,double ypos);
+
+	double mouseX,mouseY;
 protected:
 
 	//Self explanatory

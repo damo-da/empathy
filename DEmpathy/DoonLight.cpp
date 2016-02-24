@@ -56,7 +56,7 @@ void DoonLight::initIrr() {
         printf("Could not startup engine\n");
     }
 
-    engine->setSoundVolume(0.5f);
+    engine->setSoundVolume(0.4f);
 }
 
 

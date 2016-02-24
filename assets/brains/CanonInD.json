@@ -1304,7 +1304,7 @@
     ],
     "98":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4G"},
-      {"type":"goto","stepID":"99","in":0.250001}
+      {"type":"goto","stepID":"99","in":0.300001}
     ],
     "99":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3D"},

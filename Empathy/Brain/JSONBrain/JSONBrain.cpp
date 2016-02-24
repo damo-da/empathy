@@ -35,6 +35,16 @@ empathy::brain::JSONBrain::JSONBrain(std::string fileName) :
     std::string fileContents=file_read(fileName.c_str());
     root = cJSON_Parse(fileContents.c_str());
 
+
+    std::string title=cJSON_GetObjectItem(root,"title")->valuestring;
+    cout<< "\n\n\n -------------------------- "<<endl;
+    cout<<"     Playing "<<title<<endl;
+    cout<<" --------------------------"<<endl<<endl<<endl;
+
+    cout<< "\n\n\n -------------------------- "<<endl;
+    cout<<"  Built with love just for you :)"<<endl;
+    cout<<" --------------------------"<<endl<<endl<<endl;
+
     cJSON * steps=cJSON_GetObjectItem(root,"steps");
 
     std::vector<std::string> stepKeys=cJSON_get_keys(steps);

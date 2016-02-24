@@ -60,7 +60,6 @@ void empathy::radio::BroadcastStation::dispatch() {
 }
 
 void empathy::radio::BroadcastStation::subscribeAll(Subscriber *subscriber) {
-    cout<<subscriber->getId()<<" is listening all"<<endl;
     instance->vipSubscribers.push_back(subscriber);
 
 }

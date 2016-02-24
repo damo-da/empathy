@@ -52,7 +52,8 @@ namespace empathy{
          * Call this function from the overridden addTo() method on the brain only.
          */
         void addBrain(brain::Brain * brain);
-
+        GLfloat getScreenSizeX()const {return sc_size_x;}
+        GLfloat getScreenSizeY()const {return sc_size_y;}
     protected:
 
         /* init the flavor-independent system ready. */
@@ -107,6 +108,10 @@ namespace empathy{
         /* The <You>, the virtual friend who connects with the user. */
         empathy::You * you;
 
+    public:
+        static Empathy *instance;
+
+        static Empathy * getInstance(){return instance;}
     };
 
 }
