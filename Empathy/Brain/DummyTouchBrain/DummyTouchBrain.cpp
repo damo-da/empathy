@@ -16,7 +16,7 @@ void empathy::brain::DummyTouchBrain::onReceiveEvent(empathy::radio::Event &even
 
     static int level=0;
 
-    if(event.action==EMPATHY_EVENT_INPUT_MOUSE_LEFT_KEY_PRESS){
+    if(event.action==EMPATHY_EVENT_INPUT_MOUSE_LEFT_KEY_PRESS || event.action==EMPATHY_EVENT_INPUT_MOUSE_RIGHT_KEY_PRESS){
         life_event::CWave_data * wave=new life_event::CWave_data();
 
         Empathy* empathy1=Empathy::getInstance();

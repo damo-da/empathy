@@ -115,9 +115,15 @@ DEmpathy::DEmpathy() : Empathy() {
 }
 
 void DEmpathy::mouse_input_callback(GLFWwindow *window, int button, int action, int mods) {
-    if(button==GLFW_MOUSE_BUTTON_LEFT && action==GLFW_PRESS){
+    if(action==GLFW_PRESS){
+        empathy::radio::Event event(EMPATHY_EVENT_ACTION_NONE);
 
-        empathy::radio::Event event=empathy::radio::Event(EMPATHY_EVENT_INPUT_MOUSE_LEFT_KEY_PRESS);
+        if(button==GLFW_MOUSE_BUTTON_LEFT ){
+            event=empathy::radio::Event(EMPATHY_EVENT_INPUT_MOUSE_LEFT_KEY_PRESS);
+        }else if(button==GLFW_MOUSE_BUTTON_RIGHT){
+            event=empathy::radio::Event(EMPATHY_EVENT_INPUT_MOUSE_RIGHT_KEY_PRESS);
+        }
+
         event.putDouble(EMPATHY_MOUSE_XPOS,instance->mouseX);
         event.putDouble(EMPATHY_MOUSE_YPOS,SC_SIZE_Y-instance->mouseY);
 
