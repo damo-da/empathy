@@ -1,4 +1,4 @@
- ![App State](https://img.shields.io/badge/state-prerelease-blue.svg) ![App Version](https://img.shields.io/badge/version-0.0-green.svg)
+ ![App Version](https://img.shields.io/badge/version-0.0-green.svg)
 
 #Empathy 
 
@@ -8,16 +8,11 @@ Play Empathy to immerse in the pool of your own emotions!
 
 ##What makes Empathy the best?
 
-Well, did you try out the demo? I certainly hope so, otherwise you should definitely try it once. Playing Canon (Pachelbel) and some waves on the screen might not seem awesome, but here's the bigger picture of what's going on in the backstage:
-
-1. There's a JSON file which makes up the instructions for the app.
-2. There are `Brain`s that drive the logic, including but not limited to executing the JSON instructions.
-3. LifeEvents move around. The waves you see on the screen are all `LifeEvent`s.
-4. The WHOLE system works on the basis of Events. Events can be passed from ANYWHERE to ANYWHERE.
+Well, did you try out the demo? I certainly hope so, otherwise you should definitely try it once. Playing Canon (Pachelbel) and some waves on the screen might not seem awesome, but [here's the bigger picture of what's going on in the backstage](docs/how-it-works.md):
 
 Empathy's built with scalability in mind. It has been designed to work in multiple frameworks, (I think I'll also build a Python interface), will run on multiple OS, multiple CPUs, multiple GPUs, and what else? It's the scalability of Empathy that is more delicious than the current state of Empathy!
 
-###Empathy sucks!!
+###I don't think Empathy's \*that\* great
 I agree that the current song is not *that* interesting, but that's only as far as I can go with creativity. You yourself could write a better song than me! So why not try building your own song file? Check it out!
 
 Again, I repeat: It's the scalability of Empathy that is more delicious than the current state of Empathy! It's the future that will be created as you and me and BumpSheep work together to make the world a better place!
