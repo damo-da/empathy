@@ -149,5 +149,5 @@ target_link_libraries(empathy
 
 add_custom_target(
         doc
-	cldoc generate --std=c++11 -- --static --type html --output docs/cldoc ${EMPATHY_SOURCES} 
+	cldoc generate --std=c++11 -- --static --type html --output docs/api/ ${EMPATHY_SOURCES} 
 )
