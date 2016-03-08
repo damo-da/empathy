@@ -6,7 +6,6 @@ cmake_install.cmake
 install_manifest.txt
 empathy
 
-*~
 
 # Compiled Object files
 *.slo
@@ -45,4 +44,4 @@ empathy
 /.idea/dictionaries/*
 /.idea
 
-/docs
+docs/
