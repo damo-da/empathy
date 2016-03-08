@@ -7,6 +7,7 @@ install_manifest.txt
 empathy
 
 *~
+/*~
 
 # Compiled Object files
 *.slo
