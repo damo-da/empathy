@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wave</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::pure_math::Wave</span></span>
+                </div><a href="empathy.pure_math.html"><span class="arrow">↵</span> <span>pure_math</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Subclasses</div>
+            <ul>
+                <li><a href="empathy.life_event.CWave.html#empathy.life_event.CWave">life_event::CWave<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.CWave_data.html#empathy.life_event.CWave_data">life_event::CWave_data<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.pure_math.Wave.Wave">Wave<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Default constructor.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.pure_math.Wave.decodeJson">decodeJson<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Decode JSON values.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.pure_math.Wave.getAmplitude">getAmplitude<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Return the maximum amplitude at the current time.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.pure_math.Wave.getAmplitudeAt">getAmplitudeAt<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Get amplitude at a certain point in current time.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.pure_math.Wave.getAngularMomentum">getAngularMomentum<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getCenterX">getCenterX<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getCenterY">getCenterY<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getDampingConst">getDampingConst<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getFrequency">getFrequency<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getInitialPhase">getInitialPhase<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getTime">getTime<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getTimePeriod">getTimePeriod<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getWaveLength">getWaveLength<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.getWaveSpeed">getWaveSpeed<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setAmplitude">setAmplitude<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Set the current maximum amplitude.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.pure_math.Wave.setCenter">setCenter<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setCenterX">setCenterX<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setCenterY">setCenterY<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setDampingConst">setDampingConst<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setFrequency">setFrequency<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setInitialPhase">setInitialPhase<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setTime">setTime<span class="counter"></span></a></li>
+                <li><a href="#empathy.pure_math.Wave.setWaveLength">setWaveLength<span class="counter"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::pure_math::Wave"><span><span class="keyword">Class</span><span>empathy::pure_math::Wave</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>A basic transverse wave.</p>
+                <p>This wave has the following characteristics:</p>
+                <p>frequency, wavelength, speed. Regarding distance, the openGL screen measures a distance of 2.0 unit. Both in x and y axes.</p>
+                <p>damping constant: an exponential function that decays the amplitude by distance <strong>BUT NOT</strong> by time.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="subclasses">Subclasses</h2>
+        <table class="subclasses">
+            <tbody>
+                <tr id="empathy::life_event::CWave+empathy::life_event::CWave">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.CWave.html#empathy.life_event.CWave">life_event::CWave</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::CWave_data+empathy::life_event::CWave_data">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.CWave_data.html#empathy.life_event.CWave_data">life_event::CWave_data</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::Wave">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">Wave</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Default constructor.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::decodeJson">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">decodeJson</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">key,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">value</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Decode JSON values.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::decodeJson::key">
+                            <td>key</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::pure_math::Wave::decodeJson::value">
+                            <td>value</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getAmplitude">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getAmplitude</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Return the maximum amplitude at the current time.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getAmplitudeAt">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getAmplitudeAt</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">distance</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Get amplitude at a certain point in current time.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::getAmplitudeAt::distance">
+                            <td>distance</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getAngularMomentum">
+                    <div class="return_type"><span class="type"><span class="name ">GLdouble</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getAngularMomentum</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getCenterX">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getCenterX</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getCenterY">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getCenterY</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getDampingConst">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getDampingConst</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getFrequency">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getFrequency</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getInitialPhase">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getInitialPhase</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getTime">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTime</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getTimePeriod">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTimePeriod</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getWaveLength">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getWaveLength</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::getWaveSpeed">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getWaveSpeed</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setAmplitude">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setAmplitude</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">amplitude</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Set the current maximum amplitude.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setAmplitude::amplitude">
+                            <td>amplitude</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setCenter">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setCenter</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">x,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">y</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setCenter::x">
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::pure_math::Wave::setCenter::y">
+                            <td>y</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setCenterX">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setCenterX</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">x</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setCenterX::x">
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setCenterY">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setCenterY</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">y</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setCenterY::y">
+                            <td>y</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setDampingConst">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setDampingConst</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">dampingConst</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setDampingConst::dampingConst">
+                            <td>dampingConst</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setFrequency">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setFrequency</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">f</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setFrequency::f">
+                            <td>f</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setInitialPhase">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setInitialPhase</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">theta</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setInitialPhase::theta">
+                            <td>theta</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setTime">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setTime</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">time</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setTime::time">
+                            <td>time</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::pure_math::Wave::setWaveLength">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setWaveLength</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">w</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::pure_math::Wave::setWaveLength::w">
+                            <td>w</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

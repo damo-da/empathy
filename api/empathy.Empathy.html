@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Empathy</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::Empathy</span></span>
+                </div><a href="empathy.html"><span class="arrow">↵</span> <span>empathy</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Variables</div>
+            <ul>
+                <li><a href="#empathy.Empathy.instance">instance<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.Empathy.Empathy">Empathy<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The constructor.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.Empathy.addBrain">addBrain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Adds a brain to the Empathy app.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.getInstance">getInstance<span class="counter"></span></a><span class="static">s</span></li>
+                <li><a href="#empathy.Empathy.getScreenSizeX">getScreenSizeX<span class="counter"></span></a></li>
+                <li><a href="#empathy.Empathy.getScreenSizeY">getScreenSizeY<span class="counter"></span></a></li>
+                <li><a href="#empathy.Empathy.run">run<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>The method called to activate <a href="#empathy.Empathy.Empathy">empathy::Empathy::Empathy</a>.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.flush">flush<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p>Terminator. More like destructor, but a terminator.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.getTime">getTime<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p>Gets the current time for the game.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.init">init<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p>init the flavor-independent system ready.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.loop">loop<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p> The gameloop.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.setMoonLight">setMoonLight<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p>Set the audio handler. For more information, see &lt;MoonLight&gt;.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.Empathy.setScreenSize">setScreenSize<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p>set the OpenGL screen sizes.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::Empathy"><span><span class="keyword">Class</span><span>empathy::Empathy</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>So how'd your own flavor? 1. Override this class. 3. override getTime() to return a time 4. override the terminate() to call upon the termination 5. override the run() function. This function is used to begin the app at user's will.</p>
+                <p>Now, let's call your flavor <code>Salamander</code>. You'd want to</p>
+                <pre><code>Salamander * sal=<span class="hljs-keyword">new</span> Salamander();
+JSONBrain * brain= <span class="hljs-keyword">new</span> JSONBrian(<span class="hljs-string">"instructions_file.json"</span>);
+brain-&gt;addTo(sal);
+sal-&gt;run();</code></pre>
+                <p>in your <code>main()</code> function.</p>
+                <p>If you want the audio, set the &lt;MoonLight&gt; using &lt;setMoonLight()&gt; method on your <code>Salamander</code>.
+                    <em>NOTE</em>: you can't directly play the audio using &lt;MoonLight&gt;. See &lt;MoonLight&gt; for more info.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="variables">Variables</h2>
+        <table class="variables">
+            <tbody>
+                <tr id="empathy::Empathy::instance">
+                    <td class="variable_name identifier">instance</td>
+                    <td class="variable_type"><span class="type"><span class="name "><a href="#empathy.Empathy">Empathy</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::Empathy">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">Empathy</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>The constructor.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::addBrain">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">addBrain</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.brain.Brain.html#empathy.brain.Brain">brain::Brain</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">brain</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Deprecated to use this method directly. Recommended to use brain-&gt;addTo(empathy).</p>
+                    <p>Call this function from the overridden addTo() method on the brain only.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::Empathy::addBrain::brain">
+                            <td>brain</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::getInstance">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name "><a href="#empathy.Empathy">Empathy</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getInstance</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::getScreenSizeX">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getScreenSizeX</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::getScreenSizeY">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getScreenSizeY</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::run">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                        <li class="abstract">abstract</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">run</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>The method called to activate <a href="#empathy.Empathy.Empathy">empathy::Empathy::Empathy</a>.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::flush">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">flush</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Terminator. More like destructor, but a terminator.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::getTime">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                        <li class="abstract">abstract</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTime</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Gets the current time for the game.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::init">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">init</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>init the flavor-independent system ready.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::loop">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">loop</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p><strong>Warning:</strong> Loop only. Does not contain the <code>while (not gameOver)</code> condition. Just the code inside the <code>while</code> loop.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::setMoonLight">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setMoonLight</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.moonlight.MoonLight.html#empathy.moonlight.MoonLight">moonlight::MoonLight</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">m</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Set the audio handler. For more information, see &lt;MoonLight&gt;.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::Empathy::setMoonLight::m">
+                            <td>m</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::Empathy::setScreenSize">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setScreenSize</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>set the OpenGL screen sizes.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::Empathy::setScreenSize::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::Empathy::setScreenSize::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

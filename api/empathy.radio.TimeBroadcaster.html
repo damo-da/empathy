@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TimeBroadcaster</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::radio::TimeBroadcaster</span></span>
+                </div><a href="empathy.radio.html"><span class="arrow">↵</span> <span>radio</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Variables</div>
+            <ul>
+                <li><a href="#empathy.radio.TimeBroadcaster.items">items<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The events queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcaster.toAddItems">toAddItems<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Events ready to be added in the main queue.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.radio.TimeBroadcaster.createRepeatingTimeout">createRepeatingTimeout<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Create a repeating timeout, ie, createInterval() of JavaScript.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcaster.createTimeout">createTimeout<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Create a repeating timeout, ie, createTimeout() of JavaScript.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcaster.poll">poll<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p> Poll the events.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::radio::TimeBroadcaster"><span><span class="keyword">Class</span><span>empathy::radio::TimeBroadcaster</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>Used only to <code>TimeBroadcaster::poll(delTime)</code> from gameloop.</p>
+                <p>See <a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">empathy::radio::Subscriber</a> and <a href="empathy.radio.Event.html#empathy.radio.Event">empathy::radio::Event</a> for creating and receiving timeouts.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="variables">Variables</h2>
+        <table class="variables">
+            <tbody>
+                <tr id="empathy::radio::TimeBroadcaster::items">
+                    <td class="variable_name identifier">items</td>
+                    <td class="variable_type"><span class="type"><span class="name ">std::vector&lt;TimeBroadcasterObject, std::allocator&lt;TimeBroadcasterObject&gt; &gt;</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The events queue.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="empathy::radio::TimeBroadcaster::toAddItems">
+                    <td class="variable_name identifier">toAddItems</td>
+                    <td class="variable_type"><span class="type"><span class="name ">std::vector&lt;TimeBroadcasterObject, std::allocator&lt;TimeBroadcasterObject&gt; &gt;</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>Events ready to be added in the main queue.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::radio::TimeBroadcaster::createRepeatingTimeout">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">createRepeatingTimeout</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">Event</a></span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Create a repeating timeout, ie, createInterval() of JavaScript.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::TimeBroadcaster::createRepeatingTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcaster::createRepeatingTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcaster::createRepeatingTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcaster::createRepeatingTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::radio::TimeBroadcaster::createTimeout">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">createTimeout</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">Event</a></span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name">,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Create a repeating timeout, ie, createTimeout() of JavaScript.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::TimeBroadcaster::createTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcaster::createTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcaster::createTimeout::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::radio::TimeBroadcaster::poll">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">poll</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p> Poll the events.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::TimeBroadcaster::poll::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

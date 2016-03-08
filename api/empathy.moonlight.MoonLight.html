@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MoonLight</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::moonlight::MoonLight</span></span>
+                </div><a href="empathy.moonlight.html"><span class="arrow">↵</span> <span>moonlight</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.radio.Subscriber%2Bempathy.radio.Subscriber">radio::Subscriber<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The class to be overridden to emit/receive events.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.moonlight.MoonLight.MoonLight">MoonLight<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Default constructor</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.moonlight.MoonLight.init">init<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>onInit()</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.moonlight.MoonLight.onReceiveEvent">onReceiveEvent<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>Called when an event is received for this subscriber.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.moonlight.MoonLight.terminate">terminate<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>onTerminate()</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.moonlight.MoonLight.play">play<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p>Play a certain tone. Repeat=false;</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.moonlight.MoonLight.play">play<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> Play a certain tone.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.moonlight.MoonLight.playKeyboard">playKeyboard<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> Play a tune on keyboard.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::moonlight::MoonLight"><span><span class="keyword">Class</span><span>empathy::moonlight::MoonLight</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>Note: this is just an implementation for playing audio. It DOES NOT play any audio sound. This is to ensure that audio can be played in an platform-independent mode. All platform dependent codes are written by creating flavors of the base
+                    implementations.</p>
+                <p>For playing audio,you must override &lt;playKeyboard()&gt; or &lt;play()&gt;, whichever function you like. After overriding this implementation, make sure to add to the <a href="empathy.Empathy.html#empathy.Empathy">empathy::Empathy</a>                    instance. by calling <code>empathyApp-&gt;setMoonLight(moonLightExtendedInstance);</code></p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::radio::Subscriber+empathy::radio::Subscriber">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">radio::Subscriber</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> The class to be overridden to emit/receive events.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::MoonLight">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">MoonLight</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Default constructor</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::init">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">init</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>onInit()</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::onReceiveEvent">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onReceiveEvent</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">radio::Event</a></span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name">event</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Called when an event is received for this subscriber.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::moonlight::MoonLight::onReceiveEvent::event">
+                            <td>event</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber.onReceiveEvent">radio::Subscriber::onReceiveEvent</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::terminate">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">terminate</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>onTerminate()</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::play">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">play</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">id</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Play a certain tone. Repeat=false;</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::moonlight::MoonLight::play::id">
+                            <td>id</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::play">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">play</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">id,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">bool</span></span>
+                                </td>
+                                <td class="argument_name">repeat</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p> Play a certain tone.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::moonlight::MoonLight::play::id">
+                            <td>id</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::moonlight::MoonLight::play::repeat">
+                            <td>repeat</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::moonlight::MoonLight::playKeyboard">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">playKeyboard</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">key</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Notation should be like <code>1As</code> or <code>2A</code> or <code>3E</code> and not <code>3A#</code></p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::moonlight::MoonLight::playKeyboard::key">
+                            <td>key</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

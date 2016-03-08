@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MathWave</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::life_event::MathWave</span></span>
+                </div><a href="empathy.life_event.html"><span class="arrow">↵</span> <span>life_event</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.life_event.LifeEvent%2Bempathy.life_event.LifeEvent">LifeEvent<span class="counter"></span></a></li>
+                <li><a href="#Color%2BColor">Color<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The color class to hold a RGBA color value.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Subclasses</div>
+            <ul>
+                <li><a href="empathy.life_event.MathWave_Para_Circle.html#empathy.life_event.MathWave_Para_Circle">MathWave_Para_Circle<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.MathWave_Line.html#empathy.life_event.MathWave_Line">MathWave_Line<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.MathWave_Sine.html#empathy.life_event.MathWave_Sine">MathWave_Sine<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.life_event.MathWave.MathWave">MathWave<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.life_event.MathWave.decodeJson">decodeJson<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.draw">draw<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.getDiff">getDiff<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getHead">getHead<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getLength">getLength<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getOffsetX">getOffsetX<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getOffsetY">getOffsetY<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getPencilSize">getPencilSize<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getRotationAngle">getRotationAngle<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getSpeed">getSpeed<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getTail">getTail<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getX">getX<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.getY">getY<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.getZoomX">getZoomX<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getZoomY">getZoomY<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.onDestroy">onDestroy<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.onInit">onInit<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.MathWave.render">render<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setDiff">setDiff<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setHead">setHead<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setLength">setLength<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setOffsetX">setOffsetX<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setOffsetY">setOffsetY<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setPencilSize">setPencilSize<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setRotationAngle">setRotationAngle<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setSpeed">setSpeed<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setTail">setTail<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setZoomX">setZoomX<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.setZoomY">setZoomY<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.MathWave.getEndTheta">getEndTheta<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.MathWave.getStartTheta">getStartTheta<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.MathWave.onCreate">onCreate<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+                <li><a href="#empathy.life_event.MathWave.onFinish">onFinish<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+                <li><a href="#empathy.life_event.MathWave.onRun">onRun<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::life_event::MathWave"><span><span class="keyword">Class</span><span>empathy::life_event::MathWave</span></span></h1>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::life_event::LifeEvent+empathy::life_event::LifeEvent">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent">LifeEvent</a></span></span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr id="Color+Color">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="Color.html#Color">Color</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p>The color class to hold a RGBA color value.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="subclasses">Subclasses</h2>
+        <table class="subclasses">
+            <tbody>
+                <tr id="empathy::life_event::MathWave_Para_Circle+empathy::life_event::MathWave_Para_Circle">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.MathWave_Para_Circle.html#empathy.life_event.MathWave_Para_Circle">MathWave_Para_Circle</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::MathWave_Line+empathy::life_event::MathWave_Line">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.MathWave_Line.html#empathy.life_event.MathWave_Line">MathWave_Line</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::MathWave_Sine+empathy::life_event::MathWave_Sine">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.MathWave_Sine.html#empathy.life_event.MathWave_Sine">MathWave_Sine</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::MathWave">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">MathWave</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::decodeJson">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">decodeJson</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">key,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">value</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::decodeJson::key">
+                            <td>key</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::life_event::MathWave::decodeJson::value">
+                            <td>value</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.decodeJson">LifeEvent::decodeJson</a> and <a href="Color.html#Color.decodeJson">Color::decodeJson</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::draw">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">draw</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.draw">LifeEvent::draw</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getDiff">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getDiff</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getHead">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getHead</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getLength">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getLength</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getOffsetX">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getOffsetX</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getOffsetY">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getOffsetY</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getPencilSize">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getPencilSize</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getRotationAngle">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getRotationAngle</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getSpeed">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getSpeed</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getTail">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTail</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getX">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getX</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">theta</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::getX::theta">
+                            <td>theta</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getY">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                        <li class="abstract">abstract</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getY</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">theta</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::getY::theta">
+                            <td>theta</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getZoomX">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getZoomX</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getZoomY">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getZoomY</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::onDestroy">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onDestroy</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.onDestroy">LifeEvent::onDestroy</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::onInit">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onInit</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.onInit">LifeEvent::onInit</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::render">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">render</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::vector&lt;float, std::allocator&lt;float&gt; &gt;</span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name">vertices</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::render::vertices">
+                            <td>vertices</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setDiff">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setDiff</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">diff</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setDiff::diff">
+                            <td>diff</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setHead">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setHead</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">head</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setHead::head">
+                            <td>head</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setLength">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setLength</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">length</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setLength::length">
+                            <td>length</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setOffsetX">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setOffsetX</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">offsetX</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setOffsetX::offsetX">
+                            <td>offsetX</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setOffsetY">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setOffsetY</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">offsetY</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setOffsetY::offsetY">
+                            <td>offsetY</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setPencilSize">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setPencilSize</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">pencilSize</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setPencilSize::pencilSize">
+                            <td>pencilSize</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setRotationAngle">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setRotationAngle</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">rotationAngle</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setRotationAngle::rotationAngle">
+                            <td>rotationAngle</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setSpeed">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setSpeed</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">speed</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setSpeed::speed">
+                            <td>speed</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setTail">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setTail</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">tail</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setTail::tail">
+                            <td>tail</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setZoomX">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setZoomX</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">zoomX</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setZoomX::zoomX">
+                            <td>zoomX</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::setZoomY">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setZoomY</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">zoomY</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::setZoomY::zoomY">
+                            <td>zoomY</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getEndTheta">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getEndTheta</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::getStartTheta">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getStartTheta</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::onCreate">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onCreate</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::onCreate::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.onCreate">LifeEvent::onCreate</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::onFinish">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onFinish</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::onFinish::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.onFinish">LifeEvent::onFinish</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::MathWave::onRun">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onRun</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::MathWave::onRun::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent.onRun">LifeEvent::onRun</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

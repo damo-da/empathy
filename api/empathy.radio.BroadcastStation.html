@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BroadcastStation</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::radio::BroadcastStation</span></span>
+                </div><a href="empathy.radio.html"><span class="arrow">↵</span> <span>radio</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Variables</div>
+            <ul>
+                <li><a href="#empathy.radio.BroadcastStation.instance">instance<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p><code>this</code>.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.radio.BroadcastStation.BroadcastStation">BroadcastStation<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Default constructor. </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.radio.BroadcastStation.dispatch">dispatch<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p> Dispatch items from the dispatch queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.BroadcastStation.emit">emit<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Add an event to the dispatch queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.BroadcastStation.subscribe">subscribe<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Subscriber a subscriber to listen to a specific channel.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.BroadcastStation.subscribeAll">subscribeAll<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Subscribe a subscriber to all channels.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::radio::BroadcastStation"><span><span class="keyword">Class</span><span>empathy::radio::BroadcastStation</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>ALMOST never used by any class directly. To use event management, see <a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">empathy::radio::Subscriber</a> and <a href="empathy.radio.Event.html#empathy.radio.Event">empathy::radio::Event</a>                    instead.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="variables">Variables</h2>
+        <table class="variables">
+            <tbody>
+                <tr id="empathy::radio::BroadcastStation::instance">
+                    <td class="variable_name identifier">instance</td>
+                    <td class="variable_type"><span class="type"><span class="name "><a href="#empathy.radio.BroadcastStation">BroadcastStation</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p><code>this</code>.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::radio::BroadcastStation::BroadcastStation">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">BroadcastStation</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Default constructor. </p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::radio::BroadcastStation::dispatch">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">dispatch</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Called from the gameloop directly.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::radio::BroadcastStation::emit">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">emit</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">Event</a></span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Add an event to the dispatch queue.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::BroadcastStation::emit::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::radio::BroadcastStation::subscribe">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">subscribe</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">base,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">channel</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Subscriber a subscriber to listen to a specific channel.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::BroadcastStation::subscribe::base">
+                            <td>base</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::BroadcastStation::subscribe::channel">
+                            <td>channel</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::radio::BroadcastStation::subscribeAll">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">subscribeAll</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">subscriber</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Subscribe a subscriber to all channels.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::BroadcastStation::subscribeAll::subscriber">
+                            <td>subscriber</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

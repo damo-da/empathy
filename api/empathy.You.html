@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>You</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::You</span></span>
+                </div><a href="empathy.html"><span class="arrow">↵</span> <span>empathy</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.radio.Subscriber%2Bempathy.radio.Subscriber">radio::Subscriber<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The class to be overridden to emit/receive events.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.You.You">You<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The constructor.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.You.addBrain">addBrain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Start a brain.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.addLifeEvent">addLifeEvent<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Add a lifeEvent to the queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.blit">blit<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Render all lifeEvents on the screen.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.calcFPS">calcFPS<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Calculate FPS.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.clearLifeEvents">clearLifeEvents<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Clear the lifeEvents queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.getInstance">getInstance<span class="counter"></span></a><span class="static">s</span>
+                    <div class="brief">
+                        <p>Return the lastinstance.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.init">init<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Initialize You. And GL.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.removeLifeEvent">removeLifeEvent<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Remove a lifeEvent from the queue.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.setTime">setTime<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Called from the Empathy app. This comes directly from the flavor in which Empathy runs on.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.You.terminate">terminate<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The Terminator kills you. o.o</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::You"><span><span class="keyword">Class</span><span>empathy::You</span></span></h1>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::radio::Subscriber+empathy::radio::Subscriber">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">radio::Subscriber</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> The class to be overridden to emit/receive events.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::You::You">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">You</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>The constructor.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::You::addBrain">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">addBrain</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.brain.Brain.html#empathy.brain.Brain">brain::Brain</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Start a brain.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::You::addBrain::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::addLifeEvent">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">addLifeEvent</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent">life_event::LifeEvent</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Add a lifeEvent to the queue.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::You::addLifeEvent::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::blit">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">blit</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Render all lifeEvents on the screen.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::calcFPS">
+                    <div class="return_type"><span class="type"><span class="name builtin">int</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">calcFPS</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">curTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Calculate FPS.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::You::calcFPS::curTime">
+                            <td>curTime</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::clearLifeEvents">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">clearLifeEvents</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Clear the lifeEvents queue.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::getInstance">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name "><a href="#empathy.You">You</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getInstance</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Return the lastinstance.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::init">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">init</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Initialize You. And GL.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::removeLifeEvent">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">removeLifeEvent</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent">life_event::LifeEvent</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Remove a lifeEvent from the queue.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::You::removeLifeEvent::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::setTime">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setTime</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Called from the Empathy app. This comes directly from the flavor in which Empathy runs on.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::You::setTime::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::You::terminate">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">terminate</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>The Terminator kills you. o.o</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

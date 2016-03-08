@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Documentation</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Namespaces</div>
+            <ul>
+                <li><a href="empathy.html#empathy">empathy<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Classes</div>
+            <ul>
+                <li><a href="Color.html#Color">Color<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The color class to hold a RGBA color value.</p>
+                    </div>
+                </li>
+                <li><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> A single TimeBroadcaster item.</p>
+                    </div>
+                </li>
+                <li><a href="UniqueObject.html#UniqueObject">UniqueObject<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The class to give everyone a unique identification.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Functions</div>
+            <ul>
+                <li><a href="#create_program">create_program<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Create shader program from vertexShader and fragmentShader.</p>
+                    </div>
+                </li>
+                <li><a href="#create_program">create_program<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
+                    </div>
+                </li>
+                <li><a href="#create_shader">create_shader<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Create a shader from a file.</p>
+                    </div>
+                </li>
+                <li><a href="#emCreateFragmentShader">emCreateFragmentShader<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>create fragmentShader.</p>
+                    </div>
+                </li>
+                <li><a href="#emCreateVertexShader">emCreateVertexShader<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>create vertexShader.</p>
+                    </div>
+                </li>
+                <li><a href="#file_read">file_read<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Read the contents of a file.</p>
+                    </div>
+                </li>
+                <li><a href="#print_gl_error_log">print_gl_error_log<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Prints the GL error log during shader compilation.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h2 data-cldoc-dynamic="1" id="namespaces">Namespaces</h2>
+        <div class="namespaces">
+            <div class="item"><a href="empathy.html#empathy" id="empathy+empathy">empathy</a>
+                <table class="namespace">
+                    <tbody>
+                        <tr>
+                            <td><a href="empathy.Empathy.html#empathy.Empathy">Empathy</a></td>
+                            <td class="doc">
+                                <div class="brief">
+                                    <p> The base application independent of all any flavors.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="empathy.You.html#empathy.You">You</a></td>
+                            <td class="doc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 data-cldoc-dynamic="1" id="classes">Classes</h2>
+            <table class="classes">
+                <tbody>
+                    <tr class="short">
+                        <td><a href="Color.html#Color">Color</a></td>
+                        <td>
+                            <div class="brief">
+                                <p>The color class to hold a RGBA color value.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="short">
+                        <td><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject</a></td>
+                        <td>
+                            <div class="brief">
+                                <p> A single TimeBroadcaster item.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="short">
+                        <td><a href="UniqueObject.html#UniqueObject">UniqueObject</a></td>
+                        <td>
+                            <div class="brief">
+                                <p> The class to give everyone a unique identification.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 data-cldoc-dynamic="1" id="functions">Functions</h2>
+            <div class="functions">
+                <div class="function">
+                    <div class="declaration" id="create_program">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">create_program</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">GLuint</span></span>
+                                    </td>
+                                    <td class="argument_name">vertexShader,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name ">GLuint</span></span>
+                                    </td>
+                                    <td class="argument_name">fragmentShader</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Create shader program from vertexShader and fragmentShader.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="create_program::vertexShader">
+                                <td>vertexShader</td>
+                                <td></td>
+                            </tr>
+                            <tr id="create_program::fragmentShader">
+                                <td>fragmentShader</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="create_program">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">create_program</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">vertexfile,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">fragmentfile</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="create_program::vertexfile">
+                                <td>vertexfile</td>
+                                <td></td>
+                            </tr>
+                            <tr id="create_program::fragmentfile">
+                                <td>fragmentfile</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="create_shader">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">create_shader</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">filename,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name ">GLenum</span></span>
+                                    </td>
+                                    <td class="argument_name">type</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Create a shader from a file.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="create_shader::filename">
+                                <td>filename</td>
+                                <td></td>
+                            </tr>
+                            <tr id="create_shader::type">
+                                <td>type</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="emCreateFragmentShader">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">emCreateFragmentShader</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                    </td>
+                                    <td class="argument_name">fileName</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>create fragmentShader.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="emCreateFragmentShader::fileName">
+                                <td>fileName</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="emCreateVertexShader">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">emCreateVertexShader</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                    </td>
+                                    <td class="argument_name">fileName</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>create vertexShader.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="emCreateVertexShader::fileName">
+                                <td>fileName</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="file_read">
+                        <div class="return_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">file_read</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">filename</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Read the contents of a file.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="file_read::filename">
+                                <td>filename</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="print_gl_error_log">
+                        <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">print_gl_error_log</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">GLuint</span></span>
+                                    </td>
+                                    <td class="argument_name">object</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Prints the GL error log during shader compilation.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="print_gl_error_log::object">
+                                <td>object</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

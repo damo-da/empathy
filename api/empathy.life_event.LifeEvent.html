@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LifeEvent</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::life_event::LifeEvent</span></span>
+                </div><a href="empathy.life_event.html"><span class="arrow">↵</span> <span>life_event</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.radio.Subscriber%2Bempathy.radio.Subscriber">radio::Subscriber<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The class to be overridden to emit/receive events.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Subclasses</div>
+            <ul>
+                <li><a href="empathy.life_event.MathWave.html#empathy.life_event.MathWave">MathWave<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.Collection.html#empathy.life_event.Collection">Collection<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.FadeInOut.html#empathy.life_event.FadeInOut">FadeInOut<span class="counter"></span></a></li>
+                <li><a href="empathy.life_event.CWave_data.html#empathy.life_event.CWave_data">CWave_data<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.life_event.LifeEvent.LifeEvent">LifeEvent<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.life_event.LifeEvent.decodeJson">decodeJson<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.draw">draw<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.getDepth">getDepth<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.getTotalTime">getTotalTime<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.init">init<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.isCreating">isCreating<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.isDestroyed">isDestroyed<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.isFinished">isFinished<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.isFinishing">isFinishing<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.isRunning">isRunning<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.kill">kill<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.onDestroy">onDestroy<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.onInit">onInit<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.passTime">passTime<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>game loop</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.life_event.LifeEvent.setDepth">setDepth<span class="counter"></span></a></li>
+                <li><a href="#empathy.life_event.LifeEvent.doneCreating">doneCreating<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.doneFinishing">doneFinishing<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.doneRunning">doneRunning<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.getTimeSinceCreate">getTimeSinceCreate<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.getTimeSinceFinish">getTimeSinceFinish<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.getTimeSinceRun">getTimeSinceRun<span class="counter"></span></a><span class="protected">p</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.onCreate">onCreate<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.onFinish">onFinish<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+                <li><a href="#empathy.life_event.LifeEvent.onRun">onRun<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::life_event::LifeEvent"><span><span class="keyword">Class</span><span>empathy::life_event::LifeEvent</span></span></h1>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::radio::Subscriber+empathy::radio::Subscriber">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">radio::Subscriber</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> The class to be overridden to emit/receive events.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="subclasses">Subclasses</h2>
+        <table class="subclasses">
+            <tbody>
+                <tr id="empathy::life_event::MathWave+empathy::life_event::MathWave">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.MathWave.html#empathy.life_event.MathWave">MathWave</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::Collection+empathy::life_event::Collection">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.Collection.html#empathy.life_event.Collection">Collection</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::FadeInOut+empathy::life_event::FadeInOut">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.FadeInOut.html#empathy.life_event.FadeInOut">FadeInOut</a></td>
+                    <td></td>
+                </tr>
+                <tr id="empathy::life_event::CWave_data+empathy::life_event::CWave_data">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.life_event.CWave_data.html#empathy.life_event.CWave_data">CWave_data</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::LifeEvent">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">LifeEvent</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::decodeJson">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">decodeJson</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">key,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">value</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::decodeJson::key">
+                            <td>key</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::life_event::LifeEvent::decodeJson::value">
+                            <td>value</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::draw">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                        <li class="abstract">abstract</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">draw</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::getDepth">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getDepth</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::getTotalTime">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTotalTime</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::init">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">init</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::isCreating">
+                    <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">isCreating</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::isDestroyed">
+                    <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">isDestroyed</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::isFinished">
+                    <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">isFinished</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::isFinishing">
+                    <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">isFinishing</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::isRunning">
+                    <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">isRunning</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::kill">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">kill</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::onDestroy">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onDestroy</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::onInit">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onInit</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::passTime">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">passTime</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>game loop</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::passTime::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::setDepth">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setDepth</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">depth</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::setDepth::depth">
+                            <td>depth</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::doneCreating">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">doneCreating</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::doneFinishing">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">doneFinishing</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::doneRunning">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">doneRunning</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::getTimeSinceCreate">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTimeSinceCreate</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::getTimeSinceFinish">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTimeSinceFinish</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::getTimeSinceRun">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getTimeSinceRun</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::onCreate">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onCreate</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::onCreate::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::onFinish">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onFinish</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::onFinish::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::life_event::LifeEvent::onRun">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onRun</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::life_event::LifeEvent::onRun::delTime">
+                            <td>delTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

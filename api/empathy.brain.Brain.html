@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Brain</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::brain::Brain</span></span>
+                </div><a href="empathy.brain.html"><span class="arrow">↵</span> <span>brain</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.radio.Subscriber%2Bempathy.radio.Subscriber">radio::Subscriber<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The class to be overridden to emit/receive events.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Subclasses</div>
+            <ul>
+                <li><a href="empathy.brain.DummyBrain.html#empathy.brain.DummyBrain">DummyBrain<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.brain.Brain.Brain">Brain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Constructor</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.brain.Brain.addTo">addTo<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p> Add brain to an Empathy app.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.getDelay">getDelay<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>How late the <code>begin</code> action should be called.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.onReceiveEvent">onReceiveEvent<span class="counter"></span></a><span class="virtual">v</span>
+                    <div class="brief">
+                        <p>Called when an event is received for this subscriber.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.run">run<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Start running lines on this <a href="#empathy.brain.Brain.Brain">empathy::brain::Brain::Brain</a> usually called by the <a href="empathy.You.html#empathy.You">empathy::You</a> class</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.setDelay">setDelay<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>How late the <code>begin</code> action should be called.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.terminate">terminate<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.brain.Brain.activateTimeoutForNextLine">activateTimeoutForNextLine<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p>Activate timeout for a certain line.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.activateTimeoutForNextLine">activateTimeoutForNextLine<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p>Activate timeout for a certain line.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.addLifeEvent">addLifeEvent<span class="counter"></span></a><span class="protected">p</span>
+                    <div class="brief">
+                        <p> Add life event to the current gamescreen.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.Brain.runLineNumber">runLineNumber<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> The logic provider.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::brain::Brain"><span><span class="keyword">Class</span><span>empathy::brain::Brain</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>Consider them the computer which take time as input and give the output on the screen.</p>
+                <p>Here's the deal: You want to build an amazing LifeEvent and also need dynamic control? Well,you might need to extend this class, or send JSON to JSONBrain file.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::radio::Subscriber+empathy::radio::Subscriber">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">radio::Subscriber</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> The class to be overridden to emit/receive events.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="subclasses">Subclasses</h2>
+        <table class="subclasses">
+            <tbody>
+                <tr id="empathy::brain::DummyBrain+empathy::brain::DummyBrain">
+                    <td class="keyword"></td>
+                    <td><a href="empathy.brain.DummyBrain.html#empathy.brain.DummyBrain">DummyBrain</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::Brain">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">Brain</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Constructor</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::addTo">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">addTo</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.Empathy.html#empathy.Empathy">Empathy</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">binder</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Sometimes a brain needs to dynamically do stuffs before adding itself to the app. That's where addTo(Empathy) comes handy in.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::addTo::binder">
+                            <td>binder</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::getDelay">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getDelay</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>How late the <code>begin</code> action should be called.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::onReceiveEvent">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">onReceiveEvent</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">radio::Event</a></span><span class="qualifier">  &amp;</span></span>
+                                </td>
+                                <td class="argument_name">event</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Called when an event is received for this subscriber.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::onReceiveEvent::event">
+                            <td>event</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber.onReceiveEvent">radio::Subscriber::onReceiveEvent</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::run">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">run</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Start running lines on this <a href="#empathy.brain.Brain.Brain">empathy::brain::Brain::Brain</a> usually called by the <a href="empathy.You.html#empathy.You">empathy::You</a> class</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::setDelay">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setDelay</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">delay</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>How late the <code>begin</code> action should be called.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::setDelay::delay">
+                            <td>delay</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::terminate">
+                    <ul class="specifiers">
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">terminate</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>A basic override function created for handling brain termination due to program abort.</p>
+                    <p>Remember to call superclass while overriding.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::activateTimeoutForNextLine">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">activateTimeoutForNextLine</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">lineID,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">afterTime</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Activate timeout for a certain line.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::activateTimeoutForNextLine::lineID">
+                            <td>lineID</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::Brain::activateTimeoutForNextLine::afterTime">
+                            <td>afterTime</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::activateTimeoutForNextLine">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">activateTimeoutForNextLine</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">lineID,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">afterTime,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">callerLineID</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Activate timeout for a certain line.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::activateTimeoutForNextLine::lineID">
+                            <td>lineID</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::Brain::activateTimeoutForNextLine::afterTime">
+                            <td>afterTime</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::Brain::activateTimeoutForNextLine::callerLineID">
+                            <td>callerLineID</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::addLifeEvent">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">addLifeEvent</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent">life_event::LifeEvent</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">event</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p> Add life event to the current gamescreen.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::addLifeEvent::event">
+                            <td>event</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::Brain::runLineNumber">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                        <li class="abstract">abstract</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">runLineNumber</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">lineID,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">callerID</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Any extension of Brain class must override this function. What it does is receive instructions. For example, when the program begins, lineID is "begin" and when you need to play a music, it will be something like "playBeethoven". Your
+                        choice.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::Brain::runLineNumber::lineID">
+                            <td>lineID</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::Brain::runLineNumber::callerID">
+                            <td>callerID</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->
