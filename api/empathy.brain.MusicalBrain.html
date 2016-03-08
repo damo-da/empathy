@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MusicalBrain</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::brain::MusicalBrain</span></span>
+                </div><a href="empathy.brain.html"><span class="arrow">↵</span> <span>brain</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.brain.Brain%2Bempathy.brain.Brain">Brain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Brain: the controller of lifevents.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.brain.MusicalBrain.MusicalBrain">MusicalBrain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Default Constructor</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.brain.MusicalBrain.getFrequency">getFrequency<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Get the beats per second of the music notation.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.MusicalBrain.setFrequency">setFrequency<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Set the beats per second of the music notation.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.MusicalBrain.setMusic">setMusic<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Set the music. See the manual above for <a href="#empathy.brain.MusicalBrain.MusicalBrain">empathy::brain::MusicalBrain::MusicalBrain</a> for more info.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.MusicalBrain.runLineNumber">runLineNumber<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> The logic provider.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::brain::MusicalBrain"><span><span class="keyword">Class</span><span>empathy::brain::MusicalBrain</span></span></h1>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::brain::Brain+empathy::brain::Brain">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.brain.Brain.html#empathy.brain.Brain">Brain</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> Brain: the controller of lifevents.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::MusicalBrain::MusicalBrain">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">MusicalBrain</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Default Constructor</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::MusicalBrain::getFrequency">
+                    <div class="return_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">getFrequency</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Warning: not frequency of music but the beat per second frequency</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::MusicalBrain::setFrequency">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setFrequency</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">frequency</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Warning: not frequency of music but the beat per second frequency</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::MusicalBrain::setFrequency::frequency">
+                            <td>frequency</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::MusicalBrain::setMusic">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">setMusic</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Set the music. See the manual above for <a href="#empathy.brain.MusicalBrain.MusicalBrain">empathy::brain::MusicalBrain::MusicalBrain</a> for more info.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::MusicalBrain::setMusic::">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::MusicalBrain::runLineNumber">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">runLineNumber</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">lineID,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">callerID</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Any extension of Brain class must override this function. What it does is receive instructions. For example, when the program begins, lineID is "begin" and when you need to play a music, it will be something like "playBeethoven". Your
+                        choice.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::MusicalBrain::runLineNumber::lineID">
+                            <td>lineID</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::MusicalBrain::runLineNumber::callerID">
+                            <td>callerID</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.brain.Brain.html#empathy.brain.Brain.runLineNumber">Brain::runLineNumber</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

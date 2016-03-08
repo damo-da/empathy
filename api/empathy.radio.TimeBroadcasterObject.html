@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TimeBroadcasterObject</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::radio::TimeBroadcasterObject</span></span>
+                </div><a href="empathy.radio.html"><span class="arrow">↵</span> <span>radio</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Fields</div>
+            <ul>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.subscriber">subscriber<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The subscriber: the one who listens to this timed event.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.event">event<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The event to be dispatched on trigger.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.period">period<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The period of a repeating trigger.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.repeat">repeat<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Whether the trigger should repeat.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.nextOccurance">nextOccurance<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The next occurance of the trigger.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.TimeBroadcasterObject">TimeBroadcasterObject<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Constructor</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.radio.TimeBroadcasterObject.printDebug">printDebug<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Print the current state of this object. Useful for debugging purposes.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::radio::TimeBroadcasterObject"><span><span class="keyword">Class</span><span>empathy::radio::TimeBroadcasterObject</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p><em>
+</em></p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="fields">Fields</h2>
+        <table class="fields">
+            <tbody>
+                <tr id="empathy::radio::TimeBroadcasterObject::subscriber">
+                    <td class="field_name identifier">subscriber</td>
+                    <td class="field_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The subscriber: the one who listens to this timed event.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="empathy::radio::TimeBroadcasterObject::event">
+                    <td class="field_name identifier">event</td>
+                    <td class="field_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">Event</a></span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The event to be dispatched on trigger.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="empathy::radio::TimeBroadcasterObject::period">
+                    <td class="field_name identifier">period</td>
+                    <td class="field_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The period of a repeating trigger.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="empathy::radio::TimeBroadcasterObject::repeat">
+                    <td class="field_name identifier">repeat</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">bool</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>Whether the trigger should repeat.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="empathy::radio::TimeBroadcasterObject::nextOccurance">
+                    <td class="field_name identifier">nextOccurance</td>
+                    <td class="field_type"><span class="type"><span class="name ">GLfloat</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The next occurance of the trigger.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::radio::TimeBroadcasterObject::TimeBroadcasterObject">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">TimeBroadcasterObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Event.html#empathy.radio.Event">Event</a></span></span>
+                                </td>
+                                <td class="argument_name">e,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">nextOccurance,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="empathy.radio.Subscriber.html#empathy.radio.Subscriber">Subscriber</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">s,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">p</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Constructor</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::radio::TimeBroadcasterObject::TimeBroadcasterObject::e">
+                            <td>e</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcasterObject::TimeBroadcasterObject::nextOccurance">
+                            <td>nextOccurance</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcasterObject::TimeBroadcasterObject::s">
+                            <td>s</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::radio::TimeBroadcasterObject::TimeBroadcasterObject::p">
+                            <td>p</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::radio::TimeBroadcasterObject::printDebug">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">printDebug</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Print the current state of this object. Useful for debugging purposes.</p>
+                </div>
+                <table class="arguments"></table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

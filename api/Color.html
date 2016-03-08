@@ -23,29 +23,69 @@
             </ul>
             <div class="subtitle">Constructors</div>
             <ul>
-                <li><a href="#Color.Color">Color<span class="counter"></span></a></li>
+                <li><a href="#Color.Color">Color<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Default constructor.</p>
+                    </div>
+                </li>
             </ul>
             <div class="subtitle">Member Functions</div>
             <ul>
                 <li><a href="#Color.decodeJson">decodeJson<span class="counter"></span></a><span class="virtual">v</span>
                     <div class="brief">
-                        <p>Apply color from JSON.</p>
+                        <p> Apply color from JSON.</p>
                     </div>
                 </li>
-                <li><a href="#Color.getA">getA<span class="counter"></span></a></li>
-                <li><a href="#Color.getB">getB<span class="counter"></span></a></li>
-                <li><a href="#Color.getG">getG<span class="counter"></span></a></li>
-                <li><a href="#Color.getR">getR<span class="counter"></span></a></li>
-                <li><a href="#Color.setA">setA<span class="counter"></span></a></li>
-                <li><a href="#Color.setB">setB<span class="counter"></span></a></li>
-                <li><a href="#Color.setColor">setColor<span class="counter"></span></a></li>
+                <li><a href="#Color.getA">getA<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Get the alpha of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.getB">getB<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Get the blueness of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.getG">getG<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Get the greenness of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.getR">getR<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Get the redness of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.setA">setA<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Sets the alpha of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.setB">setB<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Sets the blueness of the color.</p>
+                    </div>
+                </li>
                 <li><a href="#Color.setColor">setColor<span class="counter"></span></a>
                     <div class="brief">
-                        <p>Something like a "pointer" copy constructor.</p>
+                        <p> RGBA value.</p>
                     </div>
                 </li>
-                <li><a href="#Color.setG">setG<span class="counter"></span></a></li>
-                <li><a href="#Color.setR">setR<span class="counter"></span></a></li>
+                <li><a href="#Color.setColor">setColor<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>A pointer "copy constructor".</p>
+                    </div>
+                </li>
+                <li><a href="#Color.setG">setG<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Sets the greenness of the color.</p>
+                    </div>
+                </li>
+                <li><a href="#Color.setR">setR<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Sets the redness of the color.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -111,23 +151,42 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Default constructor.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr id="Color::Color::r">
                             <td>r</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>red in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::Color::g">
                             <td>g</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>green in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::Color::b">
                             <td>b</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>blue in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::Color::a">
                             <td>a</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>alpha in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -162,7 +221,7 @@
                     </table>
                 </div>
                 <div class="brief">
-                    <p>Apply color from JSON.</p>
+                    <p> Apply color from JSON.</p>
                 </div>
                 <table class="arguments">
                     <tbody>
@@ -192,11 +251,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Get the alpha of the color.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr class="return">
                             <td class="keyword">return</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>alpha in range 0.0f to 1.0f</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -216,11 +282,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Get the blueness of the color.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr class="return">
                             <td class="keyword">return</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>blueness in range 0.0f to 1.0f</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -240,11 +313,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Get the greenness of the color.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr class="return">
                             <td class="keyword">return</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>greenness in range 0.0f to 1.0f</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -264,11 +344,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Get the redness of the color.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr class="return">
                             <td class="keyword">return</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>redness in range 0.0f to 1.0f</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -289,6 +376,9 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="brief">
+                    <p> Sets the alpha of the color.</p>
                 </div>
                 <table class="arguments">
                     <tbody>
@@ -315,6 +405,9 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="brief">
+                    <p> Sets the blueness of the color.</p>
                 </div>
                 <table class="arguments">
                     <tbody>
@@ -360,23 +453,42 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> RGBA value.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr id="Color::setColor::r">
                             <td>r</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>red in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::setColor::g">
                             <td>g</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>green in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::setColor::b">
                             <td>b</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>blue in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                         <tr id="Color::setColor::a">
                             <td>a</td>
-                            <td></td>
+                            <td>
+                                <div class="doc">
+                                    <p>alpha in range (0.0-1.0f)</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -399,7 +511,7 @@
                     </table>
                 </div>
                 <div class="brief">
-                    <p>Something like a "pointer" copy constructor.</p>
+                    <p>A pointer "copy constructor".</p>
                 </div>
                 <table class="arguments">
                     <tbody>
@@ -427,6 +539,9 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="brief">
+                    <p> Sets the greenness of the color.</p>
+                </div>
                 <table class="arguments">
                     <tbody>
                         <tr id="Color::setG::g">
@@ -452,6 +567,9 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="brief">
+                    <p> Sets the redness of the color.</p>
                 </div>
                 <table class="arguments">
                     <tbody>

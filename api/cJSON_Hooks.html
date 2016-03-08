@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cJSON_Hooks</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Struct</span><span>cJSON_Hooks</span></span>
+                </div><a href="index.html"><span class="arrow">↵</span> <span>Index</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Fields</div>
+            <ul>
+                <li><a href="#cJSON_Hooks.malloc_fn">malloc_fn<span class="counter"></span></a></li>
+                <li><a href="#cJSON_Hooks.free_fn">free_fn<span class="counter"></span></a></li>
+            </ul>
+            <div class="subtitle">Functions</div>
+            <ul>
+                <li><a href="#cJSON_InitHooks">cJSON_InitHooks<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Supply malloc, realloc and free functions to cJSON</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="cJSON_Hooks"><span><span class="keyword">Struct</span><span>cJSON_Hooks</span></span></h1>
+        <h2 data-cldoc-dynamic="1" id="fields">Fields</h2>
+        <table class="fields">
+            <tbody>
+                <tr id="cJSON_Hooks::malloc_fn">
+                    <td class="field_name identifier">malloc_fn</td>
+                    <td class="field_type"><span class="type"><span class="function-type"><span class="sub-type"><span class="sub-type"><span class="name builtin">void</span><span class="qualifier"> *</span></span>
+                        </span><span class="function-qualified"><span class="plain">(</span><span class="qualifier"> *</span><span class="plain">)</span></span><span class="function-arguments"><span class="plain">(</span><span class="sub-type"><span class="name builtin">unsigned long</span></span>
+                        <span
+                            class="plain">)</span>
+                            </span>
+                            </span>
+                            </span>
+                    </td>
+                    <td class="doc"></td>
+                </tr>
+                <tr id="cJSON_Hooks::free_fn">
+                    <td class="field_name identifier">free_fn</td>
+                    <td class="field_type"><span class="type"><span class="function-type"><span class="sub-type"><span class="sub-type"><span class="name builtin">void</span></span>
+                        </span><span class="function-qualified"><span class="plain">(</span><span class="qualifier"> *</span><span class="plain">)</span></span><span class="function-arguments"><span class="plain">(</span><span class="sub-type"><span class="name builtin">void</span>
+                        <span
+                            class="qualifier"> *</span>
+                            </span><span class="plain">)</span></span>
+                            </span>
+                            </span>
+                    </td>
+                    <td class="doc"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="functions">Functions</h2>
+        <div class="functions">
+            <div class="function">
+                <div class="declaration" id="cJSON_InitHooks">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_InitHooks</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON_Hooks">cJSON_Hooks</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">hooks</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Supply malloc, realloc and free functions to cJSON</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_InitHooks::hooks">
+                            <td>hooks</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

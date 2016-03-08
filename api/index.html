@@ -14,18 +14,17 @@
             <div id="cldoc_sidebar_pagenav"></div>
             <div class="subtitle">Namespaces</div>
             <ul>
-                <li><a href="empathy.html#empathy">empathy<span class="counter"></span></a></li>
+                <li><a href="empathy.html#empathy">empathy<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> The empathy namespace and classes header.</p>
+                    </div>
+                </li>
             </ul>
             <div class="subtitle">Classes</div>
             <ul>
                 <li><a href="Color.html#Color">Color<span class="counter"></span></a>
                     <div class="brief">
                         <p>The color class to hold a RGBA color value.</p>
-                    </div>
-                </li>
-                <li><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> A single TimeBroadcaster item.</p>
                     </div>
                 </li>
                 <li><a href="UniqueObject.html#UniqueObject">UniqueObject<span class="counter"></span></a>
@@ -36,14 +35,21 @@
             </ul>
             <div class="subtitle">Functions</div>
             <ul>
-                <li><a href="#create_program">create_program<span class="counter"></span></a>
+                <li><a href="#cJSON_get_keys">cJSON_get_keys<span class="counter"></span></a></li>
+                <li><a href="#cJSON_print_keys">cJSON_print_keys<span class="counter"></span></a></li>
+                <li><a href="#create_fragment_shader">create_fragment_shader<span class="counter"></span></a>
                     <div class="brief">
-                        <p>Create shader program from vertexShader and fragmentShader.</p>
+                        <p> create fragmentShader.</p>
                     </div>
                 </li>
                 <li><a href="#create_program">create_program<span class="counter"></span></a>
                     <div class="brief">
-                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
+                        <p> Create shader program from direct vertexShader and fragmentShader.</p>
+                    </div>
+                </li>
+                <li><a href="#create_program">create_program<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Create shader program from vertexShader file and fragmentShader file.</p>
                     </div>
                 </li>
                 <li><a href="#create_shader">create_shader<span class="counter"></span></a>
@@ -51,24 +57,69 @@
                         <p> Create a shader from a file.</p>
                     </div>
                 </li>
-                <li><a href="#emCreateFragmentShader">emCreateFragmentShader<span class="counter"></span></a>
+                <li><a href="#create_vertex_shader">create_vertex_shader<span class="counter"></span></a>
                     <div class="brief">
-                        <p>create fragmentShader.</p>
-                    </div>
-                </li>
-                <li><a href="#emCreateVertexShader">emCreateVertexShader<span class="counter"></span></a>
-                    <div class="brief">
-                        <p>create vertexShader.</p>
+                        <p> create vertexShader.</p>
                     </div>
                 </li>
                 <li><a href="#file_read">file_read<span class="counter"></span></a>
                     <div class="brief">
-                        <p>Read the contents of a file.</p>
+                        <p> Read the contents of an ASCII file.</p>
+                    </div>
+                </li>
+                <li><a href="#int_to_single_char">int_to_single_char<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Convert a single digit integer to a single character. It's not ASCII.</p>
+                    </div>
+                </li>
+                <li><a href="#int_to_str">int_to_str<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Convert an integer to string.</p>
                     </div>
                 </li>
                 <li><a href="#print_gl_error_log">print_gl_error_log<span class="counter"></span></a>
                     <div class="brief">
-                        <p>Prints the GL error log during shader compilation.</p>
+                        <p> Prints the GL error log during shader compilation.</p>
+                    </div>
+                </li>
+                <li><a href="#str_has_character">str_has_character<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Checks the presence of a character in a string.</p>
+                    </div>
+                </li>
+                <li><a href="#str_remove_character">str_remove_character<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Remove a certain character from a string.</p>
+                    </div>
+                </li>
+                <li><a href="#str_replace">str_replace<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Relpace a character in a string by another character.</p>
+                    </div>
+                </li>
+                <li><a href="#str_split">str_split<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Split a string.</p>
+                    </div>
+                </li>
+                <li><a href="#str_split">str_split<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Split a string.</p>
+                    </div>
+                </li>
+                <li><a href="#str_to_int">str_to_int<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Convert a string to integer.</p>
+                    </div>
+                </li>
+                <li><a href="#str_to_lower">str_to_lower<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Convert a string to lower case.</p>
+                    </div>
+                </li>
+                <li><a href="#str_trim">str_trim<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Trim a string.</p>
                     </div>
                 </li>
             </ul>
@@ -78,6 +129,9 @@
         <h2 data-cldoc-dynamic="1" id="namespaces">Namespaces</h2>
         <div class="namespaces">
             <div class="item"><a href="empathy.html#empathy" id="empathy+empathy">empathy</a>
+                <div class="brief">
+                    <p> The empathy namespace and classes header.</p>
+                </div>
                 <table class="namespace">
                     <tbody>
                         <tr>
@@ -90,7 +144,11 @@
                         </tr>
                         <tr>
                             <td><a href="empathy.You.html#empathy.You">You</a></td>
-                            <td class="doc"></td>
+                            <td class="doc">
+                                <div class="brief">
+                                    <p> <code>You</code> interacts with the user to understand the user's emotions.</p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -107,14 +165,6 @@
                         </td>
                     </tr>
                     <tr class="short">
-                        <td><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject</a></td>
-                        <td>
-                            <div class="brief">
-                                <p> A single TimeBroadcaster item.</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="short">
                         <td><a href="UniqueObject.html#UniqueObject">UniqueObject</a></td>
                         <td>
                             <div class="brief">
@@ -126,6 +176,105 @@
             </table>
             <h2 data-cldoc-dynamic="1" id="functions">Functions</h2>
             <div class="functions">
+                <div class="function">
+                    <div class="declaration" id="cJSON_get_keys">
+                        <div class="return_type"><span class="type"><span class="name ">std::vector&lt;std::basic_string&lt;char&gt;, std::allocator&lt;std::basic_string&lt;char&gt; &gt; &gt;</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_get_keys</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">object</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_get_keys::object">
+                                <td>object</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_print_keys">
+                        <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_print_keys</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">object</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_print_keys::object">
+                                <td>object</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="create_fragment_shader">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">create_fragment_shader</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                    </td>
+                                    <td class="argument_name">fileName</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> create fragmentShader.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="create_fragment_shader::fileName">
+                                <td>fileName</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the name of the shader file</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>created fragment shader</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="function">
                     <div class="declaration" id="create_program">
                         <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
@@ -150,7 +299,7 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p>Create shader program from vertexShader and fragmentShader.</p>
+                        <p> Create shader program from direct vertexShader and fragmentShader.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
@@ -195,17 +344,25 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
+                        <p> Create shader program from vertexShader file and fragmentShader file.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="create_program::vertexfile">
                                 <td>vertexfile</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the relative path to vertex shader file</p>
+                                    </div>
+                                </td>
                             </tr>
                             <tr id="create_program::fragmentfile">
                                 <td>fragmentfile</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the relative path to fragment shader file</p>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
@@ -245,27 +402,39 @@
                         <tbody>
                             <tr id="create_shader::filename">
                                 <td>filename</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>name of the file to read</p>
+                                    </div>
+                                </td>
                             </tr>
                             <tr id="create_shader::type">
                                 <td>type</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>GL_VERTEX_SHADER or GL_FRAGMENT_SHADER</p>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the created shader</p>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="function">
-                    <div class="declaration" id="emCreateFragmentShader">
+                    <div class="declaration" id="create_vertex_shader">
                         <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
                         </div>
                         <table class="declaration">
                             <tbody>
                                 <tr>
-                                    <td class="identifier">emCreateFragmentShader</td>
+                                    <td class="identifier">create_vertex_shader</td>
                                     <td class="open_paren">(</td>
                                     <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
                                     </td>
@@ -276,50 +445,25 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p>create fragmentShader.</p>
+                        <p> create vertexShader.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
-                            <tr id="emCreateFragmentShader::fileName">
+                            <tr id="create_vertex_shader::fileName">
                                 <td>fileName</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the name of the shader file</p>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="function">
-                    <div class="declaration" id="emCreateVertexShader">
-                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
-                        </div>
-                        <table class="declaration">
-                            <tbody>
-                                <tr>
-                                    <td class="identifier">emCreateVertexShader</td>
-                                    <td class="open_paren">(</td>
-                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
-                                    </td>
-                                    <td class="argument_name">fileName</td>
-                                    <td class="close_paren">)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="brief">
-                        <p>create vertexShader.</p>
-                    </div>
-                    <table class="arguments">
-                        <tbody>
-                            <tr id="emCreateVertexShader::fileName">
-                                <td>fileName</td>
-                                <td></td>
-                            </tr>
-                            <tr class="return">
-                                <td class="keyword">return</td>
-                                <td></td>
+                                <td>
+                                    <div class="doc">
+                                        <p>created vertex shader</p>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -343,12 +487,87 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p>Read the contents of a file.</p>
+                        <p> Read the contents of an ASCII file.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="file_read::filename">
                                 <td>filename</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the relative path of the file.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the contents of the file</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="int_to_single_char">
+                        <div class="return_type"><span class="type"><span class="name builtin">char</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">int_to_single_char</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">num</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Convert a single digit integer to a single character. It's not ASCII.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="int_to_single_char::num">
+                                <td>num</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="int_to_str">
+                        <div class="return_type"><span class="type"><span class="name ">std::string</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">int_to_str</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">integer</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Convert an integer to string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="int_to_str::integer">
+                                <td>integer</td>
                                 <td></td>
                             </tr>
                             <tr class="return">
@@ -376,12 +595,405 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p>Prints the GL error log during shader compilation.</p>
+                        <p> Prints the GL error log during shader compilation.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="print_gl_error_log::object">
                                 <td>object</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the shader or the program.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_has_character">
+                        <div class="return_type"><span class="type"><span class="name builtin">bool</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_has_character</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">str,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">mChar</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Checks the presence of a character in a string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_has_character::str">
+                                <td>str</td>
+                                <td></td>
+                            </tr>
+                            <tr id="str_has_character::mChar">
+                                <td>mChar</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_remove_character">
+                        <div class="return_type"><span class="type"><span class="name ">std::string</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_remove_character</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">str,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">chr</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Remove a certain character from a string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_remove_character::str">
+                                <td>str</td>
+                                <td></td>
+                            </tr>
+                            <tr id="str_remove_character::chr">
+                                <td>chr</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the character to be removed.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>a new instance of string after replacing the character.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_replace">
+                        <div class="return_type"><span class="type"><span class="name ">std::string</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_replace</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">str,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">from,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">to</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Relpace a character in a string by another character.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_replace::str">
+                                <td>str</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the string of which the character is to be replaced.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="str_replace::from">
+                                <td>from</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the character which is to be replaced by @to</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="str_replace::to">
+                                <td>to</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the character which replaces the @from character.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_split">
+                        <div class="return_type"><span class="type"><span class="name ">std::vector&lt;std::basic_string&lt;char&gt;, std::allocator&lt;std::basic_string&lt;char&gt; &gt; &gt;</span><span class="qualifier">  &amp;</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_split</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span> &amp;</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">s,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span></span>
+                                    </td>
+                                    <td class="argument_name">delim,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::vector&lt;std::basic_string&lt;char&gt;, std::allocator&lt;std::basic_string&lt;char&gt; &gt; &gt;</span><span class="qualifier">  &amp;</span></span>
+                                    </td>
+                                    <td class="argument_name">elems</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Split a string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_split::s">
+                                <td>s</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the string to be splitted.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="str_split::delim">
+                                <td>delim</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the delimiter.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="str_split::elems">
+                                <td>elems</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the return variable.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_split">
+                        <div class="return_type"><span class="type"><span class="name ">std::vector&lt;std::basic_string&lt;char&gt;, std::allocator&lt;std::basic_string&lt;char&gt; &gt; &gt;</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_split</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span> &amp;</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">s,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span></span>
+                                    </td>
+                                    <td class="argument_name">delim</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p> Split a string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_split::s">
+                                <td>s</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the string to be splitted.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="str_split::delim">
+                                <td>delim</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the delimiter.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_to_int">
+                        <div class="return_type"><span class="type"><span class="name builtin">int</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_to_int</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                    </td>
+                                    <td class="argument_name">string</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Convert a string to integer.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_to_int::string">
+                                <td>string</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_to_lower">
+                        <div class="return_type"><span class="type"><span class="name ">std::string</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_to_lower</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">str</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="doc">
+                        <p>//TODO fix issue of cldoc with &lt;algorithm&gt;</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_to_lower::str">
+                                <td>str</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="str_trim">
+                        <div class="return_type"><span class="type"><span class="name ">std::string</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">str_trim</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">string</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="doc">
+                        <p>By trimming a string means 'remove spaces from first and last of string.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="str_trim::string">
+                                <td>string</td>
+                                <td>
+                                    <div class="doc">
+                                        <p>the string to be trimmed.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
                                 <td></td>
                             </tr>
                         </tbody>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSONBrain</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Class</span><span>empathy::brain::JSONBrain</span></span>
+                </div><a href="empathy.brain.html"><span class="arrow">↵</span> <span>brain</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Bases</div>
+            <ul>
+                <li><a href="#empathy.brain.Brain%2Bempathy.brain.Brain">Brain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Brain: the controller of lifevents.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Constructors</div>
+            <ul>
+                <li><a href="#empathy.brain.JSONBrain.JSONBrain">JSONBrain<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> Constructor.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Member Functions</div>
+            <ul>
+                <li><a href="#empathy.brain.JSONBrain.terminate">terminate<span class="counter"></span></a><span class="virtual">v</span></li>
+                <li><a href="#empathy.brain.JSONBrain.createEventFromString">createEventFromString<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> Create a &lt;LifeEvent&gt; using it's name.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.JSONBrain.executeJson">executeJson<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> Execute a certain JSON action.</p>
+                    </div>
+                </li>
+                <li><a href="#empathy.brain.JSONBrain.runLineNumber">runLineNumber<span class="counter"></span></a><span class="protected virtual">p&nbsp;v</span>
+                    <div class="brief">
+                        <p> The logic provider.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="empathy::brain::JSONBrain"><span><span class="keyword">Class</span><span>empathy::brain::JSONBrain</span></span></h1>
+        <div class="description">
+            <div class="doc">
+                <p>Here's the simple rule to parse any file:</p>
+                <pre><code>Brain * brain=<span class="hljs-keyword">new</span> JSONBrain(<span class="hljs-string">"myjsonfile.json"</span>);
+brain-&gt;addTo(empathy);<span class="hljs-comment">//empathy's your app</span></code></pre>
+                <p>And the script executes!</p>
+                <p>How to make a JSON instruction file? See &lt;doc/json_brain_rules&gt;.</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="bases">Bases</h2>
+        <table class="bases">
+            <tbody>
+                <tr id="empathy::brain::Brain+empathy::brain::Brain">
+                    <td class="keyword"></td>
+                    <td><span class="type"><span class="name "><a href="empathy.brain.Brain.html#empathy.brain.Brain">Brain</a></span></span>
+                    </td>
+                    <td>
+                        <div class="brief">
+                            <p> Brain: the controller of lifevents.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="constructors">Constructors</h2>
+        <div class="constructors">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::JSONBrain::JSONBrain">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">JSONBrain</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">fileName</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p> Constructor.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::JSONBrain::JSONBrain::fileName">
+                            <td>fileName</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
+        <div class="member_functions">
+            <div class="function">
+                <div class="declaration" id="empathy::brain::JSONBrain::terminate">
+                    <ul class="specifiers">
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">terminate</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>A basic override function created for handling brain termination due to program abort.</p>
+                    <p>Remember to call superclass while overriding.</p>
+                </div>
+                <table class="arguments"></table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.brain.Brain.html#empathy.brain.Brain.terminate">Brain::terminate</a></div>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::JSONBrain::createEventFromString">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name "><a href="empathy.life_event.LifeEvent.html#empathy.life_event.LifeEvent">life_event::LifeEvent</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">createEventFromString</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">name</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Suppose you have a JSON action like this:
+                        <code>{"type":"create","create":"cwave","colorRed":0.8}</code> What you'd want this to do is to create an instance of CWave.</p>
+                    <p>So, <a href="#empathy.brain.JSONBrain.executeJson">empathy::brain::JSONBrain::executeJson</a> receives this JSON action, and asks this method to create an empty instance of CWave. JUST create an empty instance. Nothing more.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::JSONBrain::createEventFromString::name">
+                            <td>name</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::JSONBrain::executeJson">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="virtual">virtual</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">executeJson</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span><span class="qualifier">  <span class="keyword">const</span></span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">action,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">json</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p> Execute a certain JSON action.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::JSONBrain::executeJson::action">
+                            <td>action</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::JSONBrain::executeJson::json">
+                            <td>json</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="empathy::brain::JSONBrain::runLineNumber">
+                    <ul class="specifiers">
+                        <li class="protected">protected</li>
+                        <li class="override">override</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">runLineNumber</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">lineID,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                </td>
+                                <td class="argument_name">callerID</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Any extension of Brain class must override this function. What it does is receive instructions. For example, when the program begins, lineID is "begin" and when you need to play a music, it will be something like "playBeethoven". Your
+                        choice.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="empathy::brain::JSONBrain::runLineNumber::lineID">
+                            <td>lineID</td>
+                            <td></td>
+                        </tr>
+                        <tr id="empathy::brain::JSONBrain::runLineNumber::callerID">
+                            <td>callerID</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="overrides"><span class="title">Overrides: </span><a href="empathy.brain.Brain.html#empathy.brain.Brain.runLineNumber">Brain::runLineNumber</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->

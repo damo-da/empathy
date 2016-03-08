@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cJSON</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="styles/cldoc.css">
+</head>
+
+<body id="cldoc">
+    <div id="cldoc_sidebar">
+        <div id="cldoc_sidebar_items">
+            <div class="back">
+                <div class="name"><span><span class="keyword">Struct</span><span>cJSON</span></span>
+                </div><a href="index.html"><span class="arrow">↵</span> <span>Index</span></a></div>
+            <div id="cldoc_sidebar_pagenav"></div>
+            <div class="subtitle">Fields</div>
+            <ul>
+                <li><a href="#cJSON.next">next<span class="counter"></span></a></li>
+                <li><a href="#cJSON.prev">prev<span class="counter"></span></a></li>
+                <li><a href="#cJSON.child">child<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>next/prev allow you to walk array/object chains. Alternatively, use GetArraySize/GetArrayItem/GetObjectItem</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON.type">type<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>An array or object item will have a child pointer pointing to a chain of the items in the array/object.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON.valuestring">valuestring<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The type of the item, as above.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON.valueint">valueint<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The item's string, if type==cJSON_String</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON.valuedouble">valuedouble<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The item's number, if type==cJSON_Number</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON.string">string<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The item's number, if type==cJSON_Number</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="subtitle">Functions</div>
+            <ul>
+                <li><a href="#cJSON_AddItemReferenceToArray">cJSON_AddItemReferenceToArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Use this when string is definitely const (i.e. a literal, or as good as), and will definitely survive the cJSON object</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_AddItemReferenceToObject">cJSON_AddItemReferenceToObject<span class="counter"></span></a></li>
+                <li><a href="#cJSON_AddItemToArray">cJSON_AddItemToArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Append item to the specified array/object.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_AddItemToObject">cJSON_AddItemToObject<span class="counter"></span></a></li>
+                <li><a href="#cJSON_AddItemToObjectCS">cJSON_AddItemToObjectCS<span class="counter"></span></a></li>
+                <li><a href="#cJSON_Delete">cJSON_Delete<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Delete a cJSON entity and all subentities.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_DeleteItemFromArray">cJSON_DeleteItemFromArray<span class="counter"></span></a></li>
+                <li><a href="#cJSON_DeleteItemFromObject">cJSON_DeleteItemFromObject<span class="counter"></span></a></li>
+                <li><a href="#cJSON_DetachItemFromArray">cJSON_DetachItemFromArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Remove/Detatch items from Arrays/Objects.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_DetachItemFromObject">cJSON_DetachItemFromObject<span class="counter"></span></a></li>
+                <li><a href="#cJSON_Duplicate">cJSON_Duplicate<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Duplicate a cJSON item</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_GetArrayItem">cJSON_GetArrayItem<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Retrieve item number "item" from array "array". Returns NULL if unsuccessful.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_GetArraySize">cJSON_GetArraySize<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Returns the number of items in an array (or object).</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_GetObjectItem">cJSON_GetObjectItem<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Get item "string" from object. Case insensitive.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_InsertItemInArray">cJSON_InsertItemInArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Update array items.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_Print">cJSON_Print<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Render a cJSON entity to text for transfer/storage. Free the char* when finished.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_PrintBuffered">cJSON_PrintBuffered<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Render a cJSON entity to text using a buffered strategy. prebuffer is a guess at the final size. guessing well reduces reallocation. fmt=0 gives unformatted, =1 gives formatted</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_PrintUnformatted">cJSON_PrintUnformatted<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Render a cJSON entity to text for transfer/storage without any formatting. Free the char* when finished.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_ReplaceItemInArray">cJSON_ReplaceItemInArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Shifts pre-existing items to the right.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_ReplaceItemInObject">cJSON_ReplaceItemInObject<span class="counter"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="cldoc_content">
+        <h1 id="cJSON"><span><span class="keyword">Struct</span><span>cJSON</span></span></h1>
+        <div class="description">
+            <div class="brief">
+                <p>The cJSON structure:</p>
+            </div>
+        </div>
+        <h2 data-cldoc-dynamic="1" id="fields">Fields</h2>
+        <table class="fields">
+            <tbody>
+                <tr id="cJSON::next">
+                    <td class="field_name identifier">next</td>
+                    <td class="field_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc"></td>
+                </tr>
+                <tr id="cJSON::prev">
+                    <td class="field_name identifier">prev</td>
+                    <td class="field_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc"></td>
+                </tr>
+                <tr id="cJSON::child">
+                    <td class="field_name identifier">child</td>
+                    <td class="field_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>next/prev allow you to walk array/object chains. Alternatively, use GetArraySize/GetArrayItem/GetObjectItem</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="cJSON::type">
+                    <td class="field_name identifier">type</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">int</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>An array or object item will have a child pointer pointing to a chain of the items in the array/object.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="cJSON::valuestring">
+                    <td class="field_name identifier">valuestring</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The type of the item, as above.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="cJSON::valueint">
+                    <td class="field_name identifier">valueint</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">int</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The item's string, if type==cJSON_String</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="cJSON::valuedouble">
+                    <td class="field_name identifier">valuedouble</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">double</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The item's number, if type==cJSON_Number</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="cJSON::string">
+                    <td class="field_name identifier">string</td>
+                    <td class="field_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                    </td>
+                    <td class="doc">
+                        <div class="brief">
+                            <p>The item's number, if type==cJSON_Number</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 data-cldoc-dynamic="1" id="functions">Functions</h2>
+        <div class="functions">
+            <div class="function">
+                <div class="declaration" id="cJSON_AddItemReferenceToArray">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_AddItemReferenceToArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doc">
+                    <p>Append reference to item to the specified array/object. Use this when you want to add an existing cJSON to a new cJSON, but don't want to corrupt your existing cJSON.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_AddItemReferenceToArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemReferenceToArray::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_AddItemReferenceToObject">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_AddItemReferenceToObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_AddItemReferenceToObject::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemReferenceToObject::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemReferenceToObject::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_AddItemToArray">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_AddItemToArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Append item to the specified array/object.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_AddItemToArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemToArray::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_AddItemToObject">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_AddItemToObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_AddItemToObject::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemToObject::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemToObject::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_AddItemToObjectCS">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_AddItemToObjectCS</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_AddItemToObjectCS::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemToObjectCS::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_AddItemToObjectCS::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_Delete">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_Delete</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">c</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Delete a cJSON entity and all subentities.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_Delete::c">
+                            <td>c</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_DeleteItemFromArray">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_DeleteItemFromArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">which</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_DeleteItemFromArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_DeleteItemFromArray::which">
+                            <td>which</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_DeleteItemFromObject">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_DeleteItemFromObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_DeleteItemFromObject::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_DeleteItemFromObject::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_DetachItemFromArray">
+                    <div class="return_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_DetachItemFromArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">which</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Remove/Detatch items from Arrays/Objects.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_DetachItemFromArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_DetachItemFromArray::which">
+                            <td>which</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_DetachItemFromObject">
+                    <div class="return_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_DetachItemFromObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_DetachItemFromObject::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_DetachItemFromObject::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_Duplicate">
+                    <div class="return_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_Duplicate</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">recurse</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Duplicate a cJSON item</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_Duplicate::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_Duplicate::recurse">
+                            <td>recurse</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_GetArrayItem">
+                    <div class="return_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_GetArrayItem</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Retrieve item number "item" from array "array". Returns NULL if unsuccessful.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_GetArrayItem::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_GetArrayItem::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_GetArraySize">
+                    <div class="return_type"><span class="type"><span class="name builtin">int</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_GetArraySize</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Returns the number of items in an array (or object).</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_GetArraySize::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_GetObjectItem">
+                    <div class="return_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_GetObjectItem</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Get item "string" from object. Case insensitive.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_GetObjectItem::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_GetObjectItem::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_InsertItemInArray">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_InsertItemInArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">which,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">newitem</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Update array items.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_InsertItemInArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_InsertItemInArray::which">
+                            <td>which</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_InsertItemInArray::newitem">
+                            <td>newitem</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_Print">
+                    <div class="return_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_Print</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Render a cJSON entity to text for transfer/storage. Free the char* when finished.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_Print::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_PrintBuffered">
+                    <div class="return_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_PrintBuffered</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">prebuffer,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">fmt</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Render a cJSON entity to text using a buffered strategy. prebuffer is a guess at the final size. guessing well reduces reallocation. fmt=0 gives unformatted, =1 gives formatted</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_PrintBuffered::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_PrintBuffered::prebuffer">
+                            <td>prebuffer</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_PrintBuffered::fmt">
+                            <td>fmt</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_PrintUnformatted">
+                    <div class="return_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_PrintUnformatted</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">item</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Render a cJSON entity to text for transfer/storage without any formatting. Free the char* when finished.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_PrintUnformatted::item">
+                            <td>item</td>
+                            <td></td>
+                        </tr>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_ReplaceItemInArray">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_ReplaceItemInArray</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">array,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                </td>
+                                <td class="argument_name">which,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">newitem</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brief">
+                    <p>Shifts pre-existing items to the right.</p>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_ReplaceItemInArray::array">
+                            <td>array</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_ReplaceItemInArray::which">
+                            <td>which</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_ReplaceItemInArray::newitem">
+                            <td>newitem</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="cJSON_ReplaceItemInObject">
+                    <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">cJSON_ReplaceItemInObject</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">object,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    </span>
+                                </td>
+                                <td class="argument_name">string,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">newitem</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="cJSON_ReplaceItemInObject::object">
+                            <td>object</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_ReplaceItemInObject::string">
+                            <td>string</td>
+                            <td></td>
+                        </tr>
+                        <tr id="cJSON_ReplaceItemInObject::newitem">
+                            <td>newitem</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- vi:ts=2:et -->
