@@ -23,9 +23,6 @@ Empathy is just an engine; it also needs a driver. Who else can drive it better 
 
 Would you consider helping me promote Empathy? I'd like to meet more developers like you and build a BIG Empathy community. All for the sake of making the world better. 
 
-If you believe in how much the world can be better via Empathy, you could please donate me. Here's my [Skrill account](https://skrill.com/underscoredam@gmail.com) and my [PayPal account](https://paypal.com/underscoredam). I mention: not a single penny shall be used for anything else than making the world a better place.
-
-
 ##Build instructions
 
 The instructions to build can be found on the [wiki section](https://github.com/underscoredam/empathy/wiki/Build-Instructions)
