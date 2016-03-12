@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 Yo! Straight to the topic of how the core of Empathy works like.
 
 First, there is an object canned `You`. The name `Empathy` comes in direct relation to `You`. As anyone uses Empathy, he/she can scream at the app: "`You` made me feel better!"
