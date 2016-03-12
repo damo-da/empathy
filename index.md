@@ -2,9 +2,9 @@
 layout: page
 ---
 
- ![App Version](https://img.shields.io/badge/version-0.0-green.svg)
-
 #Empathy 
+
+![App Version](https://img.shields.io/badge/version-0.0-green.svg)
 
 Play Empathy to immerse in the pool of your own emotions!
 
