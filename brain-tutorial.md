@@ -1,0 +1,42 @@
+---
+layout: page
+---
+
+# Make-your-own-`Brain` tutorial
+
+`Brain`s provide logic for displaying `LifeEvent`s around the screen. If you want to create a handle for your stuffs, say to go to edge of the universe, you extend the base `empathy::brain::Brain` class. Like this:
+
+`class RocketBrain : public Brain;`
+
+This class **MUST** override a method named runLineNumber. you do this by: 
+
+`public void runLineNumber(String action, String caller);`
+
+Now, you have to understand HOW Brain works to understand what this statement is. The Brain is started by `You` and as it begins running, it starts asynchronous timeouts to create `LifeEvent`s. Say, you want to build a wave of red color and a wave of blue color immediately afterwards. Your implementationn should be like:
+
+onStart: wave1
+after 3 seconds: wave2 (for simplicity, say the wave completes in 3 seconds)
+
+The use of `runLineNumber` is to execute a certain statement and create the intruction for timeouts. Your runLineNumber needs to be like:
+
+````
+public void runLineNumber(std::string action, std::string caller="")
+{
+	if(action=="begin"){
+	        activateTimeoutForNextLine("createWave1",0.0);//go to createWave1 after 0.0 secconds, ie, immediately
+	}else if(action=="createWave1"){
+		createWave1();//your code to create a wave
+
+	        activateTimeoutForNextLine("createWave2",3.0);//go to createWave2 after 3.0 seconds
+	}else if(action=="createWave2"){
+		createWave2(); //your code to create another wave.
+		
+		//And if you want an infinite loop, You can call this line
+		activateTimeoutForNextLine("begin",3.0);//restart after 3.0 seconds
+	}
+}
+````
+
+You might have noticed action=="begin" on line 3. This comes from `You` after empathy has finished instanciating.
+
+
