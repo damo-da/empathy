@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Brain 101
 ---
 
 # Make-your-own-`Brain` tutorial

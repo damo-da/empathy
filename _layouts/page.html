@@ -14,11 +14,8 @@
         </script>
         <!-- <base href="https://underscoredam.github.io/empathy/" target="_blank"/> -->
         <title>
-            {% if page.title == "" %}
-                Empathy by underscoredam
-            {% else %}
-                {{ page.title }}
-            {% endif %}
+            {{ page.title }}
+            
             
         </title>
         <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
@@ -49,10 +46,17 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="">
-                            <a href="/">
+                            <a href="">
                                 Home
                             </a>
                         </li>
+                        
+                        <li class="">
+                            <a href="build-instructions">
+                                Installation
+                            </a>
+                        </li>
+
                         <li>
                             <a href="docs">
                                 Docs

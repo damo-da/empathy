@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Empathy Tutorials
 ---
 
 #Tutorials

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: How Stuffs Work
 ---
 
 # How Stuffs Work
