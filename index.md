@@ -30,4 +30,4 @@ Would you consider helping me promote Empathy? I'd like to meet more developers 
 
 ## Build instructions
 
-The instructions to build can be found on the [wiki section](https://github.com/underscoredam/empathy/wiki/Build-Instructions)
+The instructions to build can be found over [here](build-instructions)
