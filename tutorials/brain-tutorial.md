@@ -19,7 +19,7 @@ after 3 seconds: wave2 (for simplicity, say the wave completes in 3 seconds)
 
 The use of `runLineNumber` is to execute a certain statement and create the intruction for timeouts. Your runLineNumber needs to be like:
 
-````
+{% highlight c++ %}
 public void runLineNumber(std::string action, std::string caller="")
 {
 	if(action=="begin"){
@@ -35,8 +35,11 @@ public void runLineNumber(std::string action, std::string caller="")
 		activateTimeoutForNextLine("begin",3.0);//restart after 3.0 seconds
 	}
 }
-````
+{% endhighlight %}
 
 You might have noticed action=="begin" on line 3. This comes from `You` after empathy has finished instanciating.
 
 
+
+
+The following code block WILL be syntax-highlighted.

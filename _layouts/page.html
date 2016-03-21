@@ -4,13 +4,25 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <base href="https://underscoredam.github.io/empathy/" target="_blank">
+        <script type="text/javascript">
+            var host=document.location.host;
+            var baseHref="http://localhost:4000/";
+            if(host=="underscoredam.github.io"){
+            baseHref="http://underscoredam.github.io/empathy/";
+            }
+            document.write("<base href='"+baseHref  + "' />");
+        </script>
+        <!-- <base href="https://underscoredam.github.io/empathy/" target="_blank"/> -->
         <title>
-            Empathy by underscoredam
+            {% if page.title == "" %}
+                Empathy by underscoredam
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+            
         </title>
         <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="stylesheets/custom.css"/>
     </head>
     <body>
@@ -29,25 +41,56 @@
                         </span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <a href="/">Empathy</a>
+                        <a class="navbar-brand" href="index">
+                            Empathy
+                        </a>
                     </a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li class="">
                             <a href="/">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="/docs">
+                            <a href="docs">
                                 Docs
                             </a>
                         </li>
-                        <li>
-                            <a href="/tutorials">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 Tutorials
+                                <span class="caret">
+                                </span>
                             </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="tutorials">
+                                        Index
+                                    </a>
+                                </li>
+                                <li role="separator" class="divider">
+                                </li>
+                                <li class="dropdown-header">
+                                    Crash courses
+                                </li>
+                                <li>
+                                    <a href="tutorials/how-it-works">
+                                        How Everything Work
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tutorials/brain-tutorial">
+                                        Brain 101
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                        <a href="JSONBrain">
+                            JSON Reference
+                        </a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +100,8 @@
         <div class="main-wrap">
             <div class="container-full">
                 <section class="page-header">
-                    <div class="clear clearfix"></div>
+                    <div class="clear clearfix">
+                    </div>
                     <h1 class="project-name">
                         Empathy
                     </h1>
@@ -73,15 +117,11 @@
                     <a href="docs" class="btn btn-lg btn-success header-btn">
                         Code Documentation
                     </a>
-                    
                 </section>
                 <section class="main-content">
-                
-                <div class="container">
-                    {{content}}
-                </div>
-                    
-                    
+                    <div class="container">
+                        {{content}}
+                    </div>
                     <footer class="site-footer container">
                         <span class="site-footer-owner">
                             <a href="https://github.com/underscoredam/empathy">
@@ -94,7 +134,11 @@
                             .
                         </span>
                         <span class="site-footer-credits">
-                            Built to <a href="http://www.lifehack.org/articles/featured/10-small-ways-to-make-the-world-a-better-place.html" title="Making the world a better place">share &lt;3</a> around the world!
+                            Built to
+                            <a href="http://www.lifehack.org/articles/featured/10-small-ways-to-make-the-world-a-better-place.html" title="Making the world a better place">
+                                share &lt;3
+                            </a>
+                            around the world!
                         </span>
                     </footer>
                 </section>
