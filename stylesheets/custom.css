@@ -1,28 +1,27 @@
-.page-header{
-	background-color: #159957;
+.page-header {
+    background-color: #159957;
     background-image: linear-gradient(120deg, #155799, #159957);
-	text-align: center;
+    text-align: center;
     min-height: 255px;
     padding-top: 44px;
     padding-bottom: 20px;
-    width:100%;
+    width: 100%;
 }
 
-.main-wrap{
-	margin-top:15px;
+.main-wrap {
+    margin-top: 15px;
 }
 
-body{
-	font-family: Open Sans;
+body {
+    font-family: Open Sans;
 }
 
-.project-name{
-	font-size: 5.25rem;
-
+.project-name {
+    font-size: 5.25rem;
 }
 
-.site-footer{
-	background-color: gainsboro;
+.site-footer {
+    background-color: gainsboro;
     border-radius: 10px;
     padding-top: 9px;
     padding-bottom: 6px;
@@ -33,35 +32,57 @@ body{
     margin-top: 15px;
 }
 
-.header-btn{
-	margin-left: 13px;
-	margin-right: 13px;
-	margin-bottom:10px;
+.header-btn {
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-bottom: 10px;
 }
 
-@media(max-width: 500px){
-	.header-btn{
-		width:65%;
-		margin-bottom: 3px;
-		margin-top:3px;
-	}
+@media(max-width: 500px) {
+    .header-btn {
+        width: 65%;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
 }
 
-@media(min-width:500px){
-	.header-btn{
-		margin-top: 14px;
-	}
+@media(min-width:500px) {
+    .header-btn {
+        margin-top: 14px;
+    }
 }
 
-.container-full{
-  margin: 0 auto;
-  width: 100%;
+.container-full {
+    margin: 0 auto;
+    width: 100%;
 }
 
-.site-footer-owner{
-	display:block;
+.site-footer-owner {
+    display: block;
 }
 
-.container{
+@media(min-width:992px) {
+    .container {
+        width: 927px;
+    }
+}
 
+@media (min-width: 1200px) {
+    .container {
+        width: 950px;
+    }
+}
+
+.main-content {
+    font-size: larger;
+}
+
+p {
+    margin-bottom: 12px;
+    margin-top: 13px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 34px;
+    margin-bottom: 10px;
 }
