@@ -3,6 +3,8 @@
     background-image: linear-gradient(120deg, #155799, #159957);
 	text-align: center;
     min-height: 255px;
+    padding-top: 44px;
+    padding-bottom: 20px;
     width:100%;
 }
 
@@ -20,11 +22,15 @@ body{
 }
 
 .site-footer{
-	background-color:gainsboro;
-	width:80%;
-	text-align: center;
-	margin-left: 10%;
-	border-radius:10px;
+	background-color: gainsboro;
+    border-radius: 10px;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    line-height: 1.5;
+    margin-top: 15px;
 }
 
 .header-btn{
@@ -39,4 +45,23 @@ body{
 		margin-bottom: 3px;
 		margin-top:3px;
 	}
+}
+
+@media(min-width:500px){
+	.header-btn{
+		margin-top: 14px;
+	}
+}
+
+.container-full{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.site-footer-owner{
+	display:block;
+}
+
+.container{
+
 }
