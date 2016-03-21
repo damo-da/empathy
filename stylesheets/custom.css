@@ -1,0 +1,42 @@
+.page-header{
+	background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+	text-align: center;
+    min-height: 255px;
+    width:100%;
+}
+
+.main-wrap{
+	margin-top:15px;
+}
+
+body{
+	font-family: Open Sans;
+}
+
+.project-name{
+	font-size: 5.25rem;
+
+}
+
+.site-footer{
+	background-color:gainsboro;
+	width:80%;
+	text-align: center;
+	margin-left: 10%;
+	border-radius:10px;
+}
+
+.header-btn{
+	margin-left: 13px;
+	margin-right: 13px;
+	margin-bottom:10px;
+}
+
+@media(max-width: 500px){
+	.header-btn{
+		width:65%;
+		margin-bottom: 3px;
+		margin-top:3px;
+	}
+}
