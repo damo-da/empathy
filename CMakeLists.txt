@@ -11,6 +11,8 @@ set (DEMPATHY_SOURCES
         DEmpathy/DEmpathy.h
         DEmpathy/DEmpathy.cpp
         DEmpathy/__main__.cpp
+        DEmpathy/tests/CWave_Test.cpp
+        DEmpathy/tests/CWave_Test.h
         )
 
 set(SOURCES
@@ -36,12 +38,6 @@ include_directories(${xi_INCLUDE_DIRS})
 
 pkg_search_module(xxf86vm REQUIRED xxf86vm)
 include_directories(${xxf86vm_INCLUDE_DIRS})
-
-find_package(OpenGL REQUIRED)
-include_directories(${OPENGL_INCLUDE_DIRS})
-
-find_package(GLEW REQUIRED)
-include_directories(${GLEW_INCLUDE_DIRS})
 
 include_directories(DEmpathy/libs/irrKlang-64bit-1.5.0/include/)
 

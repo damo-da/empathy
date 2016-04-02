@@ -86,8 +86,7 @@ set (EMPATHY_SOURCES
         Empathy/Brain/JSONBrain/JSONBrain.h
         Empathy/Libs/cJSON/cJSON_utils.cpp
         Empathy/Libs/cJSON/cJSON_utils.h
-        DEmpathy/tests/CWave_Test.cpp
-        DEmpathy/tests/CWave_Test.h
+
 
         Empathy/empathy.h
         Empathy/Brain/DummyTouchBrain/DummyTouchBrain.cpp Empathy/Brain/DummyTouchBrain/DummyTouchBrain.h
