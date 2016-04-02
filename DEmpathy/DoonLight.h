@@ -11,8 +11,8 @@
 
 using namespace irrklang;
 
-#include "../Empathy/empathy.h"
-#include "../Empathy/MoonLight/MoonLight.h"
+#include "../Empathy/Empathy/empathy.h"
+#include "../Empathy/Empathy/MoonLight/MoonLight.h"
 
 class DoonLight : public empathy::moonlight::MoonLight{
 public:

@@ -1,0 +1,2 @@
+cd dist
+cmake .. && make

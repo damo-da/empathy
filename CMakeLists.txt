@@ -1,9 +1,10 @@
 #Specify the version being used as well as the language
 cmake_minimum_required(VERSION 2.8)
 
-include(Empathy/config.cmake)
+project(dempathy)
 
 #set source code
+include(Empathy/Empathy/load_sources.cmake)
 
 set (DEMPATHY_SOURCES
         DEmpathy/DoonLight.cpp
@@ -13,11 +14,6 @@ set (DEMPATHY_SOURCES
         DEmpathy/__main__.cpp
         DEmpathy/tests/CWave_Test.cpp
         DEmpathy/tests/CWave_Test.h
-        )
-
-set(SOURCES
-        ${EMPATHY_SOURCES}
-        ${DEMPATHY_SOURCES}
         )
 
 
@@ -39,22 +35,38 @@ include_directories(${xi_INCLUDE_DIRS})
 pkg_search_module(xxf86vm REQUIRED xxf86vm)
 include_directories(${xxf86vm_INCLUDE_DIRS})
 
+find_package(OpenGL REQUIRED)
+include_directories(${OPENGL_INCLUDE_DIRS})
+
+find_package(GLEW REQUIRED)
+include_directories(${GLEW_INCLUDE_DIRS})
+
 include_directories(DEmpathy/libs/irrKlang-64bit-1.5.0/include/)
+include_directories(Empathy)
+
+include_directories(Empathy/Empathy)
+#
+#set(SOURCES
+#        ${EMPATHY_SOURCES}
+#        ${DEMPATHY_SOURCES}
+#        )
 
 #add source files for compilation
-add_executable(empathy ${SOURCES})
-
+add_executable(dempathy ${DEMPATHY_SOURCES} ${EMPATHY_SOURCES})
 
 #link the libraries
-target_link_libraries(empathy
+target_link_libraries(dempathy
         ${GLFW_STATIC_LIBRARIES}
         ${GLEW_LIBRARIES}
+        ${OPENGL_LIBRARIES}
+
         ${x11_LIBRARIES}
         ${xi_LIBRARIES}
-        ${OPENGL_LIBRARIES}
+
         ${xxf86vm_LIBRARIES}
         ${xrandr_LIBRARIES}
 
         "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
+        "Empathy/dist/libempathy.so"
         )
 

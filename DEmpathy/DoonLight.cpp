@@ -3,7 +3,7 @@
 //
 
 #include "DoonLight.h"
-#include "../Empathy/Utils/string_utils.h"
+#include "../Empathy/Empathy/Utils/string_utils.h"
 
 #include <iostream>
 using namespace std;

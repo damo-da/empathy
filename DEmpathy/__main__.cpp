@@ -1,9 +1,9 @@
 #include "DEmpathy.h"
 
 
-#include "../Empathy/empathy.h"
-#include "../Empathy/Brain/JSONBrain/JSONBrain.h"
-#include "../Empathy/Brain/DummyTouchBrain/DummyTouchBrain.h"
+
+#include "../Empathy/Empathy/Brain/JSONBrain/JSONBrain.h"
+#include "../Empathy/Empathy/Brain/DummyTouchBrain/DummyTouchBrain.h"
 
 using namespace std;
 
