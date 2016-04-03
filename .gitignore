@@ -32,6 +32,9 @@ empathy
 # Compiled Static libraries
 *.lai
 *.la
+/Empathy/*
+!/Empathy/.gitignore
+
 *.a
 *.lib
 
