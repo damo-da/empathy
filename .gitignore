@@ -1,4 +1,3 @@
-
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
@@ -22,9 +21,9 @@ empathy
 
 
 # Compiled Dynamic libraries
-#*.so
-#*.dylib
-#*.dll
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
 *.mod
@@ -32,8 +31,10 @@ empathy
 # Compiled Static libraries
 *.lai
 *.la
-
 *.a
+/dist/*
+!/dist/.gitignore
+
 *.lib
 
 # Executables
@@ -49,8 +50,3 @@ empathy
 /.idea
 
 /docs
-
-
-/dist/*
-/ikpMP3.so
-!/dist/libs
