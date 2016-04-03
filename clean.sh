@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 while true; do
     read -p "Do you wish to clean Empathy? Any untracked file in git will be reomved.Y/N" yn
     case $yn in
