@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 project(empathy)
 
 set(EMPATHY_SOURCES_BASE "include/Empathy")
-include(include/load_sources.cmake)
+include(load_sources.cmake)
 
 add_custom_target(
         doc
