@@ -136,6 +136,7 @@ GLfloat empathy::life_event::MathWave::getStartTheta() {
         return getHead()+ getSpeed() * getTimeSinceRun();
     else if(isFinishing())
         return getHead()+ getSpeed() * getTimeSinceRun();
+    return 0;
 }
 
 GLfloat empathy::life_event::MathWave::getEndTheta() {
@@ -147,6 +148,7 @@ GLfloat empathy::life_event::MathWave::getEndTheta() {
     else if(isFinishing())
         return getTail();
 
+    return 0;
 }
 
 GLfloat empathy::life_event::MathWave::getX(GLfloat theta) {

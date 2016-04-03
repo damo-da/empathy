@@ -2,10 +2,9 @@
 // Created by damo on 2/14/16.
 //
 
-#include <sstream>
+#include <iostream>
 #include "string_utils.h"
-#include <algorithm>
-#include <string>
+
 
 std::vector<std::string> str_split(const std::string &s, char delim) {
     std::vector<std::string> elems;
@@ -14,11 +13,19 @@ std::vector<std::string> str_split(const std::string &s, char delim) {
 }
 
 std::vector<std::string> &str_split(const std::string &s, char delim, std::vector<std::string> &elems) {
-    std::stringstream ss(s);
-    std::string item;
-    while(std::getline(ss,item,delim)){
-        elems.push_back(item);
+    std::string lastString="";
+    for (int i=0;i<s.size();i++){
+        if(s[i]==delim){
+            elems.push_back(lastString);
+            lastString="";
+        }else{
+            lastString += s[i];
+        }
     }
+    if(lastString!=""){
+        elems.push_back(lastString);
+    }
+
     return elems;
 }
 
@@ -63,6 +70,7 @@ int str_to_int(std::string string) {
         return i;
 
     }
+    return 0;
 }
 
 std::string int_to_str(int integer) {
@@ -105,7 +113,11 @@ char int_to_single_char(const int num) {
 }
 
 std::string str_to_lower(const std::string str) {
-    std::string data = str;
-    std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+    std::string data ="";
+    for(int i=0;i<data.size();i++){
+
+        data[i]=((char)tolower(str[i]));
+    }
+
     return data;
 }
