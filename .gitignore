@@ -1,3 +1,4 @@
+
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
@@ -47,3 +48,8 @@ empathy
 /.idea
 
 /docs
+
+
+/dist/*
+/ikpMP3.so
+!/dist/libs

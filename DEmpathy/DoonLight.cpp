@@ -82,7 +82,7 @@ void DoonLight::playKeyboard(string key) {
     try{
 //        std::string file=KEYBOARD_BASE+key+".ogg";
         std::string file=empathy::getAssetPath("audio/keyboard/music/"+final+".mp3");
-
+        cout<<"Playing audio"<<file<<endl;
 
         engine->play2D(file.c_str());
 

@@ -3,7 +3,7 @@
 #ifndef EMPATHY_GLOBAL_H
 #define EMPATHY_GLOBAL_H
 namespace empathy{
-    static std::string __base="Empathy/assets/";
+    static std::string __base="";
 
     std::string join_path(std::string path1,std::string path2);
 

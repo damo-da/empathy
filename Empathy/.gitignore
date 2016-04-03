@@ -32,6 +32,9 @@ empathy
 *.lai
 *.la
 *.a
+/dist/*
+!/dist/.gitignore
+
 *.lib
 
 # Executables
