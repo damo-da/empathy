@@ -11,8 +11,8 @@
 
 using namespace irrklang;
 
-#include "../Empathy/Empathy/empathy.h"
-#include "../Empathy/Empathy/MoonLight/MoonLight.h"
+#include "Empathy/empathy.h"
+#include "Empathy/MoonLight/MoonLight.h"
 
 class DoonLight : public empathy::moonlight::MoonLight{
 public:
@@ -31,10 +31,6 @@ private:
 protected:
     virtual void play(std::string id, bool repeat) override;
     virtual void playKeyboard(std::string string) override;
-
-private:
-    static std::string BASE;
-    static std::string KEYBOARD_BASE;
 };
 
 

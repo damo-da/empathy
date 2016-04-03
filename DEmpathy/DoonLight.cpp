@@ -3,7 +3,9 @@
 //
 
 #include "DoonLight.h"
-#include "../Empathy/Empathy/Utils/string_utils.h"
+#include "Empathy/Utils/string_utils.h"
+
+#include "Empathy/global.h"
 
 #include <iostream>
 using namespace std;
@@ -12,7 +14,7 @@ void DoonLight::play(std::string id, bool repeat) {
     cout<<"Playing "<<id<<endl;
     try{
         std::string local=references[id];
-        std::string file=BASE+local;
+        std::string file=empathy::getAssetPath(local);
 
         if(local.size()>0)
             engine->play2D(file.c_str());
@@ -59,10 +61,6 @@ void DoonLight::initIrr() {
     engine->setSoundVolume(0.4f);
 }
 
-
-std::string DoonLight::BASE="./assets/audio/";
-std::string DoonLight::KEYBOARD_BASE= DoonLight::BASE + "keyboard/";
-
 void DoonLight::playKeyboard(string key) {
     int pitch=str_to_int(key);
     bool sharp=str_has_character(key,'s') || str_has_character(key,'#');
@@ -83,7 +81,7 @@ void DoonLight::playKeyboard(string key) {
 //    cout<<"Playing "<<final<<endl;
     try{
 //        std::string file=KEYBOARD_BASE+key+".ogg";
-        std::string file=KEYBOARD_BASE+"music/"+final+".mp3";
+        std::string file=empathy::getAssetPath("audio/keyboard/music/"+final+".mp3");
 
 
         engine->play2D(file.c_str());

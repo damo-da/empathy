@@ -1,2 +1,2 @@
 cd dist
-cmake ../Empathy/ && make
+cmake ../include/Empathy && make

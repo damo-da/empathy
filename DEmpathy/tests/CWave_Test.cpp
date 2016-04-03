@@ -4,8 +4,8 @@
 
 #include "CWave_Test.h"
 
-#include "../../Empathy/LifeEvent/CWave/CWave.h"
-#include "../../Empathy/LifeEvent/CWave/CWave_data.h"
+#include "Empathy/LifeEvent/CWave/CWave.h"
+#include "Empathy/LifeEvent/CWave/CWave_data.h"
 
 void CWave_Test::runLineNumber(std::string lineID, std::string callerID) {
     if(lineID=="begin"){

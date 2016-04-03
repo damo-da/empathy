@@ -3,8 +3,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(dempathy)
 
-#set source code
-include(Empathy/Empathy/load_sources.cmake)
+#set empathy source code
+set(EMPATHY_SOURCES_BASE "Empathy/include/Empathy")
+include(Empathy/include/load_sources.cmake)
 
 set (DEMPATHY_SOURCES
         DEmpathy/DoonLight.cpp
@@ -42,9 +43,7 @@ find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_DIRS})
 
 include_directories(DEmpathy/libs/irrKlang-64bit-1.5.0/include/)
-include_directories(Empathy)
-
-include_directories(Empathy/Empathy)
+include_directories(Empathy/include)
 #
 #set(SOURCES
 #        ${EMPATHY_SOURCES}
@@ -52,10 +51,12 @@ include_directories(Empathy/Empathy)
 #        )
 
 #add source files for compilation
+
 add_executable(dempathy ${DEMPATHY_SOURCES} ${EMPATHY_SOURCES})
 
 #link the libraries
 target_link_libraries(dempathy
+#        "${CMAKE_CURRENT_SOURCE_DIR}/Empathy/dist/libempathy.so"
         ${GLFW_STATIC_LIBRARIES}
         ${GLEW_LIBRARIES}
         ${OPENGL_LIBRARIES}
@@ -67,6 +68,5 @@ target_link_libraries(dempathy
         ${xrandr_LIBRARIES}
 
         "${CMAKE_CURRENT_SOURCE_DIR}/DEmpathy/libs/irrKlang-64bit-1.5.0/bin/linux-gcc-64/libIrrKlang.so"
-        "Empathy/dist/libempathy.so"
         )
 
