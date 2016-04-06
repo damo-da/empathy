@@ -5,8 +5,8 @@
 #ifndef DEMPATHY_LINEAR_LINEAR_LOONLIGHT_H
 #define DEMPATHY_LINEAR_LINEAR_LOONLIGHT_H
 
-#include <Empathy/empathy.h>
-#include <Empathy/MoonLight/MoonLight.h>
+#include "../empathy.h"
+#include "../MoonLight/MoonLight.h"
 #include <iostream>
 #include <stack>
 
