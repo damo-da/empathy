@@ -9,6 +9,11 @@ endif()
 
 set (EMPATHY_SOURCES
 
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/empathy_linear.h
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/empathy_linear.cpp
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/Linear_MoonLight.cpp
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/Linear_MoonLight.h
+
         ${EMPATHY_SOURCES_BASE}/Empathy/Empathy.h
         ${EMPATHY_SOURCES_BASE}/Empathy/Empathy.cpp
 

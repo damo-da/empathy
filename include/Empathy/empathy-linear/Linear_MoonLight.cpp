@@ -2,7 +2,7 @@
 // Created by geek on 4/6/16.
 //
 
-#include <Empathy/Utils/string_utils.h>
+#include "../Utils/string_utils.h"
 #include "Linear_MoonLight.h"
 
 void Linear_MoonLight::init() {

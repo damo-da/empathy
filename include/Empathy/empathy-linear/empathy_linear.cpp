@@ -4,7 +4,6 @@
 
 #include <queue>
 #include "empathy_linear.h"
-#include <irrKlang.h>
 
 using namespace std;
 
