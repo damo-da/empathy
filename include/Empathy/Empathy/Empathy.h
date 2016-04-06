@@ -52,6 +52,7 @@ namespace empathy{
          * Call this function from the overridden addTo() method on the brain only.
          */
         void addBrain(brain::Brain * brain);
+
         GLfloat getScreenSizeX()const {return sc_size_x;}
         GLfloat getScreenSizeY()const {return sc_size_y;}
     protected:
@@ -71,6 +72,16 @@ namespace empathy{
 
         /* set the OpenGL screen sizes. */
         void setScreenSize(int,int);
+
+    public:
+        virtual bool shouldClose(){
+            return _shouldClose;
+        }
+        void makeReadyToClose(){
+            _shouldClose=true;
+        }
+    private:
+        bool _shouldClose;
 
     private:
         /* Get all brains added in the instance.

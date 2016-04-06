@@ -6,7 +6,8 @@
 using namespace std;
 
 empathy::Empathy::Empathy():
-moonLight(nullptr)
+moonLight(nullptr),
+_shouldClose(false)
 {
     instance=this;
 }
@@ -58,10 +59,7 @@ void empathy::Empathy::initYou(){
     you=new empathy::You();
     you->init();
 
-    std::vector<empathy::brain::Brain *> brains=this->getBrains();
-    for(int i=0;i<brains.size();i++){
-        you->addBrain(brains[i]);
-    }
+
 }
 
 
@@ -72,7 +70,6 @@ void empathy::Empathy::setScreenSize(int x,int y){
 }
 
 void empathy::Empathy::loop() {
-
     empathy::radio::BroadcastStation::dispatch();
 
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -86,6 +83,7 @@ void empathy::Empathy::loop() {
 
 void empathy::Empathy::addBrain(empathy::brain::Brain *brain) {
     brains.push_back(brain);
+    you->addBrain(brain);
 }
 
 empathy::Empathy * empathy::Empathy::instance= nullptr;

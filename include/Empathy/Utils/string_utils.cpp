@@ -114,9 +114,9 @@ char int_to_single_char(const int num) {
 
 std::string str_to_lower(const std::string str) {
     std::string data ="";
-    for(int i=0;i<data.size();i++){
 
-        data[i]=((char)tolower(str[i]));
+    for(int i=0;i<str.size();i++){
+        data += ((char)tolower(str[i]));
     }
 
     return data;

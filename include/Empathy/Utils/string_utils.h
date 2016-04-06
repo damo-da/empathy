@@ -15,12 +15,13 @@
  * */
 std::vector<std::string> &str_split(const std::string &s,char delim,std::vector<std::string> &elems);
 
+
 /* Split a string.
  *
  * @s the string to be splitted.
  * @delim the delimiter.
  * */
-std::vector<std::string> str_split(const std::string&s,char delim);
+std::vector<std::string> str_split(const std::string& s,char delim);
 
 
 /* Trim a string.
