@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="empathy.html#empathy">empathy<span class="counter"></span></a>
                     <div class="brief">
-                        <p> The empathy namespace and classes header.</p>
+                        <p> The empathy namespace and classes header file.</p>
                     </div>
                 </li>
             </ul>
@@ -27,29 +27,74 @@
                         <p>The color class to hold a RGBA color value.</p>
                     </div>
                 </li>
+                <li><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject<span class="counter"></span></a>
+                    <div class="brief">
+                        <p> A single TimeBroadcaster item.</p>
+                    </div>
+                </li>
                 <li><a href="UniqueObject.html#UniqueObject">UniqueObject<span class="counter"></span></a>
                     <div class="brief">
                         <p> The class to give everyone a unique identification.</p>
                     </div>
                 </li>
             </ul>
+            <div class="subtitle">Structures</div>
+            <ul>
+                <li><a href="cJSON.html#cJSON">cJSON<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>The cJSON structure:</p>
+                    </div>
+                </li>
+                <li><a href="cJSON_Hooks.html#cJSON_Hooks">cJSON_Hooks<span class="counter"></span></a></li>
+            </ul>
             <div class="subtitle">Functions</div>
             <ul>
+                <li><a href="#cJSON_CreateArray">cJSON_CreateArray<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateBool">cJSON_CreateBool<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateDoubleArray">cJSON_CreateDoubleArray<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateFalse">cJSON_CreateFalse<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateFloatArray">cJSON_CreateFloatArray<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateIntArray">cJSON_CreateIntArray<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>These utilities create an Array of count items.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_CreateNull">cJSON_CreateNull<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>These calls create a cJSON item of the appropriate type.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_CreateNumber">cJSON_CreateNumber<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateObject">cJSON_CreateObject<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateString">cJSON_CreateString<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateStringArray">cJSON_CreateStringArray<span class="counter"></span></a></li>
+                <li><a href="#cJSON_CreateTrue">cJSON_CreateTrue<span class="counter"></span></a></li>
                 <li><a href="#cJSON_get_keys">cJSON_get_keys<span class="counter"></span></a></li>
+                <li><a href="#cJSON_GetErrorPtr">cJSON_GetErrorPtr<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>For analysing failed parses. This returns a pointer to the parse error. You'll probably need to look a few chars back to make sense of it. Defined when cJSON_Parse() returns 0. 0 when cJSON_Parse() succeeds.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_Minify">cJSON_Minify<span class="counter"></span></a></li>
+                <li><a href="#cJSON_Parse">cJSON_Parse<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>Supply a block of JSON, and this returns a cJSON object you can interrogate. Call cJSON_Delete when finished.</p>
+                    </div>
+                </li>
+                <li><a href="#cJSON_ParseWithOpts">cJSON_ParseWithOpts<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>ParseWithOpts allows you to require (and check) that the JSON is null terminated, and to retrieve the pointer to the final byte parsed.</p>
+                    </div>
+                </li>
                 <li><a href="#cJSON_print_keys">cJSON_print_keys<span class="counter"></span></a></li>
-                <li><a href="#create_fragment_shader">create_fragment_shader<span class="counter"></span></a>
+                <li><a href="#create_program">create_program<span class="counter"></span></a>
                     <div class="brief">
-                        <p> create fragmentShader.</p>
+                        <p>Create shader program from vertexShader and fragmentShader.</p>
                     </div>
                 </li>
                 <li><a href="#create_program">create_program<span class="counter"></span></a>
                     <div class="brief">
-                        <p> Create shader program from direct vertexShader and fragmentShader.</p>
-                    </div>
-                </li>
-                <li><a href="#create_program">create_program<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> Create shader program from vertexShader file and fragmentShader file.</p>
+                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
                     </div>
                 </li>
                 <li><a href="#create_shader">create_shader<span class="counter"></span></a>
@@ -57,21 +102,22 @@
                         <p> Create a shader from a file.</p>
                     </div>
                 </li>
-                <li><a href="#create_vertex_shader">create_vertex_shader<span class="counter"></span></a>
+                <li><a href="#emCreateFragmentShader">emCreateFragmentShader<span class="counter"></span></a>
                     <div class="brief">
-                        <p> create vertexShader.</p>
+                        <p>create fragmentShader.</p>
+                    </div>
+                </li>
+                <li><a href="#emCreateVertexShader">emCreateVertexShader<span class="counter"></span></a>
+                    <div class="brief">
+                        <p>create vertexShader.</p>
                     </div>
                 </li>
                 <li><a href="#file_read">file_read<span class="counter"></span></a>
                     <div class="brief">
-                        <p> Read the contents of an ASCII file.</p>
+                        <p>Read the contents of a file.</p>
                     </div>
                 </li>
-                <li><a href="#int_to_single_char">int_to_single_char<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> Convert a single digit integer to a single character. It's not ASCII.</p>
-                    </div>
-                </li>
+                <li><a href="#int_to_single_char">int_to_single_char<span class="counter"></span></a></li>
                 <li><a href="#int_to_str">int_to_str<span class="counter"></span></a>
                     <div class="brief">
                         <p>Convert an integer to string.</p>
@@ -79,24 +125,12 @@
                 </li>
                 <li><a href="#print_gl_error_log">print_gl_error_log<span class="counter"></span></a>
                     <div class="brief">
-                        <p> Prints the GL error log during shader compilation.</p>
+                        <p>Prints the GL error log during shader compilation.</p>
                     </div>
                 </li>
-                <li><a href="#str_has_character">str_has_character<span class="counter"></span></a>
-                    <div class="brief">
-                        <p>Checks the presence of a character in a string.</p>
-                    </div>
-                </li>
-                <li><a href="#str_remove_character">str_remove_character<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> Remove a certain character from a string.</p>
-                    </div>
-                </li>
-                <li><a href="#str_replace">str_replace<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> Relpace a character in a string by another character.</p>
-                    </div>
-                </li>
+                <li><a href="#str_has_character">str_has_character<span class="counter"></span></a></li>
+                <li><a href="#str_remove_character">str_remove_character<span class="counter"></span></a></li>
+                <li><a href="#str_replace">str_replace<span class="counter"></span></a></li>
                 <li><a href="#str_split">str_split<span class="counter"></span></a>
                     <div class="brief">
                         <p> Split a string.</p>
@@ -112,11 +146,7 @@
                         <p>Convert a string to integer.</p>
                     </div>
                 </li>
-                <li><a href="#str_to_lower">str_to_lower<span class="counter"></span></a>
-                    <div class="brief">
-                        <p> Convert a string to lower case.</p>
-                    </div>
-                </li>
+                <li><a href="#str_to_lower">str_to_lower<span class="counter"></span></a></li>
                 <li><a href="#str_trim">str_trim<span class="counter"></span></a>
                     <div class="brief">
                         <p> Trim a string.</p>
@@ -130,7 +160,7 @@
         <div class="namespaces">
             <div class="item"><a href="empathy.html#empathy" id="empathy+empathy">empathy</a>
                 <div class="brief">
-                    <p> The empathy namespace and classes header.</p>
+                    <p> The empathy namespace and classes header file.</p>
                 </div>
                 <table class="namespace">
                     <tbody>
@@ -146,7 +176,7 @@
                             <td><a href="empathy.You.html#empathy.You">You</a></td>
                             <td class="doc">
                                 <div class="brief">
-                                    <p> <code>You</code> interacts with the user to understand the user's emotions.</p>
+                                    <p>You have all the brains. And the brains manipulate lifeEvents on You.</p>
                                 </div>
                             </td>
                         </tr>
@@ -165,6 +195,14 @@
                         </td>
                     </tr>
                     <tr class="short">
+                        <td><a href="TimeBroadcasterObject.html#TimeBroadcasterObject">TimeBroadcasterObject</a></td>
+                        <td>
+                            <div class="brief">
+                                <p> A single TimeBroadcaster item.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="short">
                         <td><a href="UniqueObject.html#UniqueObject">UniqueObject</a></td>
                         <td>
                             <div class="brief">
@@ -174,8 +212,406 @@
                     </tr>
                 </tbody>
             </table>
+            <h2 data-cldoc-dynamic="1" id="structures">Structures</h2>
+            <table class="structures">
+                <tbody>
+                    <tr class="short">
+                        <td><a href="cJSON.html#cJSON">cJSON</a></td>
+                        <td>
+                            <div class="brief">
+                                <p>The cJSON structure:</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="short">
+                        <td><a href="cJSON_Hooks.html#cJSON_Hooks">cJSON_Hooks</a></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h2 data-cldoc-dynamic="1" id="functions">Functions</h2>
             <div class="functions">
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateArray">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateArray</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateBool">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateBool</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">b</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateBool::b">
+                                <td>b</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateDoubleArray">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateDoubleArray</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">double</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">numbers,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">count</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateDoubleArray::numbers">
+                                <td>numbers</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_CreateDoubleArray::count">
+                                <td>count</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateFalse">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateFalse</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateFloatArray">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateFloatArray</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">float</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">numbers,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">count</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateFloatArray::numbers">
+                                <td>numbers</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_CreateFloatArray::count">
+                                <td>count</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateIntArray">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateIntArray</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">numbers,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">count</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>These utilities create an Array of count items.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateIntArray::numbers">
+                                <td>numbers</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_CreateIntArray::count">
+                                <td>count</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateNull">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateNull</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>These calls create a cJSON item of the appropriate type.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateNumber">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateNumber</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">double</span></span>
+                                    </td>
+                                    <td class="argument_name">num</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateNumber::num">
+                                <td>num</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateObject">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateObject</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateString">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateString</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">string</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateString::string">
+                                <td>string</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateStringArray">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateStringArray</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> **</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">strings,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">count</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_CreateStringArray::strings">
+                                <td>strings</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_CreateStringArray::count">
+                                <td>count</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_CreateTrue">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_CreateTrue</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="function">
                     <div class="declaration" id="cJSON_get_keys">
                         <div class="return_type"><span class="type"><span class="name ">std::vector&lt;std::basic_string&lt;char&gt;, std::allocator&lt;std::basic_string&lt;char&gt; &gt; &gt;</span></span>
@@ -185,7 +621,7 @@
                                 <tr>
                                     <td class="identifier">cJSON_get_keys</td>
                                     <td class="open_paren">(</td>
-                                    <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    <td class="argument_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier">  <span class="keyword">const</span> *</span>
                                         </span>
                                     </td>
                                     <td class="argument_name">object</td>
@@ -208,6 +644,149 @@
                     </table>
                 </div>
                 <div class="function">
+                    <div class="declaration" id="cJSON_GetErrorPtr">
+                        <div class="return_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                            </span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_GetErrorPtr</td>
+                                    <td class="open_paren">(</td>
+                                    <td colspan="2"></td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>For analysing failed parses. This returns a pointer to the parse error. You'll probably need to look a few chars back to make sense of it. Defined when cJSON_Parse() returns 0. 0 when cJSON_Parse() succeeds.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_Minify">
+                        <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_Minify</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier"> *</span></span>
+                                    </td>
+                                    <td class="argument_name">json</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_Minify::json">
+                                <td>json</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_Parse">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_Parse</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">value</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>Supply a block of JSON, and this returns a cJSON object you can interrogate. Call cJSON_Delete when finished.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_Parse::value">
+                                <td>value</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="cJSON_ParseWithOpts">
+                        <div class="return_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier"> *</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">cJSON_ParseWithOpts</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">value,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span> **</span>
+                                        </span>
+                                    </td>
+                                    <td class="argument_name">return_parse_end,</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="argument_type"><span class="type"><span class="name builtin">int</span></span>
+                                    </td>
+                                    <td class="argument_name">require_null_terminated</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>ParseWithOpts allows you to require (and check) that the JSON is null terminated, and to retrieve the pointer to the final byte parsed.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="cJSON_ParseWithOpts::value">
+                                <td>value</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_ParseWithOpts::return_parse_end">
+                                <td>return_parse_end</td>
+                                <td></td>
+                            </tr>
+                            <tr id="cJSON_ParseWithOpts::require_null_terminated">
+                                <td>require_null_terminated</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
                     <div class="declaration" id="cJSON_print_keys">
                         <div class="return_type"><span class="type"><span class="name builtin">void</span></span>
                         </div>
@@ -216,7 +795,7 @@
                                 <tr>
                                     <td class="identifier">cJSON_print_keys</td>
                                     <td class="open_paren">(</td>
-                                    <td class="argument_type"><span class="type"><span class="name ">cJSON</span><span class="qualifier">  <span class="keyword">const</span> *</span>
+                                    <td class="argument_type"><span class="type"><span class="name "><a href="cJSON.html#cJSON">cJSON</a></span><span class="qualifier">  <span class="keyword">const</span> *</span>
                                         </span>
                                     </td>
                                     <td class="argument_name">object</td>
@@ -230,47 +809,6 @@
                             <tr id="cJSON_print_keys::object">
                                 <td>object</td>
                                 <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="function">
-                    <div class="declaration" id="create_fragment_shader">
-                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
-                        </div>
-                        <table class="declaration">
-                            <tbody>
-                                <tr>
-                                    <td class="identifier">create_fragment_shader</td>
-                                    <td class="open_paren">(</td>
-                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
-                                    </td>
-                                    <td class="argument_name">fileName</td>
-                                    <td class="close_paren">)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="brief">
-                        <p> create fragmentShader.</p>
-                    </div>
-                    <table class="arguments">
-                        <tbody>
-                            <tr id="create_fragment_shader::fileName">
-                                <td>fileName</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the name of the shader file</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="return">
-                                <td class="keyword">return</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>created fragment shader</p>
-                                    </div>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -299,7 +837,7 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p> Create shader program from direct vertexShader and fragmentShader.</p>
+                        <p>Create shader program from vertexShader and fragmentShader.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
@@ -344,25 +882,17 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p> Create shader program from vertexShader file and fragmentShader file.</p>
+                        <p>Create shader program from vertexShaderfile and fragmentShaderfile.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="create_program::vertexfile">
                                 <td>vertexfile</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the relative path to vertex shader file</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="create_program::fragmentfile">
                                 <td>fragmentfile</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the relative path to fragment shader file</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
@@ -402,39 +932,27 @@
                         <tbody>
                             <tr id="create_shader::filename">
                                 <td>filename</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>name of the file to read</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="create_shader::type">
                                 <td>type</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>GL_VERTEX_SHADER or GL_FRAGMENT_SHADER</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the created shader</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="function">
-                    <div class="declaration" id="create_vertex_shader">
+                    <div class="declaration" id="emCreateFragmentShader">
                         <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
                         </div>
                         <table class="declaration">
                             <tbody>
                                 <tr>
-                                    <td class="identifier">create_vertex_shader</td>
+                                    <td class="identifier">emCreateFragmentShader</td>
                                     <td class="open_paren">(</td>
                                     <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
                                     </td>
@@ -445,25 +963,50 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p> create vertexShader.</p>
+                        <p>create fragmentShader.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
-                            <tr id="create_vertex_shader::fileName">
+                            <tr id="emCreateFragmentShader::fileName">
                                 <td>fileName</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the name of the shader file</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>created vertex shader</p>
-                                    </div>
-                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="function">
+                    <div class="declaration" id="emCreateVertexShader">
+                        <div class="return_type"><span class="type"><span class="name ">GLuint</span></span>
+                        </div>
+                        <table class="declaration">
+                            <tbody>
+                                <tr>
+                                    <td class="identifier">emCreateVertexShader</td>
+                                    <td class="open_paren">(</td>
+                                    <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                    </td>
+                                    <td class="argument_name">fileName</td>
+                                    <td class="close_paren">)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="brief">
+                        <p>create vertexShader.</p>
+                    </div>
+                    <table class="arguments">
+                        <tbody>
+                            <tr id="emCreateVertexShader::fileName">
+                                <td>fileName</td>
+                                <td></td>
+                            </tr>
+                            <tr class="return">
+                                <td class="keyword">return</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -487,25 +1030,17 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p> Read the contents of an ASCII file.</p>
+                        <p>Read the contents of a file.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="file_read::filename">
                                 <td>filename</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the relative path of the file.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the contents of the file</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -527,9 +1062,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="brief">
-                        <p> Convert a single digit integer to a single character. It's not ASCII.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
@@ -595,17 +1127,13 @@
                         </table>
                     </div>
                     <div class="brief">
-                        <p> Prints the GL error log during shader compilation.</p>
+                        <p>Prints the GL error log during shader compilation.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="print_gl_error_log::object">
                                 <td>object</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the shader or the program.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -634,9 +1162,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="brief">
-                        <p>Checks the presence of a character in a string.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
@@ -674,14 +1199,11 @@
                                     <td class="argument_type"><span class="type"><span class="name builtin">char</span><span class="qualifier">  <span class="keyword">const</span></span>
                                         </span>
                                     </td>
-                                    <td class="argument_name">chr</td>
+                                    <td class="argument_name">mChar</td>
                                     <td class="close_paren">)</td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="brief">
-                        <p> Remove a certain character from a string.</p>
                     </div>
                     <table class="arguments">
                         <tbody>
@@ -689,21 +1211,13 @@
                                 <td>str</td>
                                 <td></td>
                             </tr>
-                            <tr id="str_remove_character::chr">
-                                <td>chr</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the character to be removed.</p>
-                                    </div>
-                                </td>
+                            <tr id="str_remove_character::mChar">
+                                <td>mChar</td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>a new instance of string after replacing the character.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -740,34 +1254,19 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="brief">
-                        <p> Relpace a character in a string by another character.</p>
-                    </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="str_replace::str">
                                 <td>str</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the string of which the character is to be replaced.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="str_replace::from">
                                 <td>from</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the character which is to be replaced by @to</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="str_replace::to">
                                 <td>to</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the character which replaces the @from character.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
@@ -813,27 +1312,15 @@
                         <tbody>
                             <tr id="str_split::s">
                                 <td>s</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the string to be splitted.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="str_split::delim">
                                 <td>delim</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the delimiter.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="str_split::elems">
                                 <td>elems</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the return variable.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
@@ -873,19 +1360,11 @@
                         <tbody>
                             <tr id="str_split::s">
                                 <td>s</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the string to be splitted.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr id="str_split::delim">
                                 <td>delim</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the delimiter.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
@@ -945,9 +1424,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="doc">
-                        <p>//TODO fix issue of cldoc with &lt;algorithm&gt;</p>
-                    </div>
                     <table class="arguments">
                         <tbody>
                             <tr id="str_to_lower::str">
@@ -986,11 +1462,7 @@
                         <tbody>
                             <tr id="str_trim::string">
                                 <td>string</td>
-                                <td>
-                                    <div class="doc">
-                                        <p>the string to be trimmed.</p>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr class="return">
                                 <td class="keyword">return</td>
