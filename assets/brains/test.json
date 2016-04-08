@@ -6,23 +6,30 @@
   "steps": {
     "begin":[{"type":"goto","stepID":"1","in":0.5}],
 
-    "baseWave":[
+    "paleBlueDot":[
       {
         "type":"create",
-        "create":"cwave",
-        "colorRed":0.9,
-        "colorBlue":0.8,
-        "colorGreen":0.1,
-        "damping":5.0,
-        "wavelength":0.1,
-        "frequency":1.0
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.19,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":-1.57
+
       }
     ],
 
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
-      {"type":"goto","stepID":"baseWave","in":0.0},
+      {"type":"goto","stepID":"paleBlueDot","in":0.0},
       {"type":"goto","stepID":"1","in":5.0}
     ]
 

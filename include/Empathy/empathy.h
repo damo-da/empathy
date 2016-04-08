@@ -45,6 +45,7 @@ namespace empathy{
     /* It's amazing how audio sounds the best in moonlight. */
     namespace moonlight{
         class MoonLight;
+        class BasicNote;
     };
 
     /* All mathematical stuffs will be placed here. And that's an order. */

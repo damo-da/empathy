@@ -13,7 +13,7 @@ namespace empathy_linear{
 
     void flush();
 
-    std::stack<PlayableItem> getAudioEvents();
+    std::stack<empathy::moonlight::BasicNote> getMusicalKeyboardEvents();
 
     void loop();
 

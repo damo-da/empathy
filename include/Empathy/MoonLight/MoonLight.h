@@ -7,6 +7,7 @@
 
 #include <map>
 #include "../RadioStation/Subscriber.h"
+#include "BasicNote.h"
 
 #define EMPATHY_AUDIO_PLAY "EMPATHY_PLAY_AUDIO"
 #define EMPATHY_AUDIO_SHOULD_REPEAT "EMPATHY_AUDIO_SHOULD_REPEAT"
@@ -46,7 +47,7 @@ namespace empathy {
              *
              * Notation should be like `1As` or `2A` or `3E` and not `3A#`
              * */
-            virtual void playKeyboard(std::string key);
+            virtual void playKeyboard(BasicNote note);
 
             /* Play a certain tone. Repeat=false; */
             void play(std::string id);

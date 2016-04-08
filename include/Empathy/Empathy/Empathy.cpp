@@ -52,7 +52,7 @@ void empathy::Empathy::initShaders(){
 
 void empathy::Empathy::initGL(){
 //	cout<<"initing glViewport"<<sc_size_x<<","<<sc_size_y<<endl;
-    glViewport(0, 0, sc_size_x, sc_size_y);
+
 }
 
 void empathy::Empathy::initYou(){
@@ -67,6 +67,8 @@ void empathy::Empathy::setScreenSize(int x,int y){
 //    cout<<"Set setScreenSize"<<endl;
     sc_size_x=x;
     sc_size_y=y;
+
+    glViewport(0, 0, sc_size_x, sc_size_y);
 }
 
 void empathy::Empathy::loop() {

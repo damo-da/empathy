@@ -10,33 +10,25 @@
 #include <iostream>
 #include <stack>
 
+namespace empathy_linear {
+    class Linear_MoonLight : public empathy::moonlight::MoonLight {
 
-struct PlayableItem{
-public:
-    std::string fileName;
-    bool repeat;
+    private:
+        std::stack<empathy::moonlight::BasicNote> events;
+    public:
+        Linear_MoonLight();
 
-    PlayableItem(std::string fileName, bool repeat);
-};
+        virtual void init() override;
 
-class Linear_MoonLight : public empathy::moonlight::MoonLight{
+        virtual void terminate() override;
 
-private:
-    std::stack<PlayableItem> events;
-public:
-    Linear_MoonLight();
+        std::stack<empathy::moonlight::BasicNote> getEvents();
 
-    virtual void init() override;
+    protected:
+        virtual void playKeyboard(empathy::moonlight::BasicNote note) override;
 
-    virtual void terminate() override;
-
-    std::stack<PlayableItem> getEvents();
-
-protected:
-    virtual void playKeyboard(std::string key) override;
-
-    virtual void play(std::string id, bool repeat) override;
-};
-
+        virtual void play(std::string id, bool repeat) override;
+    };
+}
 
 #endif //DEMPATHY_LINEAR_LINEAR_LOONLIGHT_H

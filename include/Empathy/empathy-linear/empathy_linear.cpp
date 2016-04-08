@@ -38,12 +38,12 @@ namespace empathy_linear{
 
 
         virtual void init() override {
-            setScreenSize(700,700);
-
             empathy_linear::moonLight=new Linear_MoonLight();
             setMoonLight(empathy_linear::moonLight);
 
             empathy::Empathy::init();
+
+            setScreenSize(700,700);
         }
 
     public:
@@ -56,7 +56,7 @@ namespace empathy_linear{
         return getInstance()->shouldClose();
     }
 
-    std::stack<PlayableItem> getAudioEvents() {
+    std::stack<empathy::moonlight::BasicNote> getMusicalKeyboardEvents() {
         return moonLight->getEvents();
     }
 

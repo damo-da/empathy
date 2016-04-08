@@ -44,6 +44,6 @@ void empathy::moonlight::MoonLight::terminate() {
 
 }
 
-void empathy::moonlight::MoonLight::playKeyboard(std::string key) {
+void empathy::moonlight::MoonLight::playKeyboard(empathy::moonlight::BasicNote note) {
 
 }
