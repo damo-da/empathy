@@ -3,7 +3,7 @@
 //
 
 #include "../Utils/string_utils.h"
-#include "Linear_MoonLight.h"
+#include "linear_moonlight.h"
 
 void empathy_linear::Linear_MoonLight::init() {
     empathy::moonlight::MoonLight::init();

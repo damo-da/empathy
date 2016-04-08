@@ -3,7 +3,7 @@
 //
 
 #include <queue>
-#include "empathy_linear.h"
+#include "linear_empathy.h"
 
 using namespace std;
 

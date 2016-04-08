@@ -8,11 +8,8 @@ else()
 endif()
 
 set (EMPATHY_SOURCES
-
-        ${EMPATHY_SOURCES_BASE}/empathy-linear/empathy_linear.h
-        ${EMPATHY_SOURCES_BASE}/empathy-linear/empathy_linear.cpp
-        ${EMPATHY_SOURCES_BASE}/empathy-linear/Linear_MoonLight.cpp
-        ${EMPATHY_SOURCES_BASE}/empathy-linear/Linear_MoonLight.h
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/linear_empathy.cpp
+        ${EMPATHY_SOURCES_BASE}/empathy-linear/linear_moonlight.cpp
 
         ${EMPATHY_SOURCES_BASE}/Empathy/Empathy.h
         ${EMPATHY_SOURCES_BASE}/Empathy/Empathy.cpp
@@ -34,6 +31,7 @@ set (EMPATHY_SOURCES
 
         ${EMPATHY_SOURCES_BASE}/MoonLight/MoonLight.cpp
         ${EMPATHY_SOURCES_BASE}/MoonLight/MoonLight.h
+        ${EMPATHY_SOURCES_BASE}/MoonLight/BasicNote.cpp
 
         ${EMPATHY_SOURCES_BASE}/RadioStation/BroadcastStation.cpp
         ${EMPATHY_SOURCES_BASE}/RadioStation/BroadcastStation.h

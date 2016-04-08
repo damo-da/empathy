@@ -6,7 +6,7 @@
 #include "../Brain/JSONBrain/JSONBrain.h"
 #include "../Brain/DummyTouchBrain/DummyTouchBrain.h"
 
-#include "Linear_MoonLight.h"
+#include "linear_moonlight.h"
 
 namespace empathy_linear{
     bool shouldClose();
