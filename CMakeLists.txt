@@ -18,7 +18,7 @@ find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_DIRS})
 
 
-link_libraries(empathy
+target_link_libraries(empathy
         ${GLEW_LIBRARIES}
         ${OPENGL_LIBRARIES}
         )

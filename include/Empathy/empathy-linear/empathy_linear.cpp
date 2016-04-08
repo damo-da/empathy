@@ -23,7 +23,6 @@ namespace empathy_linear{
         }
 
 
-
     public:
         virtual void loop() override {
             empathy::Empathy::loop();
