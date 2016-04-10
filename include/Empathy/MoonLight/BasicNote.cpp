@@ -2,7 +2,7 @@
 // Created by geek on 4/8/16.
 //
 
-#include <Empathy/Utils/string_utils.h>
+#include "../Utils/string_utils.h"
 #include "BasicNote.h"
 
 std::string empathy::moonlight::BasicNote::toString()
