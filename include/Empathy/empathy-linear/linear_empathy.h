@@ -29,7 +29,8 @@ namespace empathy_linear{
 
     void makeReadyToClose();
 
-    
+    void setScreenSize(GLint size);
+    void setScreenMargins(GLint x,GLint y);
 }
 
 

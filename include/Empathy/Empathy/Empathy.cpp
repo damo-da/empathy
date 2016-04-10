@@ -63,18 +63,27 @@ void empathy::Empathy::initYou(){
 }
 
 
-void empathy::Empathy::setScreenSize(int x,int y){
+void empathy::Empathy::setScreenSize(int x){
 //    cout<<"Set setScreenSize"<<endl;
-    sc_size_x=x;
-    sc_size_y=y;
 
-    glViewport(0, 0, sc_size_x, sc_size_y);
+    sc_size=x;
+
+    glViewport(marginLeft, marginTop, sc_size,sc_size);
+}
+
+void empathy::Empathy::setScreenMargins(int x,int y){
+
+    marginLeft=x;
+    marginTop=y;
+
+    glViewport(marginLeft, marginTop, sc_size,sc_size);
 }
 
 void empathy::Empathy::loop() {
     empathy::radio::BroadcastStation::dispatch();
 
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+
     glClear(GL_COLOR_BUFFER_BIT );
 
     you->setTime(getTime());

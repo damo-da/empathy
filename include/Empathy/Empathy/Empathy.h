@@ -53,8 +53,25 @@ namespace empathy{
          */
         void addBrain(brain::Brain * brain);
 
-        GLfloat getScreenSizeX()const {return sc_size_x;}
-        GLfloat getScreenSizeY()const {return sc_size_y;}
+
+        GLuint getScreenSize() const {
+            return sc_size;
+        }
+
+        GLuint getMarginTop() const {
+            return marginTop;
+        }
+
+        GLuint getMarginLeft() const {
+            return marginLeft;
+        }
+
+        /* set the OpenGL screen sizes. */
+        void setScreenSize(int);
+
+        /* set the OpenGL screen margins. */
+        void setScreenMargins(int,int);
+
     protected:
 
         /* init the flavor-independent system ready. */
@@ -69,9 +86,6 @@ namespace empathy{
          * Just the code inside the `while` loop.
          * */
         virtual void loop();
-
-        /* set the OpenGL screen sizes. */
-        void setScreenSize(int,int);
 
     public:
         virtual bool shouldClose(){
@@ -99,7 +113,8 @@ namespace empathy{
         moonlight::MoonLight * moonLight;
 
         /* The OpenGL Screen Size. */
-        GLuint sc_size_x,sc_size_y;
+        GLuint sc_size;
+        GLuint marginTop,marginLeft;
 
         /* Initialize GLEW */
         void initGlew();

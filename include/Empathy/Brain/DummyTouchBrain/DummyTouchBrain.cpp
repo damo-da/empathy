@@ -21,8 +21,8 @@ void empathy::brain::DummyTouchBrain::onReceiveEvent(empathy::radio::Event &even
 
         Empathy* empathy1=Empathy::getInstance();
 
-        GLdouble xPos=event.getDouble(EMPATHY_MOUSE_XPOS)/(empathy1->getScreenSizeX());
-        GLdouble yPos=event.getDouble(EMPATHY_MOUSE_YPOS)/(empathy1->getScreenSizeY());
+        GLdouble xPos=event.getDouble(EMPATHY_MOUSE_XPOS)/(empathy1->getScreenSize());
+        GLdouble yPos=event.getDouble(EMPATHY_MOUSE_YPOS)/(empathy1->getScreenSize());
 
         xPos=2 * xPos-1;
         yPos=2 * yPos-1;

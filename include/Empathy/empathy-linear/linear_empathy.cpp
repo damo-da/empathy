@@ -16,7 +16,6 @@ namespace empathy_linear{
     Linear_MoonLight * moonLight;
 
     class Empathy_Linear:public empathy::Empathy{
-
     protected:
         virtual GLfloat getTime() override {
             return time;
@@ -42,8 +41,6 @@ namespace empathy_linear{
             setMoonLight(empathy_linear::moonLight);
 
             empathy::Empathy::init();
-
-            setScreenSize(700,700);
         }
 
     public:
@@ -95,6 +92,14 @@ namespace empathy_linear{
 
     void makeReadyToClose() {
         getInstance()->makeReadyToClose();
+    }
+
+    void setScreenSize(GLint size) {
+        getInstance()->setScreenSize(size);
+    }
+
+    void setScreenMargins(GLint x, GLint y) {
+        getInstance()->setScreenMargins(x,y);
     }
 
 
