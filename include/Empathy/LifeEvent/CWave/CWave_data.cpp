@@ -18,6 +18,7 @@ empathy::life_event::CWave_data::CWave_data()
 void empathy::life_event::CWave_data::onInit() {
     LifeEvent::onInit();
 
+
     // cout<<"initing vertex objects"<<endl;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -31,10 +32,11 @@ void empathy::life_event::CWave_data::onRun(GLfloat delTime) {
 
     GLfloat radius = getTimeSinceRun() * getWaveSpeed();
 
-    if(radius> EMPATHY_CWAVE_MAXIMUM_DISTANCE){
+    if(getAmplitudeAt(radius) < 0.0215781){
         doneRunning();
         return;
     }
+
     float diff = 0.01f;
     float cerv = 2 * M_PI * radius;
 
@@ -89,6 +91,7 @@ void empathy::life_event::CWave_data::draw() {
 
 void empathy::life_event::CWave_data::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
+
     Color::decodeJson(key,value);
     pure_math::Wave::decodeJson(key,value);
 }
