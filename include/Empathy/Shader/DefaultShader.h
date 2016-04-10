@@ -21,9 +21,6 @@ namespace empathy {
         class DefaultShader {
         public:
             static GLuint shaderProgram;
-            static GLfloat marginLeft;
-            static GLfloat marginTop;
-            static bool initialized;
 
             /* Initialize the shader.
              *
@@ -40,11 +37,6 @@ namespace empathy {
 
             /* Set the color of the fragmentColor. */
             static void setVertexColor(Color *color);
-
-
-            static void setMarginTop(GLfloat marginTop);
-
-            static void setMarginLeft(GLfloat marginLeft);
         };
     }
 }

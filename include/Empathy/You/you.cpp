@@ -7,10 +7,10 @@
 
 using namespace std;
 
-empathy::You::You():brains()
+empathy::You::You():brains(),background()
 {
     instance=this;
-
+    background= new life_event::Background();
 }
 
 
@@ -55,6 +55,7 @@ void empathy::You::init(){
     glEnable (GL_BLEND);
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    addLifeEvent(background);
 }
 
 void empathy::You::addLifeEvent(empathy::life_event::LifeEvent *e) {

@@ -82,10 +82,6 @@ void empathy::Empathy::setScreenMargins(int x,int y){
 void empathy::Empathy::loop() {
     empathy::radio::BroadcastStation::dispatch();
 
-    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-
-    glClear(GL_COLOR_BUFFER_BIT );
-
     you->setTime(getTime());
 
     you->blit();

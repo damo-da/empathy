@@ -2,6 +2,7 @@
 // Created by damo on 2/15/16.
 //
 
+#include "../../You/you.h"
 #include "JSONBrain.h"
 #include "../../Utils/file_utils.h"
 #include "../../Libs/cJSON/cJSON_utils.h"
@@ -95,7 +96,16 @@ void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json
         double after=cJSON_GetObjectItem(json,"in")->valuedouble;
 
         activateTimeoutForNextLine(stepID,after);
-    }else if(action=="create"){
+    }else if(action=="background_transition"){
+        Color toColor;
+        GLfloat duration=cJSON_GetObjectItem(json,"duration")->valuedouble;
+        std::vector<std::string> keys=cJSON_get_keys(json);
+        for(int i=0;i<keys.size();i++){
+            toColor.decodeJson(keys[i],cJSON_GetObjectItem(json,keys[i].c_str()));
+        }
+        You::getInstance()->getBackground()->addTransition(toColor,duration);
+
+    } else if(action=="create"){
         std::string object=cJSON_GetObjectItem(json,"create")->valuestring;
 
         //create this new object

@@ -18,6 +18,8 @@ public:
 
     Color(GLfloat r=1.0f,GLfloat g=1.0f,GLfloat b=1.0f,GLfloat a=1.0f);
 
+    Color(Color * color);
+
     /* Something like a "pointer" copy constructor. */
     void setColor(Color * color);
 
@@ -53,8 +55,13 @@ public:
         Color::a = a;
     }
 
+
+    static Color mix(Color * color1,Color * color2,GLfloat ratio);
+
     /* Apply color from JSON. */
     virtual void decodeJson(std::string key,cJSON* value);
+
+    std::string toString();
 private:
     GLfloat r,g,b,a;
 };

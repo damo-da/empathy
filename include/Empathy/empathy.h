@@ -29,6 +29,7 @@ namespace empathy{
         class MathWave_Para_Circle;
         class MathWave_Sinc;
         class MathWave_Sine;
+        class Background;
     }
 
     /* Brains gives logic to the program. They determine when and how a lifeEvent appears on the screen. */

@@ -62,6 +62,8 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/CWave/CWave_data.h
         ${EMPATHY_SOURCES_BASE}/LifeEvent/MathWave/MathWave_Para_Circle.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/MathWave/MathWave_Para_Circle.h
+        ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background.cpp
+        ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background_Transition.cpp
 
         ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.cpp
         ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.h

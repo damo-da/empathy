@@ -34,3 +34,36 @@ void Color::decodeJson(std::string key, cJSON *value) {
         setA(value->valuedouble);
     }
 }
+
+Color Color::mix(Color *color1, Color *color2, GLfloat ratio) {
+    Color mixed;
+
+    mixed.setA(color2->getA()*ratio + color1->getA()*(1-ratio));
+    mixed.setR(color2->getR()*ratio + color1->getR()*(1-ratio));
+    mixed.setG(color2->getG()*ratio + color1->getG()*(1-ratio));
+    mixed.setB(color2->getB()*ratio + color1->getB()*(1-ratio));
+
+    return mixed;
+}
+
+Color::Color(Color *color) {
+    this->setColor(color);
+}
+
+std::string Color::toString() {
+    return "Color("
+                   "r=>" + std::to_string(r)+", "
+                   "g=>" + std::to_string(g)+", "
+                   "b=>" + std::to_string(b)+", "
+                   "a=>" + std::to_string(a)+")";
+
+}
+
+
+
+
+
+
+
+
+

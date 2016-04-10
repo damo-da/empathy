@@ -4,7 +4,10 @@
   "title":"Canon in D (Pachelbel)",
   "copyright":"Public Domain",
   "steps": {
-    "begin":[{"type":"goto","stepID":"1","in":0.5}],
+    "begin":[{"type":"goto","stepID":"1","in":0.5},
+      {"type":"background_transition","colorRed":0.0,"colorGreen":0.1,"colorBlue":0.1,"colorAlpha":0.0,"duration":3.0},
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    ],
 
     "baseWave":[
       {
@@ -884,6 +887,7 @@
     ],
     "16":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.3,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"17","in":0.7500001}
     ],
     "17":[
@@ -902,6 +906,7 @@
     ],
     "20":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type":"background_transition","colorRed":0.0,"colorGreen":0.2,"colorBlue":0.3,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"21","in":0.7500001}
     ],
     "21":[
@@ -939,7 +944,8 @@
     ],
     "28":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
-      {"type":"goto","stepID":"29","in":0.7500001}
+      {"type":"goto","stepID":"29","in":0.7500001},
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.2,"colorBlue":0.3,"colorAlpha":0.0,"duration":5.0}
     ],
     "29":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1A"},

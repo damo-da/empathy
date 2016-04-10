@@ -11,10 +11,12 @@
 
 #include <vector>
 #include <GL/glew.h>
+#include "../LifeEvent/Background/Background.h"
 
 namespace empathy {
     class You : public radio::Subscriber {
 
+        life_event::Background* background;
     public:
         /* The constructor. */
         You();
@@ -45,6 +47,8 @@ namespace empathy {
 
         /* The Terminator kills you. o.o */
         void terminate();
+
+        life_event::Background * getBackground(){return background;}
 
     private:
         /* FPS stuffs. */
