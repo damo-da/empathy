@@ -29,8 +29,8 @@ void empathy::life_event::Background::onRun(GLfloat delTime) {
 void empathy::life_event::Background::onInit() {
     LifeEvent::onInit();
 
-    setColor(0.1f,0.1f,0.2f,0.0f);
-    addTransition(this,0.1f);
+    setColor(0.0f,0.0f,0.0f,0.0f);
+    addTransition(this,1.0f);
 }
 
 void empathy::life_event::Background::draw() {
@@ -67,6 +67,7 @@ void empathy::life_event::Background::decodeJson(std::string key, cJSON *value) 
 }
 
 void empathy::life_event::Background::addTransition(Color color, GLfloat duration) {
+    cout<<"Adding transition to "<<color.toString()<<endl;
     transitions.push_back(Background_Transition(color,duration));
 }
 

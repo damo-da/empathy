@@ -4,9 +4,7 @@
   "title":"Canon in D (Pachelbel)",
   "copyright":"Public Domain",
   "steps": {
-    "begin":[{"type":"goto","stepID":"1","in":0.5},
-      {"type":"background_transition","colorRed":0.0,"colorGreen":0.1,"colorBlue":0.1,"colorAlpha":0.0,"duration":3.0},
-      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    "begin":[{"type":"goto","stepID":"1","in":0.5}
     ],
 
     "baseWave":[
@@ -819,6 +817,8 @@
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
+      {"type":"abackground_transition","colorRed":0.0,"colorGreen":0.1,"colorBlue":0.1,"colorAlpha":0.0,"duration":3.0},
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"2","in":0.7500001}
     ],
@@ -988,6 +988,7 @@
     ],
     "36":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
+      {"type":"background_transition","colorRed":0.1,"colorGreen":0.2,"colorBlue":0.1,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"37","in":0.70001}
     ],
     "37":[
@@ -1020,6 +1021,7 @@
     ],
     "43":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.4,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"44","in":0.70001}
     ],
     "44":[
@@ -1034,6 +1036,7 @@
     ],
     "46":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.2,"colorBlue":0.4,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"47","in":0.70001}
     ],
     "47":[
@@ -1048,6 +1051,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3G"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3B"},
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"extendedBaseWave","in":0.0},
       {"type":"goto","stepID":"50","in":0.70001}
     ],
@@ -1067,6 +1071,7 @@
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "1D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.4,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"54","in":0.70001}
     ],
     "54":[
@@ -1176,6 +1181,7 @@
     "74":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2B"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Cs"},
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.1,"colorBlue":0.0,"colorAlpha":0.0,"duration":3.0},
       {"type":"goto","stepID":"75","in":0.600001}
     ],
     "75":[
@@ -1191,13 +1197,14 @@
     "77":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Cs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4Fs"},
+
       {"type":"goto","stepID":"78","in":0.600001}
     ],
     "78":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2Fs"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4A"},
       {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
-      {"type":"goto","stepID":"artisticSineWave","in":0.0},
+      {"type":"goto","stepID":"paleBlueDot1","in":0.0},
       {"type":"goto","stepID":"79","in":0.600001}
     ],
     "79":[
@@ -1258,6 +1265,7 @@
     "89":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "3A"},
+      {"type":"background_transition","colorRed":0.1,"colorGreen":0.1,"colorBlue":0.3,"colorAlpha":0.0,"duration":3.0},
       {"type":"goto","stepID":"90","in":0.600001}
     ],
     "90":[

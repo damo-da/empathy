@@ -85,10 +85,10 @@ void empathy::You::clearLifeEvents() {
 
 void empathy::You::blit(){
 
-    // cout<<"blitting you"<<endl;
-
     for(int i=0;i<lifeEvents.size();i++){
         empathy::life_event::LifeEvent * event=lifeEvents[i];
+
+        if(event== nullptr)continue;
 
         event->draw();
     }
