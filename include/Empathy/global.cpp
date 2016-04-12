@@ -37,7 +37,7 @@ std::string empathy::getBase()
         }else{
             cCurrentPath[sizeof(cCurrentPath) - 1] = '\0'; /* not really required */
 
-            __base=join_path(std::string(cCurrentPath),"Empathy");
+            __base=join_path(std::string(cCurrentPath),"empathy");
 
             std::cout<<"Base changed to "<<__base<<std::endl;
         }
