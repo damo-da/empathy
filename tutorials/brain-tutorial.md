@@ -39,8 +39,3 @@ public void runLineNumber(std::string action, std::string caller="")
 {% endhighlight %}
 
 You might have noticed action=="begin" on line 3. This comes from `You` after empathy has finished instanciating.
-
-
-
-
-The following code block WILL be syntax-highlighted.
