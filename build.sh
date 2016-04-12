@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p dist/docs
+mkdir -p dist
 
 cd dist
 
