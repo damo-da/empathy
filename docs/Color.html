@@ -24,6 +24,7 @@
             <div class="subtitle">Constructors</div>
             <ul>
                 <li><a href="#Color.Color">Color<span class="counter"></span></a></li>
+                <li><a href="#Color.Color">Color<span class="counter"></span></a></li>
             </ul>
             <div class="subtitle">Member Functions</div>
             <ul>
@@ -36,6 +37,7 @@
                 <li><a href="#Color.getB">getB<span class="counter"></span></a></li>
                 <li><a href="#Color.getG">getG<span class="counter"></span></a></li>
                 <li><a href="#Color.getR">getR<span class="counter"></span></a></li>
+                <li><a href="#Color.mix">mix<span class="counter"></span></a><span class="static">s</span></li>
                 <li><a href="#Color.setA">setA<span class="counter"></span></a></li>
                 <li><a href="#Color.setB">setB<span class="counter"></span></a></li>
                 <li><a href="#Color.setColor">setColor<span class="counter"></span></a></li>
@@ -46,6 +48,7 @@
                 </li>
                 <li><a href="#Color.setG">setG<span class="counter"></span></a></li>
                 <li><a href="#Color.setR">setR<span class="counter"></span></a></li>
+                <li><a href="#Color.toString">toString<span class="counter"></span></a></li>
             </ul>
         </div>
     </div>
@@ -132,6 +135,30 @@
                     </tbody>
                 </table>
             </div>
+            <div class="function">
+                <div class="declaration" id="Color::Color">
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">Color</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#Color">Color</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">color</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="Color::Color::color">
+                            <td>color</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <h2 data-cldoc-dynamic="1" id="member functions">Member Functions</h2>
         <div class="member_functions">
@@ -147,7 +174,7 @@
                             <tr>
                                 <td class="identifier">decodeJson</td>
                                 <td class="open_paren">(</td>
-                                <td class="argument_type"><span class="type"><span class="name ">std::string</span></span>
+                                <td class="argument_type"><span class="type"><span class="name ">std::__cxx11::string</span></span>
                                 </td>
                                 <td class="argument_name">key,</td>
                             </tr>
@@ -266,6 +293,59 @@
                 </div>
                 <table class="arguments">
                     <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="Color::mix">
+                    <ul class="specifiers">
+                        <li class="static">static</li>
+                    </ul>
+                    <div class="return_type"><span class="type"><span class="name "><a href="#Color">Color</a></span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">mix</td>
+                                <td class="open_paren">(</td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#Color">Color</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">color1,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name "><a href="#Color">Color</a></span><span class="qualifier"> *</span></span>
+                                </td>
+                                <td class="argument_name">color2,</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="argument_type"><span class="type"><span class="name ">GLfloat</span></span>
+                                </td>
+                                <td class="argument_name">ratio</td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr id="Color::mix::color1">
+                            <td>color1</td>
+                            <td></td>
+                        </tr>
+                        <tr id="Color::mix::color2">
+                            <td>color2</td>
+                            <td></td>
+                        </tr>
+                        <tr id="Color::mix::ratio">
+                            <td>ratio</td>
+                            <td></td>
+                        </tr>
                         <tr class="return">
                             <td class="keyword">return</td>
                             <td></td>
@@ -457,6 +537,30 @@
                     <tbody>
                         <tr id="Color::setR::r">
                             <td>r</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="function">
+                <div class="declaration" id="Color::toString">
+                    <div class="return_type"><span class="type"><span class="name ">std::__cxx11::string</span></span>
+                    </div>
+                    <table class="declaration">
+                        <tbody>
+                            <tr>
+                                <td class="identifier">toString</td>
+                                <td class="open_paren">(</td>
+                                <td colspan="2"></td>
+                                <td class="close_paren">)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="arguments">
+                    <tbody>
+                        <tr class="return">
+                            <td class="keyword">return</td>
                             <td></td>
                         </tr>
                     </tbody>
