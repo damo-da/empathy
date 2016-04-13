@@ -26,16 +26,21 @@ void empathy::life_event::Background::onRun(GLfloat delTime) {
 
 }
 
+void empathy::life_event::Background::onDestroy() {
+    LifeEvent::onDestroy();
+
+}
+
+
 void empathy::life_event::Background::onInit() {
     LifeEvent::onInit();
 
-    setColor(0.0f,0.0f,0.0f,0.0f);
-    addTransition(this,1.0f);
 }
 
 void empathy::life_event::Background::draw() {
 
 
+//    cout<<"I am "<<Color::toString()<<endl;
     glClearColor(getR(), getG(),getB(),getA());
 //
     glClear(GL_COLOR_BUFFER_BIT );
@@ -48,12 +53,12 @@ void empathy::life_event::Background::onCreate(GLfloat delTime) {
 
 empathy::life_event::Background::Background() :
         LifeEvent(),
-        Color(),
+        Color(0.0f,0.0f,0.0f,0.0f),
         last_completion_time(0),
         transitions()
 
 {
-    transitions.push_back(Background_Transition(Color(this),1.0));
+    addTransition(Color(this),1.0);
 }
 
 
@@ -67,7 +72,7 @@ void empathy::life_event::Background::decodeJson(std::string key, cJSON *value) 
 }
 
 void empathy::life_event::Background::addTransition(Color color, GLfloat duration) {
-    cout<<"Adding transition to "<<color.toString()<<endl;
+//    cout<<"ADDING TRANSITION"<<color.toString()<<endl;
     transitions.push_back(Background_Transition(color,duration));
 }
 

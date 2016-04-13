@@ -2,8 +2,20 @@
 #include "LifeEvent.h"
 
 using namespace std;
-empathy::life_event::LifeEvent::LifeEvent(): Subscriber(){
-    totalTime=0.0f;
+empathy::life_event::LifeEvent::LifeEvent() :
+        Subscriber(),
+        initComplete(false),
+        runComplete(false),
+        createComplete(false),
+        finishComplete(false),
+        destroyComplete(false),
+        createTime(0.0),
+        finishTime(0.0),
+        runTime(0.0),
+        totalTime(0.0),
+        depth(0.0)
+{
+
 
 }
 void empathy::life_event::LifeEvent::passTime(GLfloat delTime){
