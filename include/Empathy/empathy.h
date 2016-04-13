@@ -27,6 +27,7 @@ namespace empathy{
         class MathWave;
         class MathWave_Line;
         class MathWave_Para_Circle;
+        class MathWave_FromString;
         class MathWave_Sinc;
         class MathWave_Sine;
         class Background;

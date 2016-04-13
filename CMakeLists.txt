@@ -17,10 +17,14 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_DIRS})
 
+find_package(muparser REQUIRED)
+#include_directories(${MUPARSER_INCLUDE_DIRS})
+
 
 target_link_libraries(empathy
         ${GLEW_LIBRARIES}
         ${OPENGL_LIBRARIES}
+
         )
 
 add_definitions(-DSTANDALONE_EMPATHY=true)

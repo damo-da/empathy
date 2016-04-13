@@ -14,6 +14,7 @@
 #include "../../LifeEvent/MathWave/MathWave_Para_Circle.h"
 #include "../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
+#include "../../LifeEvent/MathWave/MathWave_FromString.h"
 
 
 using namespace std;
@@ -142,6 +143,8 @@ empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString
         return new empathy::life_event::MathWave_Sinc();
     }else if(name=="mathwave_sine"){
         return new empathy::life_event::MathWave_Sine();
+    }else if(name=="mathwave"){
+        return new empathy::life_event::MathWave_FromString();
     }
 
 
