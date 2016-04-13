@@ -28,11 +28,11 @@ int empathy::You::calcFPS(GLfloat curTime){
 
 void empathy::You::passTime(GLfloat timeLength){
 
-//    cout<<"passing time"<<endl;
     for(int i=0;i<lifeEvents.size();i++){
         empathy::life_event::LifeEvent * event=lifeEvents[i];
 
         if(event->isDestroyed()){
+
             removeLifeEvent(event);
             i--;
             continue;
@@ -63,7 +63,6 @@ void empathy::You::addLifeEvent(empathy::life_event::LifeEvent *e) {
     lifeEvents.push_back(e);
 }
 void empathy::You::removeLifeEvent(empathy::life_event::LifeEvent *e) {
-
     for (int i = 0; i < lifeEvents.size(); i++) {
         if (e->getId() == lifeEvents[i]->getId()) {
 
@@ -75,7 +74,6 @@ void empathy::You::removeLifeEvent(empathy::life_event::LifeEvent *e) {
 }
 
 void empathy::You::clearLifeEvents() {
-
     while(lifeEvents.size()>0){
         empathy::life_event::LifeEvent * event = lifeEvents[0];
 
@@ -84,14 +82,22 @@ void empathy::You::clearLifeEvents() {
 }
 
 void empathy::You::blit(){
-
+//    cout<<"BLITTING"<<endl;
     for(int i=0;i<lifeEvents.size();i++){
+//        cout<<"Lower"<<endl;
         empathy::life_event::LifeEvent * event=lifeEvents[i];
+//        cout<<"RENDERING"<<endl;
+        if(event== nullptr){
+            cout<<"FOUND A null event";
+            continue;
+        }
+//        cout<<"EVENT ID IS "<< event->getId()<<endl;
 
-        if(event== nullptr)continue;
-
-        event->draw();
+        if(event->isCreating() || event->isRunning() || event->isFinishing())
+            event->draw();
+//        cout<<"RENDERED"<<endl;
     }
+//    cout<<"BLITTED"<<endl;
 }
 
 empathy::You * empathy::You::instance=nullptr;

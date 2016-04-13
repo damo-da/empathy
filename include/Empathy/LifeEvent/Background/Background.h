@@ -24,6 +24,9 @@ namespace empathy{
         protected:
         public:
         protected:
+        public:
+            virtual void onDestroy() override;
+
             virtual void onCreate(GLfloat delTime) override;
 
             virtual void decodeJson(std::string key, cJSON *value) override;
