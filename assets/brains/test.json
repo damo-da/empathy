@@ -9,7 +9,9 @@
     "paleBlueDot":[
       {
         "type":"create",
-        "create":"mathwave_sine",
+        "create":"mathwave",
+        "mathwave_x":"time",
+        "mathwave_y":"sin(time*2.0/period -1.57)",
         "offsetX":0.0,
         "offsetY":0,
         "length":0.15,
@@ -19,10 +21,8 @@
         "colorBlue":0.1,
         "head":-0.95,
         "tail":0.95,
-        "period":1.0,
-        "zoomY":0.8,
-        "sine_thetaOffset":-1.57
-
+        "mathwave_period":1.0,
+        "zoomY":0.8
       }
     ],
 

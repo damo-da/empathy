@@ -101,12 +101,6 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/Brain/DummyTouchBrain/DummyTouchBrain.cpp
         ${EMPATHY_SOURCES_BASE}/Brain/DummyTouchBrain/DummyTouchBrain.h
 
-        ${EMPATHY_SOURCES_BASE}/Libs/math-parser/variablelist.cpp
-        ${EMPATHY_SOURCES_BASE}/Libs/math-parser/functions.cpp
-        ${EMPATHY_SOURCES_BASE}/Libs/math-parser/parser.cpp
-        ${EMPATHY_SOURCES_BASE}/Libs/math-parser/error.cpp
-        ${EMPATHY_SOURCES_BASE}/Libs/math-parser/constants.h
-
         )
 
 include(CheckCXXCompilerFlag)
