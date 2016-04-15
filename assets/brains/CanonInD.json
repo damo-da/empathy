@@ -817,7 +817,6 @@
     "1":[
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "4F#"},
-      {"type":"abackground_transition","colorRed":0.0,"colorGreen":0.1,"colorBlue":0.1,"colorAlpha":0.0,"duration":3.0},
       {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0},
       {"type":"goto","stepID":"baseWave","in":0.0},
       {"type":"goto","stepID":"2","in":0.7500001}

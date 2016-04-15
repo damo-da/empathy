@@ -35,6 +35,8 @@ namespace empathy {
              */
             static void use();
 
+            static void flush();
+
             /* Set the color of the fragmentColor. */
             static void setVertexColor(Color *color);
         };

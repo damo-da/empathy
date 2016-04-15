@@ -1,8 +1,10 @@
 #include "Empathy.h"
 
 #include "../Shader/DefaultShader.h"
+
 #include "../MoonLight/MoonLight.h"
 #include "../You/you.h"
+
 using namespace std;
 
 empathy::Empathy::Empathy():
@@ -18,10 +20,17 @@ void empathy::Empathy::flush(){
 
     moonLight->terminate();
     you->terminate();
+
+    shader::DefaultShader::flush();
+
 }
 
 void empathy::Empathy::init() {
 //	cout<<"initing emp"<<endl;
+
+    //initialize base location
+    getBase();
+
 
     initGlew();
 
@@ -58,8 +67,6 @@ void empathy::Empathy::initGL(){
 void empathy::Empathy::initYou(){
     you=new empathy::You();
     you->init();
-
-
 }
 
 
@@ -94,3 +101,4 @@ void empathy::Empathy::addBrain(empathy::brain::Brain *brain) {
 }
 
 empathy::Empathy * empathy::Empathy::instance= nullptr;
+

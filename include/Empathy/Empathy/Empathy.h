@@ -34,7 +34,6 @@ namespace empathy{
         /* Gets the current time for the game. */
         virtual GLfloat  getTime()=0;
 
-
         /* Terminator. More like destructor, but a terminator. */
         virtual void flush();
     public:

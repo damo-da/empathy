@@ -56,6 +56,7 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/FadeInOut/FadeInOut.h
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Collection.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Collection.h
+
         ${EMPATHY_SOURCES_BASE}/LifeEvent/CWave/CWave.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/CWave/CWave.h
         ${EMPATHY_SOURCES_BASE}/LifeEvent/CWave/CWave_data.cpp
@@ -67,9 +68,7 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background_Transition.cpp
 
         ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.cpp
-        ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.h
-        ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.cpp
-        ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.h
+
         ${EMPATHY_SOURCES_BASE}/Shader/shader_utils.cpp
         ${EMPATHY_SOURCES_BASE}/Shader/shader_utils.h
 

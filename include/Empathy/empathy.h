@@ -31,6 +31,11 @@ namespace empathy{
         class MathWave_Sinc;
         class MathWave_Sine;
         class Background;
+        class TextEvent;
+    }
+
+    namespace shader{
+        class DefaultShader;
     }
 
     /* Brains gives logic to the program. They determine when and how a lifeEvent appears on the screen. */

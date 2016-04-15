@@ -35,4 +35,9 @@ GLuint emCreateFragmentShader(std::string fileName);
 
 /* create vertexShader. */
 GLuint emCreateVertexShader(std::string fileName);
+
+GLint get_attrib(GLuint program, const char *name);
+
+GLint get_uniform(GLuint program, const char *name);
 #endif
+

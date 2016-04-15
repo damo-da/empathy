@@ -24,3 +24,9 @@ void empathy::shader::DefaultShader::setVertexColor(Color * color) {
     GLint vertexColorLocation = glGetUniformLocation(DefaultShader::shaderProgram, "vertexColor");
     glUniform4f(vertexColorLocation, color->getR(),color->getG(),color->getB(),color->getA());
 }
+
+void empathy::shader::DefaultShader::flush() {
+    glDeleteProgram(shaderProgram);
+}
+
+
