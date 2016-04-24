@@ -32,4 +32,4 @@ Would you consider helping me promote Empathy? I'd like to meet more developers 
 
 ## Build instructions
 
-The instructions to build can be found over [here](build-instructions)
+The instructions to build can be found over [here](build)
