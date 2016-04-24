@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Empathy Build Instructions
+title: Building Empathy
 ---
 
-# Build Instructions
+# Building Empathy
 
 There are going to be so many flavors of Empathy: DEmpathy(Desktop + Empathy, made for linux but, works for any desktop), AEmpathy(Android + Empathy, not yet released), iEmpathy (iOS + Empathy, not yet released),
 So choose the flavor you want to. And let's build Empathy in the flavor you like!
@@ -23,6 +23,9 @@ Empathy has been kept away from unnecessary dependencies as much as possible, ho
 **GLEW**:
 To make Empathy platform-independent, some uniform libraries are required. Empathy at the very core is made in close relation with GLEW.
 
+**muparser**:
+To parse mathematical expressions during runtime.
+
 ### DEmpathy
 
 **GLFW3**
@@ -30,6 +33,9 @@ To show window, we need something. Let it be GLFW.
  
 **irrKlang**
 To make music in DEmpathy aka DoonLight (MoonLight + Desktop!) 
+
+
+-------------------------
 
 ## Installing Dependencies
 
@@ -71,6 +77,6 @@ Okay Windows folks, I haven't tested this but the procedure goes something like 
 -GLFW: Download from [here](http://www.glfw.org/download.html)
 
 ----------------
-So let's hope that your installation is successful. If not, and you won't give up without compiling it from scratch, drop by a short mail on the address on the footer!
+So let's hope that your installation is successful. If not, and you won't give up without compiling it from scratch, [drop by an email](mailto:underscoredam@gmail.com)!
 
 ----------------------------------

@@ -5,15 +5,17 @@ title: Empathy by underscoredam
 
 # Empathy 
 
-![App Version](https://img.shields.io/badge/version-0.0-green.svg)
+![App Version](https://img.shields.io/badge/version-0.0.1-green.svg)
 
-Play Empathy to immerse in the pool of your own emotions!
+>"Play Empathy to immerse in the pool of your own emotions!"
 
  Introducing a brand new concept in gaming: a game that you don't play. In Empathy, you just sit back and enjoy what's given in life. You let go of everything and let Empathy take control of your emotions! You'll soon realize that the delicious cake in the background is what you have been asking for since the very beginning.
 
+Empathy is a research project, specifically aiming at "audio visualization of computer music using emotion recognition via facial recognition".
+
 ## What makes Empathy the best?
 
-Well, did you try out the demo? I certainly hope so, otherwise you should definitely try it once. Playing Canon (Pachelbel) and some waves on the screen might not seem awesome, but [here's the bigger picture of what's going on in the backstage](docs/how-it-works.md):
+Well, did you try out the demo? I certainly hope so, otherwise you should definitely try it once. Playing Canon (Pachelbel) and some waves on the screen might not seem awesome, but [here's the bigger picture of what's going on in the backstage](tutorials/how-it-works):
 
 Empathy's built with scalability in mind. It has been designed to work in multiple frameworks, (I think I'll also build a Python interface), will run on multiple OS, multiple CPUs, multiple GPUs, and what else? It's the scalability of Empathy that is more delicious than the current state of Empathy!
 
