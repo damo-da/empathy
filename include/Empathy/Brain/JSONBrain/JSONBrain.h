@@ -40,7 +40,7 @@ namespace empathy {
         protected:
             /* @inherit
              * */
-            virtual void runLineNumber(std::string lineID, std::string callerID) override;
+            virtual void runLineNumber(std::string lineID, std::string callerID,cJSON * override=nullptr) override;
 
             /* Execute a certain JSON action.
              *
@@ -48,7 +48,7 @@ namespace empathy {
              * @json the json data.
              *
              */
-            virtual void executeJson(const std::string action, cJSON *json);
+            virtual void executeJson(const std::string action, cJSON *json,cJSON * override= nullptr);
 
             /* Create a <LifeEvent> using it's name.
              *

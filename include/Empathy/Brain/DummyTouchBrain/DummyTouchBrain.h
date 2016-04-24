@@ -16,7 +16,7 @@ namespace empathy{
             virtual void onReceiveEvent(empathy::radio::Event &event) override;
 
         protected:
-            virtual void runLineNumber(std::string lineID, std::string callerID) override;
+            virtual void runLineNumber(std::string lineID, std::string callerID,cJSON * override=nullptr) override;
         };
     }
 

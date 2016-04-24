@@ -11,7 +11,8 @@ empathy::radio::Event::Event(std::string action):
         intData(),
         broadcaster(nullptr),
         strData(),
-        doubleData()
+        doubleData(),
+        jsonData()
 {
 
 

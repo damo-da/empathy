@@ -40,7 +40,7 @@ namespace empathy {
 
         protected:
             /* @inherit */
-            virtual void runLineNumber(std::string lineID, std::string callerID) override;
+            virtual void runLineNumber(std::string lineID, std::string callerID,cJSON * override=nullptr) override;
 
         public:
 

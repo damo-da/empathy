@@ -112,11 +112,11 @@ void empathy::life_event::MathWave::calcVertices() {
         GLfloat x=getX(i);
         GLfloat y=getY(i);
 
-        x += getOffsetX();
-        y += getOffsetY();
-
         x *= getZoomX();
         y *= getZoomY();
+
+        x += getOffsetX();
+        y += getOffsetY();
 
         GLfloat outX=x*cos(rotationAngle)-y*sin(rotationAngle);
         GLfloat outY=x*sin(rotationAngle)+y*cos(rotationAngle);

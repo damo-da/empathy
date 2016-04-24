@@ -7,7 +7,7 @@
 #include "../../Empathy/Empathy.h"
 using namespace std;
 
-void empathy::brain::DummyTouchBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::DummyTouchBrain::runLineNumber(std::string lineID, std::string callerID,cJSON * override) {
 
 }
 
