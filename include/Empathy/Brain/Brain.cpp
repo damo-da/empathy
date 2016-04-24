@@ -14,8 +14,9 @@ void empathy::brain::Brain::onReceiveEvent(empathy::radio::Event &event) {
         if(event.action==EMPATHY_EVENT_BRAIN_LINE_NUMBER){
             std::string lineID=event.getString(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
             std::string caller=event.getString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER);
+            cJSON* overrideData=event.getJson(EMPATHY_EVENT_DATA_OVERRIDE);
 
-            runLineNumber(lineID,caller);
+            runLineNumber(lineID,caller,overrideData);
         }
     }
 }
@@ -42,10 +43,12 @@ void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLflo
     activateTimeoutForNextLine(lineID,afterTime,"");
 }
 
-void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID) {
+void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID,cJSON* override) {
     empathy::radio::Event event=createEvent(EMPATHY_EVENT_BRAIN_LINE_NUMBER);
     event.putString(EMPATHY_EVENT_BRAIN_LINE_NUMBER,lineID);
     event.putString(EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER,callerLineID);
+
+    event.putJson(EMPATHY_EVENT_DATA_OVERRIDE,override);
 
     createTimeOut(afterTime,event);
 }
@@ -57,3 +60,9 @@ void empathy::brain::Brain::addTo(Empathy *binder) {
 void empathy::brain::Brain::terminate() {
 
 }
+
+void empathy::brain::Brain::activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, cJSON *overrideData) {
+    activateTimeoutForNextLine(lineID,afterTime,"",overrideData);
+}
+
+

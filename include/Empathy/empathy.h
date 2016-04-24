@@ -31,7 +31,7 @@ namespace empathy{
         class MathWave_Sinc;
         class MathWave_Sine;
         class Background;
-        class TextEvent;
+        class Image;
     }
 
     namespace shader{

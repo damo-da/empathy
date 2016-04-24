@@ -3,6 +3,7 @@
 
 #define EMPATHY_EVENT_BRAIN_LINE_NUMBER "EMPATHY_EVENT_BRAIN_LINE_NUMBER"
 #define EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER "EMPATHY_EVENT_BRAIN_CALLER_LINE_NUMBER"
+#define EMPATHY_EVENT_DATA_OVERRIDE "EMPATHY_EVENT_DATA_OVERRIDE"
 
 #include "../empathy.h"
 #include "../RadioStation/Subscriber.h"
@@ -75,13 +76,15 @@ namespace empathy {
              *
              * Note that cross-brain communication is not supported.
              */
-            virtual void runLineNumber(std::string lineID, std::string callerID) = 0;
+            virtual void runLineNumber(std::string lineID, std::string callerID,cJSON * overrideData=nullptr) = 0;
 
             /* Activate timeout for a certain line.*/
             void activateTimeoutForNextLine(std::string lineID, GLfloat afterTime);
 
             /* Activate timeout for a certain line.*/
-            void activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID);
+            void activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, std::string callerLineID,cJSON * override=nullptr);
+
+            void activateTimeoutForNextLine(std::string lineID, GLfloat afterTime, cJSON* overrideData);
 
             /* Add life event to the current gamescreen.
              *

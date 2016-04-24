@@ -6,7 +6,7 @@
 #include "../../Utils/string_utils.h"
 using namespace std;
 
-void empathy::brain::MusicalBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::MusicalBrain::runLineNumber(std::string lineID, std::string callerID,cJSON * override) {
     int number;
     if(lineID=="begin"){
         number=1;

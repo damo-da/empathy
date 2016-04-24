@@ -15,17 +15,18 @@
 #include "../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../LifeEvent/MathWave/MathWave_FromString.h"
+#include "../../LifeEvent/Image/Image.h"
 
 
 using namespace std;
 
-void empathy::brain::JSONBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::JSONBrain::runLineNumber(std::string lineID, std::string callerID,cJSON * override) {
     std::vector<cJSON*> actions=steps[lineID];
     cout<<"running "<<lineID<<endl;
 
     for(int i=0;i<actions.size();i++){
         std::string action=cJSON_GetObjectItem(actions[i],"type")->valuestring;
-        executeJson(action,actions[i]);
+        executeJson(action,actions[i],override);
     }
 }
 
@@ -78,9 +79,20 @@ void empathy::brain::JSONBrain::terminate() {
     cJSON_Delete(root);
 }
 
-void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json) {
-    if(action=="audio"){
+void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON * original,cJSON* override) {
 
+    cJSON * json=cJSON_Duplicate(original,1);
+
+    if(override != nullptr){
+        cJSON * child=override->child;
+        while (child){
+            cJSON_ReplaceItemInObject(json,child->string,cJSON_Duplicate(child,1));
+            child=child->next;
+        }
+    }
+
+
+    if(action=="audio"){
         std::string name=cJSON_GetObjectItem(json, "name")->valuestring;
         bool instrumental=(bool)cJSON_GetObjectItem(json,"instrumental")->valueint;
 
@@ -94,12 +106,18 @@ void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json
         }
     }else if(action=="goto"){
         std::string stepID=cJSON_GetObjectItem(json,"stepID")->valuestring;
-        double after=cJSON_GetObjectItem(json,"in")->valuedouble;
+        GLfloat after=(GLfloat)(cJSON_GetObjectItem(json,"in")->valuedouble);
 
-        activateTimeoutForNextLine(stepID,after);
+        cJSON * overrideData=cJSON_GetObjectItem(json,"override");
+
+        if(override != nullptr){
+            activateTimeoutForNextLine(stepID,after,overrideData);
+        }else {
+            activateTimeoutForNextLine(stepID, after);
+        }
     }else if(action=="background_transition"){
         Color toColor;
-        GLfloat duration=cJSON_GetObjectItem(json,"duration")->valuedouble;
+        GLfloat duration=(GLfloat)(cJSON_GetObjectItem(json,"duration")->valuedouble);
         std::vector<std::string> keys=cJSON_get_keys(json);
         for(int i=0;i<keys.size();i++){
             toColor.decodeJson(keys[i],cJSON_GetObjectItem(json,keys[i].c_str()));
@@ -131,7 +149,6 @@ void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON *json
     }
 }
 
-
 empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString(const std::string name) {
     if(name=="cwave"){
         return new empathy::life_event::CWave_data();
@@ -145,6 +162,8 @@ empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString
         return new empathy::life_event::MathWave_Sine();
     }else if(name=="mathwave"){
         return new empathy::life_event::MathWave_FromString();
+    }else if(name=="image"){
+        return new empathy::life_event::Image();
     }
 
 

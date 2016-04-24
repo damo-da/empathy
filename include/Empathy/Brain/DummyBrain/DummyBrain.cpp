@@ -8,7 +8,7 @@ empathy::brain::DummyBrain::DummyBrain() : Brain() {
 
 }
 
-void empathy::brain::DummyBrain::runLineNumber(std::string lineID, std::string callerID) {
+void empathy::brain::DummyBrain::runLineNumber(std::string lineID, std::string callerID,cJSON * override) {
 
 }
 

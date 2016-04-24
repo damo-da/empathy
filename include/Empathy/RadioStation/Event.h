@@ -1,14 +1,12 @@
-//
-// Created by damo on 1/25/16.
-//
-
 #ifndef EMPATHY_EVENT_H
 #define EMPATHY_EVENT_H
 
 #include <GL/glew.h>
 #include <iostream>
 #include <map>
+#include <Empathy/Libs/cJSON/cJSON.h>
 #include "Subscriber.h"
+#include "../Libs/cJSON/cJSON.h"
 
 #define EMPATHY_EVENT_ACTION_NONE "EMPATHY_EVENT_ACTION_NONE"
 
@@ -44,6 +42,13 @@ namespace empathy {
                 return doubleData[key];
             }
 
+            void putJson(std::string key,cJSON* json){
+                jsonData[key]=json;
+            }
+            cJSON* getJson(const std::string key){
+                return jsonData[key];
+            }
+
             Event(std::string);
 
             std::string action;
@@ -53,6 +58,7 @@ namespace empathy {
             std::map<std::string, int> intData;
             std::map<std::string, std::string> strData;
             std::map<std::string, GLdouble > doubleData;
+            std::map<std::string, cJSON *> jsonData;
         };
 
     }
