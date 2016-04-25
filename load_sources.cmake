@@ -55,7 +55,6 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/FadeInOut/FadeInOut.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/FadeInOut/FadeInOut.h
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Collection.cpp
-        ${EMPATHY_SOURCES_BASE}/LifeEvent/Image/Image.cpp
 
 
         ${EMPATHY_SOURCES_BASE}/LifeEvent/CWave/CWave.cpp
@@ -92,10 +91,6 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/Brain/JSONBrain/JSONBrain.h
         ${EMPATHY_SOURCES_BASE}/Libs/cJSON/cJSON_utils.cpp
         ${EMPATHY_SOURCES_BASE}/Libs/cJSON/cJSON_utils.h
-
-        ${EMPATHY_SOURCES_BASE}/Libs/lodepng/lodepng.h
-        ${EMPATHY_SOURCES_BASE}/Libs/lodepng/lodepng.cpp
-
 
         ${EMPATHY_SOURCES_BASE}/empathy.h
         ${EMPATHY_SOURCES_BASE}/global.h

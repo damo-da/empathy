@@ -4,7 +4,6 @@
 
 #include <cstring>
 #include "Image.h"
-#include "../../Libs/lodepng/lodepng.h"
 #include "../../global.h"
 
 using namespace std;

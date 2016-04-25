@@ -19,6 +19,7 @@ empathy::life_event::MathWave_FromString::MathWave_FromString() :
 
     //by default, x = time
     xParser.SetExpr("time");
+    yParser.SetExpr("time");
 }
 
 void empathy::life_event::MathWave_FromString::decodeJson(const std::string key, cJSON *value) {

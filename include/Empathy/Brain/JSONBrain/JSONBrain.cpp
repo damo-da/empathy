@@ -15,7 +15,7 @@
 #include "../../LifeEvent/MathWave/MathWave_Sine.h"
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../LifeEvent/MathWave/MathWave_FromString.h"
-#include "../../LifeEvent/Image/Image.h"
+//#include "../../LifeEvent/Image/Image.h"
 
 
 using namespace std;
@@ -38,39 +38,40 @@ empathy::brain::JSONBrain::JSONBrain(std::string fileName) :
     std::string filePath=getAssetPath(fileName);
     std::string fileContents=file_read(filePath.c_str());
     root = cJSON_Parse(fileContents.c_str());
+    if(root == nullptr){
+        cout<<"Invalid json file: "<<fileName<<" "<<<endl;
+        exit(EXIT_FAILURE);
 
+    }else{
+        std::string title=cJSON_GetObjectItem(root,"title")->valuestring;
+        cout<< "\n\n\n -------------------------- "<<endl;
+        cout<<"     Playing "<<title<<endl;
+        cout<<" --------------------------"<<endl<<endl<<endl;
 
-    std::string title=cJSON_GetObjectItem(root,"title")->valuestring;
-    cout<< "\n\n\n -------------------------- "<<endl;
-    cout<<"     Playing "<<title<<endl;
-    cout<<" --------------------------"<<endl<<endl<<endl;
+        cout<< "\n\n\n -------------------------- "<<endl;
+        cout<<"  Built with love just for you :)"<<endl;
+        cout<<" --------------------------"<<endl<<endl<<endl;
 
-    cout<< "\n\n\n -------------------------- "<<endl;
-    cout<<"  Built with love just for you :)"<<endl;
-    cout<<" --------------------------"<<endl<<endl<<endl;
+        cJSON * steps=cJSON_GetObjectItem(root,"steps");
 
-    cJSON * steps=cJSON_GetObjectItem(root,"steps");
+        std::vector<std::string> stepKeys=cJSON_get_keys(steps);
+        for(int i=0;i<stepKeys.size();i++){
+            std::string key=stepKeys[i];
 
-    std::vector<std::string> stepKeys=cJSON_get_keys(steps);
-    for(int i=0;i<stepKeys.size();i++){
-        std::string key=stepKeys[i];
+            cJSON* actionList=cJSON_GetObjectItem(steps,key.c_str());
 
-        cJSON* actionList=cJSON_GetObjectItem(steps,key.c_str());
-
-        std::vector<cJSON*> arrayList;
-        if(actionList->type==cJSON_Object)arrayList.push_back(actionList);
-        else if(actionList->type==cJSON_Array){
-            actionList=actionList->child;
-            while(actionList){
-                arrayList.push_back(actionList);
-                actionList=actionList->next;
+            std::vector<cJSON*> arrayList;
+            if(actionList->type==cJSON_Object)arrayList.push_back(actionList);
+            else if(actionList->type==cJSON_Array){
+                actionList=actionList->child;
+                while(actionList){
+                    arrayList.push_back(actionList);
+                    actionList=actionList->next;
+                }
             }
+            this->steps[key]=arrayList;
         }
-        this->steps[key]=arrayList;
     }
-
-
-
 }
 
 void empathy::brain::JSONBrain::terminate() {
@@ -162,9 +163,10 @@ empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString
         return new empathy::life_event::MathWave_Sine();
     }else if(name=="mathwave"){
         return new empathy::life_event::MathWave_FromString();
-    }else if(name=="image"){
-        return new empathy::life_event::Image();
     }
+//    else if(name=="image"){
+//        return new empathy::life_event::Image();
+//    }
 
 
     return nullptr;

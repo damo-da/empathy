@@ -91,7 +91,6 @@ void empathy::life_event::CWave_data::draw() {
 
 void empathy::life_event::CWave_data::decodeJson(std::string key, cJSON *value) {
     LifeEvent::decodeJson(key, value);
-
     Color::decodeJson(key,value);
     pure_math::Wave::decodeJson(key,value);
 }

@@ -93,13 +93,30 @@ namespace empathy {
 
 //Time and loop handlers
         public:
-            GLfloat getTotalTime();
+            GLfloat getTotalTime() const;
 
             //game loop
             virtual void passTime(GLfloat delTime);
 
         private:
             GLfloat totalTime;
+
+        protected:
+            struct ValueTransition{
+                std::string key;
+                GLdouble from;
+                GLdouble to;
+                GLdouble duration;
+                GLboolean completed=GL_FALSE;
+                GLdouble percentageComplete(const LifeEvent * event){
+                    return event->getTotalTime()/duration;;
+                }
+                GLdouble getValue(const LifeEvent * event){
+                    return to * percentageComplete(event)+ from * (1.0 - percentageComplete(event));
+                }
+            };
+            std::vector<ValueTransition> transitions;
+            virtual void performTransitions();
 
 //Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the object goes
         public:

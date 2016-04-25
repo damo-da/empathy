@@ -13,13 +13,17 @@ empathy::life_event::LifeEvent::LifeEvent() :
         finishTime(0.0),
         runTime(0.0),
         totalTime(0.0),
-        depth(0.0)
+        depth(0.0),
+        transitions()
 {
 
 
 }
 void empathy::life_event::LifeEvent::passTime(GLfloat delTime){
     totalTime += delTime;
+
+    performTransitions();
+
     if(isCreating()){
         createTime += delTime;
 
@@ -65,7 +69,7 @@ void empathy::life_event::LifeEvent::onFinish(GLfloat delTime) {
     doneFinishing();
 }
 
-GLfloat empathy::life_event::LifeEvent::getTotalTime() {
+GLfloat empathy::life_event::LifeEvent::getTotalTime() const {
     return totalTime;
 }
 
@@ -96,5 +100,49 @@ void empathy::life_event::LifeEvent::onDestroy() {
 }
 
 void empathy::life_event::LifeEvent::decodeJson(std::string key, cJSON *value) {
+    if(key=="transition"){
+        std::vector<cJSON *> jsonTransitions;
 
+        if(value->type==cJSON_Object){
+            jsonTransitions.push_back(value);
+        }else if(value->type==cJSON_Array){
+            cJSON * child=value->child;
+            while(child){
+                jsonTransitions.push_back(child);
+                child=child->next;
+            }
+        }
+
+        for(int i=0;i<jsonTransitions.size();i++){
+            cJSON * transition=jsonTransitions[i];
+
+            ValueTransition valueTransition;
+            valueTransition.duration=cJSON_GetObjectItem(transition,"duration")->valuedouble;
+            valueTransition.from=cJSON_GetObjectItem(transition,"from")->valuedouble;
+            valueTransition.to=cJSON_GetObjectItem(transition,"to")->valuedouble;
+            valueTransition.key=cJSON_GetObjectItem(transition,"key")->valuestring;
+            cout<<"Duration is "<<valueTransition.duration<<endl;
+            transitions.push_back(valueTransition);
+        }
+    }
+}
+
+void empathy::life_event::LifeEvent::performTransitions() {
+    for(int i=0;i<transitions.size();i++){
+
+        ValueTransition valueTransition=transitions[i];
+
+        //if the transition has expired
+        if(getTotalTime() > valueTransition.duration){
+            transitions.erase(transitions.begin()+i);
+            i--;
+            continue;
+        }
+
+        GLdouble output=valueTransition.getValue(this);
+
+        cJSON* value=cJSON_CreateNumber(output);
+
+        decodeJson(valueTransition.key,value);
+    }
 }
