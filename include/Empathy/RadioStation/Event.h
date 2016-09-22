@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include <iostream>
 #include <map>
-#include <Empathy/Libs/cJSON/cJSON.h>
+#include "../Libs/cJSON/cJSON.h"
 #include "Subscriber.h"
 #include "../Libs/cJSON/cJSON.h"
 
