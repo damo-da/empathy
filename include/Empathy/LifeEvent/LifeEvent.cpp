@@ -121,7 +121,7 @@ void empathy::life_event::LifeEvent::decodeJson(std::string key, cJSON *value) {
             valueTransition.from=cJSON_GetObjectItem(transition,"from")->valuedouble;
             valueTransition.to=cJSON_GetObjectItem(transition,"to")->valuedouble;
             valueTransition.key=cJSON_GetObjectItem(transition,"key")->valuestring;
-            cout<<"Duration is "<<valueTransition.duration<<endl;
+//            cout<<"Duration is "<<valueTransition.duration<<endl;
             transitions.push_back(valueTransition);
         }
     }
