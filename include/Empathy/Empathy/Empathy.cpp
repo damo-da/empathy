@@ -9,7 +9,9 @@ using namespace std;
 
 empathy::Empathy::Empathy():
 moonLight(nullptr),
-_shouldClose(false)
+_shouldClose(false),
+sc_size(800),
+marginTop(10), marginLeft(10)
 {
     instance=this;
 }

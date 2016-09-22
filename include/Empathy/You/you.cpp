@@ -7,7 +7,11 @@
 
 using namespace std;
 
-empathy::You::You():brains(),background()
+empathy::You::You():
+        brains(),
+        background(),
+        lastTime(0),
+        deltaTime(0.0001)
 {
     instance=this;
     background= new life_event::Background();

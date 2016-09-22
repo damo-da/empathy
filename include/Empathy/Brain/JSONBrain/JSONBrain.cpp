@@ -39,7 +39,7 @@ empathy::brain::JSONBrain::JSONBrain(std::string fileName) :
     std::string fileContents=file_read(filePath.c_str());
     root = cJSON_Parse(fileContents.c_str());
     if(root == nullptr){
-        cout<<"Invalid json file: "<<fileName<<" "<<<endl;
+        cout<<"Invalid json file: "<<fileName<<" "<<endl;
         exit(EXIT_FAILURE);
 
     }else{
