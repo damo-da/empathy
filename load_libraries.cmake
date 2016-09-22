@@ -15,9 +15,18 @@ include_directories(${FREETYPE_INCLUDE_DIRS})
 pkg_search_module(MUPARSER REQUIRED muparser)
 include_directories(${MUPARSER_INCLUDE_DIRS})
 
+find_package(OpenCV REQUIRED)
+include_directories(${OPENCV_INCLUDE_DIRS})
+
+#find_package(curl REQUIRED)
+include_directories(${CURL_INCLUDE_DIRS})
+
 set(EMPATHY_DEPENDENCY_LIBRARIES
         ${GLEW_LIBRARIES}
         ${OPENGL_LIBRARIES}
         ${MUPARSER_LIBRARIES}
         ${FREETYPE_LIBRARIES}
+        ${OpenCV_LIBS}
+        pthread
+        curl
         )
