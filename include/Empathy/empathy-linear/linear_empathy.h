@@ -5,6 +5,7 @@
 #include "../Empathy/Empathy.h"
 #include "../Brain/JSONBrain/JSONBrain.h"
 #include "../Brain/DummyTouchBrain/DummyTouchBrain.h"
+#include "../Brain/EmotionBrain/EmotionBrain.h"
 
 #include "linear_moonlight.h"
 
@@ -24,6 +25,8 @@ namespace empathy_linear{
     void init();
 
     void addJsonBrain(std::string name);
+
+    void addEmotionBrain();
 
     void addDummyTouchBrain();
 

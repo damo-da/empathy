@@ -78,6 +78,11 @@ namespace empathy_linear{
         brain->addTo(getInstance());
     }
 
+    void addEmotionBrain() {
+        empathy::brain::EmotionBrain * brain = new empathy::brain::EmotionBrain();
+        brain->addTo(getInstance());
+    }
+
     Empathy_Linear * getInstance(){
         if(_instance== nullptr)
             _instance=new Empathy_Linear();
