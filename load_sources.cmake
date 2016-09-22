@@ -99,6 +99,9 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/Brain/DummyTouchBrain/DummyTouchBrain.cpp
         ${EMPATHY_SOURCES_BASE}/Brain/DummyTouchBrain/DummyTouchBrain.h
 
+        ${EMPATHY_SOURCES_BASE}/Brain/EmotionBrain/EmotionBrain.cpp
+        ${EMPATHY_SOURCES_BASE}/Brain/EmotionBrain/EmotionBrain.h
+
         )
 
 include(CheckCXXCompilerFlag)
