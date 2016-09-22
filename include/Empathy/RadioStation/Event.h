@@ -54,6 +54,11 @@ namespace empathy {
             std::string action;
 
             Subscriber *broadcaster;
+
+            friend std::ostream& operator<<(std::ostream& os, const Event& event){
+                os << "Event::" << event.action;
+
+            }
         private:
             std::map<std::string, int> intData;
             std::map<std::string, std::string> strData;
