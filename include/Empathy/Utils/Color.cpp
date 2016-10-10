@@ -59,6 +59,14 @@ std::string Color::toString() {
 
 }
 
+void Color::changeBrightness(GLfloat ratio) {
+
+    this->a *= ratio;
+    this->b *= ratio;
+    this->r *= ratio;
+    this->g *= ratio;
+}
+
 
 
 

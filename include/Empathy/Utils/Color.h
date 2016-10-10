@@ -55,6 +55,7 @@ public:
         Color::a = a;
     }
 
+    void changeBrightness(GLfloat ratio);
 
     static Color mix(Color * color1,Color * color2,GLfloat ratio);
 
