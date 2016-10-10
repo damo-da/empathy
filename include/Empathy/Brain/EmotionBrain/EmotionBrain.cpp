@@ -5,7 +5,9 @@
 #include "EmotionBrain.h"
 
 #include <sys/stat.h>
+#include "../../You/you.h"
 #include "../../RadioStation/TimeBroadcaster.h"
+#include <vector>
 
 using namespace cv;
 using namespace std;
@@ -179,4 +181,13 @@ void empathy::brain::EmotionBrain::parse_result() {
     cout << "Happiness: " << happiness << endl;
 
 
+    {
+        //update background of the display
+        Color color;
+
+        color.changeBrightness(happiness);
+        color.setA(1);
+
+        You::getInstance()->getBackground()->addTransition(color, 0.2f);
+    }
 }
