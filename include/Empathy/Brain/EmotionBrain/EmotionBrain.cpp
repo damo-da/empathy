@@ -188,6 +188,6 @@ void empathy::brain::EmotionBrain::parse_result() {
         color.changeBrightness(happiness);
         color.setA(1);
 
-        You::getInstance()->getBackground()->addTransition(color, 0.2f);
+        You::getInstance()->getBackground()->addTransition(color, 1.0f);
     }
 }
