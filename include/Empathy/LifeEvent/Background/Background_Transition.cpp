@@ -14,7 +14,7 @@ current_transition_time(0.0f)
 }
 
 empathy::life_event::Background_Transition::Background_Transition(Color color,GLfloat duration):
-transition_duration(4.0f),
+transition_duration(duration),
 color(color),
 current_transition_time(0.0f)
 {
