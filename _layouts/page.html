@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script type="text/javascript">
             var host=document.location.host;
-            var baseHref="http://localhost:4000/";
+            var baseHref="localhost:4000/";
             if(host=="underscoredam.github.io"){
-            baseHref="http://underscoredam.github.io/empathy/";
+            baseHref="underscoredam.github.io/empathy/";
             }
-            document.write("<base href='"+baseHref  + "' />");
+            document.write("<base href='"+location.protocol+"//"+baseHref  + "' />");
         </script>
       
         	<!-- ****** faviconit.com favicons ****** -->
