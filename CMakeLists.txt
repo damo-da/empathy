@@ -23,6 +23,6 @@ set(EMPATHY_SOURCES_BASE "../include/Empathy")
 include(load_sources.cmake)
 add_custom_target(
         doc
-        cldoc generate --std=c++11 -- --static --type html --output ../docs/docs/ ${EMPATHY_SOURCES}
+	cldoc generate --std=c++11 `pkg-config --cflags opencv` -- --static --type html --output ../docs/docs/ ${EMPATHY_SOURCES}
 )
 
