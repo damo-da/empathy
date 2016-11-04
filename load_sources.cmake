@@ -66,8 +66,10 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/MathWave/MathWave_FromString.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background_Transition.cpp
+        ${EMPATHY_SOURCES_BASE}/LifeEvent/Text/Text.cpp
 
         ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.cpp
+        ${EMPATHY_SOURCES_BASE}/Shader/TextShader.cpp
 
         ${EMPATHY_SOURCES_BASE}/Shader/shader_utils.cpp
         ${EMPATHY_SOURCES_BASE}/Shader/shader_utils.h

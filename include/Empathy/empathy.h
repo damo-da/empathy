@@ -36,6 +36,7 @@ namespace empathy{
 
     namespace shader{
         class DefaultShader;
+        class TextShader;
     }
 
     /* Brains gives logic to the program. They determine when and how a lifeEvent appears on the screen. */

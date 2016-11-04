@@ -1,9 +1,11 @@
 #include "Empathy.h"
 
-#include "../Shader/DefaultShader.h"
 
 #include "../MoonLight/MoonLight.h"
 #include "../You/you.h"
+
+#include "../Shader/TextShader.h"
+#include "../Shader/DefaultShader.h"
 
 using namespace std;
 
@@ -24,6 +26,7 @@ void empathy::Empathy::flush(){
     you->terminate();
 
     shader::DefaultShader::flush();
+    shader::TextShader::flush();
 
 }
 
@@ -58,7 +61,8 @@ void empathy::Empathy::initGlew(){
 }
 
 void empathy::Empathy::initShaders(){
-    empathy::shader::DefaultShader::init();
+    shader::DefaultShader::init();
+    shader::TextShader::init();
 }
 
 void empathy::Empathy::initGL(){
