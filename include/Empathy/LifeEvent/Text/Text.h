@@ -16,20 +16,27 @@
 namespace empathy{
     namespace life_event{
         class Text : public LifeEvent, public Color{
-            FT_Library ft;
-            FT_Face face;
-            struct Character {
+           struct Character {
                 GLuint     TextureID;  // ID handle of the glyph texture
                 glm::ivec2 Size;       // Size of glyph
                 glm::ivec2 Bearing;    // Offset from baseline to left/top of glyph
                 GLuint     Advance;    // Offset to advance to next glyph
             };
 
+            static FT_Library ft;
+            static FT_Face face;
             std::map<GLchar, Character> Characters;
+            static bool initialized;
 
             GLuint VAO, VBO;
 
-            void RenderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
+            void RenderText(std::string text, GLfloat scale);
+
+            void initializeResources();
+
+            glm::vec2 getTextLength(std::string text, GLfloat scale);
+
+            GLfloat centerX, centerY;
 
         public:
             Text();
@@ -46,6 +53,9 @@ namespace empathy{
             virtual void onRun(GLfloat delTime) override;
 
             virtual void onFinish(GLfloat delTime) override;
+
+        public:
+            virtual void decodeJson(std::string key, cJSON *value) override;
         };
 
     }

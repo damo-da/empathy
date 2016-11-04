@@ -26,7 +26,7 @@ void empathy::shader::TextShader::flush() {
 
 void empathy::shader::TextShader::setTextColor(Color *color) {
     GLint vertexColorLocation = glGetUniformLocation(shaderProgram, "textColor");
-    glUniform3f(vertexColorLocation, color->getR(),color->getG(),color->getB());
+    glUniform4f(vertexColorLocation, color->getR(),color->getG(),color->getB(), color->getA());
 
     glActiveTexture(GL_TEXTURE0);
 }
