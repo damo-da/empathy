@@ -7,7 +7,7 @@
 
 using namespace std;
 
-empathy::life_event::Text::Text() : LifeEvent() {
+empathy::life_event::Text::Text() : LifeEvent(), Color(0.5f, 0.8f, 0.2f){
 
 }
 
@@ -90,9 +90,6 @@ void empathy::life_event::Text::onInit() {
     glBindVertexArray(0);
 
     cout<<"font initialization complete"<<endl;
-
-
-    cout <<"Text drawn"<<endl;
 }
 
 void empathy::life_event::Text::onCreate(GLfloat delTime) {
@@ -117,7 +114,7 @@ void empathy::life_event::Text::RenderText(std::string text, GLfloat x, GLfloat 
     empathy::shader::TextShader::use();
 
     Color textColor(color.x, color.y, color.z);
-    shader::TextShader::setTextColor(&textColor);
+    shader::TextShader::setTextColor(this);
 
     glBindVertexArray(VAO);
 
@@ -156,3 +153,4 @@ void empathy::life_event::Text::RenderText(std::string text, GLfloat x, GLfloat 
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
 }
+
