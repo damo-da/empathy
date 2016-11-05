@@ -23,10 +23,7 @@ namespace empathy{
                 GLuint     Advance;    // Offset to advance to next glyph
             };
 
-            static FT_Library ft;
-            static FT_Face face;
             std::map<GLchar, Character> Characters;
-            static bool initialized;
 
             GLuint VAO, VBO;
 
@@ -37,6 +34,9 @@ namespace empathy{
             glm::vec2 getTextLength(std::string text, GLfloat scale);
 
             GLfloat centerX, centerY;
+            std::string text;
+            bool fade;
+            GLfloat fadeInDuration, duration, fadeOutDuration;
 
         public:
             Text();

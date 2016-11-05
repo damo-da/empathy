@@ -4,6 +4,7 @@
 #include <GL/glew.h>
 #include "../empathy.h"
 #include "../RadioStation/BroadcastStation.h"
+#include "../Utils/Font.h"
 
 #include <vector>
 namespace empathy{
@@ -129,6 +130,9 @@ namespace empathy{
 
         /* Initialize the <You> instance. */
         void initYou();
+
+        /* Initialize the FreeType font library. */
+        void initFont();
 
         /* The <You>, the virtual friend who connects with the user. */
         empathy::You * you;

@@ -78,6 +78,7 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/PureMath/Wave.h
 
         ${EMPATHY_SOURCES_BASE}/Utils/Color.cpp
+        ${EMPATHY_SOURCES_BASE}/Utils/Font.cpp
         ${EMPATHY_SOURCES_BASE}/Utils/Color.h
         ${EMPATHY_SOURCES_BASE}/Utils/file_utils.cpp
         ${EMPATHY_SOURCES_BASE}/Utils/file_utils.h

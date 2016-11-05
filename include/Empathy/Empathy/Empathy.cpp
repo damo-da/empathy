@@ -25,6 +25,8 @@ void empathy::Empathy::flush(){
     moonLight->terminate();
     you->terminate();
 
+    Font::flush();
+
     shader::DefaultShader::flush();
     shader::TextShader::flush();
 
@@ -44,6 +46,8 @@ void empathy::Empathy::init() {
     initShaders();
 
     initYou();
+
+    Font::load(getAssetPath("fonts/FreeSans.ttf"));
 
     if(this->moonLight != nullptr)
         this->moonLight->init();
@@ -107,4 +111,8 @@ void empathy::Empathy::addBrain(empathy::brain::Brain *brain) {
 }
 
 empathy::Empathy * empathy::Empathy::instance= nullptr;
+
+void empathy::Empathy::initFont() {
+    empathy::Font::load(getAssetPath("fonts/FreeType.ttf"));
+}
 

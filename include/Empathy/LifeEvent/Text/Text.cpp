@@ -4,6 +4,7 @@
 
 #include "Text.h"
 #include <iostream>
+#include "../../Utils/Font.h"
 
 using namespace std;
 
@@ -11,7 +12,12 @@ empathy::life_event::Text::Text() :
         LifeEvent(),
         Color(0.5f, 0.8f, 0.2f, 0.8f),
         centerX(0.0f),
-        centerY(0.0f)
+        centerY(0.0f),
+        fade(true),
+        fadeInDuration(2),
+        duration(2),
+        fadeOutDuration(2),
+        text("Test text")
 {
 
 }
@@ -19,32 +25,47 @@ empathy::life_event::Text::Text() :
 void empathy::life_event::Text::onDestroy() {
     LifeEvent::onDestroy();
 
-    FT_Done_Face(face);
-    FT_Done_FreeType(ft);
+    glDeleteBuffers(1, &VBO);
+    glDeleteVertexArrays(1, &VAO);
+
 }
 
 void empathy::life_event::Text::onInit() {
     LifeEvent::onInit();
 
     initializeResources();
+
+    if (fade && fadeInDuration>0){
+        this->setA(0.0f);
+    }
 }
 
 void empathy::life_event::Text::onCreate(GLfloat delTime) {
-    LifeEvent::onCreate(delTime);
+    if (getTimeSinceCreate() > fadeInDuration) doneCreating();
+
+    GLfloat ratio = getTimeSinceCreate() / fadeInDuration;
+    this->setA(ratio);
 }
 
 void empathy::life_event::Text::onRun(GLfloat delTime) {
+    if (getTimeSinceRun() > duration) doneRunning();
 //    centerX += 0.001f;
+
+    this->setA(1.0f);
 }
 
 void empathy::life_event::Text::onFinish(GLfloat delTime) {
-    LifeEvent::onFinish(delTime);
+    if (getTimeSinceFinish() > fadeOutDuration) doneFinishing();
+
+    GLfloat ratio = getTimeSinceFinish() / fadeOutDuration;
+
+    this->setA(1.0f - ratio);
 }
 
 void empathy::life_event::Text::draw() {
     shader::TextShader::use();
 
-    RenderText("This is sample text", 0.002f);
+    RenderText(text, 0.002f);
 }
 
 void empathy::life_event::Text::RenderText(std::string text, GLfloat scale) {
@@ -98,35 +119,14 @@ void empathy::life_event::Text::RenderText(std::string text, GLfloat scale) {
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-FT_Library empathy::life_event::Text::ft = 0;
-FT_Face empathy::life_event::Text::face = 0;
-//std::map<GLchar, empathy::life_event::Text::Character> empathy::life_event::Text::Characters;
-bool empathy::life_event::Text::initialized = false;
-
 void empathy::life_event::Text::initializeResources() {
-    if (initialized) {
-        cout << "Font already initialized" << endl;
-    }else{
-        if (FT_Init_FreeType(&ft))
-            std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
+    FT_Face * face = Font::getFace();
 
-        string path = getAssetPath("fonts/FreeSans.ttf").c_str();
-        if (int error=FT_New_Face(ft, path.c_str(), 0, &face))
-            std::cout << "ERROR::FREETYPE: Failed to load font" << error << std::endl;
-
-        FT_Set_Pixel_Sizes(face, 0, 50);
-
-        if (FT_Load_Char(face, 'X', FT_LOAD_RENDER))
-            std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
-
-
-        glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // Disable byte-alignment restriction
-    }
-
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // Disable byte-alignment restriction
     for (GLubyte c = 0; c < 128; c++)
     {
         // Load character glyph
-        if (FT_Load_Char(face, c, FT_LOAD_RENDER))
+        if (FT_Load_Char(*face, c, FT_LOAD_RENDER))
         {
             std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
             continue;
@@ -139,12 +139,12 @@ void empathy::life_event::Text::initializeResources() {
                 GL_TEXTURE_2D,
                 0,
                 GL_RED,
-                face->glyph->bitmap.width,
-                face->glyph->bitmap.rows,
+                (*face)->glyph->bitmap.width,
+                (*face)->glyph->bitmap.rows,
                 0,
                 GL_RED,
                 GL_UNSIGNED_BYTE,
-                face->glyph->bitmap.buffer
+                (*face)->glyph->bitmap.buffer
         );
         // Set texture options
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -154,9 +154,9 @@ void empathy::life_event::Text::initializeResources() {
         // Now store character for later use
         Character character = {
                 texture,
-                glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
-                glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
-                (GLuint)face->glyph->advance.x
+                glm::ivec2((*face)->glyph->bitmap.width, (*face)->glyph->bitmap.rows),
+                glm::ivec2((*face)->glyph->bitmap_left, (*face)->glyph->bitmap_top),
+                (GLuint)(*face)->glyph->advance.x
         };
         Characters.insert(std::pair<GLchar, Character>(c, character));
     }
@@ -176,9 +176,6 @@ void empathy::life_event::Text::initializeResources() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-    cout<<"font initialization complete"<<endl;
-
-    initialized = true;
 }
 
 void empathy::life_event::Text::decodeJson(std::string key, cJSON *value) {
@@ -189,6 +186,16 @@ void empathy::life_event::Text::decodeJson(std::string key, cJSON *value) {
         centerX = (GLfloat) value->valuedouble;
     }else if(key == "centerY"){
         centerY = (GLfloat) value->valuedouble;
+    }else if(key == "text"){
+        text = value->valuestring;
+    }else if(key == "fade"){
+        fade = (bool) value->valueint;
+    }else if(key == "fadeInDuration"){
+        fadeInDuration = (GLfloat) value->valuedouble;
+    }else if(key == "fadeOutDuration"){
+        fadeOutDuration = (GLfloat) value->valuedouble;
+    }else if(key == "duration"){
+        duration = (GLfloat) value->valuedouble;
     }
 }
 
