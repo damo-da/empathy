@@ -54,6 +54,9 @@ namespace empathy{
 
             virtual void onFinish(GLfloat delTime) override;
 
+            virtual std::string getText();
+            virtual void setText(std::string);
+
         public:
             virtual void decodeJson(std::string key, cJSON *value) override;
         };

@@ -17,9 +17,8 @@ empathy::life_event::Text::Text() :
         fadeInDuration(2),
         duration(2),
         fadeOutDuration(2),
-        text("Test text")
+        text("Empathy")
 {
-
 }
 
 void empathy::life_event::Text::onDestroy() {
@@ -41,7 +40,10 @@ void empathy::life_event::Text::onInit() {
 }
 
 void empathy::life_event::Text::onCreate(GLfloat delTime) {
-    if (getTimeSinceCreate() > fadeInDuration) doneCreating();
+    if (getTimeSinceCreate() > fadeInDuration) {
+        doneCreating();
+        this->getText();
+    }
 
     GLfloat ratio = getTimeSinceCreate() / fadeInDuration;
     this->setA(ratio);
@@ -49,7 +51,6 @@ void empathy::life_event::Text::onCreate(GLfloat delTime) {
 
 void empathy::life_event::Text::onRun(GLfloat delTime) {
     if (getTimeSinceRun() > duration) doneRunning();
-//    centerX += 0.001f;
 
     this->setA(1.0f);
 }
@@ -65,7 +66,7 @@ void empathy::life_event::Text::onFinish(GLfloat delTime) {
 void empathy::life_event::Text::draw() {
     shader::TextShader::use();
 
-    RenderText(text, 0.002f);
+    RenderText(getText(), 0.002f);
 }
 
 void empathy::life_event::Text::RenderText(std::string text, GLfloat scale) {
@@ -211,4 +212,12 @@ glm::vec2 empathy::life_event::Text::getTextLength(std::string text, GLfloat sca
         length.y = (thisY > length.y) ? thisY : length.y;
     }
     return length;
+}
+
+std::string empathy::life_event::Text::getText() {
+    return text;
+}
+
+void empathy::life_event::Text::setText(std::string str){
+    Text::text = str;
 }

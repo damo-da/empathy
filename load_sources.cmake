@@ -67,6 +67,7 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Background/Background_Transition.cpp
         ${EMPATHY_SOURCES_BASE}/LifeEvent/Text/Text.cpp
+        ${EMPATHY_SOURCES_BASE}/LifeEvent/TextInput/TextInput.cpp
 
         ${EMPATHY_SOURCES_BASE}/Shader/DefaultShader.cpp
         ${EMPATHY_SOURCES_BASE}/Shader/TextShader.cpp
