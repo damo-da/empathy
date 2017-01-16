@@ -16,6 +16,7 @@
 #include "../../LifeEvent/MathWave/MathWave_Sinc.h"
 #include "../../LifeEvent/MathWave/MathWave_FromString.h"
 #include "../../LifeEvent/Text/Text.h"
+#include "../../LifeEvent/TextInput/TextInput.h"
 //#include "../../LifeEvent/Image/Image.h"
 
 
@@ -166,6 +167,8 @@ empathy::life_event::LifeEvent *empathy::brain::JSONBrain::createEventFromString
         return new empathy::life_event::MathWave_FromString();
     }else if(name=="text"){
         return new empathy::life_event::Text();
+    }else if(name=="text_input"){
+        return new empathy::life_event::TextInput();
     }
 //    else if(name=="image"){
 //        return new empathy::life_event::Image();
