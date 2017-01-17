@@ -269,3 +269,7 @@ GLfloat empathy::life_event::Text::getFadeOutDuration() const {
 void empathy::life_event::Text::setFadeOutDuration(GLfloat fadeOutDuration) {
     Text::fadeOutDuration = fadeOutDuration;
 }
+
+void empathy::life_event::Text::onReceiveEvent(empathy::radio::Event &event) {
+    LifeEvent::onReceiveEvent(event);
+}

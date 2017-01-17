@@ -82,6 +82,8 @@ namespace empathy{
             virtual std::string getText();
             virtual void setText(std::string);
 
+            virtual void onReceiveEvent(radio::Event &event) override;
+
         public:
             virtual void decodeJson(std::string key, cJSON *value) override;
         };
