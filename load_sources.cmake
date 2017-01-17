@@ -86,6 +86,9 @@ set (EMPATHY_SOURCES
 
         ${EMPATHY_SOURCES_BASE}/Brain/MusicalBrain/MusicalBrain.cpp
         ${EMPATHY_SOURCES_BASE}/Brain/MusicalBrain/MusicalBrain.h
+
+        ${EMPATHY_SOURCES_BASE}/Brain/CustomLogic/Calming_1.cpp
+
         ${EMPATHY_SOURCES_BASE}/Utils/string_utils.cpp
         ${EMPATHY_SOURCES_BASE}/Utils/string_utils.h
 
