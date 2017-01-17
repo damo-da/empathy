@@ -9,7 +9,7 @@ empathy::life_event::TextInput::TextInput() : Text(){
 }
 
 void empathy::life_event::TextInput::onReceiveEvent(empathy::radio::Event &event) {
-    Subscriber::onReceiveEvent(event);
+    Text::onReceiveEvent(event);
 
     if (event.action == EMPATHY_EVENT_INPUT_KEY_PRESS){
         int key = event.getInt(EMPATHY_EVENT_INPUT_KEY);

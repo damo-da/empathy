@@ -48,7 +48,7 @@ void empathy::life_event::CWave::passTime(GLfloat delTime) {
 
 
 void empathy::life_event::CWave::onReceiveEvent(empathy::radio::Event &event) {
-    empathy::radio::Subscriber::onReceiveEvent(event);
+    LifeEvent::onReceiveEvent(event);
 
     if(event.action==EMPATHY_EVENT_REPEAT_TIMEOUT ||
        event.action==EMPATHY_EVENT_TIMEOUT){
