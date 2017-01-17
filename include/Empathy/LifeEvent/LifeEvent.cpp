@@ -166,7 +166,7 @@ void empathy::life_event::LifeEvent::performTransitions() {
 }
 
 void empathy::life_event::LifeEvent::onReceiveEvent(empathy::radio::Event &event) {
-    Subscriber::onReceiveEvent(event);
+    empathy::radio::Subscriber::onReceiveEvent(event);
 
     if( event.action == EMPATHY_LIFE_EVENT_CREATE ){
         onInit();
