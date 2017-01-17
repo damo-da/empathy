@@ -20,6 +20,10 @@ namespace empathy {
         public:
 
             Calming_1();
+
+            const std::string &getName() const;
+
+            void setName(const std::string &name);
         };
 
     }

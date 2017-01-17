@@ -5,7 +5,7 @@
   "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"intro","in":0.0}
+      {"type":"goto","stepID":"intro","in":0.3}
       ],
     "intro":[
       {
@@ -39,22 +39,23 @@
         "centerX":0.3,
         "centerY":-1.0
       },
-      {"type":"goto","stepID":"intro2","in":3.5},
-      {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":3.5}
+      {"type":"goto","stepID":"intro2","in":3.5}
     ],
     "intro2":[
+      {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":0},
       {
+        "$id": "user_name_input_label",
         "type":"create",
         "create":"text",
         "text": "What's your name?",
         "colorRed":0.1,
         "colorGreen":0.8,
         "colorBlue":0.2,
-        "startX":-0.0,
-        "startY":0.0,
+        "centerX":-0.0,
+        "centerY":0.11,
         "charLimit":10,
         "fadeInDuration": 1,
-        "duration": 1.0,
+        "duration": 10000.0,
         "fadeOutDuration": 1.0
       },
       {
