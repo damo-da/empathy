@@ -34,7 +34,8 @@ void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
 
 empathy::radio::Subscriber::Subscriber():
         UniqueObject(),
-        actions()
+        actions(),
+        directCallbacks()
 {
 
 }
@@ -106,14 +107,15 @@ void empathy::radio::Subscriber::playKeyboardAudio(std::string key) {
     emit(e);
 }
 
-void empathy::radio::Subscriber::dispatchEventToActions(string event_name) {
+void empathy::radio::Subscriber::dispatchEventToActions(string event_name, Event origEvent) {
     if(Subscriber::actions.size() == 0)return;
 
     for (int i=0; i<Subscriber::actions.size(); i++){
         Action action = Subscriber::actions[i];
 
         if (action.on == event_name){
-            Event e = createEvent(action.action);
+            Event e(origEvent);
+            e.action = action.action;
 
             emitToIdentifier(e, action.id);
         }
@@ -151,6 +153,11 @@ void empathy::radio::Subscriber::setIdentifier(std::string newId) {
 void empathy::radio::Subscriber::emitToIdentifier(empathy::radio::Event e, std::string identifier) {
     e.putString(EMPATHY_EVENT_SUBSCRIBER_IDENTIFIER, identifier);
     emit(e);
+}
+
+void empathy::radio::Subscriber::dispatchEventToActions(std::string event_action) {
+    return dispatchEventToActions(event_action, Event(event_action));
+
 }
 
 
