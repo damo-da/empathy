@@ -107,5 +107,8 @@ namespace empathy_linear{
         getInstance()->setScreenMargins(x,y);
     }
 
+    void addBrain(empathy::brain::Brain* brain){
+        getInstance()->addBrain(brain);
+    }
 
 }

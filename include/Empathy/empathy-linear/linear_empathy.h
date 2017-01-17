@@ -6,7 +6,7 @@
 #include "../Brain/JSONBrain/JSONBrain.h"
 #include "../Brain/DummyTouchBrain/DummyTouchBrain.h"
 #include "../Brain/EmotionBrain/EmotionBrain.h"
-
+#include "../Brain/Brain.h"
 #include "linear_moonlight.h"
 
 namespace empathy_linear{
@@ -34,6 +34,8 @@ namespace empathy_linear{
 
     void setScreenSize(GLint size);
     void setScreenMargins(GLint x,GLint y);
+
+    void addBrain(empathy::brain::Brain * brain);
 }
 
 
