@@ -33,8 +33,20 @@ void empathy::brain::Calming_1::onReceiveEvent(empathy::radio::Event &event) {
 
     if(event.action == CALMING_COLLECT_NAME){
         string name = event.getString(EMPATHY_TEXT_INPUT_TEXT);
-
         Calming_1::setName(name);
+
+        runLineNumber("bg_trans_1", CALMING_COLLECT_NAME, nullptr);
+
+        life_event::TextInput * greetName = new life_event::TextInput();
+        greetName->setColor(0.3, 0.3, 0.8);
+        greetName->setText("Hi, "+getName()+"!");
+        greetName->setFadeInDuration(2.5);
+        greetName->setFadeOutDuration(1.5);
+        greetName->setDuration(1.0);
+
+        addLifeEvent(greetName);
+
+
     }
 }
 

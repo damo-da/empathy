@@ -100,6 +100,9 @@
         "centerX":0.3,
         "centerY":-1.0
       }
+    ],
+    "bg_trans_1": [
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
     ]
 
   }
