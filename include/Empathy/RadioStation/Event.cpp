@@ -17,3 +17,12 @@ empathy::radio::Event::Event(std::string action):
 
 
 }
+
+empathy::radio::Event::Event(const empathy::radio::Event &event) :
+        action(event.action),
+        intData(event.intData),
+        broadcaster(event.broadcaster),
+        strData(event.strData),
+        doubleData(event.doubleData),
+        jsonData(event.jsonData) {
+}

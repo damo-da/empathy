@@ -55,6 +55,8 @@ namespace empathy {
 
             Event(std::string);
 
+            Event(const Event & event);
+
             std::string action;
 
             Subscriber *broadcaster;
