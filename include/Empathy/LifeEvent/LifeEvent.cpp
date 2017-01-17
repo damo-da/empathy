@@ -1,7 +1,10 @@
 #include <iostream>
 #include "LifeEvent.h"
+#include <assert.h>
+#include "../You/you.h"
 
 using namespace std;
+
 empathy::life_event::LifeEvent::LifeEvent() :
         Subscriber(),
         initComplete(false),
@@ -55,6 +58,8 @@ void empathy::life_event::LifeEvent::onInit(){
     createTime=0.0f;
     runTime=0.0f;
     finishTime=0.0f;
+
+    dispatchEventToActions(EMPATHY_LIFE_EVENT_INIT_COMPLETE);
 }
 
 void empathy::life_event::LifeEvent::onCreate(GLfloat delTime) {
@@ -81,25 +86,39 @@ void empathy::life_event::LifeEvent::init() {
 }
 
 void empathy::life_event::LifeEvent::doneCreating() {
+    if(!isCreating())return;
+
     createComplete=true;
+    dispatchEventToActions(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);
     emit(EMPATHY_LIFE_EVENT_CREATE_COMPLETE);
 }
 
 void empathy::life_event::LifeEvent::doneRunning() {
+    if(!isRunning())return;
+
     runComplete=true;
+    dispatchEventToActions(EMPATHY_LIFE_EVENT_RUN_COMPLETE);
     emit(EMPATHY_LIFE_EVENT_RUN_COMPLETE);
 }
 
 void empathy::life_event::LifeEvent::doneFinishing() {
+    if(!isFinishing())return;
+
     finishComplete=true;
+    dispatchEventToActions(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);
     emit(EMPATHY_LIFE_EVENT_FINISH_COMPLETE);
 }
 
 void empathy::life_event::LifeEvent::onDestroy() {
-//    cout<<"deleted event "<<getId()<<endl;
+    if(isDestroyed())return;
+    if(!isFinished())return;;
+
+    dispatchEventToActions(EMPATHY_LIFE_EVENT_DESTROYED);
 }
 
 void empathy::life_event::LifeEvent::decodeJson(std::string key, cJSON *value) {
+    Subscriber::decodeJson(key, value);
+
     if(key=="transition"){
         std::vector<cJSON *> jsonTransitions;
 
@@ -121,7 +140,6 @@ void empathy::life_event::LifeEvent::decodeJson(std::string key, cJSON *value) {
             valueTransition.from=cJSON_GetObjectItem(transition,"from")->valuedouble;
             valueTransition.to=cJSON_GetObjectItem(transition,"to")->valuedouble;
             valueTransition.key=cJSON_GetObjectItem(transition,"key")->valuestring;
-//            cout<<"Duration is "<<valueTransition.duration<<endl;
             transitions.push_back(valueTransition);
         }
     }
@@ -146,3 +164,24 @@ void empathy::life_event::LifeEvent::performTransitions() {
         decodeJson(valueTransition.key,value);
     }
 }
+
+void empathy::life_event::LifeEvent::onReceiveEvent(empathy::radio::Event &event) {
+    Subscriber::onReceiveEvent(event);
+
+    if( event.action == EMPATHY_LIFE_EVENT_CREATE ){
+        onInit();
+    }else if(event.action == EMPATHY_LIFE_EVENT_RUN){
+        onInit();
+        doneCreating();
+    }else if(event.action == EMPATHY_LIFE_EVENT_FINISH){
+        doneCreating();
+        doneRunning();
+    }else if(event.action == EMPATHY_LIFE_EVENT_DESTROY){
+        doneCreating();
+        doneRunning();
+        doneFinishing();
+    }
+}
+
+
+

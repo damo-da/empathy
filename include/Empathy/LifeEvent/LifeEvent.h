@@ -16,12 +16,12 @@
 
 
 #define EMPATHY_LIFE_EVENT_CREATE_COMPLETE "EMPATHY_LIFE_EVENT_CREATE_COMPLETE"
+#define EMPATHY_LIFE_EVENT_INIT_COMPLETE "EMPATHY_LIFE_EVENT_INIT_COMPLETE"
 #define EMPATHY_LIFE_EVENT_RUN_COMPLETE "EMPATHY_LIFE_EVENT_RUN_COMPLETE"
 #define EMPATHY_LIFE_EVENT_FINISH_COMPLETE "EMPATHY_LIFE_EVENT_FINISH_COMPLETE"
 #define EMPATHY_LIFE_EVENT_DESTROYED "EMPATHY_LIFE_EVENT_DESTROYED"
 namespace empathy {
     namespace life_event {
-
         class LifeEvent : public empathy::radio::Subscriber {
         public:
             LifeEvent();
@@ -41,6 +41,8 @@ namespace empathy {
             virtual void draw() = 0;
 
             virtual void onDestroy();
+
+            virtual void onReceiveEvent(radio::Event &event) override;
 
             virtual void onInit();
 
@@ -102,20 +104,23 @@ namespace empathy {
             GLfloat totalTime;
 
         protected:
-            struct ValueTransition{
+            struct ValueTransition {
                 std::string key;
                 GLdouble from;
                 GLdouble to;
                 GLdouble duration;
-                GLboolean completed=GL_FALSE;
-                GLdouble percentageComplete(const LifeEvent * event){
-                    return event->getTotalTime()/duration;;
+                GLboolean completed = GL_FALSE;
+                GLdouble percentageComplete(const LifeEvent *event) {
+                    return event->getTotalTime() / duration;;
                 }
-                GLdouble getValue(const LifeEvent * event){
-                    return to * percentageComplete(event)+ from * (1.0 - percentageComplete(event));
+
+                GLdouble getValue(const LifeEvent *event) {
+                    return to * percentageComplete(event) + from * (1.0 - percentageComplete(event));
                 }
             };
+
             std::vector<ValueTransition> transitions;
+
             virtual void performTransitions();
 
 //Depth. It is the z-index in the range 0.0 to 1.0. The more it is, the backward the object goes
@@ -128,6 +133,7 @@ namespace empathy {
             void setDepth(GLfloat depth) {
                 LifeEvent::depth = depth;
             }
+
 
         private:
             GLfloat depth;
