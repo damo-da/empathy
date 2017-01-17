@@ -102,8 +102,35 @@ namespace empathy {
              * */
             void playKeyboardAudio(std::string key);
 
+            void emitToIdentifier(Event e, std::string identifier);
+
+            /*
+             * Apply json as passed from JSONBrain
+             * */
+            virtual void decodeJson(std::string key, cJSON* value);
+
+            /* An Action that when triggered, affects a LifeEvent.
+             * */
+            struct Action {
+                std::string on;
+                std::string id;
+                std::string action;
+
+                static Action create(std::string trigger, std::string action, std::string applyTo) {
+                    return Action{trigger, applyTo, action};
+
+                }
+            };
+
+            /* The identifier for this life event usually passed from JSON.
+                 *
+                 * Not to be confused with the `getId()` method.
+                 * */
+            std::string getIdentifier();
+
         protected:
-            /* Create an empty event. of empty action. */
+            /* Create an empty event. of empty action.
+             * */
             Event createEvent();
 
             /* Create an empty event.
@@ -113,6 +140,30 @@ namespace empathy {
              * @return an empty event.
              * */
             Event createEvent(std::string action);
+
+            /* Dispatches event to subscriber if condition from `actions` is matched
+             *
+             * @id the name of the subscriber to which the event will be dispatched
+             *
+             * @event_action the Event::action
+             */
+            void dispatchEventToActions(std::string event_action);
+
+        private:
+            /* The identifier for this life event usually passed from JSON.
+            *
+            * Not to be confused with the Subscriber ID.
+            * */
+            std::string identifier;
+
+            /* The identifier for this life event usually passed from JSON.
+             * */
+            void setIdentifier(std::string newId);
+
+            /* contains all the triggers passed on the "triggers" key of JSON
+             * */
+            std::vector<Action> actions;
+
         };
 
     }

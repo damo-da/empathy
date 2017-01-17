@@ -4,7 +4,7 @@
 
 #include <assert.h>
 #include "BroadcastStation.h"
-
+#include "../empathy.h"
 using namespace std;
 
 
@@ -41,6 +41,17 @@ void empathy::radio::BroadcastStation::dispatch() {
     for (int i=0;i<instance->events.size();i++){
 
         Event e=instance->events[i];
+
+        if (e.hasString(EMPATHY_EVENT_SUBSCRIBER_IDENTIFIER)){
+            string identifier = e.getString(EMPATHY_EVENT_SUBSCRIBER_IDENTIFIER);
+
+            for (int j=0;j<instance->channels[DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL].size(); j++){
+                Subscriber* subscriber = instance->channels[DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL][j];
+                if (subscriber->getIdentifier() == identifier){
+                    subscriber->onReceiveEvent(e);
+                }
+            }
+        }
 
         std::vector<Subscriber*> subscribers= instance->channels[e.action];
         for(int j=0;j<subscribers.size();j++){

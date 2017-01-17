@@ -22,6 +22,10 @@ namespace empathy {
 
             }
 
+            bool hasString(std::string key){
+               return strData.find(key) != strData.end();
+            }
+
             void putInt(std::string key, int value) {
 
                 intData[key] = value;

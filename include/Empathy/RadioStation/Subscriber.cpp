@@ -5,16 +5,22 @@
 #include "Subscriber.h"
 #include "BroadcastStation.h"
 #include "../Utils/UniqueObject.h"
+#include "../empathy.h"
 #include "TimeBroadcaster.h"
 #include "../MoonLight/MoonLight.h"
 
 
 using namespace std;
+
+empathy::radio::Subscriber::Action convertToAction(cJSON* data);
+
 void empathy::radio::Subscriber::emit(Event & event) {
     event.broadcaster=this;
     event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
 
     empathy::radio::BroadcastStation::emit(event);
+
+    empathy::radio::BroadcastStation::subscribe(this, DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL);
 }
 
 
@@ -27,7 +33,8 @@ void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
 }
 
 empathy::radio::Subscriber::Subscriber():
-        UniqueObject()
+        UniqueObject(),
+        actions()
 {
 
 }
@@ -98,3 +105,61 @@ void empathy::radio::Subscriber::playKeyboardAudio(std::string key) {
     e.putString(EMPATHY_AUDIO_PLAY_KEYBOARD,key);
     emit(e);
 }
+
+void empathy::radio::Subscriber::dispatchEventToActions(string event_name) {
+    if(Subscriber::actions.size() == 0)return;
+
+    for (int i=0; i<Subscriber::actions.size(); i++){
+        Action action = Subscriber::actions[i];
+
+        if (action.on == event_name){
+            Event e = createEvent(action.action);
+
+            emitToIdentifier(e, action.id);
+        }
+    }
+}
+
+void empathy::radio::Subscriber::decodeJson(std::string key, cJSON *value) {
+    if (key=="$id"){
+        setIdentifier(value->valuestring);
+    }else if(key=="actions"){
+        Subscriber::actions.clear();
+        if(value->type==cJSON_Array){
+            cJSON * child = value->child;
+
+            while(child){
+                Subscriber::actions.push_back(convertToAction(child));
+                child = child->next;
+            }
+        }else {
+            Subscriber::actions.push_back(convertToAction(value));
+        }
+
+    }
+}
+
+std::string empathy::radio::Subscriber::getIdentifier() {
+    return Subscriber::identifier;
+}
+
+void empathy::radio::Subscriber::setIdentifier(std::string newId) {
+    Subscriber::identifier = newId;
+
+}
+
+void empathy::radio::Subscriber::emitToIdentifier(empathy::radio::Event e, std::string identifier) {
+    e.putString(EMPATHY_EVENT_SUBSCRIBER_IDENTIFIER, identifier);
+    emit(e);
+}
+
+
+empathy::radio::Subscriber::Action convertToAction(cJSON* data){
+    std::string trigger = cJSON_GetObjectItem(data, "on")->valuestring;
+    std::string action = cJSON_GetObjectItem(data, "action")->valuestring;
+    std::string applyTo = cJSON_GetObjectItem(data, "applyTo")->valuestring;
+
+    return empathy::radio::Subscriber::Action::create(trigger,action,applyTo);
+}
+
+
