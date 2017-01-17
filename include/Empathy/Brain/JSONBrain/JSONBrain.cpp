@@ -23,6 +23,8 @@
 using namespace std;
 
 void empathy::brain::JSONBrain::runLineNumber(std::string lineID, std::string callerID,cJSON * override) {
+    if(steps.find(lineID) == steps.end())return; // the line ID is non existent.
+
     std::vector<cJSON*> actions=steps[lineID];
     cout<<"running "<<lineID<<endl;
 
