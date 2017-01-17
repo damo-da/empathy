@@ -147,6 +147,7 @@ namespace empathy {
              *
              * @event_action the Event::action
              */
+            void dispatchEventToActions(std::string event_action, Event event);
             void dispatchEventToActions(std::string event_action);
 
         private:
@@ -163,6 +164,17 @@ namespace empathy {
             /* contains all the triggers passed on the "triggers" key of JSON
              * */
             std::vector<Action> actions;
+
+            std::map<std::string, std::vector<Subscriber*>> directCallbacks;
+        public:
+            /* Add an action to match the respective requirement
+             *
+             * */
+            void addAction(Subscriber* subscriber, std::string event, std::string callbackActionName){
+                Subscriber::actions.push_back(Action::create(
+                        event, callbackActionName, subscriber->getIdentifier()
+                ));
+            }
 
         };
 
