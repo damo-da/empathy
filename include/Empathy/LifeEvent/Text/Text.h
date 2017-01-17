@@ -47,6 +47,30 @@ namespace empathy{
 
             virtual void draw() override;
 
+            GLfloat getCenterX() const;
+
+            void setCenterX(GLfloat centerX);
+
+            GLfloat getCenterY() const;
+
+            void setCenterY(GLfloat centerY);
+
+            bool isFade() const;
+
+            void setFade(bool fade);
+
+            GLfloat getFadeInDuration() const;
+
+            void setFadeInDuration(GLfloat fadeInDuration);
+
+            GLfloat getDuration() const;
+
+            void setDuration(GLfloat duration);
+
+            GLfloat getFadeOutDuration() const;
+
+            void setFadeOutDuration(GLfloat fadeOutDuration);
+
         protected:
             virtual void onCreate(GLfloat delTime) override;
 

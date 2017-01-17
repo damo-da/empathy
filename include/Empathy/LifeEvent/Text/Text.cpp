@@ -221,3 +221,51 @@ std::string empathy::life_event::Text::getText() {
 void empathy::life_event::Text::setText(std::string str){
     Text::text = str;
 }
+
+GLfloat empathy::life_event::Text::getCenterX() const {
+    return centerX;
+}
+
+void empathy::life_event::Text::setCenterX(GLfloat centerX) {
+    Text::centerX = centerX;
+}
+
+GLfloat empathy::life_event::Text::getCenterY() const {
+    return centerY;
+}
+
+void empathy::life_event::Text::setCenterY(GLfloat centerY) {
+    Text::centerY = centerY;
+}
+
+bool empathy::life_event::Text::isFade() const {
+    return fade;
+}
+
+void empathy::life_event::Text::setFade(bool fade) {
+    Text::fade = fade;
+}
+
+GLfloat empathy::life_event::Text::getFadeInDuration() const {
+    return fadeInDuration;
+}
+
+void empathy::life_event::Text::setFadeInDuration(GLfloat fadeInDuration) {
+    Text::fadeInDuration = fadeInDuration;
+}
+
+GLfloat empathy::life_event::Text::getDuration() const {
+    return duration;
+}
+
+void empathy::life_event::Text::setDuration(GLfloat duration) {
+    Text::duration = duration;
+}
+
+GLfloat empathy::life_event::Text::getFadeOutDuration() const {
+    return fadeOutDuration;
+}
+
+void empathy::life_event::Text::setFadeOutDuration(GLfloat fadeOutDuration) {
+    Text::fadeOutDuration = fadeOutDuration;
+}
