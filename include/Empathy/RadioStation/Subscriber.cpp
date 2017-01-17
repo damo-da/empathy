@@ -1,13 +1,10 @@
-//
-// Created by damo on 1/25/16.
-//
-
 #include "Subscriber.h"
 #include "BroadcastStation.h"
 #include "../Utils/UniqueObject.h"
 #include "../empathy.h"
 #include "TimeBroadcaster.h"
 #include "../MoonLight/MoonLight.h"
+#include "../Utils/string_utils.h"
 
 
 using namespace std;
@@ -19,8 +16,6 @@ void empathy::radio::Subscriber::emit(Event & event) {
     event.putInt(EMPATHY_SUBSCRIBER_ID,getId());
 
     empathy::radio::BroadcastStation::emit(event);
-
-    empathy::radio::BroadcastStation::subscribe(this, DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL);
 }
 
 
@@ -28,16 +23,13 @@ void empathy::radio::Subscriber::listen(std::string id) {
     BroadcastStation::subscribe(this,id);
 }
 
-void empathy::radio::Subscriber::onReceiveEvent(Event & event) {
-
-}
-
 empathy::radio::Subscriber::Subscriber():
         UniqueObject(),
-        actions(),
-        directCallbacks()
+        actions()
 {
+    setIdentifier(int_to_str(getId()));
 
+    empathy::radio::BroadcastStation::subscribe(this, DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL);
 }
 
 void empathy::radio::Subscriber::createTimeOut(GLfloat start, int id) {
@@ -74,6 +66,7 @@ empathy::radio::Event empathy::radio::Subscriber::createEvent() {
 }
 
 empathy::radio::Event  empathy::radio::Subscriber::createEvent(std::string action) {
+
     Event event=Event(action);
 
     event.broadcaster=this;
@@ -160,6 +153,10 @@ void empathy::radio::Subscriber::dispatchEventToActions(std::string event_action
 
 }
 
+void empathy::radio::Subscriber::onReceiveEvent(empathy::radio::Event &) {
+
+}
+
 
 empathy::radio::Subscriber::Action convertToAction(cJSON* data){
     std::string trigger = cJSON_GetObjectItem(data, "on")->valuestring;
@@ -168,5 +165,4 @@ empathy::radio::Subscriber::Action convertToAction(cJSON* data){
 
     return empathy::radio::Subscriber::Action::create(trigger,action,applyTo);
 }
-
 

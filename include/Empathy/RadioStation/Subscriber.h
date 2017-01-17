@@ -150,6 +150,11 @@ namespace empathy {
             void dispatchEventToActions(std::string event_action, Event event);
             void dispatchEventToActions(std::string event_action);
 
+        public:
+            /* The identifier for this life event usually passed from JSON.
+                 * */
+            void setIdentifier(std::string newId);
+
         private:
             /* The identifier for this life event usually passed from JSON.
             *
@@ -157,25 +162,22 @@ namespace empathy {
             * */
             std::string identifier;
 
-            /* The identifier for this life event usually passed from JSON.
-             * */
-            void setIdentifier(std::string newId);
-
-            /* contains all the triggers passed on the "triggers" key of JSON
+            /* contains all the triggers passed on the "triggers" key of JSON.
+             *
+             * These may also contain "direct calbacks" which refer to passing events without onReceiveEvents()
              * */
             std::vector<Action> actions;
-
-            std::map<std::string, std::vector<Subscriber*>> directCallbacks;
         public:
             /* Add an action to match the respective requirement
              *
+             * the @subscriber will get an event with action @callbackActionName when @event occurs in this instance.
              * */
             void addAction(Subscriber* subscriber, std::string event, std::string callbackActionName){
-                Subscriber::actions.push_back(Action::create(
-                        event, callbackActionName, subscriber->getIdentifier()
-                ));
+                addAction(subscriber->getIdentifier(), event, callbackActionName);
             }
-
+            void addAction(std::string subscriber_identifier, std::string event, std::string callbackActionName){
+                Subscriber::actions.push_back(Action::create(event, callbackActionName, subscriber_identifier));
+            }
         };
 
     }
