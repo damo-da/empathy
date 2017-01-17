@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 
-empathy::life_event::TextInput::TextInput() : Text() {
+empathy::life_event::TextInput::TextInput() : Text(){
 
+    Text::setText("");
     listen(EMPATHY_EVENT_INPUT_KEY_PRESS);
 }
 
