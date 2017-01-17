@@ -1,4 +1,5 @@
 #include "Calming_1.h"
+#include "../../LifeEvent/TextInput/TextInput.h"
 
 using namespace std;
 
@@ -7,6 +8,14 @@ void empathy::brain::Calming_1::runLineNumber(std::string lineID, std::string ca
 
     if (lineID == CALMING_COLLECT_NAME){
         cout << "Collecting name"<<endl;
+
+        life_event::TextInput * lifeEvent = new life_event::TextInput();
+
+
+        lifeEvent->setColor(0.8, 0.5, 0.5);
+        lifeEvent->setText("");
+
+        addLifeEvent(lifeEvent);
     }
 }
 

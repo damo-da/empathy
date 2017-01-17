@@ -1,14 +1,91 @@
 {
   "fileAuthor":"Damodar Dahal",
   "version":0.0,
-  "title":"Canon in D (Pachelbel)",
-  "copyright":"Public Domain",
+  "title":"Calming 1",
+  "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"1","in":0.0}
+      {"type":"goto","stepID":"intro","in":0.0}
       ],
-    "1":[
-      {"type":"create", "create":"text_input", "colorRed":0.1, "colorGreen":0.2, "colorBlue":1.0, "startX":-0.0, "startY":0.0, "charLimit":10, "fadeInDuration": 100},
+    "intro":[
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Hi !",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "startX":-0.0,
+        "startY":0.0,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0,
+        "actions": [
+          {"on": "EMPATHY_LIFE_EVENT_CREATE_COMPLETE", "applyTo": "1", "action":"EMPATHY_LIFE_EVENT_FINISH"}
+        ]
+      },
+      {
+        "$id":"1",
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":1.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":6.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":-1.0
+      },
+      {"type":"goto","stepID":"intro2","in":3.5},
+      {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":3.5}
+    ],
+    "intro2":[
+      {
+        "type":"create",
+        "create":"text",
+        "text": "What's your name?",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "startX":-0.0,
+        "startY":0.0,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":-1.0
+      }
+    ],
+    "intro3":[
+      {
+        "type":"create",
+        "create":"text_input",
+        "text": "Hi !",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "startX":-0.0,
+        "startY":0.0,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
       {
         "type":"create",
         "create":"cwave",
@@ -20,7 +97,7 @@
         "wavelength":0.1,
         "frequency":1.0,
         "centerX":0.3,
-        "centerY":0.0
+        "centerY":-1.0
       }
     ]
 
