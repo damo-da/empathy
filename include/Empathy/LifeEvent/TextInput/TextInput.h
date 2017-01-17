@@ -3,6 +3,9 @@
 
 #include "../Text/Text.h"
 
+#define EMPATHY_TEXT_INPUT_ENTERED "EMPATHY_TEXT_ENTERED"
+#define EMPATHY_TEXT_INPUT_TEXT "EMPATHY_TEXT_INPUT_TEXT"
+
 namespace empathy{
     namespace life_event{
         class TextInput : public Text{

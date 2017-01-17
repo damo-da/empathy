@@ -12,10 +12,16 @@ void empathy::life_event::TextInput::onReceiveEvent(empathy::radio::Event &event
     Subscriber::onReceiveEvent(event);
 
     if (event.action == EMPATHY_EVENT_INPUT_KEY_PRESS){
-        cout << event << endl;
         int key = event.getInt(EMPATHY_EVENT_INPUT_KEY);
 
-        std::string text = Text::getText() + (char)key;
-        Text::setText(text);
+        if (key == 257){
+            empathy::radio::Event e(EMPATHY_TEXT_INPUT_ENTERED);
+            e.putString(EMPATHY_TEXT_INPUT_TEXT, getText());
+            dispatchEventToActions(EMPATHY_TEXT_INPUT_ENTERED, e);
+        }else {
+            std::string text = Text::getText() + (char)key;
+            Text::setText(text);
+        }
+
     }
 }
