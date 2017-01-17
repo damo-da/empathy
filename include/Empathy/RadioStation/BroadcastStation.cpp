@@ -5,6 +5,7 @@
 #include <assert.h>
 #include "BroadcastStation.h"
 #include "../empathy.h"
+#include <algorithm>
 using namespace std;
 
 
@@ -47,6 +48,14 @@ void empathy::radio::BroadcastStation::dispatch() {
 
             for (int j=0;j<instance->channels[DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL].size(); j++){
                 Subscriber* subscriber = instance->channels[DEFAULT_DEFAULT_SUBSCRIPTION_CHANNEL][j];
+
+                //If this subscriber is VIP subscriber, the event will be emitted twice. That's why we should only emit
+                //if the subscriber is not VIP.
+                vector<Subscriber *> &vips = instance->vipSubscribers;
+                if (std::find(vips.begin(), vips.end(), subscriber) != vips.end()){
+                    continue;
+                }
+
                 if (subscriber->getIdentifier() == identifier){
                     subscriber->onReceiveEvent(e);
                 }
