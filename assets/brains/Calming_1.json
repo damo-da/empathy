@@ -1,0 +1,28 @@
+{
+  "fileAuthor":"Damodar Dahal",
+  "version":0.0,
+  "title":"Canon in D (Pachelbel)",
+  "copyright":"Public Domain",
+  "steps": {
+    "begin":[
+      {"type":"goto","stepID":"1","in":0.0}
+      ],
+    "1":[
+      {"type":"create", "create":"text_input", "colorRed":0.1, "colorGreen":0.2, "colorBlue":1.0, "startX":-0.0, "startY":0.0, "charLimit":10, "fadeInDuration": 100},
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":1.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":0.0
+      }
+    ]
+
+  }
+}
