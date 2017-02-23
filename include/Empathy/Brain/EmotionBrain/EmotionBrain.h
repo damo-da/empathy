@@ -5,7 +5,7 @@
 #ifndef EMPATHY_BRAIN_EMOTIONBRAIN
 #define EMPATHY_BRAIN_EMOTIONBRAIN
 
-#include <cv.hpp>
+#include <opencv2/opencv.hpp>
 #include <curl/curl.h>
 #include <iostream>
 #include <pthread.h>
