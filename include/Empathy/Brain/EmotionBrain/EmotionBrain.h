@@ -1,7 +1,3 @@
-//
-// Created by bad on 9/22/16.
-//
-
 #ifndef EMPATHY_BRAIN_EMOTIONBRAIN
 #define EMPATHY_BRAIN_EMOTIONBRAIN
 

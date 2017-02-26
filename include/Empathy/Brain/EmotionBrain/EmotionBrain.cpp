@@ -1,12 +1,8 @@
-//
-// Created by bad on 9/22/16.
-//
-
 #include "EmotionBrain.h"
 
 #include <sys/stat.h>
-#include "../../You/you.h"
 #include "../../RadioStation/TimeBroadcaster.h"
+#include "../../Utils/EmotionVector.h"
 #include <vector>
 
 using namespace cv;
@@ -158,8 +154,6 @@ std::string empathy::brain::EmotionBrain::root_path = "temp/";
 empathy::brain::EmotionBrain * empathy::brain::EmotionBrain::instance = 0;
 
 void empathy::brain::EmotionBrain::parse_result() {
-    cout << "Parsing happiness result" << endl;
-
     cJSON * root = cJSON_Parse(readBuffer.c_str());
 
     int num_faces = cJSON_GetArraySize(root);
@@ -176,18 +170,9 @@ void empathy::brain::EmotionBrain::parse_result() {
 
     cJSON * child_scores = cJSON_GetObjectItem(element_root, "scores");
 
-    double happiness = cJSON_GetObjectItem(child_scores, "happiness")->valuedouble;
 
-    cout << "Happiness: " << happiness << endl;
-
-
-    {
-        //update background of the display
-        Color color;
-
-        color.changeBrightness(happiness);
-        color.setA(1);
-
-        You::getInstance()->getBackground()->addTransition(color, 1.0f);
-    }
+    cout << "Emitting emotion event"<<endl;
+    empathy::radio::Event event(EMPATHY_EVENT_EMOTION_COLLECTED);
+    event.putJson("scores", child_scores);
+    EmotionBrain::instance->emit(event);
 }

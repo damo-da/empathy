@@ -90,7 +90,8 @@ set (EMPATHY_SOURCES
         ${EMPATHY_SOURCES_BASE}/Brain/CustomLogic/Calming_1.cpp
 
         ${EMPATHY_SOURCES_BASE}/Utils/string_utils.cpp
-        ${EMPATHY_SOURCES_BASE}/Utils/string_utils.h
+
+        ${EMPATHY_SOURCES_BASE}/Utils/EmotionVector.cpp
 
         ${EMPATHY_SOURCES_BASE}/Libs/cJSON/cJSON.c
         ${EMPATHY_SOURCES_BASE}/Libs/cJSON/cJSON.h
