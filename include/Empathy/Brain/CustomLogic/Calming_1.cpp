@@ -1,5 +1,6 @@
 #include "Calming_1.h"
 #include "../../LifeEvent/TextInput/TextInput.h"
+#include "../../LifeEvent/Text/Text.h"
 
 using namespace std;
 
@@ -19,6 +20,66 @@ void empathy::brain::Calming_1::runLineNumber(std::string lineID, std::string ca
         textInput->addAction(textInput, EMPATHY_TEXT_INPUT_ENTERED, EMPATHY_LIFE_EVENT_FINISH);
 
         addLifeEvent(textInput);
+    } else if(lineID == CALMING_SHOW_SMILE_MESSAGE){
+        if(true){ //user is smiling
+            life_event::Text * textInput = new life_event::Text();
+            textInput->setColor(0.8, 0.5, 0.5);
+            textInput->setText("Yes, Yes, That’s the big smile!");
+            textInput->setCenterX(0);
+            textInput->setCenterY(0);
+            textInput->setDuration(3);
+            textInput->setFadeOutDuration(0.5);
+            textInput->setFadeInDuration(0.3);
+
+            addLifeEvent(textInput);
+
+            activateTimeoutForNextLine("p2.2", 4.0);
+        }else{
+            activateTimeoutForNextLine("p2.2", 0.0);
+        }
+    } else if(lineID == CALMING_YOU_KNOW_YOURSELF_MESSAGE){
+        life_event::Text * textInput = new life_event::Text();
+        textInput->setColor(0.8, 0.5, 0.5);
+        textInput->setText(getName() + ", you already know everything");
+        textInput->setDuration(3);
+        textInput->setCenterY(0.065f);
+        textInput->setFadeOutDuration(0.5);
+        textInput->setFadeInDuration(1.5);
+        addLifeEvent(textInput);
+
+        life_event::Text * textInput2 = new life_event::Text();
+        textInput2->setColor(0.8, 0.5, 0.5);
+        textInput2->setText("to make yourself happy. You're awesome.");
+        textInput2->setDuration(3);
+        textInput2->setCenterY(-0.065f);
+        textInput2->setFadeOutDuration(0.5);
+        textInput2->setFadeInDuration(1.5);
+        addLifeEvent(textInput2);
+
+
+        activateTimeoutForNextLine("p2.3", 4.8);
+
+    } else if(lineID == CALMING_SHOW_THANK_YOu){
+        life_event::Text * textInput = new life_event::Text();
+        textInput->setColor(0.8, 0.5, 0.5);
+        textInput->setText("Thanks for trying Empathy, "+getName() + "!");
+        textInput->setDuration(30000);
+        textInput->setCenterY(0.065f);
+        textInput->setFadeOutDuration(0.5);
+        textInput->setFadeInDuration(0.3);
+
+        addLifeEvent(textInput);
+
+        life_event::Text * textInput2 = new life_event::Text();
+        textInput2->setColor(0.8, 0.5, 0.5);
+        textInput2->setText("I hope you enjoyed the experience");
+        textInput2->setCenterY(-0.13f);
+        textInput2->setDuration(30000);
+        textInput2->setCenterY(-0.065f);
+        textInput2->setFadeOutDuration(0.5);
+        textInput2->setFadeInDuration(0.3);
+        addLifeEvent(textInput2);
+
     }
 }
 
@@ -37,7 +98,7 @@ void empathy::brain::Calming_1::onReceiveEvent(empathy::radio::Event &event) {
 
         runLineNumber("bg_trans_1", CALMING_COLLECT_NAME, nullptr);
 
-        life_event::TextInput * greetName = new life_event::TextInput();
+        life_event::Text * greetName = new life_event::Text();
         greetName->setColor(0.3, 0.3, 0.8);
         greetName->setText("Hi, "+getName()+"!");
         greetName->setFadeInDuration(2.5);

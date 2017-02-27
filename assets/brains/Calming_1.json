@@ -5,7 +5,7 @@
   "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"intro","in":0.3}
+      {"type":"goto","stepID":"p2.0","in":0.3}
       ],
     "intro":[
       {
@@ -51,7 +51,6 @@
         "colorRed":0.1,
         "colorGreen":0.8,
         "colorBlue":0.2,
-        "centerX":-0.0,
         "centerY":0.11,
         "charLimit":10,
         "fadeInDuration": 1,
@@ -103,6 +102,236 @@
     ],
     "bg_trans_1": [
       {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    ],
+    "p2.0": [
+      {
+        "type": "create",
+        "create": "text",
+        "text": "Life is funny, isn't it?",
+        "colorRed": 0.1,
+        "colorGreen": 1.0,
+        "colorBlue": 0.4,
+        "charLimit": 10,
+        "fadeInDuration": 1,
+        "centerY": 0.0,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"p2.0.1","in":3.2}
+    ],
+    "p2.0.1": [
+      {
+        "type": "create",
+        "create": "text",
+        "text": "Some days you cry;",
+        "colorRed": 0.1,
+        "colorGreen": 1.0,
+        "colorBlue": 0.4,
+        "charLimit": 10,
+        "fadeInDuration": 1,
+        "centerY": 0.0,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"p2.0.2","in":3.2}
+    ],
+    "p2.0.2": [
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Some days you have friends",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "centerY": 0.065,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "to gather and smile.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "centerY": -0.065,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"p2.0.3","in":3.2}
+    ],
+    "p2.0.3": [
+      {
+        "type": "create",
+        "create": "text",
+        "text": "Someday you see the stars",
+        "colorRed": 0.1,
+        "colorGreen": 1.0,
+        "colorBlue": 0.4,
+        "charLimit": 10,
+        "fadeInDuration": 1,
+        "centerY": 0.065,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type": "create",
+        "create": "text",
+        "text": "and ponder how tiny our lives are.",
+        "colorRed": 0.1,
+        "colorGreen": 1.0,
+        "colorBlue": 0.4,
+        "charLimit": 10,
+        "fadeInDuration": 1,
+        "centerY": -0.065,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"p2.1","in":3.2}
+    ],
+    "p2.1": [
+      {
+        "type":"create",
+        "create":"text",
+        "text": "But, forget everything.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "centerY": 0.13,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Live in the present moment.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "centerY": -0.0,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "And smile!",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "centerY": -0.13,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"CALMING_SHOW_SMILE_MESSAGE","in":3.2}
+    ],
+    "p2.2": [
+      {
+        "type":"create",
+        "create":"text",
+        "text": "I can see that you're feeling better!",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "centerY": 0.065,
+        "fadeInDuration": 1,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Awesome!",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "centerY": -0.065,
+        "fadeInDuration": 2,
+        "duration": 1.0,
+        "fadeOutDuration": 0.5
+      },
+      {"type":"goto","stepID":"CALMING_YOU_KNOW_YOURSELF_MESSAGE","in":3.8}
+    ],
+    "p2.3": [
+      {
+        "type":"create",
+        "create":"text",
+        "text": "All you need to do is to take a deep breath.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 0.7,
+        "duration": 1.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "And let go.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "centerY": -0.15,
+        "fadeInDuration": 1.1,
+        "duration": 1.3,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"p2.4","in":3.5}
+    ],
+    "p2.4": [
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Here’s the mantra: close your eyes;",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "centerY": 0.15,
+        "fadeInDuration": 1,
+        "duration": 2,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "And open then whenever you’re comfortable.",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 2,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "That’s it!",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "charLimit":10,
+        "centerY": -0.15,
+        "fadeInDuration": 1,
+        "duration": 2,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto","stepID":"CALMING_SHOW_THANK_YOU","in":3.2}
     ]
 
   }
