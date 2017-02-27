@@ -77,7 +77,7 @@ void empathy::life_event::Text::RenderText(std::string text, GLfloat scale) {
 
     glm::vec2 length = getTextLength(text, scale);
 
-    x -= length.x /2;
+    x -= length.x /2 + text.size() * 0.005;
     y -= length.y /2;
 
     shader::TextShader::setTextColor(this);
