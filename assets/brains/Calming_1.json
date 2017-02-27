@@ -5,7 +5,7 @@
   "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"p2.0","in":0.3}
+      {"type":"goto","stepID":"intro","in":0.3}
       ],
     "intro":[
       {
@@ -20,41 +20,39 @@
         "charLimit":10,
         "fadeInDuration": 1,
         "duration": 1.0,
-        "fadeOutDuration": 1.0,
-        "actions": [
-          {"on": "EMPATHY_LIFE_EVENT_CREATE_COMPLETE", "applyTo": "1", "action":"EMPATHY_LIFE_EVENT_FINISH"}
-        ]
+        "fadeOutDuration": 1.0
       },
-      {
-        "$id":"1",
-        "type":"create",
-        "create":"cwave",
-        "colorRed":0.2,
-        "colorBlue":1.0,
-        "colorGreen":0.2,
-        "initialPhase":1.0,
-        "damping":6.0,
-        "wavelength":0.1,
-        "frequency":1.0,
-        "centerX":0.3,
-        "centerY":-1.0
-      },
-      {"type":"goto","stepID":"intro2","in":3.5}
+      {"type":"goto","stepID":"s2","in":3.5}
     ],
-    "intro2":[
-      {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":0},
+    "bg_trans_1": [
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    ],
+    "s2":[
       {
-        "$id": "user_name_input_label",
         "type":"create",
         "create":"text",
-        "text": "What's your name?",
+        "text": "I'm Empathy",
         "colorRed":0.1,
         "colorGreen":0.8,
         "colorBlue":0.2,
-        "centerY":0.11,
+        "centerY":0.065,
         "charLimit":10,
         "fadeInDuration": 1,
-        "duration": 10000.0,
+        "duration": 2.0,
+        "fadeOutDuration": 1.0
+      },
+      {
+        "type":"create",
+        "create":"text",
+        "text": "I'm here to make you feel better !",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "centerX":0.0,
+        "centerY":-0.065,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 2.0,
         "fadeOutDuration": 1.0
       },
       {
@@ -67,41 +65,93 @@
         "damping":8.0,
         "wavelength":0.1,
         "frequency":1.0,
-        "centerX":0.3,
-        "centerY":-1.0
-      }
-    ],
-    "intro3":[
-      {
-        "type":"create",
-        "create":"text_input",
-        "text": "Hi !",
-        "colorRed":0.1,
-        "colorGreen":1.0,
-        "colorBlue":0.4,
-        "startX":-0.0,
-        "startY":0.0,
-        "charLimit":10,
-        "fadeInDuration": 1,
-        "duration": 1.0,
-        "fadeOutDuration": 1.0
+        "centerX":0.2,
+        "centerY":-0.4
       },
       {
         "type":"create",
         "create":"cwave",
-        "colorRed":0.2,
-        "colorBlue":1.0,
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.231,
+        "centerY":0.6
+      },
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
         "colorGreen":0.2,
         "initialPhase":1.0,
         "damping":8.0,
         "wavelength":0.1,
         "frequency":1.0,
         "centerX":0.3,
-        "centerY":-1.0
+        "centerY":-0.2
+      },
+      {"type":"goto","stepID":"s3","in":4.0}
+    ],
+    "s3":[
+      {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":0.0},
+      {
+        "$id": "user_name_input_label",
+        "type":"create",
+        "create":"text",
+        "text": "How may I call you?",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "centerY":0.065,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 10000,
+        "fadeOutDuration": 1.0
       }
     ],
-    "bg_trans_1": [
-      {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    "s4":[
+      {
+        "type":"create",
+        "create":"text",
+        "text": "Nice to meet you !!",
+        "colorRed":0.1,
+        "colorGreen":1.0,
+        "colorBlue":0.4,
+        "centerY":-0.065,
+        "charLimit":10,
+        "fadeInDuration": 1,
+        "duration": 3.0,
+        "fadeOutDuration": 1.0
+      },
+      {"type":"goto", "stepID":"CALMING_HAPPINESS_CHECK","in":6.0}
+    ],
+    "s5":[
+      {
+        "type": "create",
+        "create": "text",
+        "text":"I’ll play some random music for you.",
+        "centerY":0.13,
+        "duration": 2.0
+      },
+      {
+        "type": "create",
+        "create": "text",
+        "text":"If you listen carefully, you can find that",
+        "centerY":0.0,
+        "duration": 2.0
+      },
+      {
+        "type": "create",
+        "create": "text",
+        "text":"it’s soothing and contains mysteries.",
+        "centerY":-0.13,
+        "duration": 2.0
+      },
+      {"type":"goto", "stepID":"p2.0","in":6.0}
     ],
     "p2.0": [
       {
@@ -168,7 +218,7 @@
       {
         "type": "create",
         "create": "text",
-        "text": "Someday you see the stars",
+        "text": "Some days you see the stars",
         "colorRed": 0.1,
         "colorGreen": 1.0,
         "colorBlue": 0.4,
@@ -331,7 +381,7 @@
         "duration": 2,
         "fadeOutDuration": 1.0
       },
-      {"type":"goto","stepID":"CALMING_SHOW_THANK_YOU","in":3.2}
+      {"type":"goto","stepID":"CALMING_SHOW_THANK_YOU","in":5}
     ]
 
   }
