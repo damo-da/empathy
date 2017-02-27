@@ -88,3 +88,7 @@ float empathy::EmotionVector::getAnger() const {
 void empathy::EmotionVector::setAnger(float anger) {
     empathy::EmotionVector::anger = anger;
 }
+
+bool empathy::EmotionVector::isHappy() const {
+    return empathy::EmotionVector::happiness>0.7;
+}

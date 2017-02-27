@@ -43,6 +43,9 @@ namespace empathy {
 
         void setAnger(float anger);
 
+        bool isHappy() const;
+
+
     private:
         float happiness;
         float sadness;
