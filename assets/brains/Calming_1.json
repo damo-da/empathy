@@ -22,12 +22,132 @@
         "duration": 1.0,
         "fadeOutDuration": 1.0
       },
-      {"type":"goto","stepID":"s2","in":3.5}
+      {"type":"goto","stepID":"p1.1","in":3.5}
     ],
     "bg_trans_1": [
       {"type":"background_transition","colorRed":0.4,"colorGreen":0.2,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
     ],
-    "s2":[
+    "bg_trans_2": [
+      {"type":"background_transition","colorRed":0.4,"colorGreen":0.1,"colorBlue":0.2,"colorAlpha":0.0,"duration":5.0}
+    ],
+    "bg_trans_3": [
+      {"type":"background_transition","colorRed":0.5,"colorGreen":0.2,"colorBlue":0.8,"colorAlpha":0.0,"duration":5.0}
+    ],
+    "bg_trans_4": [
+      {"type":"background_transition","colorRed":0.2,"colorGreen":0.5,"colorBlue":0.1,"colorAlpha":0.0,"duration":5.0}
+    ],
+    "cwave_barage": [
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      },{
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorBlue":0.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.2,
+        "centerY":-0.4
+      }
+    ],
+    "p1.1":[
       {
         "type":"create",
         "create":"text",
@@ -48,55 +168,15 @@
         "colorRed":0.1,
         "colorGreen":0.8,
         "colorBlue":0.2,
-        "centerX":0.0,
         "centerY":-0.065,
         "charLimit":10,
         "fadeInDuration": 1,
         "duration": 2.0,
         "fadeOutDuration": 1.0
       },
-      {
-        "type":"create",
-        "create":"cwave",
-        "colorRed":0.7,
-        "colorBlue":0.0,
-        "colorGreen":0.2,
-        "initialPhase":1.0,
-        "damping":8.0,
-        "wavelength":0.1,
-        "frequency":1.0,
-        "centerX":0.2,
-        "centerY":-0.4
-      },
-      {
-        "type":"create",
-        "create":"cwave",
-        "colorRed":0.7,
-        "colorBlue":0.0,
-        "colorGreen":0.2,
-        "initialPhase":1.0,
-        "damping":8.0,
-        "wavelength":0.1,
-        "frequency":1.0,
-        "centerX":0.231,
-        "centerY":0.6
-      },
-      {
-        "type":"create",
-        "create":"cwave",
-        "colorRed":0.7,
-        "colorBlue":0.0,
-        "colorGreen":0.2,
-        "initialPhase":1.0,
-        "damping":8.0,
-        "wavelength":0.1,
-        "frequency":1.0,
-        "centerX":0.3,
-        "centerY":-0.2
-      },
-      {"type":"goto","stepID":"s3","in":4.0}
+      {"type":"goto","stepID":"p1.2","in":4.0}
     ],
-    "s3":[
+    "p1.2":[
       {"type":"goto","stepID":"CALMING_COLLECT_NAME","in":0.0},
       {
         "$id": "user_name_input_label",
@@ -113,7 +193,7 @@
         "fadeOutDuration": 1.0
       }
     ],
-    "s4":[
+    "p1.3":[
       {
         "type":"create",
         "create":"text",
@@ -123,17 +203,19 @@
         "colorBlue":0.4,
         "centerY":-0.065,
         "charLimit":10,
-        "fadeInDuration": 1,
-        "duration": 3.0,
+        "duration": 1.0,
         "fadeOutDuration": 1.0
       },
-      {"type":"goto", "stepID":"CALMING_HAPPINESS_CHECK","in":6.0}
+      {"type":"goto", "stepID":"CALMING_HAPPINESS_CHECK","in":5.0}
     ],
-    "s5":[
+    "p1.4":[
       {
         "type": "create",
         "create": "text",
         "text":"I’ll play some random music for you.",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
         "centerY":0.13,
         "duration": 2.0
       },
@@ -141,6 +223,9 @@
         "type": "create",
         "create": "text",
         "text":"If you listen carefully, you can find that",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
         "centerY":0.0,
         "duration": 2.0
       },
@@ -148,6 +233,9 @@
         "type": "create",
         "create": "text",
         "text":"it’s soothing and contains mysteries.",
+        "colorRed":0.1,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
         "centerY":-0.13,
         "duration": 2.0
       },
