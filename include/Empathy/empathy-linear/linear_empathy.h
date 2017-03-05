@@ -16,6 +16,8 @@ namespace empathy_linear{
 
     std::stack<empathy::moonlight::BasicNote> getMusicalKeyboardEvents();
 
+    std::stack<std::string> getMusicalEvents();
+
     void loop();
 
     void setTime(GLfloat time);

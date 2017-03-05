@@ -108,6 +108,8 @@ void empathy::brain::JSONBrain::executeJson(const std::string action,cJSON * ori
             if(instrument=="keyboard" || instrument=="piano"){
                 playKeyboardAudio(name);
             }
+        }else{
+            playAudio(name);
         }
     }else if(action=="goto"){
         std::string stepID=cJSON_GetObjectItem(json,"stepID")->valuestring;

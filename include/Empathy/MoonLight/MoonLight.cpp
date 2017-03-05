@@ -21,7 +21,7 @@ empathy::moonlight::MoonLight::MoonLight():Subscriber()
 }
 
 void empathy::moonlight::MoonLight::init() {
-//    listen(EMPATHY_AUDIO_PLAY);
+    listen(EMPATHY_AUDIO_PLAY);
     listen(EMPATHY_AUDIO_PLAY_KEYBOARD);
 }
 

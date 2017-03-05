@@ -54,7 +54,12 @@ namespace empathy_linear{
     }
 
     std::stack<empathy::moonlight::BasicNote> getMusicalKeyboardEvents() {
-        return moonLight->getEvents();
+        return moonLight->getMusicalKeyboardEvents();
+    }
+
+    std::stack<std::string> getMusicalEvents(){
+        return moonLight->getMusicalEvents();
+
     }
 
     void addDummyTouchBrain() {
