@@ -14,7 +14,8 @@ namespace empathy_linear {
     class Linear_MoonLight : public empathy::moonlight::MoonLight {
 
     private:
-        std::stack<empathy::moonlight::BasicNote> events;
+        std::stack<empathy::moonlight::BasicNote> musicalKeyboardEvents;
+        std::stack<std::string> events;
     public:
         Linear_MoonLight();
 
@@ -22,7 +23,8 @@ namespace empathy_linear {
 
         virtual void terminate() override;
 
-        std::stack<empathy::moonlight::BasicNote> getEvents();
+        std::stack<empathy::moonlight::BasicNote> getMusicalKeyboardEvents();
+        std::stack<std::string> getMusicalEvents();
 
     protected:
         virtual void playKeyboard(empathy::moonlight::BasicNote note) override;
