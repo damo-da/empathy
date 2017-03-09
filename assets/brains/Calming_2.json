@@ -5,7 +5,7 @@
   "copyright": "CC0",
   "steps": {
     "begin": [
-
+      {"type": "audio", "instrumental": false, "name": "calming2/calming2.mp3"}
     ]
   }
 }
