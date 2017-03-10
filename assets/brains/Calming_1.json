@@ -5,8 +5,12 @@
   "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"intro","in":0.3}
+      {"type":"goto","stepID":"musicintro","in":0.3}
       ],
+    "musicintro": [
+      {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
+      {"type": "audio", "instrumental": false, "name": "test.mp3"}
+    ],
     "intro":[
       {
         "type":"create",

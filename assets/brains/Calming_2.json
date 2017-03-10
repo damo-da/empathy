@@ -5,7 +5,999 @@
   "copyright": "CC0",
   "steps": {
     "begin": [
-      {"type": "audio", "instrumental": false, "name": "calming2/calming2.mp3"}
+      {"type": "goto", "stepID": "d1", "in": 0.0}
+    ],
+
+    "baseWave":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.9,
+        "colorBlue":0.8,
+        "colorGreen":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveA":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveB":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveC":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveD":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveE":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveF":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.3,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveG":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paleBlueDot":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.19,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":-1.57
+
+      }
+    ],
+    "heartBeat":[
+
+      {
+        "type":"create",
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":1.0,
+        "length":0.15,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+      }
+    ],
+    "heartBeat2":[
+
+      {
+        "type":"create",
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":2.0,
+        "length":0.15,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+      }
+    ],
+    "paleBlueDot1":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.17,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":1.15
+      }
+    ],
+    "artisticLineDown":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":-1.57,
+        "zoomY":0.03,
+        "offsetX":0.1,
+        "offsetY":-31,
+        "sine_thetaOffset":0,
+        "length":0.4,
+        "speed":0.5,
+        "head":-1.05,
+        "tail":1,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      },
+      {
+        "type":"create",
+        "speed":0.5,
+        "create":"mathwave_sine",
+        "rotationAngle":-1.57,
+        "zoomY":0.03,
+        "offsetX":0.1,
+        "offsetY":31,
+        "length":0.4,
+        "head":-1.05,
+        "tail":1,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "artisticLineForward":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":0,
+        "zoomY":0.02,
+        "offsetX":0.1,
+        "offsetY":-40,
+        "length":0.2,
+        "head":-1.0,
+        "sine_thetaOffset":1.57,
+        "speed":0.5,
+        "tail":1.0,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.2
+      }
+    ],
+    "sinusoidalBeat":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":0,
+        "zoomY":0.1,
+        "zoomX":0.4,
+        "offsetX":0.1,
+        "offsetY":0,
+        "length":0.2,
+        "head":-2.0,
+        "sine_thetaOffset":3.5,
+        "speed":0.39,
+        "tail":2.0,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.2
+      }
+    ],
+    "artisticLineDown2":[
+      {
+        "type":"create",
+        "create":"mathwave_line",
+        "rotationAngle":-1.57,
+        "offsetY":0.9,
+        "length":0.2,
+        "speed":0.5,
+        "head":-0.9,
+        "colorRed":1.0,
+        "colorGreen":0.0,
+        "colorBlue":1.0
+      }
+    ],
+    "extendedBaseWave":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":2.0,
+        "centerX":0.8,
+        "centerY":-0.8
+      }
+    ],
+    "extendedBaseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":-0.4
+      }
+    ],
+    "extendedBaseWave3":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":1.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":0.6
+      }
+    ],
+    "extendedBaseWave4":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":0.2,
+        "colorGreen":1.0,
+        "initialPhase":1.0,
+        "damping":10.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.5,
+        "centerY":-0.6
+      }
+    ],
+    "extendedBaseWave5":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorBlue":0.5,
+        "colorGreen":0.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":0.3
+      }
+    ],
+    "baseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.3,
+        "colorGreen":0.9,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paraCircle1":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.2,
+        "zoomY":0.2,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.24,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.05,
+        "zoomY":0.05,
+        "speed":0.74,
+        "tail":6.28,
+        "length":1.4,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle2","in":2.3}
+    ],
+    "paraCircle2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle3","in":2.5}
+    ],
+    "paraCircle3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "solarSun":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.005,
+        "zoomY":0.005,
+        "speed":0.9,
+        "tail":6.28,
+        "length":6.28,
+        "colorRed":1.0,
+        "colorGreen":0.2,
+        "colorBlue":0.2
+      }
+    ],
+    "solarMercury":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.15,
+        "zoomY":0.15,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.7,
+        "colorGreen":0.1,
+        "colorBlue":0.1
+      }
+    ],
+    "solarEarth":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.3,
+        "zoomY":0.3,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.0,
+        "colorGreen":1.0,
+        "colorBlue":0.3
+      }
+    ],
+    "solarSystem":[
+      {"type":"goto","stepID":"solarSun","in":0.0},
+      {"type":"goto","stepID":"solarMercury","in":0.0},
+      {"type":"goto","stepID":"solarEarth","in":0.0}
+    ],
+    "binaryStarA":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarB":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      }
+    ],
+    "binaryStarC":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.8
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.089,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.8
+      }
+    ],
+    "rotatedEllipse":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.28,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse2","in":2.5}
+
+    ],
+    "rotatedEllipse2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse3","in":2.5}
+
+    ],
+    "rotatedEllipse3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      }
+
+    ],
+    "binaryStarSystem":[
+      {"type":"goto","stepID":"binaryStar","in":0.0},
+      {"type":"goto","stepID":"binaryStar2","in":0.0},
+
+      {"type":"goto","stepID":"binaryStarAlternate","in":2.85},
+      {"type":"goto","stepID":"binaryStarAlternate2","in":2.85},
+
+      {"type":"goto","stepID":"binaryStarAlternateB","in":5.7},
+      {"type":"goto","stepID":"binaryStarAlternateB2","in":5.7},
+
+      {"type":"goto","stepID":"binaryStarAlternateC","in":8.55},
+      {"type":"goto","stepID":"binaryStarAlternateC2","in":8.55},
+
+      {"type":"goto","stepID":"binaryStarAlternateD","in":11.4},
+      {"type":"goto","stepID":"binaryStarAlternateD2","in":11.4},
+
+      {"type":"goto","stepID":"binaryStarAlternateE","in":14.25},
+      {"type":"goto","stepID":"binaryStarAlternateE2","in":14.25},
+
+      {"type":"goto","stepID":"binaryStarAlternateF","in":17.1},
+      {"type":"goto","stepID":"binaryStarAlternateF2","in":17.1},
+
+      {"type":"goto","stepID":"binaryStarAlternateG","in":19.95},
+      {"type":"goto","stepID":"binaryStarAlternateG2","in":19.95}
+
+    ],
+    "fireworks":[
+      {"type":"goto","stepID":"extendedBaseWave2","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave3","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave4","in":0.0},
+      {"type":"goto","stepID":"extendedBaseWave5","in":0.0}
+    ],
+
+    "d1": [
+      {"type": "goto", "stepID":"baseWaveA", "in":1.23},
+      {"type": "audio", "instrumental": false, "name": "calming2/2.0.mp3"},
+      {"type": "goto", "stepID": "d2", "in":2.00}
+    ],
+    "d2": [
+      {"type": "goto", "stepID":"baseWaveB", "in":0.0},
+      {"type": "goto", "stepID": "d3", "in":0.900}
+    ],
+    "d3": [
+      {"type": "goto", "stepID":"baseWaveC", "in":0.0},
+      {"type": "goto", "stepID": "d4", "in":0.675}
+    ],
+    "d4": [
+      {"type": "goto", "stepID":"baseWaveD", "in":0.0},
+      {"type": "goto", "stepID": "d5", "in":0.850}
+    ],
+    "d5": [
+      {"type": "goto", "stepID":"baseWaveE", "in":0.0},
+      {"type": "goto", "stepID": "d6", "in":0.855}
+    ],
+    "d6": [
+      {"type": "goto", "stepID":"baseWaveF", "in":0.0},
+      {"type": "goto", "stepID": "d7", "in":1.45}
+    ],
+    "d7": [
+      {"type": "goto", "stepID":"baseWaveG", "in":0.0},
+      {"type": "goto", "stepID": "d8", "in":0.0}
+    ],
+    "d8": [
+      {"type": "goto", "stepID":"baseWaveA", "in":0.0},
+      {"type": "goto", "stepID": "d9", "in":0.0}
+    ],
+    "d9": [
+      {"type": "goto", "stepID":"baseWaveC", "in":0.0},
+      {"type": "goto", "stepID": "d10", "in":0.0}
+    ],
+    "d10": [
+      {"type": "goto", "stepID":"baseWaveC", "in":0.0},
+      {"type": "goto", "stepID": "d11", "in":0.0}
+    ],
+    "d11": [
+      {"type": "goto", "stepID": "d12", "in":4.0}
+    ],
+    "d12": [
+      {"type": "goto","stepID":"fireworks","in":0.0},
+      {"type": "goto", "stepID": "d13", "in":3.05}
+    ],
+    "d13": [
+      {"type": "goto","stepID":"fireworks","in":0.0},
+      {"type": "audio", "instrumental": false, "name": "calming2/2.1.mp3"},
+      {"type": "goto", "stepID": "d14", "in":3.5}
+    ],
+    "d14": [
+      {"type": "goto", "stepID":"baseWaveA", "in":0.0},
+      {"type": "goto", "stepID":"binaryStarA", "in":0.0},
+      {"type": "goto", "stepID": "d15", "in":3.1}
+    ],
+    "d15": [
+      {"type": "goto", "stepID":"baseWaveB", "in":0.0},
+      {"type": "goto", "stepID":"binaryStarB", "in":0.0},
+      {"type": "goto", "stepID": "d16", "in":3.1}
+    ],
+    "d16": [
+      {"type": "goto", "stepID":"baseWaveC", "in":0.0},
+      {"type": "goto", "stepID":"binaryStarC", "in":0.0},
+      {"type": "goto", "stepID": "d17", "in":2.85}
+    ],
+    "d17": [
+      {"type": "audio", "instrumental": false, "name": "calming2/2.2.mp3"},
+      {"type": "goto", "stepID": "d18", "in":0.55}
+    ],
+    "d18": [
+      {"type": "goto", "stepID": "sinusoidalBeat", "in":0.0},
+      {"type": "goto", "stepID": "d19", "in":0.2}
+    ],
+    "d19": [
+       {
+        "type":"create",
+        "create":"mathwave",
+        "mathwave_x":"-sin(4-2*time) * ln(abs(2-time))/2",
+        "mathwave_y":"(abs(2-time))^0.3 * cos(2-time)^0.5",
+        "offsetX":0.0,
+        "offsetY":-0.4,
+         "zoomY": 1.5,
+         "zoomX": 2.0,
+        "length":0.8,
+        "speed":0.85,
+        "colorRed":0.5,
+        "colorGreen":0.4,
+        "colorBlue":0.4,
+        "head":0,
+        "tail":2,
+        "transition":[
+        ]
+      },
+      {
+        "type":"create",
+        "create":"mathwave",
+        "mathwave_x":"sin(4-2*time) * ln(abs(2-time)) / 2",
+        "mathwave_y":"(abs(2-time))^0.3 * cos(2-time)^0.5",
+        "zoomY": 1.5,
+        "zoomX": 2.0,
+        "offsetX":0.0,
+        "offsetY":-0.4,
+        "length":0.8,
+        "speed":0.85,
+        "colorRed":0.5,
+        "colorGreen":0.4,
+        "colorBlue":0.4,
+        "head":0,
+        "tail":2,
+        "transition":[
+        ]
+      },
+
+      {"type": "goto", "stepID": "baseWave", "in":2.0}
+    ],
+    "d20": [
+      {"type": "goto", "stepID": "d21", "in":0.0}
+    ],
+    "d21": [
+      {"type": "goto", "stepID": "d22", "in":0.0}
+    ],
+    "d22": [
+      {"type": "goto", "stepID": "d23", "in":0.0}
+    ],
+    "d23": [
+      {"type": "goto", "stepID": "d24", "in":0.0}
+    ],
+    "d24": [
+      {"type": "goto", "stepID": "d25", "in":0.0}
+    ],
+    "d25": [
+      {"type": "goto", "stepID": "d26", "in":0.0}
+    ],
+    "d26": [
+      {"type": "goto", "stepID": "d27", "in":0.0}
+    ],
+    "d27": [
+      {"type": "goto", "stepID": "d28", "in":0.0}
+    ],
+    "d28": [
+      {"type": "goto", "stepID": "d29", "in":0.0}
+    ],
+    "d29": [
+      {"type": "goto", "stepID": "d30", "in":0.0}
+    ],
+    "d30": [
+      {"type": "goto", "stepID": "d31", "in":0.0}
+    ],
+    "d31": [
+      {"type": "goto", "stepID": "d32", "in":0.0}
+    ],
+    "d32": [
+      {"type": "goto", "stepID": "d33", "in":0.0}
+    ],
+    "d33": [
+      {"type": "goto", "stepID": "d34", "in":0.0}
+    ],
+    "d34": [
+      {"type": "goto", "stepID": "d35", "in":0.0}
+    ],
+    "d35": [
+      {"type": "goto", "stepID": "d36", "in":0.0}
+    ],
+    "d36": [
+      {"type": "goto", "stepID": "d37", "in":0.0}
+    ],
+    "d37": [
+      {"type": "goto", "stepID": "d38", "in":0.0}
+    ],
+    "d38": [
+      {"type": "goto", "stepID": "d39", "in":0.0}
+    ],
+    "d39": [
+      {"type": "goto", "stepID": "d40", "in":0.0}
+    ],
+    "d40": [
+      {"type": "goto", "stepID": "d41", "in":0.0}
+    ],
+    "d41": [
+      {"type": "goto", "stepID": "d42", "in":0.0}
+    ],
+    "d42": [
+      {"type": "goto", "stepID": "d43", "in":0.0}
+    ],
+    "d43": [
+      {"type": "goto", "stepID": "d44", "in":0.0}
+    ],
+    "d44": [
+      {"type": "goto", "stepID": "d45", "in":0.0}
+    ],
+    "d45": [
+      {"type": "goto", "stepID": "d46", "in":0.0}
+    ],
+    "d46": [
+      {"type": "goto", "stepID": "d47", "in":0.0}
+    ],
+    "d47": [
+      {"type": "goto", "stepID": "d48", "in":0.0}
+    ],
+    "d48": [
+      {"type": "goto", "stepID": "d49", "in":0.0}
+    ],
+    "d49": [
+      {"type": "goto", "stepID": "d50", "in":0.0}
+    ],
+    "d50": [
+      {"type": "goto", "stepID": "d51", "in":0.0}
+    ],
+    "d51": [
+      {"type": "goto", "stepID": "d52", "in":0.0}
+    ],
+    "d52": [
+      {"type": "goto", "stepID": "d53", "in":0.0}
+    ],
+    "d53": [
+      {"type": "goto", "stepID": "d54", "in":0.0}
+    ],
+    "d54": [
+      {"type": "goto", "stepID": "d55", "in":0.0}
+    ],
+    "d55": [
+      {"type": "goto", "stepID": "d56", "in":0.0}
+    ],
+    "d56": [
+      {"type": "goto", "stepID": "d57", "in":0.0}
+    ],
+    "d57": [
+      {"type": "goto", "stepID": "d58", "in":0.0}
+    ],
+    "d58": [
+      {"type": "goto", "stepID": "d59", "in":0.0}
+    ],
+    "d59": [
+      {"type": "goto", "stepID": "d60", "in":0.0}
+    ],
+    "d60": [
+      {"type": "goto", "stepID": "d61", "in":0.0}
+    ],
+    "d61": [
+      {"type": "goto", "stepID": "d62", "in":0.0}
+    ],
+    "d62": [
+      {"type": "goto", "stepID": "d63", "in":0.0}
+    ],
+    "d63": [
+      {"type": "goto", "stepID": "d64", "in":0.0}
+    ],
+    "d64": [
+      {"type": "goto", "stepID": "d65", "in":0.0}
+    ],
+    "d65": [
+      {"type": "goto", "stepID": "d66", "in":0.0}
+    ],
+    "d66": [
+      {"type": "goto", "stepID": "d67", "in":0.0}
+    ],
+    "d67": [
+      {"type": "goto", "stepID": "d68", "in":0.0}
+    ],
+    "d68": [
+      {"type": "goto", "stepID": "d69", "in":0.0}
+    ],
+    "d69": [
+      {"type": "goto", "stepID": "d70", "in":0.0}
+    ],
+    "d70": [
+      {"type": "goto", "stepID": "d71", "in":0.0}
+    ],
+    "d71": [
+      {"type": "goto", "stepID": "d72", "in":0.0}
+    ],
+    "d72": [
+      {"type": "goto", "stepID": "d73", "in":0.0}
+    ],
+    "d73": [
+      {"type": "goto", "stepID": "d74", "in":0.0}
+    ],
+    "d74": [
+      {"type": "goto", "stepID": "d75", "in":0.0}
+    ],
+    "d75": [
+      {"type": "goto", "stepID": "d76", "in":0.0}
+    ],
+    "d76": [
+      {"type": "goto", "stepID": "d77", "in":0.0}
+    ],
+    "d77": [
+      {"type": "goto", "stepID": "d78", "in":0.0}
+    ],
+    "d78": [
+      {"type": "goto", "stepID": "d79", "in":0.0}
+    ],
+    "d79": [
+      {"type": "goto", "stepID": "d80", "in":0.0}
+    ],
+    "d80": [
+      {"type": "goto", "stepID": "d81", "in":0.0}
+    ],
+    "d81": [
+      {"type": "goto", "stepID": "d82", "in":0.0}
+    ],
+    "d82": [
+      {"type": "goto", "stepID": "d83", "in":0.0}
+    ],
+    "d83": [
+      {"type": "goto", "stepID": "d84", "in":0.0}
+    ],
+    "d84": [
+      {"type": "goto", "stepID": "d85", "in":0.0}
+    ],
+    "d85": [
+      {"type": "goto", "stepID": "d86", "in":0.0}
+    ],
+    "d86": [
+      {"type": "goto", "stepID": "d87", "in":0.0}
+    ],
+    "d87": [
+      {"type": "goto", "stepID": "d88", "in":0.0}
+    ],
+    "d88": [
+      {"type": "goto", "stepID": "d89", "in":0.0}
+    ],
+    "d89": [
+      {"type": "goto", "stepID": "d90", "in":0.0}
+    ],
+    "d90": [
+      {"type": "goto", "stepID": "d91", "in":0.0}
+    ],
+    "d91": [
+      {"type": "goto", "stepID": "d92", "in":0.0}
+    ],
+    "d92": [
+      {"type": "goto", "stepID": "d93", "in":0.0}
+    ],
+    "d93": [
+      {"type": "goto", "stepID": "d94", "in":0.0}
+    ],
+    "d94": [
+      {"type": "goto", "stepID": "d95", "in":0.0}
+    ],
+    "d95": [
+      {"type": "goto", "stepID": "d96", "in":0.0}
+    ],
+    "d96": [
+      {"type": "goto", "stepID": "d97", "in":0.0}
+    ],
+    "d97": [
+      {"type": "goto", "stepID": "d98", "in":0.0}
+    ],
+    "d98": [
+      {"type": "goto", "stepID": "d99", "in":0.0}
+    ],
+    "d99": [
+      {"type": "goto", "stepID": "d100", "in":0.0}
+    ],
+    "d100": [
     ]
+
   }
 }
