@@ -4,8 +4,906 @@
   "title": "Calming 2",
   "copyright": "CC0",
   "steps": {
+
+    "baseWave":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.9,
+        "colorBlue":0.8,
+        "colorGreen":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveA":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveB":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveC":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveD":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveE":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveF":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.7,
+        "colorGreen":0.3,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "baseWaveG":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paleBlueDot":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.19,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":-1.57
+
+      }
+    ],
+    "heartBeat":[
+
+      {
+        "type":"create",
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":1.0,
+        "length":0.15,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+      }
+    ],
+    "heartBeat2":[
+
+      {
+        "type":"create",
+        "create":"mathwave_sinc",
+        "offsetX":0.0,
+        "offsetY":0.3,
+        "speed":2.0,
+        "length":0.15,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.15,
+        "head":-0.95,
+        "tail":1.0,
+        "period":6.5,
+        "zoomY":0.3,
+        "sine_thetaOffset":-1.15
+      }
+    ],
+    "paleBlueDot1":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "offsetX":0.0,
+        "offsetY":0,
+        "length":0.15,
+        "speed":0.17,
+        "colorRed":0.5,
+        "colorGreen":0.2,
+        "colorBlue":0.1,
+        "head":-0.95,
+        "tail":0.95,
+        "period":1.0,
+        "zoomY":0.8,
+        "sine_thetaOffset":1.15
+      }
+    ],
+    "artisticLineDown":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":-1.57,
+        "zoomY":0.03,
+        "offsetX":0.1,
+        "offsetY":-31,
+        "sine_thetaOffset":0,
+        "length":0.4,
+        "speed":0.5,
+        "head":-1.05,
+        "tail":1,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      },
+      {
+        "type":"create",
+        "speed":0.5,
+        "create":"mathwave_sine",
+        "rotationAngle":-1.57,
+        "zoomY":0.03,
+        "offsetX":0.1,
+        "offsetY":31,
+        "length":0.4,
+        "head":-1.05,
+        "tail":1,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "artisticLineForward":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":0,
+        "zoomY":0.02,
+        "offsetX":0.1,
+        "offsetY":-40,
+        "length":0.2,
+        "head":-1.0,
+        "sine_thetaOffset":1.57,
+        "speed":0.5,
+        "tail":1.0,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.2
+      }
+    ],
+    "artisticLineForward2":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "rotationAngle":0,
+        "zoomY":0.1,
+        "offsetX":0.1,
+        "offsetY":0,
+        "length":0.2,
+        "head":-1.0,
+        "sine_thetaOffset":1.57,
+        "speed":0.5,
+        "tail":1.0,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.2
+      }
+    ],
+    "artisticLineDown2":[
+      {
+        "type":"create",
+        "create":"mathwave_line",
+        "rotationAngle":-1.57,
+        "offsetY":0.9,
+        "length":0.2,
+        "speed":0.5,
+        "head":-0.9,
+        "colorRed":1.0,
+        "colorGreen":0.0,
+        "colorBlue":1.0
+      }
+    ],
+    "artisticSineWave":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "period":0.75,
+        "offsetY":-2.8,
+        "zoomY":0.3,
+        "speed":1,
+        "length":0.2,
+        "head":-0.9,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "artisticSineWave2":[
+      {
+        "type":"create",
+        "create":"mathwave_sine",
+        "period":0.75,
+        "offsetY":2.8,
+        "zoomY":0.3,
+        "speed":1,
+        "sine_thetaOffset":1.5,
+        "length":0.2,
+        "head":-0.9,
+        "colorRed":0.8,
+        "colorGreen":0.1,
+        "colorBlue":0.7
+      }
+    ],
+    "extendedBaseWave":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":2.0,
+        "centerX":0.8,
+        "centerY":-0.8
+      }
+    ],
+    "extendedBaseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":1.0,
+        "colorBlue":0.2,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":-0.4
+      }
+    ],
+    "extendedBaseWave3":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":1.0,
+        "colorGreen":0.2,
+        "initialPhase":1.0,
+        "damping":8.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":-0.3,
+        "centerY":0.6
+      }
+    ],
+    "extendedBaseWave4":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.2,
+        "colorBlue":0.2,
+        "colorGreen":1.0,
+        "initialPhase":1.0,
+        "damping":10.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.5,
+        "centerY":-0.6
+      }
+    ],
+    "extendedBaseWave5":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.5,
+        "colorBlue":0.5,
+        "colorGreen":0.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0,
+        "centerX":0.3,
+        "centerY":0.3
+      }
+    ],
+    "baseWave2":[
+      {
+        "type":"create",
+        "create":"cwave",
+        "colorRed":0.3,
+        "colorGreen":0.9,
+        "colorBlue":1.0,
+        "initialPhase":1.0,
+        "damping":5.0,
+        "wavelength":0.1,
+        "frequency":1.0
+      }
+    ],
+    "paraCircle1":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.2,
+        "zoomY":0.2,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.24,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.05,
+        "zoomY":0.05,
+        "speed":0.74,
+        "tail":6.28,
+        "length":1.4,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle2","in":2.3}
+    ],
+    "paraCircle2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      },
+      {"type":"goto","stepID":"paraCircle3","in":2.5}
+    ],
+    "paraCircle3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.5,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":3.14,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "solarSun":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.005,
+        "zoomY":0.005,
+        "speed":0.9,
+        "tail":6.28,
+        "length":6.28,
+        "colorRed":1.0,
+        "colorGreen":0.2,
+        "colorBlue":0.2
+      }
+    ],
+    "solarMercury":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.15,
+        "zoomY":0.15,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.7,
+        "colorGreen":0.1,
+        "colorBlue":0.1
+      }
+    ],
+    "solarEarth":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.3,
+        "zoomY":0.3,
+        "speed":0.74,
+        "tail":6.28,
+        "length":0.2,
+        "colorRed":0.0,
+        "colorGreen":1.0,
+        "colorBlue":0.3
+      }
+    ],
+    "solarSystem":[
+      {"type":"goto","stepID":"solarSun","in":0.0},
+      {"type":"goto","stepID":"solarMercury","in":0.0},
+      {"type":"goto","stepID":"solarEarth","in":0.0}
+    ],
+    "binaryStar":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStar2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternate":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      }
+    ],
+    "binaryStarAlternate2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.8,
+        "colorBlue":0.8
+      }
+    ],
+    "binaryStarAlternateB":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2
+      }
+    ],
+    "binaryStarAlternateB2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.8,
+        "colorBlue":0.2
+      }
+    ],
+    "binaryStarAlternateC":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1
+      }
+    ],
+    "binaryStarAlternateC2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.5,
+        "colorGreen":1.0,
+        "colorBlue":0.1
+      }
+    ],
+    "binaryStarAlternateD":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateD2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.2,
+        "colorGreen":0.7,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateE":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateE2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.7,
+        "colorGreen":0.2,
+        "colorBlue":0.7
+      }
+    ],
+    "binaryStarAlternateF":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":0.4,
+        "colorGreen":0.3,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternateF2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":0.4,
+        "colorGreen":0.3,
+        "colorBlue":1.0
+      }
+    ],
+    "binaryStarAlternateG":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "tail":3.14,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3
+      }
+    ],
+    "binaryStarAlternateG2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.4,
+        "zoomY":0.4,
+        "speed":1.13,
+        "head":3.14,
+        "tail":6.28,
+        "length":0.8,
+        "colorRed":1.0,
+        "colorGreen":0.7,
+        "colorBlue":0.3
+      }
+    ],
+
+    "rotatedEllipse":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.28,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse2","in":2.5}
+
+    ],
+    "rotatedEllipse2":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      },
+      {"type":"goto","stepID":"rotatedEllipse3","in":2.5}
+
+    ],
+    "rotatedEllipse3":[
+      {
+        "type":"create",
+        "create":"mathwave_para_circle",
+        "zoomX":0.9,
+        "zoomY":0.5,
+        "speed":1,
+        "tail":6.8,
+        "length":0.14,
+        "colorRed":0.5,
+        "colorGreen":0.5,
+        "colorBlue":1.0,
+        "rotationAngle":0.45
+      }
+
+    ],
+
+    "binaryStarSystem":[
+      {"type":"goto","stepID":"binaryStar","in":0.0},
+      {"type":"goto","stepID":"binaryStar2","in":0.0},
+
+      {"type":"goto","stepID":"binaryStarAlternate","in":2.85},
+      {"type":"goto","stepID":"binaryStarAlternate2","in":2.85},
+
+      {"type":"goto","stepID":"binaryStarAlternateB","in":5.7},
+      {"type":"goto","stepID":"binaryStarAlternateB2","in":5.7},
+
+      {"type":"goto","stepID":"binaryStarAlternateC","in":8.55},
+      {"type":"goto","stepID":"binaryStarAlternateC2","in":8.55},
+
+      {"type":"goto","stepID":"binaryStarAlternateD","in":11.4},
+      {"type":"goto","stepID":"binaryStarAlternateD2","in":11.4},
+
+      {"type":"goto","stepID":"binaryStarAlternateE","in":14.25},
+      {"type":"goto","stepID":"binaryStarAlternateE2","in":14.25},
+
+      {"type":"goto","stepID":"binaryStarAlternateF","in":17.1},
+      {"type":"goto","stepID":"binaryStarAlternateF2","in":17.1},
+
+      {"type":"goto","stepID":"binaryStarAlternateG","in":19.95},
+      {"type":"goto","stepID":"binaryStarAlternateG2","in":19.95}
+
+    ],
+
     "begin": [
-      {"type": "audio", "instrumental": false, "name": "calming2/calming2.mp3"}
+      {"type": "audio", "instrumental": false, "name": "calming2/calming2.1.0.mp3"},
+      {"type": "goto", "stepID": "b1", "in":0.0}
+    ],
+    "b1": [
+      {"type": "goto", "stepID": "b2", "in":3.65},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+    ],
+    "b2": [
+      {"type": "goto", "stepID": "b3", "in":3.37},
+      {"type": "goto", "stepID": "baseWaveG", "in": 0.0}
+
+    ],
+    "b3": [
+      {"type": "goto", "stepID": "b4", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveF", "in": 0.0}
+
+    ],
+    "b4": [
+      {"type": "goto", "stepID": "b5", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveE", "in": 0.0}
+
+    ],
+    "b5": [
+      {"type": "goto", "stepID": "b6", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveF", "in": 0.0},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
+    ],
+    "b6": [
+      {"type": "goto", "stepID": "b7", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
+    ],
+    "b7": [
+      {"type": "goto", "stepID": "b8", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
+    ],
+    "b8": [
+      {"type": "goto", "stepID": "b9", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
+    ],
+    "b9": [
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 0.8133125},
+      {"type": "goto", "stepID": "extendedBaseWave2", "in": 2.426625},
+      {"type": "goto", "stepID": "b10", "in":3.2}
+
+    ],
+    "b10": [
+      {"type": "goto", "stepID": "b11", "in":3.00},
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 2.1},
+      {"type": "goto", "stepID": "baseWaveG", "in": 0.0}
+
+    ],
+    "b11": [
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "extendedBaseWave", "in": 2.4375},
+      {"type": "goto", "stepID": "b12", "in": 3.25}
+
+    ],
+    "b12": [
+      {"type": "goto", "stepID": "b13", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveF", "in": 0.0}
+
+    ],
+    "b13": [
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 0.8125},
+      {"type": "goto", "stepID": "extendedBaseWave2", "in": 2.437},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "b14", "in":3.25}
+
+    ],
+    "b14": [
+      {"type": "goto", "stepID": "b15", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 2.437}
+
+
+    ],
+    "b15": [
+      {"type": "goto", "stepID": "b16", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 2.437}
+
+    ],
+    "b16": [
+      {"type": "goto", "stepID": "b17", "in":3.25},
+      {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
     ]
   }
 }
