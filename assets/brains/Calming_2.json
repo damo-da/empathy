@@ -815,10 +815,12 @@
     "begin": [
       {"type": "audio", "instrumental": false, "name": "calming2/calming2.1.0.mp3"},
       {"type": "goto", "stepID": "b1", "in":0.0}
+
     ],
     "b1": [
       {"type": "goto", "stepID": "b2", "in":3.65},
       {"type": "goto", "stepID": "baseWaveA", "in": 0.0}
+
     ],
     "b2": [
       {"type": "goto", "stepID": "b3", "in":3.37},
@@ -857,22 +859,24 @@
 
     ],
     "b9": [
+      {"type": "goto", "stepID": "b10", "in":3.2},
       {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
+      {"type": "goto", "stepID": "binaryStarAlternateF", "in": 0.8125},
       {"type": "goto", "stepID": "extendedBaseWave3", "in": 0.8133125},
       {"type": "goto", "stepID": "extendedBaseWave2", "in": 2.426625},
-      {"type": "goto", "stepID": "b10", "in":3.2}
+      {"type": "goto", "stepID": "binaryStarAlternateF2", "in": 3.49}
 
     ],
     "b10": [
       {"type": "goto", "stepID": "b11", "in":3.00},
-      {"type": "goto", "stepID": "extendedBaseWave3", "in": 2.1},
-      {"type": "goto", "stepID": "baseWaveG", "in": 0.0}
+      {"type": "goto", "stepID": "baseWaveG", "in": 0.0},
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 2.1}
 
     ],
     "b11": [
+      {"type": "goto", "stepID": "b12", "in": 3.25},
       {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
-      {"type": "goto", "stepID": "extendedBaseWave", "in": 2.4375},
-      {"type": "goto", "stepID": "b12", "in": 3.25}
+      {"type": "goto", "stepID": "extendedBaseWave", "in": 2.4375}
 
     ],
     "b12": [
@@ -881,10 +885,10 @@
 
     ],
     "b13": [
-      {"type": "goto", "stepID": "extendedBaseWave3", "in": 0.8125},
-      {"type": "goto", "stepID": "extendedBaseWave2", "in": 2.437},
+      {"type": "goto", "stepID": "b14", "in":3.25},
       {"type": "goto", "stepID": "baseWaveA", "in": 0.0},
-      {"type": "goto", "stepID": "b14", "in":3.25}
+      {"type": "goto", "stepID": "extendedBaseWave3", "in": 0.8125},
+      {"type": "goto", "stepID": "extendedBaseWave2", "in": 2.437}
 
     ],
     "b14": [
