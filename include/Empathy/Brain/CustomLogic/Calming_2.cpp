@@ -13,3 +13,11 @@ void empathy::brain::Calming_2::runLineNumber(std::string lineID, std::string ca
 void empathy::brain::Calming_2::executeJson(const std::string action, cJSON *json, cJSON *override) {
     JSONBrain::executeJson(action, json, override);
 }
+
+void empathy::brain::Calming_2::onReceiveEvent(empathy::radio::Event &event) {
+    Brain::onReceiveEvent(event);
+
+    if(event.action == EMPATHY_CALMING_2_START_MUSIC ){
+        runLineNumber("b1", "", nullptr);
+    }
+}

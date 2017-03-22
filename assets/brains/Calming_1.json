@@ -5,7 +5,7 @@
   "copyright":"CC0",
   "steps": {
     "begin":[
-      {"type":"goto","stepID":"musicintro","in":0.3}
+      {"type":"goto","stepID":"intro","in":0.3}
       ],
     "musicintro": [
       {"type": "audio", "instrumental": true, "instrument": "keyboard", "name": "2D"},
@@ -103,6 +103,7 @@
         "centerY":0.13,
         "duration": 2.0
       },
+      {"type":"goto","stepID":"EMPATHY_CALMING_2_START_MUSIC_FROM_CALMING_1","in":4.0},
       {
         "type": "create",
         "create": "text",

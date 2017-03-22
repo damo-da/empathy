@@ -1,5 +1,6 @@
 #include "Calming_1.h"
 #include "../../LifeEvent/TextInput/TextInput.h"
+#include "Calming_2.h"
 
 using namespace std;
 
@@ -120,6 +121,9 @@ void empathy::brain::Calming_1::runLineNumber(std::string lineID, std::string ca
         textInput2->setFadeInDuration(0.3);
         addLifeEvent(textInput2);
 
+    }else if(lineID == EMPATHY_CALMING_2_START_MUSIC_FROM_CALMING_1){
+        radio::Event event1(EMPATHY_CALMING_2_START_MUSIC);
+        emit(event1);
     }
 }
 

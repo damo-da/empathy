@@ -6,7 +6,6 @@
   "steps": {
 
     "begin": [
-      {"type": "goto", "stepID": "b1", "in": 0.0}
     ],
 
     "artisticLineForward2":[

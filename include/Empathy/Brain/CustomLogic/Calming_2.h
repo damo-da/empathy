@@ -1,6 +1,8 @@
 #ifndef EMPATHY_LINEAR_CALMING_2_H
 #define EMPATHY_LINEAR_CALMING_2_H
 
+#define EMPATHY_CALMING_2_START_MUSIC "EMPATHY_CALMING_2_START_MUSIC"
+
 #include "../JSONBrain/JSONBrain.h"
 
 namespace empathy {
@@ -9,6 +11,8 @@ namespace empathy {
         class Calming_2 : public JSONBrain{
         public:
             Calming_2();
+
+            void onReceiveEvent(empathy::radio::Event &event) override;
 
         protected:
             void runLineNumber(std::string lineID, std::string callerID, cJSON *override) override;
