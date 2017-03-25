@@ -43,9 +43,6 @@ namespace empathy {
 
         void setAnger(float anger);
 
-        bool isHappy() const;
-
-
     private:
         float happiness;
         float sadness;
@@ -56,11 +53,20 @@ namespace empathy {
         float surprise;
         float anger;
 
+        static EmotionVector * resultVector; // this will be used to store the results and hence,
+                                    // the more accurate emotion of the user.
+
     public:
         EmotionVector();
 
         //Send the cJSON root structure to convert it into EmotionVectors
         EmotionVector(cJSON *vector);
+
+        static void processVector(EmotionVector& vector);
+        static std::string getDominantEmotion();
+
+        static bool isHappy();
+
     };
 }
 

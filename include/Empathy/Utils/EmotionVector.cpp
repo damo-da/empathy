@@ -89,6 +89,27 @@ void empathy::EmotionVector::setAnger(float anger) {
     empathy::EmotionVector::anger = anger;
 }
 
-bool empathy::EmotionVector::isHappy() const {
-    return empathy::EmotionVector::happiness>0.7;
+
+
+namespace empathy{
+    EmotionVector* EmotionVector::resultVector = new EmotionVector();
+
+    void EmotionVector::processVector(EmotionVector &vector) {
+        resultVector->disgust = vector.disgust;
+        resultVector->anger = vector.anger;
+        resultVector->happiness = vector.happiness;
+        resultVector->surprise = vector.surprise;
+        resultVector->neutral = vector.neutral;
+        resultVector->fear = vector.contempt;
+        resultVector->contempt = vector.contempt;
+    }
+
+    std::string EmotionVector::getDominantEmotion(){
+        return "sad";
+    }
+
+    bool EmotionVector::isHappy(){
+        return getDominantEmotion() == "happy";
+    }
+
 }
