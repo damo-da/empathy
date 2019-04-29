@@ -7,8 +7,10 @@
         <script type="text/javascript">
             var host=document.location.host;
             var baseHref="localhost:4000/";
-            if(host=="underscoredam.github.io"){
+            if(host==="underscoredam.github.io"){
             baseHref="underscoredam.github.io/empathy/";
+            } else if(host==="damodar.me"){
+            baseHref="damodar.me/empathy/";
             }
             document.write("<base href='"+location.protocol+"//"+baseHref  + "' />");
         </script>
