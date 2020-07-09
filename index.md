@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Empathy by underscoredam
+title: Empathy
 ---
 
 # Empathy 
