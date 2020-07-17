@@ -1,7 +1,7 @@
  ![App Version](https://img.shields.io/badge/version-0.0-green.svg)
 
 # Empathy
-[underscoredam.github.io/empathy](https://underscoredam.github.io/empathy)
+[damo-da.github.io/empathy](https://damo-da.github.io/empathy)
 
 
 Play Empathy to immerse in the pool of your own emotions!
